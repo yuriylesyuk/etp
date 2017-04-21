@@ -1,0 +1,15 @@
+{
+  "name": "genfwports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "process.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonpath": "^0.2.9",
+    "lodash": "^4.17.4"
+  }
+}

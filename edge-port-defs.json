@@ -1,0 +1,185 @@
+{
+    "edge": [
+        {
+            "client": {
+                "component": "R",
+                "servers": [
+                    {
+                        "component": "MP",
+                        "ports": [
+                            4528,
+                            8998,
+                            8082,
+                            4527
+                        ]
+                    },
+                    {
+                        "component": "MS",
+                        "ports": [
+                            8080
+                        ]
+                    },
+                    {
+                        "component": "QIS",
+                        "ports": [
+                            5672
+                        ]
+                    },
+                    {
+                        "component": "ZK",
+                        "ports": [
+                            2181
+                        ]
+                    },
+                    {
+                        "component": "CS",
+                        "ports": [
+                            9042,
+                            9160
+                        ]
+                    },
+                    {
+                        "component": "R",
+                        "ports": [
+                            4527
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "MS",
+                "servers": [
+                    {
+                        "component": "MP",
+                        "ports": [
+                            4528
+                        ]
+                    },
+                    {
+                        "component": "QIS",
+                        "ports": [
+                            4529
+                        ]
+                    },
+                    {
+                        "component": "PG",
+                        "ports": [
+                            4530,
+                            5432
+                        ]
+                    },
+                    {
+                        "component": "ZK",
+                        "ports": [
+                            2181
+                        ]
+                    },
+                    {
+                        "component": "CS",
+                        "ports": [
+                            9042,
+                            9160
+                        ]
+                    },
+                    {
+                        "component": "R",
+                        "ports": [
+                            4527
+                        ]
+                    },
+                    {
+                        "component": "OL",
+                        "ports": [
+                            10389
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "MP",
+                "servers": [
+                    {
+                        "component": "MS",
+                        "ports": [
+                            8080
+                        ]
+                    },
+                    {
+                        "component": "MP",
+                        "ports": [
+                            4528
+                        ]
+                    },
+                    {
+                        "component": "QIS",
+                        "ports": [
+                            4529
+                        ]
+                    },
+                    {
+                        "component": "ZK",
+                        "ports": [
+                            2181
+                        ]
+                    },
+                    {
+                        "component": "CS",
+                        "ports": [
+                            9042,
+                            9160
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "UI",
+                "servers": [
+                    {
+                        "component": "MS",
+                        "ports": [
+                            8080
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "QIS",
+                "servers": [
+                    {
+                        "component": "MS",
+                        "ports": [
+                            8080
+                        ]
+                    },
+                    {
+                        "component": "ZK",
+                        "ports": [
+                            2181
+                        ]
+                    },
+                    {
+                        "component": "CS",
+                        "ports": [
+                            9042,
+                            9160
+                        ]
+                    },
+                    {
+                        "component": "PG",
+                        "ports": [
+                            5432
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
