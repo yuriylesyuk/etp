@@ -3,78 +3,97 @@
     "nodes": [
         {
             "id": 1,
+            "hostname": "nnnxxxyyy01",
             "ip": "10.119.3.201"
         },
         {
             "id": 2,
+            "hostname": "nnnxxxyyy02",
             "ip": "10.119.3.202"
         },
         {
             "id": 3,
+            "hostname": "nnnxxxyyy03",
             "ip": "10.119.3.203"
         },
         {
             "id": 4,
+            "hostname": "nnnxxxyyy04",
             "ip": "10.119.3.204"
         },
         {
             "id": 5,
+            "hostname": "nnnxxxyyy05",
             "ip": "10.119.3.205"
         },
         {
             "id": 6,
+            "hostname": "nnnxxxyyy06",
             "ip": "10.119.3.206"
         },
         {
             "id": 7,
+            "hostname": "nnnxxxyyy07",
             "ip": "10.119.3.207"
         },
         {
             "id": 8,
+            "hostname": "nnnxxxyyy08",
             "ip": "10.119.3.208"
         },
         {
             "id": 9,
+            "hostname": "nnnxxxyyy09",
             "ip": "10.119.3.209"
         },
         {
             "id": 10,
+            "hostname": "nnnxxxyyy10",
             "ip": "10.119.3.210"
         },
         {
             "id": 11,
+            "hostname": "nnnxxxyyy11",
             "ip": "10.119.3.211"
         },
         {
             "id": 12,
+            "hostname": "nnnxxxyyy12",
             "ip": "10.119.3.213"
         },
         {
             "id": 13,
+            "hostname": "nnnxxxyyy13",
             "ip": "10.119.3.213"
         },
         {
             "id": 14,
+            "hostname": "nnnxxxyyy14",
             "ip": "10.119.3.214"
         },
         {
             "id": 15,
+            "hostname": "nnnxxxyyy15",
             "ip": "10.119.3.215"
         },
         {
             "id": 16,
+            "hostname": "nnnxxxyyy16",
             "ip": "10.119.3.216"
         },
         {
             "id": 17,
+            "hostname": "nnnxxxyyy17",
             "ip": "10.119.3.217"
         },
         {
             "id": 18,
+            "hostname": "nnnxxxyyy18",
             "ip": "10.119.3.218"
         },
         {
             "id": 19,
+            "hostname": "nnnxxxyyy20",
             "ip": "10.119.3.219"
         }
     ],

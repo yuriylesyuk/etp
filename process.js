@@ -5,7 +5,7 @@ var fp = require("lodash/fp");
 var portDefs = require("./edge-port-defs.json");
 
 //var topology = require("./enbd-uat.topology.json");
-var topology = require("./du-prod.topology.json");
+var topology = require("./uat-19n-3sn-topology.json");
 
 
 // Edge Ports: iterate over
@@ -119,6 +119,10 @@ console.log( ports);
 
 console.log("====================================================");
 
+var nodes = fp.keyBy( "id" )( topology.nodes );
+
+
+
 var firewallPortRequests = [];
 
 // top-level map by client.component
@@ -139,19 +143,39 @@ var firewallPortRequest = fp.map( clientComponent =>{
         // bottom-level reduce by subnet analysis
         var n = fp.flatMap( cs => 
             fp.reduce( (plist, ss ) => {
-                    ss.subnet == cs.subnet ? plist : plist.push( { src: cs.node, dst: ss.node, port: sc.ports } );
+                    ss.subnet == cs.subnet ? plist : plist.push( 
+                        // flatMap by sc.ports
+                        // { src: cs.node, dst: ss.node, port: sc.ports }
+                        fp.map( port => { return { srcnode: cs.node, srchostname: nodes[cs.node].hostname,  dstnode: ss.node, dsthostname: nodes[ss.node].hostname, clientcomponent: clientComponent, servercomponent: sc.component, port: port }; } )(sc.ports)
+                    );
                     return plist;
                 }, firewallPortRequests )(serversubnets) 
         )(clientsubnets)
 
     })(servercomponents);
     
-
-
-
-   console.log(3)
 })(edge_int);
 
-console.log(firewallPortRequests);
 
-console.log(JSON.stringify(firewallPortRequests));
+// Generate CSV 
+//console.log(firewallPortRequests);
+
+var columns = [ "srcnode", "srchostname", "dstnode", "dsthostname", "clientcomponent", "servercomponent", "port" ];
+
+var firewallPortRequestsList = fp.flattenDeep(firewallPortRequests);
+
+var csv = [ fp.chain( firewallPortRequestsList[0] ).pick(columns).keys().value().join( ", ") ];
+
+fp.forEach( portRecord => 
+    csv.push( fp.chain( portRecord ).pick(columns).values().value().join( ", ") )
+)(firewallPortRequestsList);
+
+
+fs = require('fs');
+fs.writeFile('firewallportsrequest.csv', csv.join("\n"), function (err) {
+    if (err) 
+        return console.log(err);
+    console.log("File successfully written out");
+});
+
+
