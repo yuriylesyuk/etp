@@ -239,6 +239,7 @@
     "subnets": [
         {
             "name": "api-exposure",
+            "dmz": true,
             "nodes": [
                 1,
                 2,

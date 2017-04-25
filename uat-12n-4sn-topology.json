@@ -74,9 +74,9 @@
         {
             "node": 2,
             "components": [
+                "OL",
                 "ZK",
                 "CS",
-                "OL",
                 "TG"
             ]
         },
@@ -170,6 +170,7 @@
     "subnets": [
         {
             "name": "external",
+            "dmz": true,
             "nodes": [
                 1,
                 7,
