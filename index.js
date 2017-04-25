@@ -3,19 +3,23 @@
 var program = require("commander");
 
 program
-    .version("0.3.12")
+    .version(require('./package').version);
 
 program
     .command("generate <artifact> <topology> [<output>]").alias("g")
     .description('Generate artifact')
     .option("-i")
     .action(function(artifact, topology, output){
-        artifactType = artifact;
+        artifactType = artifact || "<notprovided>";
         topologyFile = topology;
         outputFile = output || 'con';
     });
+  program.on('*', function () {
+      console.log('Unknown Command: ' + program.args.join(' '));
+      program.help();
+    })
 
-var supportedArtifactTypes = ["diagram", "portrequest", "checkports" ];
+var supportedArtifactTypes = [ "diagram", "portrequest", "checkports" ];
 
 program.on('--help', function(){
   console.log(' Supported artifact:  ' + supportedArtifactTypes.join(", "));
@@ -23,10 +27,13 @@ program.on('--help', function(){
 });
 program.parse(process.argv);
 
-
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+    process.exit(1);
+}
 
 if( supportedArtifactTypes.indexOf( artifactType ) == -1 ){
-   console.error('The artifact is not supported.');
+   console.error(`The artifact '${artifactType}' is not supported.`);
    process.exit(1);
 }
 
