@@ -16,14 +16,25 @@ Examples of configurations can be seen in examples foler.
 npm install -g https://github.com/yuriylesyuk/etp/tarball/master
 
 
-2. Fetch an example file to your working folder
+2. Fetch an example topology to your working folder. 
+
+
+wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-19n-3sn-topology.json
+
+or
 
 wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-12n-4sn-topology.json
 
+3. Generate svg diagram for the topology
 
-etp generate portrequest ./uat-12n-4sn-topology.json ./portrequest.csv
+etp generate diagram $PWD/uat-19n-3sn-topology.json $PWD/svgdiagram.svg
+
+4. Open generated svg file in your browser.
 
 
-1. 
+5. Generate firewall ports request
 
-etp generate diagram ./examples/uat-12n-4sn-topology.json svgdiagram.svg
+etp generate portrequest $PWD/uat-19n-3sn-topology.json $PWD/portrequest.csv
+
+
+6. Open generated portrequest.cvs file in Excel.
