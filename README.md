@@ -3,11 +3,11 @@
 
 # ETP Edge Topology Processor
 
-Utility to generate different artifacts using Edge topology configuration.
+Utility to generate different artifacts using Edge topology configuration definition.
 
 A configuration is written using JSON format. 
 
-Examples of configurations can be seen in examples foler.
+Examples of configurations can be seen in the examples folder.
 
 ## Quick Start Guide
 
