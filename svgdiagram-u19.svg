@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+xmlns:svg="http://www.w3.org/2000/svg"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+height="600"
+width="600"
+xml:space="preserve"
+version="1.1"
+id="svg2">
+
+
+<symbol id="node">
+    <rect id="node2" x="1" y="1" width="27.6" height="156.6" style="fill:#ffffff;stroke:#bfbfbf"/>
+</symbol>
+
+<symbol id="struct">
+    <rect id="compcs2" x="1.5" y="1.5" width="23" height="16" rx="3" style="stroke-width:1.5"/>
+</symbol>
+
+<symbol id="ui">
+    <use href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >UI</text>
+</symbol>
+
+
+<symbol id="r">
+    <use href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >R</text>
+</symbol>
+
+<symbol id="mp">
+    <use href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MP</text>
+</symbol>
+
+<symbol id="cs">
+    <use href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >CS</text>
+</symbol>
+
+<symbol id="zk">
+    <use href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZK</text>
+</symbol>
+
+<symbol id="ol">
+    <use href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >OL</text>
+</symbol>
+
+<symbol id="bp">
+    <use href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >BP</text>
+</symbol>
+
+<symbol id="bs">
+    <use href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >BS</text>
+</symbol>
+
+<symbol id="nx">
+    <use href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >NX</text>
+</symbol>
+
+<symbol id="tc">
+    <use href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >TC</text>
+</symbol>
+
+<symbol id="es">
+    <use href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ES</text>
+</symbol>
+
+<symbol id="ps">
+    <use href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PS</text>
+</symbol>
+
+<symbol id="qis">
+    <use href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >QIS</text>
+</symbol>
+
+
+<symbol id="qd">
+    <use href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >QD</text>
+</symbol>
+
+<symbol id="pg">
+    <use href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PG</text>
+</symbol>
+
+
+<symbol id="dp">
+    <use href="#struct" style="fill:#c0504d;stroke:#c0504d;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >DP</text>
+</symbol>
+
+<symbol id="ht">
+    <use href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#c0504d;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >HT</text>
+</symbol>
+
+<symbol id="my">
+    <use href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#c0504d;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MY</text>
+</symbol>
+
+
+<symbol id="no">
+    <use href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >No</text>
+</symbol>
+
+
+<rect id="subnet1" x="200" y="0" width="133.4" height="180.6" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+<use id="node1" href="#node"  x="207" y="3"/>
+<use href="#r"  x="209" y="5"/>
+
+
+<use id="node2" href="#node"  x="237.6" y="3"/>
+<use href="#r"  x="239.6" y="5"/>
+
+
+<use id="node8" href="#node"  x="268.2" y="3"/>
+<use href="#dp"  x="270.2" y="5"/>
+<use href="#ht"  x="270.2" y="24"/>
+
+
+<use id="node9" href="#node"  x="298.8" y="3"/>
+<use href="#dp"  x="300.8" y="5"/>
+<use href="#ht"  x="300.8" y="24"/>
+
+
+<rect id="subnet1" x="0" y="200" width="255.8" height="180.6" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+<use id="node3" href="#node"  x="7" y="203"/>
+<use href="#mp"  x="9" y="205"/>
+<use href="#ui"  x="9" y="224"/>
+<use href="#ms"  x="9" y="243"/>
+
+
+<use id="node4" href="#node"  x="37.6" y="203"/>
+<use href="#mp"  x="39.6" y="205"/>
+
+
+<use id="node5" href="#node"  x="68.2" y="203"/>
+<use href="#mp"  x="70.2" y="205"/>
+
+
+<use id="node6" href="#node"  x="98.80000000000001" y="203"/>
+<use href="#mp"  x="100.80000000000001" y="205"/>
+
+
+<use id="node7" href="#node"  x="129.4" y="203"/>
+<use href="#mp"  x="131.4" y="205"/>
+
+
+<use id="node10" href="#node"  x="160" y="203"/>
+<use href="#bs"  x="162" y="205"/>
+<use href="#bp"  x="162" y="224"/>
+<use href="#nx"  x="162" y="243"/>
+<use href="#es"  x="162" y="262"/>
+
+
+<use id="node11" href="#node"  x="190.6" y="203"/>
+<use href="#bs"  x="192.6" y="205"/>
+<use href="#bp"  x="192.6" y="224"/>
+<use href="#nx"  x="192.6" y="243"/>
+<use href="#es"  x="192.6" y="262"/>
+
+
+<rect id="subnet1" x="270.8" y="200" width="255.8" height="180.6" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+<use id="node12" href="#node"  x="277.8" y="203"/>
+<use href="#ol"  x="279.8" y="205"/>
+<use href="#zk"  x="279.8" y="224"/>
+<use href="#cs"  x="279.8" y="243"/>
+
+
+<use id="node13" href="#node"  x="308.40000000000003" y="203"/>
+<use href="#ol"  x="310.40000000000003" y="205"/>
+<use href="#zk"  x="310.40000000000003" y="224"/>
+<use href="#cs"  x="310.40000000000003" y="243"/>
+
+
+<use id="node14" href="#node"  x="339" y="203"/>
+<use href="#zk"  x="341" y="205"/>
+<use href="#cs"  x="341" y="224"/>
+
+
+<use id="node15" href="#node"  x="369.6" y="203"/>
+<use href="#cs"  x="371.6" y="205"/>
+
+
+<use id="node16" href="#node"  x="400.20000000000005" y="203"/>
+<use href="#cs"  x="402.20000000000005" y="205"/>
+
+
+<use id="node17" href="#node"  x="430.8" y="203"/>
+<use href="#cs"  x="432.8" y="205"/>
+
+
+<use id="node18" href="#node"  x="461.4" y="203"/>
+<use href="#ps"  x="463.4" y="205"/>
+<use href="#qis"  x="463.4" y="224"/>
+<use href="#pg"  x="463.4" y="243"/>
+<use href="#qd"  x="463.4" y="262"/>
+<use href="#my"  x="463.4" y="281"/>
+
+
+<use id="node19" href="#node"  x="492" y="203"/>
+<use href="#ps"  x="494" y="205"/>
+<use href="#qis"  x="494" y="224"/>
+<use href="#pg"  x="494" y="243"/>
+<use href="#qd"  x="494" y="262"/>
+<use href="#my"  x="494" y="281"/>
+</svg>
