@@ -103,7 +103,7 @@ module.exports = function ( topologyFile, outputFile ){
                     };
 
     fs = require('fs');
-    fs.writeFile('firewallportstest.json', JSON.stringify(testport, null, 4), function (err) {
+    fs.writeFile('openapi-dev-ports.json', JSON.stringify(testport, null, 4), function (err) {
         if (err) 
             return console.log(err);
         console.log("File successfully written out");

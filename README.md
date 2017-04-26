@@ -70,7 +70,8 @@ The etp utility automatically generates check ports input configuration for all 
 
 You invoke it using following command line.
 
-TODO: right now the configuratio file is hard-coded as openapi-dev-ports.json in a playbook folder.
+TODO: right now the configuration file is hard-coded as openapi-dev-ports.json in a playbook folder, but it also is generated when running 'g portrequest' command under same name. So all it good, but to be changed later.
+
 ```shell
 ansible-playbook -i "localhost," checkports.yml
 ```
