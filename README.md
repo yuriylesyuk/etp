@@ -71,7 +71,7 @@ An example for a 12 node topologies is given below.
         { "node": 5, "components": [ "QIS", "BS", "BP", "TC", "QD", "TG", "IF", "GF" ] },
         { "node": 6, "components": [ "PS", ] },
         { "node": 7, "components": [ "R", "TG" ] },
-        { "node": 8, "components": [ "R", "TG"  },
+        { "node": 8, "components": [ "R", "TG" ] },
         { "node": 9, "components": [ "MP", "UI", "MS", "TG" ] },
         { "node": 10, "components": [ "MP", "TG" ] },
         { "node": 11, "components": [ "R", "MP", "TG" ] },
@@ -114,9 +114,9 @@ They use input configuration file in form:
 openapi-dev-ports.json:
 ```json
 { 
-    ports: [
-        { c: "10.119.3.233", s: "10.119.3.236", p: "9999"},
-        { c: "10.119.3.233", s: "10.119.3.236", p: "99"}
+    "ports": [
+        { "c": "10.119.3.233", "s": "10.119.3.236", "p": "9999"},
+        { "c": "10.119.3.233", "s": "10.119.3.236", "p": "99"}
     ]
 }
 ```
