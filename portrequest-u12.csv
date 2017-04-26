@@ -158,3 +158,12 @@ srcnode, srchostname, dstnode, dsthostname, clientcomponent, servercomponent, po
 6, nnnxxxyyy06, 4, nnnxxxyyy04, QIS, CS, 9042
 6, nnnxxxyyy06, 4, nnnxxxyyy04, QIS, CS, 9160
 5, nnnxxxyyy05, 6, nnnxxxyyy06, QIS, PG, 5432
+6, nnnxxxyyy06, 2, nnnxxxyyy02, PG, ZK, 2181
+6, nnnxxxyyy06, 3, nnnxxxyyy03, PG, ZK, 2181
+6, nnnxxxyyy06, 4, nnnxxxyyy04, PG, ZK, 2181
+6, nnnxxxyyy06, 2, nnnxxxyyy02, PG, CS, 9042
+6, nnnxxxyyy06, 2, nnnxxxyyy02, PG, CS, 9160
+6, nnnxxxyyy06, 3, nnnxxxyyy03, PG, CS, 9042
+6, nnnxxxyyy06, 3, nnnxxxyyy03, PG, CS, 9160
+6, nnnxxxyyy06, 4, nnnxxxyyy04, PG, CS, 9042
+6, nnnxxxyyy06, 4, nnnxxxyyy04, PG, CS, 9160

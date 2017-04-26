@@ -13,7 +13,7 @@ module.exports = function ( topologyFile, outputFile ){
     var edge_ext = [ "UICLNT", "MSCLNT", "MPTE", "LBHB", "SMTP", "JMX" ];
 
     // TODO: PGM, PGS, "OL", "ZK", "CS", , "PG"
-    var edge_int = [ "R", "MP", "MS", "UI", "QIS" ];
+    var edge_int = [ "R", "MP", "MS", "UI", "QIS", "PG", "ZK", "CS" ];
 
     var edge_mon = [ "TG", "IF", "GF" ];
 
