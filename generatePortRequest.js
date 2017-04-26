@@ -12,7 +12,7 @@ module.exports = function ( topologyFile, outputFile ){
     // Edge Ports: iterate over
     var edge_ext = [ "UICLNT", "MSCLNT", "MPTE", "LBHB", "SMTP", "JMX" ];
 
-    // TODO: PGM, PGS, "OL", "ZK", "CS", , "PG"
+    // TODO: PGM, PGS, "OL"
     var edge_int = [ "R", "MP", "MS", "UI", "QIS", "PG", "ZK", "CS" ];
 
     var edge_mon = [ "TG", "IF", "GF" ];
