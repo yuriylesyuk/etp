@@ -100,9 +100,9 @@ The 'g diagram' command will generate an svg file that depicts Edge's topology.
 
 Diagrams for example u12 and u19 topologies are:
 
-![alt u12](docs/svgdiagram-u12.png)
+<img src="docs/svgdiagram-u12.png" width="400">
 
-![alt u19](docs/svgdiagram-u19.png)
+<img src="docs/svgdiagram-u19.png" width="400">
 
 
 ## Check Ports functionality
