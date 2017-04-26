@@ -31,7 +31,7 @@ id="svg2">
 </symbol>
 
 <symbol id="ui">
-    <use href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -40,7 +40,7 @@ id="svg2">
 
 
 <symbol id="r">
-    <use href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -48,7 +48,7 @@ id="svg2">
 </symbol>
 
 <symbol id="mp">
-    <use href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -56,7 +56,7 @@ id="svg2">
 </symbol>
 
 <symbol id="cs">
-    <use href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -64,7 +64,7 @@ id="svg2">
 </symbol>
 
 <symbol id="zk">
-    <use href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -72,7 +72,7 @@ id="svg2">
 </symbol>
 
 <symbol id="ol">
-    <use href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -80,7 +80,7 @@ id="svg2">
 </symbol>
 
 <symbol id="bp">
-    <use href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
+    <use xlink:href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -88,7 +88,7 @@ id="svg2">
 </symbol>
 
 <symbol id="bs">
-    <use href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
+    <use xlink:href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -96,7 +96,7 @@ id="svg2">
 </symbol>
 
 <symbol id="nx">
-    <use href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -104,7 +104,7 @@ id="svg2">
 </symbol>
 
 <symbol id="tc">
-    <use href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -112,7 +112,7 @@ id="svg2">
 </symbol>
 
 <symbol id="es">
-    <use href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -120,7 +120,7 @@ id="svg2">
 </symbol>
 
 <symbol id="ps">
-    <use href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
+    <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -128,7 +128,7 @@ id="svg2">
 </symbol>
 
 <symbol id="qis">
-    <use href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
+    <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -137,7 +137,7 @@ id="svg2">
 
 
 <symbol id="qd">
-    <use href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -145,7 +145,7 @@ id="svg2">
 </symbol>
 
 <symbol id="pg">
-    <use href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -154,7 +154,7 @@ id="svg2">
 
 
 <symbol id="dp">
-    <use href="#struct" style="fill:#c0504d;stroke:#c0504d;"/>
+    <use xlink:href="#struct" style="fill:#c0504d;stroke:#c0504d;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -162,7 +162,7 @@ id="svg2">
 </symbol>
 
 <symbol id="ht">
-    <use href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#c0504d;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -170,7 +170,7 @@ id="svg2">
 </symbol>
 
 <symbol id="my">
-    <use href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#c0504d;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -179,7 +179,7 @@ id="svg2">
 
 
 <symbol id="no">
-    <use href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
         alignment-baseline="middle" text-anchor="middle"
@@ -197,14 +197,14 @@ id="svg2">
     var compSpacingV = 3;
     var compPadding = 2;
 
-    var compTemplate = fp.template('<use href="#<%= comp %>"  x="<%= x %>" y="<%= y %>"/>');
+    var compTemplate = fp.template('<use xlink:href="#<%= comp %>"  x="<%= x %>" y="<%= y %>"/>');
 
     var nodeWidth = 27.6;
     var nodeHeight = 16;        // *Calculated
     var nodeSpacingH = 3;
     var nodePadding = 2;
 
-    var nodeTemplate = fp.template('\n<use id="node<%= id%>" href="#node"  x="<%= x %>" y="<%= y %>"/>');
+    var nodeTemplate = fp.template('\n<use id="node<%= id%>" xlink:href="#node"  x="<%= x %>" y="<%= y %>"/>');
 
 
     //var subnetWidth = 15;
