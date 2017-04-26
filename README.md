@@ -40,6 +40,17 @@ etp generate portrequest $PWD/uat-19n-3sn-topology.json $PWD/portrequest.csv
 
 6. Open generated portrequest.cvs file in Excel.
 
+
+## Firewall Ports Request
+
+The etp generates a typical port request spreadsheet that you can use to submit to your Firewall/Security teams to create firewall rules. The generated file is in .csv format and can easily be opened in Excel or your preferred spreadsheet program.
+
+Example contents can be seen on the following screenshot.
+
+![alt port requests](docs/fwportrequest.png)
+
+
+
 ## Topology Diagram
 
 The 'g diagram' command will generate an svg file that depicts Edge's topology.
@@ -49,7 +60,7 @@ Diagrams for example u12 and u19 topologies are:
 ![alt u12](docs/svgdiagram-u12.png)
 
 ![alt u19](docs/svgdiagram-u19.png)
- 
+
 
 ## Check Ports functionality
 
