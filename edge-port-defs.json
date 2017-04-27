@@ -242,6 +242,19 @@
                     }
                 ]
             }
+        },
+        {
+            "client": {
+                "component": "OL",
+                "servers": [
+                    {
+                        "component": "OL",
+                        "ports": [
+                            10389
+                        ]
+                    }
+                ]
+            }
         }
     ]
 }
