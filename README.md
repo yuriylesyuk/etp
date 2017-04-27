@@ -100,7 +100,11 @@ The 'g diagram' command will generate an svg file that depicts Edge's topology.
 
 Diagrams for example u12 and u19 topologies are:
 
+u12:
+
 <img src="docs/svgdiagram-u12.png" width="400">
+
+u19:
 
 <img src="docs/svgdiagram-u19.png" width="400">
 

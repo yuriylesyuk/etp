@@ -21,11 +21,6 @@ xml:space="preserve"
 version="1.1"
 id="svg2">
 
-
-<symbol id="node">
-    <rect id="node2" x="1" y="1" width="27.6" height="156.6" style="fill:#ffffff;stroke:#bfbfbf"/>
-</symbol>
-
 <symbol id="struct">
     <rect id="compcs2" x="1.5" y="1.5" width="23" height="16" rx="3" style="stroke-width:1.5"/>
 </symbol>
@@ -152,6 +147,22 @@ id="svg2">
     >PG</text>
 </symbol>
 
+<symbol id="pgm">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PGm</text>
+</symbol>
+
+<symbol id="pgs">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PGs</text>
+</symbol>
+
 
 <symbol id="dp">
     <use xlink:href="#struct" style="fill:#c0504d;stroke:#c0504d;"/>
@@ -186,6 +197,30 @@ id="svg2">
     >No</text>
 </symbol>
 
+<symbol id="tg">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >TG</text>
+</symbol>
+
+<symbol id="if">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >IF</text>
+</symbol>
+
+<symbol id="gf">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >GF</text>
+</symbol>
+
 `;
 
     var svgFooter = '</svg>';
@@ -204,7 +239,7 @@ id="svg2">
     var nodeSpacingH = 3;
     var nodePadding = 2;
 
-    var nodeTemplate = fp.template('\n<use id="node<%= id%>" xlink:href="#node"  x="<%= x %>" y="<%= y %>"/>');
+    var nodeTemplate = fp.template('\n<rect id="node<%= id%>" x="<%= x %>" y="<%= y %>" width="27.6" height="<%= height %>" style="fill:#ffffff;stroke:#bfbfbf"/>');
 
 
     //var subnetWidth = 15;
@@ -213,7 +248,7 @@ id="svg2">
 
     var subnetSpacingH = 15;
 
-    var subnetTemplate = fp.template('\n<rect id="subnet<%= id %>" x="<%= x %>" y="<%= y %>" width="<%= w %>" height="180.6" style="fill:#f2f2f2;stroke:#bfbfbf"/>');
+    var subnetTemplate = fp.template('\n<rect id="subnet<%= id %>" x="<%= x %>" y="<%= y %>" width="<%= width %>" height="<%= height %>" style="fill:#f2f2f2;stroke:#bfbfbf"/>');
 
 
     var tpComponents = [ "OL", "ZK", "CS", "HT", "No", "QD", "PG", "MY"];
@@ -229,6 +264,11 @@ id="svg2">
 
 
 
+    var maxNodeComponents = fp.max(fp.map(i=>i.components.length)(topology.layout));
+
+    var nodeHeightTotal = nodeHeight*maxNodeComponents
+        + (maxNodeComponents-1)*nodeSpacingH
+        + nodePadding*2 + 6;
 
     // 
     // 
@@ -259,7 +299,7 @@ id="svg2">
             var subnetNodes = subnet.nodes.length
             var subnetWidth = subnetNodes* nodeWidth + (subnetNodes-1)*nodeSpacingH + subnetPaddingH*2;
 
-            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, w:  subnetWidth }) );
+            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, width:  subnetWidth, height: nodeHeightTotal+20  }) );
 
             var nodeX = 0;
             var nodeY = 0;
@@ -269,7 +309,7 @@ id="svg2">
                 (acc, i) => {
                     console.log(i.components); 
                     
-                        acc.push( nodeTemplate({ id: i.node, x: subnetX + subnetPaddingH + nodeX, y: subnetY + subnetPaddingV + nodeY }) );
+                        acc.push( nodeTemplate({ id: i.node, x: 1+subnetX + subnetPaddingH + nodeX, y: subnetY + subnetPaddingV + nodeY, height: nodeHeightTotal }) );
                     
                         var compX = compPadding;
                         var compY = compPadding;
@@ -301,11 +341,6 @@ id="svg2">
 
 
     // Generate nodes
-    var maxNodeComponets = fp.max(fp.map(i=>i.components.length)(topology.layout));
-
-    var nodeHeightTotal = nodeHeight*maxNodeComponets
-        + (maxNodeComponets-1)*nodeSpacingH
-        + nodePadding*2;
 
     // Generate components
 
