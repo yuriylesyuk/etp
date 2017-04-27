@@ -28,14 +28,14 @@ wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-12n-4
 
 3. Generate svg diagram for the topology.
 ```shell
-etp generate diagram $PWD/uat-19n-3sn-topology.json $PWD/svgdiagram.svg
+etp generate diagram $PWD/uat-19n-3sn-topology.json $PWD/svgdiagram-uat-19n.svg
 ```
 4. Open generated svg file in your browser.
 
 
 5. Generate firewall ports request
 ```shell
-etp generate portrequest $PWD/uat-19n-3sn-topology.json $PWD/portrequest.csv
+etp generate portrequest $PWD/uat-19n-3sn-topology.json $PWD/portrequest-uat19n.csv
 ```
 
 6. Open generated portrequest.cvs file in Excel.
