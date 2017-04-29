@@ -246,7 +246,11 @@ id="svg2">
     var nodeSpacingH = 3;
     var nodePadding = 2;
 
-    var nodeTemplate = fp.template('\n<rect id="node<%= id%>" x="<%= x %>" y="<%= y %>" width="27.6" height="<%= height %>" style="fill:#ffffff;stroke:#bfbfbf"/>');
+    var nodeTemplate = fp.template(`\n
+    <rect id="node<%= id %>" x="<%= x %>" y="<%= y %>" width="27.6" height="<%= height %>" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext<%= id %>" x="<%= textx() %>" y="<%= texty() %>" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle"><%= text() %></text>
+    `);
 
 
     //var subnetWidth = 15;
@@ -321,9 +325,17 @@ id="svg2">
 
             fp(topology.layout).keyBy('node').at(subnet.nodes).filter().reduce(
                 (acc, i) => {
-                    console.log(i.components); 
+                        // console.log(i.components); 
                     
-                        acc.push( nodeTemplate({ id: i.node, x: 1+subnetX + subnetPaddingH + nodeX, y: subnetY + subnetPaddingV + nodeY, height: nodeHeightTotal }) );
+                        acc.push( nodeTemplate({ 
+                            id: i.node, 
+                            x: 1+subnetX + subnetPaddingH + nodeX, 
+                            y: subnetY + subnetPaddingV + nodeY, 
+                            height: nodeHeightTotal,
+                            textx: function(){ return this.x + nodeWidth/2 }, 
+                            texty: function(){ return this.y + this.height + 8 },
+                            text: function() { return "Node " + this.id }
+                         }) );
                     
                         function genComps(comps, compX, compY, compInc){
 
