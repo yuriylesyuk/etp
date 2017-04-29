@@ -21,6 +21,13 @@ id="svg2">
     >UI</text>
 </symbol>
 
+<symbol id="ms">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MS</text>
+</symbol>
 
 <symbol id="r">
     <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
@@ -214,18 +221,21 @@ id="svg2">
 
 <rect id="node1" x="208" y="3" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#dp"  x="209" y="5"/>
-<use xlink:href="#no"  x="209" y="24"/>
-<use xlink:href="#ht"  x="209" y="43"/>
+
+<use xlink:href="#ht"  x="209" y="141"/>
+<use xlink:href="#no"  x="209" y="122"/>
 
 
 <rect id="node7" x="238.6" y="3" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#r"  x="239.6" y="5"/>
-<use xlink:href="#tg"  x="239.6" y="24"/>
+
+<use xlink:href="#tg"  x="239.6" y="141"/>
 
 
 <rect id="node8" x="269.2" y="3" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#r"  x="270.2" y="5"/>
-<use xlink:href="#tg"  x="270.2" y="24"/>
+
+<use xlink:href="#tg"  x="270.2" y="141"/>
 
 
 <rect id="subnet1" x="0" y="200" width="164" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
@@ -234,56 +244,64 @@ id="svg2">
 <use xlink:href="#mp"  x="9" y="205"/>
 <use xlink:href="#ui"  x="9" y="224"/>
 <use xlink:href="#ms"  x="9" y="243"/>
-<use xlink:href="#tg"  x="9" y="262"/>
+
+<use xlink:href="#tg"  x="9" y="341"/>
 
 
 <rect id="node10" x="38.6" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#mp"  x="39.6" y="205"/>
-<use xlink:href="#tg"  x="39.6" y="224"/>
+
+<use xlink:href="#tg"  x="39.6" y="341"/>
 
 
 <rect id="node11" x="69.2" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#r"  x="70.2" y="205"/>
 <use xlink:href="#mp"  x="70.2" y="224"/>
-<use xlink:href="#tg"  x="70.2" y="243"/>
+
+<use xlink:href="#tg"  x="70.2" y="341"/>
 
 
 <rect id="node12" x="99.80000000000001" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#r"  x="100.80000000000001" y="205"/>
 <use xlink:href="#mp"  x="100.80000000000001" y="224"/>
-<use xlink:href="#tg"  x="100.80000000000001" y="243"/>
+
+<use xlink:href="#tg"  x="100.80000000000001" y="341"/>
 
 
 <rect id="node5" x="130.4" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-<use xlink:href="#qis"  x="131.4" y="205"/>
-<use xlink:href="#bs"  x="131.4" y="224"/>
-<use xlink:href="#bp"  x="131.4" y="243"/>
-<use xlink:href="#tc"  x="131.4" y="262"/>
-<use xlink:href="#qd"  x="131.4" y="281"/>
-<use xlink:href="#tg"  x="131.4" y="300"/>
-<use xlink:href="#if"  x="131.4" y="319"/>
-<use xlink:href="#gf"  x="131.4" y="338"/>
+<use xlink:href="#bs"  x="131.4" y="205"/>
+<use xlink:href="#bp"  x="131.4" y="224"/>
+<use xlink:href="#qis"  x="131.4" y="243"/>
+
+<use xlink:href="#tg"  x="131.4" y="341"/>
+<use xlink:href="#if"  x="131.4" y="322"/>
+<use xlink:href="#gf"  x="131.4" y="303"/>
+<use xlink:href="#qd"  x="131.4" y="284"/>
+<use xlink:href="#tc"  x="131.4" y="265"/>
 
 
 <rect id="subnet1" x="179" y="200" width="102.80000000000001" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
 
 <rect id="node2" x="187" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-<use xlink:href="#ol"  x="188" y="205"/>
-<use xlink:href="#zk"  x="188" y="224"/>
-<use xlink:href="#cs"  x="188" y="243"/>
-<use xlink:href="#tg"  x="188" y="262"/>
+
+<use xlink:href="#tg"  x="188" y="341"/>
+<use xlink:href="#zk"  x="188" y="322"/>
+<use xlink:href="#cs"  x="188" y="303"/>
+<use xlink:href="#ol"  x="188" y="284"/>
 
 
 <rect id="node3" x="217.6" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-<use xlink:href="#zk"  x="218.6" y="205"/>
-<use xlink:href="#cs"  x="218.6" y="224"/>
-<use xlink:href="#tg"  x="218.6" y="243"/>
+
+<use xlink:href="#tg"  x="218.6" y="341"/>
+<use xlink:href="#zk"  x="218.6" y="322"/>
+<use xlink:href="#cs"  x="218.6" y="303"/>
 
 
 <rect id="node4" x="248.2" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-<use xlink:href="#zk"  x="249.2" y="205"/>
-<use xlink:href="#cs"  x="249.2" y="224"/>
-<use xlink:href="#tg"  x="249.2" y="243"/>
+
+<use xlink:href="#tg"  x="249.2" y="341"/>
+<use xlink:href="#zk"  x="249.2" y="322"/>
+<use xlink:href="#cs"  x="249.2" y="303"/>
 
 
 <rect id="subnet1" x="296.8" y="200" width="41.6" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
@@ -291,8 +309,9 @@ id="svg2">
 <rect id="node6" x="304.8" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
 <use xlink:href="#ps"  x="305.8" y="205"/>
 <use xlink:href="#qis"  x="305.8" y="224"/>
-<use xlink:href="#qd"  x="305.8" y="243"/>
-<use xlink:href="#pg"  x="305.8" y="262"/>
-<use xlink:href="#my"  x="305.8" y="281"/>
-<use xlink:href="#tg"  x="305.8" y="300"/>
+
+<use xlink:href="#tg"  x="305.8" y="341"/>
+<use xlink:href="#my"  x="305.8" y="322"/>
+<use xlink:href="#pg"  x="305.8" y="303"/>
+<use xlink:href="#qd"  x="305.8" y="284"/>
 </svg>

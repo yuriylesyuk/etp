@@ -75,38 +75,38 @@
             "node": 2,
             "components": [
                 "OL",
-                "ZK",
                 "CS",
+                "ZK",
                 "TG"
             ]
         },
         {
             "node": 3,
             "components": [
-                "ZK",
                 "CS",
+                "ZK",
                 "TG"
             ]
         },
         {
             "node": 4,
             "components": [
-                "ZK",
                 "CS",
+                "ZK",
                 "TG"
             ]
         },
         {
             "node": 5,
             "components": [
-                "QIS",
                 "BS",
                 "BP",
+                "QIS",
                 "TC",
                 "QD",
-                "TG",
+                "GF",
                 "IF",
-                "GF"
+                "TG"
             ]
         },
         {

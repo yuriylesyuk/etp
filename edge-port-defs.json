@@ -3,6 +3,7 @@
         {
             "client": {
                 "component": "R",
+                "apigee": true,
                 "servers": [
                     {
                         "component": "MP",
@@ -50,24 +51,27 @@
         {
             "client": {
                 "component": "MS",
+                "apigee": true,
                 "servers": [
                     {
                         "component": "MP",
                         "ports": [
-                            4528
+                            4528,
+                            8082
                         ]
                     },
                     {
                         "component": "QIS",
                         "ports": [
-                            4529
+                            4529,
+                            8083
                         ]
                     },
                     {
-                        "component": "PG",
+                        "component": "PS",
                         "ports": [
                             4530,
-                            5432
+                            8084
                         ]
                     },
                     {
@@ -86,7 +90,8 @@
                     {
                         "component": "R",
                         "ports": [
-                            4527
+                            4527,
+                            8081
                         ]
                     },
                     {
@@ -101,6 +106,7 @@
         {
             "client": {
                 "component": "MP",
+                "apigee": true,
                 "servers": [
                     {
                         "component": "MS",
@@ -139,6 +145,7 @@
         {
             "client": {
                 "component": "UI",
+                "apigee": true,
                 "servers": [
                     {
                         "component": "MS",
@@ -152,6 +159,7 @@
         {
             "client": {
                 "component": "QIS",
+                "apigee": true,
                 "servers": [
                     {
                         "component": "MS",
@@ -177,6 +185,38 @@
                         "ports": [
                             5432
                         ]
+                    },
+                    {
+                        "component": "PGm",
+                        "ports": [
+                            5432
+                        ]
+                    },
+                    {
+                        "component": "PGs",
+                        "ports": [
+                            5432
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "PS",
+                "apigee": true,
+                "servers": [
+                    {
+                        "component": "ZK",
+                        "ports": [
+                            2181
+                        ]
+                    },
+                    {
+                        "component": "PG",
+                        "ports": [
+                            5432
+                        ]
                     }
                 ]
             }
@@ -184,6 +224,7 @@
         {
             "client": {
                 "component": "PG",
+                "apigee": false,
                 "servers": [
                     {
                         "component": "ZK",
@@ -204,11 +245,11 @@
         {
             "client": {
                 "component": "PGm",
+                "apigee": false,
                 "servers": [
                     {
                         "component": "PGs",
                         "ports": [
-                            5432,
                             22
                         ]
                     },
@@ -231,11 +272,11 @@
         {
             "client": {
                 "component": "PGs",
+                "apigee": false,
                 "servers": [
                     {
                         "component": "PGm",
                         "ports": [
-                            5432,
                             22
                         ]
                     },
@@ -258,6 +299,7 @@
         {
             "client": {
                 "component": "ZK",
+                "apigee": false,
                 "servers": [
                     {
                         "component": "ZK",
@@ -272,6 +314,7 @@
         {
             "client": {
                 "component": "CS",
+                "apigee": false,
                 "servers": [
                     {
                         "component": "ZK",
@@ -292,12 +335,62 @@
         },
         {
             "client": {
+                "component": "DP",
+                "apigee": true,
+                "servers": [
+                    {
+                        "component": "R",
+                        "ports": [
+                            59002
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
                 "component": "OL",
+                "apigee": false,
                 "servers": [
                     {
                         "component": "OL",
                         "ports": [
                             10389
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "BP",
+                "apigee": true,
+                "servers": [
+                    {
+                        "component": "BS",
+                        "ports": [
+                            8080
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "BS",
+                "apigee": true,
+                "servers": [
+                    {
+                        "component": "BS",
+                        "ports": [
+                            2551
+                        ]
+                    },
+                    {
+                        "component": "CS",
+                        "ports": [
+                            9042,
+                            9160
                         ]
                     }
                 ]

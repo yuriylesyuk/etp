@@ -33,6 +33,13 @@ id="svg2">
     >UI</text>
 </symbol>
 
+<symbol id="ms">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MS</text>
+</symbol>
 
 <symbol id="r">
     <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
@@ -284,6 +291,13 @@ id="svg2">
 
     subnetX = 200; // TODO: Center the subnet(s)
 
+    // make lookup table for component:isnative check
+    var components = fp(portDefs.edge).reduce( (comps, comp) => {
+        comps[comp.client.component] = comp.client.apigee;
+        return comps;
+    }, {});
+
+// TODO: loop by tiers
     genSubnet( fp.filter({"dmz": true})(topology.subnets) );
 
     subnetX = 0;
@@ -311,23 +325,24 @@ id="svg2">
                     
                         acc.push( nodeTemplate({ id: i.node, x: 1+subnetX + subnetPaddingH + nodeX, y: subnetY + subnetPaddingV + nodeY, height: nodeHeightTotal }) );
                     
-                        var compX = compPadding;
-                        var compY = compPadding;
-                        
-                        var comps = fp.reduce(
-                            (acc, c) => {
-                                console.log("comp:" +c);
-                                
+                        function genComps(comps, compX, compY, compInc){
 
-                                acc.push( compTemplate({comp: c.toLowerCase(), x: subnetX + subnetPaddingH + nodeX + compX, y: subnetY + subnetPaddingV + compY }) );
-                                compY += compHeight + compSpacingV;
+                            var comps = fp(comps).reduce(
+                                (acc, c) => {
+                                    acc.push( compTemplate({comp: c.toLowerCase(), x: subnetX + subnetPaddingH + nodeX + compX, y: subnetY + subnetPaddingV + compY }) );
+                                    compY += compInc();
 
-                                return acc;
-                            }, nodesSvg
-                        )(i.components);                
-                        
-                        acc.push( comps );
+                                    return acc;
+                                }, nodesSvg
+                            );      
 
+                            return comps;          
+                        };
+
+                        acc.push( genComps( fp(i.components).filter(comp=>components[comp]), compPadding, compPadding, compY => compHeight + compSpacingV ) );
+
+                        acc.push( genComps( fp(i.components).filter(comp=>!components[comp]).reverse(), compPadding, nodeHeightTotal - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
+                       
                         nodeX += nodeWidth + nodeSpacingH;
                         return acc;
                     }, nodesSvg );
