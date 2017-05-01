@@ -204,6 +204,30 @@ id="svg2">
     >No</text>
 </symbol>
 
+<symbol id="git">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >GIT</text>
+</symbol>
+
+<symbol id="jnk">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >Jnk</text>
+</symbol>
+
+<symbol id="mvn">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >Mvn</text>
+</symbol>
+
 <symbol id="tg">
     <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -261,74 +285,117 @@ id="svg2">
 
     var subnetTemplate = fp.template('\n<rect id="subnet<%= id %>" x="<%= x %>" y="<%= y %>" width="<%= width %>" height="<%= height %>" style="fill:#f2f2f2;stroke:#bfbfbf"/>');
 
+    var tierHeader = 20;
+    var tierSpacingV = 10;
+    var tierHeaderTemplate = fp.template(`
+        <line x1="<%= x1 %>" y1="<%= y1 %>" x2="<%= x2 %>" y2="<%= y2 %>" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="<%= x %>" y="<%= y %>" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end"><%= name %></text>
+    `);
 
     var tpComponents = [ "OL", "ZK", "CS", "HT", "No", "QD", "PG", "MY"];
 
     // Calculate Layout Geometry
+    var nodesSvg = [];    // svg shapes accumulator
 
-    // Generate subnets
-    var subnetsTotal = topology.subnets.length;
-    var subnetsInDMZ = fp.countBy("dmz")(topology.subnets).true;
-
-
-    var nodesSvg = [];
-
-
-
-    var maxNodeComponents = fp.max(fp.map(i=>i.components.length)(topology.layout));
+    var maxNodeComponents = fp.max( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets).map( node => node.components.length ) );
 
     var nodeHeightTotal = nodeHeight*maxNodeComponents
         + (maxNodeComponents-1)*nodeSpacingH
         + nodePadding*2 + 6;
 
+    var subnetHeight = nodeHeightTotal+20;   // 20 -- node name + paddings
+
+    // var tierHeight = tierHeader + subnetHeight;  // 40 -- tier divider and name + subnet name + paddings
+
     // 
     // 
-    // upper row: iterate by dmz
 
-
-    // lower row: iterate by non-dmz
-
-
-    var subnetX = 0;
-    var subnetY = 0;
-
-
-    subnetX = 200; // TODO: Center the subnet(s)
-
-    // make lookup table for component:isnative check
-    var components = fp(portDefs.edge).reduce( (comps, comp) => {
+    // make lookup table for component:isApigee check
+    var isApigee = fp(portDefs.edge).reduce( (comps, comp) => {
         comps[comp.client.component] = comp.client.apigee;
         return comps;
     }, {});
 
-// TODO: loop by tiers
-    genSubnet( fp.filter({"dmz": true})(topology.subnets) );
+    // Iterate collection of subnets by tier -- vertical layout
 
-    subnetX = 0;
-    subnetY += 200;
-    genSubnet( fp.reject({"dmz": true})(topology.subnets) );
+    // Pass I: calculate Maximum Tier Width Array
+    var tierWidthsPairs = fp.map( tier => {
+
+       var tierWidth = fp.map(
+            subnet => 
+                getSubnetWidth( subnet )
+            )(
+            fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+        ).reduce( (max, width) => max += width === 0 ? width : subnetSpacingH + width, 0 );
+
+        return { tier: tier.name, width: tierWidth }
+
+    })(topology.regions[0].tiers);
+
+    var tierWidths = fp(tierWidthsPairs).reduce( (tierWidths, tierWidth) => {
+        tierWidths[tierWidth.tier] = tierWidth.width;
+        return tierWidths;
+    }, {} );
+    var maxTierWidth = fp(tierWidthsPairs).reduce( 
+        (maxtiersize, tiersize) => { 
+            return maxtiersize > tiersize.width? maxtiersize: tiersize.width 
+        }, 0
+    )
+
+    // Pass II: generate tier layout
+
+    var subnetX = 0;
+    var subnetY = 0;
+
+    fp.map( tier => {
+
+        nodesSvg.push( tierHeaderTemplate({ 
+            x1: 0, y1: subnetY, x2: maxTierWidth, y2: subnetY,
+            x: maxTierWidth, y: subnetY+8, 
+            name: tier.name.toUpperCase(),  
+        }) );
+
+        subnetX = (maxTierWidth - tierWidths[ tier.name ])/2;    // Center this tier subnets
+        subnetY += tierHeader
+
+        fp.map(
+            subnet => {
+                //console.log(subnet);              
+
+                drawSubnet( subnet )
+
+                subnetX += getSubnetWidth( subnet ) + subnetSpacingH;
 
 
-    function genSubnet(subnets){
-        fp.map( subnet => {
+            })(
+            fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+        )
+        subnetY += subnetHeight + tierSpacingV;
 
-            console.log(subnet);
+    })(topology.regions[0].tiers)
 
-            var subnetNodes = subnet.nodes.length
-            var subnetWidth = subnetNodes* nodeWidth + (subnetNodes-1)*nodeSpacingH + subnetPaddingH*2;
 
-            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, width:  subnetWidth, height: nodeHeightTotal+20  }) );
+    function getSubnetWidth( subnet ){
+        return subnet.nodes.length* nodeWidth + (subnet.nodes.length-1)*nodeSpacingH + subnetPaddingH*2;
+    }
+
+
+    function drawSubnet( subnet ){
+
+            var subnetWidth = getSubnetWidth( subnet );
+
+            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, width:  subnetWidth, height: subnetHeight  }) );
 
             var nodeX = 0;
             var nodeY = 0;
 
-
-            fp(topology.layout).keyBy('node').at(subnet.nodes).filter().reduce(
-                (acc, i) => {
+            // Generate nodes
+            fp.reduce(
+                (acc, node) => {
                         // console.log(i.components); 
                     
                         acc.push( nodeTemplate({ 
-                            id: i.node, 
+                            id: node.id, 
                             x: 1+subnetX + subnetPaddingH + nodeX, 
                             y: subnetY + subnetPaddingV + nodeY, 
                             height: nodeHeightTotal,
@@ -337,7 +404,7 @@ id="svg2">
                             text: function() { return "Node " + this.id }
                          }) );
                     
-                        function genComps(comps, compX, compY, compInc){
+                        function drawComponents(comps, compX, compY, compInc){
 
                             var comps = fp(comps).reduce(
                                 (acc, c) => {
@@ -351,31 +418,20 @@ id="svg2">
                             return comps;          
                         };
 
-                        acc.push( genComps( fp(i.components).filter(comp=>components[comp]), compPadding, compPadding, compY => compHeight + compSpacingV ) );
+                        // Generate components: Apigee
+                        acc.push( drawComponents( fp(node.components).filter(comp=>isApigee[comp]), compPadding, compPadding, compY => compHeight + compSpacingV ) );
 
-                        acc.push( genComps( fp(i.components).filter(comp=>!components[comp]).reverse(), compPadding, nodeHeightTotal - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
+                        // Generate components: 3rd Parties
+                        acc.push( drawComponents( fp(node.components).filter(comp=>!isApigee[comp]).reverse(), compPadding, nodeHeightTotal - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
                        
                         nodeX += nodeWidth + nodeSpacingH;
                         return acc;
-                    }, nodesSvg );
-
-            subnetX += subnetWidth + subnetSpacingH;
-
-        })(subnets);
+                    }, nodesSvg 
+                )(subnet.nodes);
     }
 
 
-
-
-    // Generate nodes
-
-    // Generate components
-
-
-
-
-
-
+    //---------------------------------
     // console.log(svgHeader);
     // console.log(nodesSvg.join("\n"));
     // console.log(svgFooter);

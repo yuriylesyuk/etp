@@ -1,7 +1,7 @@
 {
-  "name": "genfwports",
-  "version": "0.3.12",
-  "description": "",
+  "name": "etp",
+  "version": "0.5.34",
+  "description": "etp -- edge topology processor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

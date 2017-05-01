@@ -49,25 +49,32 @@ module.exports = function ( topologyFile, outputFile ){
     //    {"components": server }
 
 
-
-    var nodes = fp.keyBy( "id" )( topology.nodes );
+    // nodes reference collection for hostname, ip lookups
+    var nodes = fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets) );
 
 
 
     var firewallPortRequests = [];
 
     // top-level map by client.component
-    var firewallPortRequest = fp.map( clientComponent =>{
-        var clientnodes = fp.filter( n => fp(n.components).includes( clientComponent ) )(topology.layout).map(n=>n.node);
-        var clientsubnets = fp.flatMap( n => fp.filter( s => fp(s.nodes).includes(n))(topology.subnets).map(s=>{ return { node: n, subnet: s.name }; }) )(clientnodes);
+    var firewallPortRequest = fp.map( clientComponent => {
+
+        var clientsubnets = fp.flatMap( subnet => 
+                                fp.filter( 
+                                    node => fp(node.components).includes(clientComponent) 
+                                )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
+                            )(topology.regions[0].subnets);
 
         // next-level map by server.component
         var servercomponents = fp.filter( 'component' )((fp.filter(['client.component', clientComponent])(portDefs.edge))[0].client.servers)
         
         fp.map( sc =>{
-            var servernodes = fp.filter( n => fp(n.components).includes( sc.component ) )(topology.layout).map(n=>n.node);
-            var serversubnets = fp.flatMap( n => fp.filter( s => fp(s.nodes).includes(n))(topology.subnets).map(s=>{ return { node: n, subnet: s.name }; }) )(servernodes);
-            
+            var serversubnets = fp.flatMap( subnet => 
+                                    fp.filter( 
+                                        node => fp(node.components).includes(sc.component) 
+                                    )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
+                                )(topology.regions[0].subnets);
+                
             // console.log(servernodes)
 
 

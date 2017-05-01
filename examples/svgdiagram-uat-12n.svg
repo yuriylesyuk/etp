@@ -192,6 +192,30 @@ id="svg2">
     >No</text>
 </symbol>
 
+<symbol id="git">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >GIT</text>
+</symbol>
+
+<symbol id="jnk">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >Jnk</text>
+</symbol>
+
+<symbol id="mvn">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >Mvn</text>
+</symbol>
+
 <symbol id="tg">
     <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -217,149 +241,157 @@ id="svg2">
 </symbol>
 
 
-<rect id="subnet1" x="200" y="0" width="102.80000000000001" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+        <line x1="0" y1="0" x2="353.40000000000003" y2="0" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="353.40000000000003" y="8" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DMZ</text>
+    
+
+<rect id="subnet1" x="117.80000000000001" y="20" width="102.80000000000001" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
 
 
-    <rect id="node1" x="208" y="3" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext1" x="221.8" y="170" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node1" x="125.80000000000001" y="23" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext1" x="139.60000000000002" y="190" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 1</text>
     
-<use xlink:href="#dp"  x="209" y="5"/>
+<use xlink:href="#dp"  x="126.80000000000001" y="25"/>
 
-<use xlink:href="#ht"  x="209" y="141"/>
-<use xlink:href="#no"  x="209" y="122"/>
+<use xlink:href="#ht"  x="126.80000000000001" y="161"/>
+<use xlink:href="#no"  x="126.80000000000001" y="142"/>
 
 
 
-    <rect id="node7" x="238.6" y="3" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext7" x="252.4" y="170" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node7" x="156.4" y="23" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext7" x="170.20000000000002" y="190" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 7</text>
     
-<use xlink:href="#r"  x="239.6" y="5"/>
+<use xlink:href="#r"  x="157.4" y="25"/>
 
-<use xlink:href="#tg"  x="239.6" y="141"/>
+<use xlink:href="#tg"  x="157.4" y="161"/>
 
 
 
-    <rect id="node8" x="269.2" y="3" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext8" x="283" y="170" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node8" x="187" y="23" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext8" x="200.8" y="190" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 8</text>
     
-<use xlink:href="#r"  x="270.2" y="5"/>
+<use xlink:href="#r"  x="188" y="25"/>
 
-<use xlink:href="#tg"  x="270.2" y="141"/>
-
-
-<rect id="subnet1" x="0" y="200" width="164" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+<use xlink:href="#tg"  x="188" y="161"/>
 
 
-    <rect id="node9" x="8" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext9" x="21.8" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        <line x1="0" y1="209" x2="353.40000000000003" y2="209" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="353.40000000000003" y="217" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
+    
+
+<rect id="subnet1" x="0" y="229" width="164" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+
+    <rect id="node9" x="8" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext9" x="21.8" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 9</text>
     
-<use xlink:href="#mp"  x="9" y="205"/>
-<use xlink:href="#ui"  x="9" y="224"/>
-<use xlink:href="#ms"  x="9" y="243"/>
+<use xlink:href="#mp"  x="9" y="234"/>
+<use xlink:href="#ui"  x="9" y="253"/>
+<use xlink:href="#ms"  x="9" y="272"/>
 
-<use xlink:href="#tg"  x="9" y="341"/>
+<use xlink:href="#tg"  x="9" y="370"/>
 
 
 
-    <rect id="node10" x="38.6" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext10" x="52.400000000000006" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node10" x="38.6" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext10" x="52.400000000000006" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 10</text>
     
-<use xlink:href="#mp"  x="39.6" y="205"/>
+<use xlink:href="#mp"  x="39.6" y="234"/>
 
-<use xlink:href="#tg"  x="39.6" y="341"/>
+<use xlink:href="#tg"  x="39.6" y="370"/>
 
 
 
-    <rect id="node11" x="69.2" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext11" x="83" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node11" x="69.2" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext11" x="83" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 11</text>
     
-<use xlink:href="#r"  x="70.2" y="205"/>
-<use xlink:href="#mp"  x="70.2" y="224"/>
+<use xlink:href="#r"  x="70.2" y="234"/>
+<use xlink:href="#mp"  x="70.2" y="253"/>
 
-<use xlink:href="#tg"  x="70.2" y="341"/>
+<use xlink:href="#tg"  x="70.2" y="370"/>
 
 
 
-    <rect id="node12" x="99.80000000000001" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext12" x="113.60000000000001" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node12" x="99.80000000000001" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext12" x="113.60000000000001" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 12</text>
     
-<use xlink:href="#r"  x="100.80000000000001" y="205"/>
-<use xlink:href="#mp"  x="100.80000000000001" y="224"/>
+<use xlink:href="#r"  x="100.80000000000001" y="234"/>
+<use xlink:href="#mp"  x="100.80000000000001" y="253"/>
 
-<use xlink:href="#tg"  x="100.80000000000001" y="341"/>
+<use xlink:href="#tg"  x="100.80000000000001" y="370"/>
 
 
 
-    <rect id="node5" x="130.4" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext5" x="144.20000000000002" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node5" x="130.4" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext5" x="144.20000000000002" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 5</text>
     
-<use xlink:href="#bs"  x="131.4" y="205"/>
-<use xlink:href="#bp"  x="131.4" y="224"/>
-<use xlink:href="#qis"  x="131.4" y="243"/>
+<use xlink:href="#bs"  x="131.4" y="234"/>
+<use xlink:href="#bp"  x="131.4" y="253"/>
+<use xlink:href="#qis"  x="131.4" y="272"/>
 
-<use xlink:href="#tg"  x="131.4" y="341"/>
-<use xlink:href="#if"  x="131.4" y="322"/>
-<use xlink:href="#gf"  x="131.4" y="303"/>
-<use xlink:href="#qd"  x="131.4" y="284"/>
-<use xlink:href="#tc"  x="131.4" y="265"/>
-
-
-<rect id="subnet1" x="179" y="200" width="102.80000000000001" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+<use xlink:href="#tg"  x="131.4" y="370"/>
+<use xlink:href="#if"  x="131.4" y="351"/>
+<use xlink:href="#gf"  x="131.4" y="332"/>
+<use xlink:href="#qd"  x="131.4" y="313"/>
+<use xlink:href="#tc"  x="131.4" y="294"/>
 
 
-    <rect id="node2" x="187" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext2" x="200.8" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+<rect id="subnet1" x="179" y="229" width="102.80000000000001" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+
+    <rect id="node2" x="187" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext2" x="200.8" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 2</text>
     
 
-<use xlink:href="#tg"  x="188" y="341"/>
-<use xlink:href="#zk"  x="188" y="322"/>
-<use xlink:href="#cs"  x="188" y="303"/>
-<use xlink:href="#ol"  x="188" y="284"/>
+<use xlink:href="#tg"  x="188" y="370"/>
+<use xlink:href="#zk"  x="188" y="351"/>
+<use xlink:href="#cs"  x="188" y="332"/>
+<use xlink:href="#ol"  x="188" y="313"/>
 
 
 
-    <rect id="node3" x="217.6" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext3" x="231.4" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node3" x="217.6" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext3" x="231.4" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 
-<use xlink:href="#tg"  x="218.6" y="341"/>
-<use xlink:href="#zk"  x="218.6" y="322"/>
-<use xlink:href="#cs"  x="218.6" y="303"/>
+<use xlink:href="#tg"  x="218.6" y="370"/>
+<use xlink:href="#zk"  x="218.6" y="351"/>
+<use xlink:href="#cs"  x="218.6" y="332"/>
 
 
 
-    <rect id="node4" x="248.2" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext4" x="262" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node4" x="248.2" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext4" x="262" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 4</text>
     
 
-<use xlink:href="#tg"  x="249.2" y="341"/>
-<use xlink:href="#zk"  x="249.2" y="322"/>
-<use xlink:href="#cs"  x="249.2" y="303"/>
+<use xlink:href="#tg"  x="249.2" y="370"/>
+<use xlink:href="#zk"  x="249.2" y="351"/>
+<use xlink:href="#cs"  x="249.2" y="332"/>
 
 
-<rect id="subnet1" x="296.8" y="200" width="41.6" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+<rect id="subnet1" x="296.8" y="229" width="41.6" height="179" style="fill:#f2f2f2;stroke:#bfbfbf"/>
 
 
-    <rect id="node6" x="304.8" y="203" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext6" x="318.6" y="370" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node6" x="304.8" y="232" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext6" x="318.6" y="399" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
-<use xlink:href="#ps"  x="305.8" y="205"/>
-<use xlink:href="#qis"  x="305.8" y="224"/>
+<use xlink:href="#ps"  x="305.8" y="234"/>
+<use xlink:href="#qis"  x="305.8" y="253"/>
 
-<use xlink:href="#tg"  x="305.8" y="341"/>
-<use xlink:href="#my"  x="305.8" y="322"/>
-<use xlink:href="#pg"  x="305.8" y="303"/>
-<use xlink:href="#qd"  x="305.8" y="284"/>
+<use xlink:href="#tg"  x="305.8" y="370"/>
+<use xlink:href="#my"  x="305.8" y="351"/>
+<use xlink:href="#pg"  x="305.8" y="332"/>
+<use xlink:href="#qd"  x="305.8" y="313"/>
 </svg>

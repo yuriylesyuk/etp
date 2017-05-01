@@ -124,8 +124,9 @@ srcnode, srchostname, dstnode, dsthostname, clientcomponent, servercomponent, po
 12, nnnxxxyyy12, 4, nnnxxxyyy04, MP, CS, 9042
 12, nnnxxxyyy12, 4, nnnxxxyyy04, MP, CS, 9160
 9, nnnxxxyyy09, 6, nnnxxxyyy06, MS, QIS, 4529
-9, nnnxxxyyy09, 6, nnnxxxyyy06, MS, PG, 4530
-9, nnnxxxyyy09, 6, nnnxxxyyy06, MS, PG, 5432
+9, nnnxxxyyy09, 6, nnnxxxyyy06, MS, QIS, 8083
+9, nnnxxxyyy09, 6, nnnxxxyyy06, MS, PS, 4530
+9, nnnxxxyyy09, 6, nnnxxxyyy06, MS, PS, 8084
 9, nnnxxxyyy09, 2, nnnxxxyyy02, MS, ZK, 2181
 9, nnnxxxyyy09, 3, nnnxxxyyy03, MS, ZK, 2181
 9, nnnxxxyyy09, 4, nnnxxxyyy04, MS, ZK, 2181
@@ -136,7 +137,9 @@ srcnode, srchostname, dstnode, dsthostname, clientcomponent, servercomponent, po
 9, nnnxxxyyy09, 4, nnnxxxyyy04, MS, CS, 9042
 9, nnnxxxyyy09, 4, nnnxxxyyy04, MS, CS, 9160
 9, nnnxxxyyy09, 7, nnnxxxyyy07, MS, R, 4527
+9, nnnxxxyyy09, 7, nnnxxxyyy07, MS, R, 8081
 9, nnnxxxyyy09, 8, nnnxxxyyy08, MS, R, 4527
+9, nnnxxxyyy09, 8, nnnxxxyyy08, MS, R, 8081
 9, nnnxxxyyy09, 2, nnnxxxyyy02, MS, OL, 10389
 6, nnnxxxyyy06, 9, nnnxxxyyy09, QIS, MS, 8080
 5, nnnxxxyyy05, 2, nnnxxxyyy02, QIS, ZK, 2181

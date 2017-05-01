@@ -19,23 +19,23 @@ npm install -g https://github.com/yuriylesyuk/etp/tarball/master
 2. Fetch an example topology to your working folder. 
 
 ```shell
-wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-19n-3sn-topology.json
+wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-12n-4sn-topology.json
 ```
 or
 ```shell
-wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-12n-4sn-topology.json
+wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/prod-19n-5sn-topology.json
 ```
 
 3. Generate svg diagram for the topology.
 ```shell
-etp generate diagram $PWD/uat-19n-3sn-topology.json $PWD/svgdiagram-uat-19n.svg
+etp generate diagram $PWD/uat-12n-4sn-topology.json $PWD/svgdiagram-uat-12n.svg
 ```
 4. Open generated svg file in your browser.
 
 
 5. Generate firewall ports request
 ```shell
-etp generate portrequest $PWD/uat-19n-3sn-topology.json $PWD/portrequest-uat19n.csv
+etp generate portrequest $PWD/uat-12n-4sn-topology.json $PWD/portrequest-uat-12n.csv
 ```
 
 6. Open generated portrequest.cvs file in Excel.
@@ -49,39 +49,168 @@ An example for a 12 node topologies is given below.
 ```json
 {
     "planet": "UAT",
-    "nodes": [
-        { "id": 1, "hostname": "nnnxxxyyy01", "ip": "10.119.3.201" },
-        { "id": 2, "hostname": "nnnxxxyyy02", "ip": "10.119.3.202" },
-        { "id": 3, "hostname": "nnnxxxyyy03", "ip": "10.119.3.203" },
-        { "id": 4, "hostname": "nnnxxxyyy04", "ip": "10.119.3.204" },
-        { "id": 5, "hostname": "nnnxxxyyy05", "ip": "10.119.3.205" },
-        { "id": 6, "hostname": "nnnxxxyyy06", "ip": "10.119.3.206" },
-        { "id": 7, "hostname": "nnnxxxyyy07", "ip": "10.119.3.207" },
-        { "id": 8, "hostname": "nnnxxxyyy08", "ip": "10.119.3.208" },
-        { "id": 9, "hostname": "nnnxxxyyy09", "ip": "10.119.3.209" },
-        { "id": 10, "hostname": "nnnxxxyyy10", "ip": "10.119.3.210" },
-        { "id": 11, "hostname": "nnnxxxyyy11", "ip": "10.119.3.211" },
-        { "id": 12, "hostname": "nnnxxxyyy12", "ip": "10.119.3.212" }
-    ],
-    "layout": [
-        { "node": 1, "components": [ "DP", "NO", "HT" ] },
-        { "node": 2, "components": [ "OL", "ZK", "CS", "TG" ] },
-        { "node": 3, "components": [ "ZK", "CS", "TG" ] },
-        { "node": 4, "components": [ "ZK", "CS", "TG" ] },
-        { "node": 5, "components": [ "QIS", "BS", "BP", "TC", "QD", "TG", "IF", "GF" ] },
-        { "node": 6, "components": [ "PS", ] },
-        { "node": 7, "components": [ "R", "TG" ] },
-        { "node": 8, "components": [ "R", "TG" ] },
-        { "node": 9, "components": [ "MP", "UI", "MS", "TG" ] },
-        { "node": 10, "components": [ "MP", "TG" ] },
-        { "node": 11, "components": [ "R", "MP", "TG" ] },
-        { "node": 12, "components": [ "R", "MP", "TG" ] }
-    ],
-    "subnets": [
-        { "name": "external", "dmz": true, "nodes": [ 1, 7, 8 ] },
-        { "name": "gateway & baas", "nodes": [ 9, 10, 11, 12, 5 ] },
-        { "name": "data storage", "nodes": [ 2, 3, 4 ] },
-        { "name": "analytics", "nodes": [ 6 ] }
+    "regions": [
+        {
+            "id": "1",
+            "name": "dc-1",
+            "subnets": [
+                {
+                    "name": "external",
+                    "tier": "dmz",
+                    "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "nnnxxxyyy01",
+                            "ip": "10.119.3.201",
+                            "components": [
+                                    "DP",
+                                    "NO",
+                                    "HT"
+                                ]
+                        },
+                        {
+                            "id": 7,
+                            "hostname": "nnnxxxyyy07",
+                            "ip": "10.119.3.207",
+                            "components": [
+                                "R",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 8,
+                            "hostname": "nnnxxxyyy08",
+                            "ip": "10.119.3.208",
+                            "components": [
+                                "R",
+                                "TG"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "gateway-baas",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 9,
+                            "hostname": "nnnxxxyyy09",
+                            "ip": "10.119.3.209",
+                            "components": [
+                                "MP",
+                                "UI",
+                                "MS",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 10,
+                            "hostname": "nnnxxxyyy10",
+                            "ip": "10.119.3.210",
+                            "components": [
+                                "MP",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 11,
+                            "hostname": "nnnxxxyyy11",
+                            "ip": "10.119.3.211",
+                            "components": [
+                                "R",
+                                "MP",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "hostname": "nnnxxxyyy12",
+                            "ip": "10.119.3.212",
+                            "components": [
+                                "R",
+                                "MP",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "hostname": "nnnxxxyyy05",
+                            "ip": "10.119.3.205",
+                            "components": [
+                                "BS",
+                                "BP",
+                                "QIS",
+                                "TC",
+                                "QD",
+                                "GF",
+                                "IF",
+                                "TG"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "data-storage",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 2,
+                            "hostname": "nnnxxxyyy02",
+                            "ip": "10.119.3.202",
+                            "components": [
+                                "OL",
+                                "CS",
+                                "ZK",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "hostname": "nnnxxxyyy03",
+                            "ip": "10.119.3.203",
+                            "components": [
+                                "CS",
+                                "ZK",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "hostname": "nnnxxxyyy04",
+                            "ip": "10.119.3.204",
+                            "components": [
+                                "CS",
+                                "ZK",
+                                "TG"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "analytics",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 6,
+                            "hostname": "nnnxxxyyy06",
+                            "ip": "10.119.3.206",
+                            "components": [
+                                "PS",
+                                "QIS",
+                                "QD",
+                                "PG",
+                                "MY",
+                                "TG"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tiers": [
+                { "name": "dmz" },
+                { "name": "core" }
+            ]
+        }
     ]
 }
 ```
@@ -100,13 +229,13 @@ The 'g diagram' command will generate an svg file that depicts Edge's topology.
 
 Diagrams for example u12 and u19 topologies are:
 
-u12:
+uat-12n:
 
-<img src="docs/svgdiagram-u12.png" width="400">
+<img src="docs/svgdiagram-uat-12n.png" width="400">
 
-u19:
+prod-19n:
 
-<img src="docs/svgdiagram-u19.png" width="400">
+<img src="docs/svgdiagram-prod-19n.png" width="400">
 
 
 ## Check Ports functionality
