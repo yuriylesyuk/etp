@@ -9,8 +9,15 @@ module.exports = function ( topologyFile, outputFile ){
     var topology = require( topologyFile );
 
 
-    // Edge Ports: iterate over
-    var edge_ext = [ "UICLNT", "MSCLNT", "MPTE", "LBHB", "SMTP", "JMX" ];
+    // Edge External Clients: Incoming
+    var edge_ext_inc = [ "UICLNT", "MSCLNT", "VHOST", "HBCLNT", "SMTP", "JMX", "IFCLNT", "GFCLNT" ];
+
+    // Edge External Clients: Outgoing
+    var edge_ext_outg = [ "TE", "SMTP" ];
+
+    // TODO: in topology, "externalclients" section contant client component ID with "source" property override 
+    //       that supposed to be overlayed as an easy implementation
+
 
     // TODO: PGM, PGS, "OL"
     var edge_int = [ "R", "MP", "MS", "UI", "QIS", "PG", "ZK", "CS" ];
@@ -50,49 +57,59 @@ module.exports = function ( topologyFile, outputFile ){
 
 
     // nodes reference collection for hostname, ip lookups
+    // overlay nodes
     var nodes = fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets) );
 
-
+    fp.forEach( 
+        o => nodes[o.id] = o )( fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  
+    )( portDefs.externalclientspseudosubnets ) ) );
 
     var firewallPortRequests = [];
 
+    // overlay subnets [TODO: what else?]
+    var subnets = [];
+    subnets = subnets.concat( topology.regions[0].subnets );
+    subnets = subnets.concat( portDefs.externalclientspseudosubnets);
+
     // top-level map by client.component
-    var firewallPortRequest = fp.map( clientComponent => {
+    var firewallPortRequest = fp.map(category =>
+        fp.map( clientComponent => {
 
-        var clientsubnets = fp.flatMap( subnet => 
-                                fp.filter( 
-                                    node => fp(node.components).includes(clientComponent) 
-                                )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
-                            )(topology.regions[0].subnets);
-
-        // next-level map by server.component
-        var servercomponents = fp.filter( 'component' )((fp.filter(['client.component', clientComponent])(portDefs.edge))[0].client.servers)
-        
-        fp.map( sc =>{
-            var serversubnets = fp.flatMap( subnet => 
+            var clientsubnets = fp.flatMap( subnet => 
                                     fp.filter( 
-                                        node => fp(node.components).includes(sc.component) 
+                                        node => fp(node.components).includes(clientComponent) 
                                     )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
-                                )(topology.regions[0].subnets);
-                
-            // console.log(servernodes)
+                                )(subnets);
+
+            // next-level map by server.component
+            var servercomponents = fp.filter( 'component' )((fp.filter(['client.component', clientComponent])(portDefs.edge))[0].client.servers)
+            
+            fp.map( sc =>{
+                var serversubnets = fp.flatMap( subnet => 
+                                        fp.filter( 
+                                            node => fp(node.components).includes(sc.component) 
+                                        )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
+                                    )(subnets);
+                    
+                // console.log(servernodes)
 
 
-            // bottom-level reduce by subnet analysis
-            var n = fp.flatMap( cs => 
-                fp.reduce( (plist, ss ) => {
-                        ss.subnet == cs.subnet ? plist : plist.push( 
-                            // flatMap by sc.ports
-                            // { src: cs.node, dst: ss.node, port: sc.ports }
-                            fp.map( port => { return { srcnode: cs.node, srchostname: nodes[cs.node].hostname,  srcip: nodes[cs.node].ip, dstnode: ss.node, dsthostname: nodes[ss.node].hostname, dstip: nodes[ss.node].ip, clientcomponent: clientComponent, servercomponent: sc.component, port: port }; } )(sc.ports)
-                        );
-                        return plist;
-                    }, firewallPortRequests )(serversubnets) 
-            )(clientsubnets)
+                // bottom-level reduce by subnet analysis
+                var n = fp.flatMap( cs => 
+                    fp.reduce( (plist, ss ) => {
+                            ss.subnet == cs.subnet ? plist : plist.push( 
+                                // flatMap by sc.ports
+                                // { src: cs.node, dst: ss.node, port: sc.ports }
+                                fp.map( port => { return { category: category.name, srcnode: cs.node, srchostname: nodes[cs.node].hostname,  srcip: nodes[cs.node].ip, dstnode: ss.node, dsthostname: nodes[ss.node].hostname, dstip: nodes[ss.node].ip, clientcomponent: clientComponent, servercomponent: sc.component, port: port }; } )(sc.ports)
+                            );
+                            return plist;
+                        }, firewallPortRequests )(serversubnets) 
+                )(clientsubnets)
 
-        })(servercomponents);
-        
-    })(edge_int);
+            })(servercomponents);
+            
+        })(category.clients)
+    )(portDefs.categories);
 
     var firewallPortRequestsList = fp.flattenDeep(firewallPortRequests);
 
@@ -124,7 +141,7 @@ module.exports = function ( topologyFile, outputFile ){
     // Generate CSV 
     //console.log(firewallPortRequests);
 
-    var columns = [ "srcnode", "srchostname", "dstnode", "dsthostname", "clientcomponent", "servercomponent", "port" ];
+    var columns = [ "category", "srcnode", "srchostname", "srcip", "dstnode", "dsthostname", "dstip", "clientcomponent", "servercomponent", "port" ];
 
 
     var csv = [ fp.chain( firewallPortRequestsList[0] ).pick(columns).keys().value().join( ", ") ];

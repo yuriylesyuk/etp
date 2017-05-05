@@ -1,0 +1,166 @@
+{
+    "planet": "UAT",
+    "regions": [
+        {
+            "id": "1",
+            "name": "dc-1",
+            "subnets": [
+                {
+                    "name": "analytics",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "LVMOPAPIQD2U",
+                            "ip": "10.119.131.11",
+                            "components": [
+                                "PS",
+                                "QIS",
+                                "QD",
+                                "PG",
+                                "MY",
+                                "TG"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "data-storage",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 2,
+                            "hostname": "LVMOPAPICS1U",
+                            "ip": "10.119.132.11",
+                            "components": [
+                                "OL",
+                                "CS",
+                                "ZK",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "hostname": "LVMOPAPICS2U",
+                            "ip": "10.119.132.12",
+                            "components": [
+                                "CS",
+                                "ZK",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "hostname": "LVMOPAPICS3U",
+                            "ip": "10.119.132.13",
+                            "components": [
+                                "CS",
+                                "ZK",
+                                "TG"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "gateway-baas",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 9,
+                            "hostname": "LVMOPAPIQD1U",
+                            "ip": "10.119.133.15",
+                            "components": [
+                                "UI",
+                                "MS",
+                                "BS",
+                                "BP",
+                                "QIS",
+                                "TC",
+                                "QD",
+                                "GF",
+                                "IF",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "hostname": "LVMOPAPIRMP1U",
+                            "ip": "10.119.133.13",
+                            "components": [
+                                "R",
+                                "MP",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 8,
+                            "hostname": "LVMOPAPIRMP2U",
+                            "ip": "10.119.133.14",
+                            "components": [
+                                "R",
+                                "MP",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "hostname": "LVMOPAPIMP1U",
+                            "ip": "10.119.133.11",
+                            "components": [
+                                "MP",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "hostname": "LVMOPAPIMP2U",
+                            "ip": "10.119.133.12",
+                            "components": [
+                                "MP",
+                                "TG"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "external",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 10,
+                            "hostname": "LVMOPAPIDPU",
+                            "ip": "10.119.134.11",
+                            "components": [
+                                    "DP",
+                                    "NO",
+                                    "HT"
+                                ]
+                        },
+                        {
+                            "id": 11,
+                            "hostname": "LVMOPAPIR1U",
+                            "ip": "10.119.134.12",
+                            "components": [
+                                "R",
+                                "TG"
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "hostname": "LVMOPAPIR2U",
+                            "ip": "10.119.134.13",
+                            "components": [
+                                "R",
+                                "TG"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tiers": [
+                { "name": "dmz" },
+                { "name": "core" }
+            ]
+        }
+    ]
+}

@@ -167,6 +167,12 @@
                 { "name": "api-gateway" },
                 { "name": "db" }
             ],
+            "externalclients": [
+                {
+                    "name": "UICLNT",
+                    "source": "0.0.0.0/0"
+                }
+            ],
             "loadbalancers": [
                 {
                     "name": "dmz-r-ha",

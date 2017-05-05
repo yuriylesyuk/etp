@@ -1,4 +1,51 @@
 {
+    "categories": [
+        {
+            "name": "incoming",
+            "clients": [
+                "UICLNT", 
+                "MSCLNT", 
+                "VHOST",
+                "HBCLNT", 
+                "JMX",
+                "IFCLNT", 
+                "GFCLNT" 
+            ]
+        },
+        {
+            "name": "outgoing",
+            "clients": [
+                "SMTP",
+                "TE"
+            ]
+        },
+        {
+            "name": "internal",
+            "clients": [
+                "R", 
+                "MP", 
+                "MS", 
+                "UI", 
+                "QIS", 
+                "PS",
+                "PG", 
+                "ZK", 
+                "CS",
+                "BS",
+                "BP",
+                "DP"
+            ]
+        },
+        {
+            "name": "monitoring",
+            "clients": [
+                "TG", 
+                "IF", 
+                "GF"
+            ]
+        }
+
+    ],
     "edge": [
         {
             "client": {
@@ -8,41 +55,41 @@
                     {
                         "component": "MP",
                         "ports": [
-                            4528,
-                            8998,
-                            8082,
-                            4527
+                            "4528",
+                            "8998",
+                            "8082",
+                            "4527"
                         ]
                     },
                     {
                         "component": "MS",
                         "ports": [
-                            8080
+                            "8080"
                         ]
                     },
                     {
                         "component": "QIS",
                         "ports": [
-                            5672
+                            "5672"
                         ]
                     },
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
                         ]
                     },
                     {
                         "component": "R",
                         "ports": [
-                            4527
+                            "4527"
                         ]
                     }
                 ]
@@ -54,50 +101,56 @@
                 "apigee": true,
                 "servers": [
                     {
+                        "component": "MS",
+                        "ports": [
+                            "4526"
+                        ]
+                    },
+                    {
                         "component": "MP",
                         "ports": [
-                            4528,
-                            8082
+                            "4528",
+                            "8082"
                         ]
                     },
                     {
                         "component": "QIS",
                         "ports": [
-                            4529,
-                            8083
+                            "4529",
+                            "8083"
                         ]
                     },
                     {
                         "component": "PS",
                         "ports": [
-                            4530,
-                            8084
+                            "4530",
+                            "8084"
                         ]
                     },
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
                         ]
                     },
                     {
                         "component": "R",
                         "ports": [
-                            4527,
-                            8081
+                            "4527",
+                            "8081"
                         ]
                     },
                     {
                         "component": "OL",
                         "ports": [
-                            10389
+                            "10389"
                         ]
                     }
                 ]
@@ -111,32 +164,37 @@
                     {
                         "component": "MS",
                         "ports": [
-                            8080
+                            "8080"
                         ]
                     },
                     {
                         "component": "MP",
                         "ports": [
-                            4528
+                            "4528"
                         ]
                     },
                     {
                         "component": "QIS",
                         "ports": [
-                            4529
+                            "5672"
                         ]
                     },
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
+                        ]
+                    },
+                    {
+                        "component": "TE",
+                        "ports": [
                         ]
                     }
                 ]
@@ -150,7 +208,13 @@
                     {
                         "component": "MS",
                         "ports": [
-                            8080
+                            "8080"
+                        ]
+                    },
+                    {
+                        "component": "SMTP",
+                        "ports": [
+                            "25"
                         ]
                     }
                 ]
@@ -164,38 +228,38 @@
                     {
                         "component": "MS",
                         "ports": [
-                            8080
+                            "8080"
                         ]
                     },
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
                         ]
                     },
                     {
                         "component": "PG",
                         "ports": [
-                            5432
+                            "5432"
                         ]
                     },
                     {
                         "component": "PGm",
                         "ports": [
-                            5432
+                            "5432"
                         ]
                     },
                     {
                         "component": "PGs",
                         "ports": [
-                            5432
+                            "5432"
                         ]
                     }
                 ]
@@ -209,13 +273,13 @@
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "PG",
                         "ports": [
-                            5432
+                            "5432"
                         ]
                     }
                 ]
@@ -226,19 +290,6 @@
                 "component": "PG",
                 "apigee": false,
                 "servers": [
-                    {
-                        "component": "ZK",
-                        "ports": [
-                            2181
-                        ]
-                    },
-                    {
-                        "component": "CS",
-                        "ports": [
-                            9042,
-                            9160
-                        ]
-                    }
                 ]
             }
         },
@@ -250,20 +301,20 @@
                     {
                         "component": "PGs",
                         "ports": [
-                            22
+                            "22"
                         ]
                     },
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
                         ]
                     }
                 ]
@@ -277,20 +328,20 @@
                     {
                         "component": "PGm",
                         "ports": [
-                            22
+                            "22"
                         ]
                     },
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
                         ]
                     }
                 ]
@@ -304,8 +355,8 @@
                     {
                         "component": "ZK",
                         "ports": [
-                            2888,
-                            3888
+                            "2888",
+                            "3888"
                         ]
                     }
                 ]
@@ -319,15 +370,15 @@
                     {
                         "component": "ZK",
                         "ports": [
-                            2181
+                            "2181"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            7000,
-                            9042,
-                            9160
+                            "7000",
+                            "9042",
+                            "9160"
                         ]
                     }
                 ]
@@ -341,7 +392,13 @@
                     {
                         "component": "R",
                         "ports": [
-                            59002
+                            "59002"
+                        ]
+                    },
+                    {
+                        "component": "SMTP",
+                        "ports": [
+                            "25"
                         ]
                     }
                 ]
@@ -355,7 +412,7 @@
                     {
                         "component": "OL",
                         "ports": [
-                            10389
+                            "10389"
                         ]
                     }
                 ]
@@ -369,7 +426,7 @@
                     {
                         "component": "BS",
                         "ports": [
-                            8080
+                            "8080"
                         ]
                     }
                 ]
@@ -383,18 +440,274 @@
                     {
                         "component": "BS",
                         "ports": [
-                            2551
+                            "2551"
                         ]
                     },
                     {
                         "component": "CS",
                         "ports": [
-                            9042,
-                            9160
+                            "9042",
+                            "9160"
+                        ]
+                    },
+                    {
+                        "component": "ES",
+                        "ports": [
+                            "9200-9400"
+                        ]
+                    },
+                    {
+                        "component": "SMTP",
+                        "ports": [
+                            "25"
+                        ]
+                    }
+
+                ]
+            }
+        },
+
+
+        {
+            "client": {
+                "component": "TG",
+                "apigee": false,
+                "servers": [
+                    {
+                        "component": "IF",
+                        "ports": [
+                            "8086"
                         ]
                     }
                 ]
             }
+        },
+        {
+            "client": {
+                "component": "GF",
+                "apigee": false,
+                "servers": [
+                    {
+                        "component": "IF",
+                        "ports": [
+                            "8086"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "IF",
+                "source": "0.0.0.0/0",
+                "servers": [
+                ]
+            }
+        },
+
+
+        {
+            "client": {
+                "component": "UICLNT",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "UI",
+                        "ports": [
+                            "9000",
+                            "9443"
+                        ]
+                    },
+                    {
+                        "component": "BS",
+                        "ports": [
+                            "9000",
+                            "9443"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "MSCLNT",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "UI",
+                        "ports": [
+                            "8080",
+                            "8443"
+                        ]
+                    },
+                    {
+                        "component": "BS",
+                        "ports": [
+                            "8080",
+                            "8443"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "VHOST",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "R",
+                        "ports": [
+                            "9000-9200"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "HBCLNT",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "R",
+                        "ports": [
+                            "15999"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "JMX",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "MS",
+                        "ports": [
+                            "1099"
+                        ]
+                    },
+                    {
+                        "component": "MP",
+                        "ports": [
+                            "1101"
+                        ]
+                    },
+                    {
+                        "component": "QIS",
+                        "ports": [
+                            "1102"
+                        ]
+                    },
+                    {
+                        "component": "PS",
+                        "ports": [
+                            "1103"
+                        ]
+                    },
+                    {
+                        "component": "CS",
+                        "ports": [
+                            "7199"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "IFCLNT",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "IF",
+                        "ports": [
+                            "8183"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "GFCLNT",
+                "source": "0.0.0.0/0",
+                "servers": [
+                    {
+                        "component": "GF",
+                        "ports": [
+                            "3000"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "client": {
+                "component": "SMTP",
+                "source": "0.0.0.0/0",
+                "servers": [
+                ]
+            }
+        },
+        {
+            "client": {
+                "component": "TE",
+                "source": "0.0.0.0/0",
+                "servers": [
+                ]
+            }
+        }
+    ], 
+    "ports": [
+        {
+            "id": "8080",
+            "type": "http",
+            "description": "Management API Calls"
+        },
+        {
+            "id": "59002",
+            "type": "http",
+            "description": "SmartDocs"
+        }
+    ],
+    "externalclientspseudosubnets": [
+        {
+            "name": "clients",
+            "nodes": [
+                {
+                    "id": -1,
+                    "hostname": "client",
+                    "ip": "0.0.0.0/0",
+                    "components": [
+                        "UICLNT", 
+                        "MSCLNT", 
+                        "VHOST",
+                        "HBCLNT", 
+                        "JMX",
+                        "IFCLNT", 
+                        "GFCLNT"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "servers",
+            "nodes": [
+                {
+                    "id": -2,
+                    "hostname": "server",
+                    "ip": "0.0.0.0/0",
+                    "components": [
+                        "SMTP",
+                        "TE" 
+                    ]
+                }
+            ]
         }
     ]
 }

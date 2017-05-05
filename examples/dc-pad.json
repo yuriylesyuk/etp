@@ -1,0 +1,110 @@
+{
+    "planet": "UAT",
+    "regions" : [
+        {
+            "id" : "dc-1",
+            "subnets": [
+                {
+                    "name": "external",
+                    "tier" : "dmz",
+                    "nodes": [
+                                {
+                                    "id": 1,
+                                    "hostname": "nnnxxxyyy01",
+                                    "ip": "10.119.3.201",
+                                    "components": [
+                                        "DP", "NO", "HT" 
+                                    ] 
+                                },
+                                {
+                                    "id": 2,
+                                    "hostname": "nnnxxxyyy02",
+                                    "ip": "10.119.3.202"
+                                },
+                                {
+                                    "id": 3,
+                                    "hostname": "nnnxxxyyy03",
+                                    "ip": "10.119.3.203"
+                                }
+                    ]
+                },
+                {
+
+                }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "dmz-r-ha",
+                    "nodes": [ 1, 2 ]
+                },
+                {
+                    "name": "dmz-dp-ha",
+                    "nodes": [ 8, 9 ]
+                },
+
+            ]
+        },
+        {   
+            "id": "dc-2",
+            "nodeoverrides" [
+
+            ]
+
+            "subnets": [
+                {
+                    "name": "external",
+                    "dmz" : true,
+                    "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "dc2xxxyyy01",
+                            "ip": "10.219.3.201",
+                            "components": { 
+                                "ref": "#/regions/dc-1/nodes/1",
+                                "override": [ "-PGm", "+PGs" ]
+                            }
+                }
+            
+
+            ]
+        }
+
+            "nodes": [
+                {
+                    "id": 1,
+                    "hostname": "nnnxxxyyy01",
+                    "ip": "10.119.3.201"
+                    "componentsRef" : "#/regions/dc-1/nodes/1"
+                },
+                {
+                    "id": 2,
+                    "hostname": "nnnxxxyyy02",
+                    "ip": "10.119.3.202"
+                },
+                {
+                    "id": 3,
+                    "hostname": "nnnxxxyyy03",
+                    "ip": "10.119.3.203"
+                }
+            ]
+        },
+        {
+            "name" : "dc-2",
+            "nodes" : [
+                {
+                    "id": 1,
+                    "hostname": "nnnxxxyyy01",
+                    "ip": "10.119.3.201"
+                },
+                {
+                    "id": 2,
+                    "hostname": "nnnxxxyyy02",
+                    "ip": "10.119.3.202"
+                },
+                {
+                    "id": 3,
+                    "hostname": "nnnxxxyyy03",
+                    "ip": "10.119.3.203"
+                }
+            ]
+        }

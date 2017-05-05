@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+xmlns:svg="http://www.w3.org/2000/svg"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+height="600"
+width="600"
+xml:space="preserve"
+version="1.1"
+id="svg2">
+
+<symbol id="struct">
+    <rect id="compcs2" x="1.5" y="1.5" width="23" height="16" rx="3" style="stroke-width:1.5"/>
+</symbol>
+
+<symbol id="ui">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >UI</text>
+</symbol>
+
+<symbol id="ms">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MS</text>
+</symbol>
+
+<symbol id="r">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >R</text>
+</symbol>
+
+<symbol id="mp">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MP</text>
+</symbol>
+
+<symbol id="cs">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >CS</text>
+</symbol>
+
+<symbol id="zk">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZK</text>
+</symbol>
+
+<symbol id="ol">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >OL</text>
+</symbol>
+
+<symbol id="bp">
+    <use xlink:href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >BP</text>
+</symbol>
+
+<symbol id="bs">
+    <use xlink:href="#struct" style="fill:#d3990a;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >BS</text>
+</symbol>
+
+<symbol id="nx">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >NX</text>
+</symbol>
+
+<symbol id="tc">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >TC</text>
+</symbol>
+
+<symbol id="es">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#d3990a;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#8bb148;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ES</text>
+</symbol>
+
+<symbol id="ps">
+    <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PS</text>
+</symbol>
+
+<symbol id="qis">
+    <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >QIS</text>
+</symbol>
+
+
+<symbol id="qd">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >QD</text>
+</symbol>
+
+<symbol id="pg">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PG</text>
+</symbol>
+
+<symbol id="pgm">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PGm</text>
+</symbol>
+
+<symbol id="pgs">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >PGs</text>
+</symbol>
+
+
+<symbol id="dp">
+    <use xlink:href="#struct" style="fill:#c0504d;stroke:#c0504d;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >DP</text>
+</symbol>
+
+<symbol id="ht">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#c0504d;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >HT</text>
+</symbol>
+
+<symbol id="my">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#c0504d;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#c0504d;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MY</text>
+</symbol>
+
+
+<symbol id="no">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >No</text>
+</symbol>
+
+<symbol id="git">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >GIT</text>
+</symbol>
+
+<symbol id="jnk">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >Jnk</text>
+</symbol>
+
+<symbol id="mvn">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >Mvn</text>
+</symbol>
+
+<symbol id="tg">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >TG</text>
+</symbol>
+
+<symbol id="if">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >IF</text>
+</symbol>
+
+<symbol id="gf">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >GF</text>
+</symbol>
+
+
+        <line x1="0" y1="0" x2="471.2" y2="0" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="471.2" y="8" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DMZ</text>
+    
+
+        <line x1="0" y1="247" x2="471.2" y2="247" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="471.2" y="255" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
+    
+
+<rect id="subnet1" x="0" y="267" width="41.6" height="217" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+
+    <rect id="node1" x="8" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext1" x="21.8" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 1</text>
+    
+<use xlink:href="#ps"  x="9" y="272"/>
+<use xlink:href="#qis"  x="9" y="291"/>
+
+<use xlink:href="#tg"  x="9" y="446"/>
+<use xlink:href="#my"  x="9" y="427"/>
+<use xlink:href="#pg"  x="9" y="408"/>
+<use xlink:href="#qd"  x="9" y="389"/>
+
+
+<rect id="subnet1" x="56.6" y="267" width="102.80000000000001" height="217" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+
+    <rect id="node2" x="64.6" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext2" x="78.39999999999999" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 2</text>
+    
+
+<use xlink:href="#tg"  x="65.6" y="446"/>
+<use xlink:href="#zk"  x="65.6" y="427"/>
+<use xlink:href="#cs"  x="65.6" y="408"/>
+<use xlink:href="#ol"  x="65.6" y="389"/>
+
+
+
+    <rect id="node3" x="95.19999999999999" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext3" x="108.99999999999999" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 3</text>
+    
+
+<use xlink:href="#tg"  x="96.2" y="446"/>
+<use xlink:href="#zk"  x="96.2" y="427"/>
+<use xlink:href="#cs"  x="96.2" y="408"/>
+
+
+
+    <rect id="node4" x="125.8" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext4" x="139.6" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 4</text>
+    
+
+<use xlink:href="#tg"  x="126.80000000000001" y="446"/>
+<use xlink:href="#zk"  x="126.80000000000001" y="427"/>
+<use xlink:href="#cs"  x="126.80000000000001" y="408"/>
+
+
+<rect id="subnet1" x="174.4" y="267" width="164" height="217" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+
+    <rect id="node9" x="182.4" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext9" x="196.20000000000002" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 9</text>
+    
+<use xlink:href="#ui"  x="183.4" y="272"/>
+<use xlink:href="#ms"  x="183.4" y="291"/>
+<use xlink:href="#bs"  x="183.4" y="310"/>
+<use xlink:href="#bp"  x="183.4" y="329"/>
+<use xlink:href="#qis"  x="183.4" y="348"/>
+
+<use xlink:href="#tg"  x="183.4" y="446"/>
+<use xlink:href="#if"  x="183.4" y="427"/>
+<use xlink:href="#gf"  x="183.4" y="408"/>
+<use xlink:href="#qd"  x="183.4" y="389"/>
+<use xlink:href="#tc"  x="183.4" y="370"/>
+
+
+
+    <rect id="node7" x="213" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext7" x="226.8" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 7</text>
+    
+<use xlink:href="#r"  x="214" y="272"/>
+<use xlink:href="#mp"  x="214" y="291"/>
+
+<use xlink:href="#tg"  x="214" y="446"/>
+
+
+
+    <rect id="node8" x="243.60000000000002" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext8" x="257.40000000000003" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 8</text>
+    
+<use xlink:href="#r"  x="244.60000000000002" y="272"/>
+<use xlink:href="#mp"  x="244.60000000000002" y="291"/>
+
+<use xlink:href="#tg"  x="244.60000000000002" y="446"/>
+
+
+
+    <rect id="node5" x="274.20000000000005" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext5" x="288.00000000000006" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 5</text>
+    
+<use xlink:href="#mp"  x="275.20000000000005" y="272"/>
+
+<use xlink:href="#tg"  x="275.20000000000005" y="446"/>
+
+
+
+    <rect id="node6" x="304.8" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext6" x="318.6" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 6</text>
+    
+<use xlink:href="#mp"  x="305.8" y="272"/>
+
+<use xlink:href="#tg"  x="305.8" y="446"/>
+
+
+<rect id="subnet1" x="353.4" y="267" width="102.80000000000001" height="217" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+
+
+    <rect id="node10" x="361.4" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext10" x="375.2" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 10</text>
+    
+<use xlink:href="#dp"  x="362.4" y="272"/>
+
+<use xlink:href="#ht"  x="362.4" y="446"/>
+<use xlink:href="#no"  x="362.4" y="427"/>
+
+
+
+    <rect id="node11" x="392" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext11" x="405.8" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 11</text>
+    
+<use xlink:href="#r"  x="393" y="272"/>
+
+<use xlink:href="#tg"  x="393" y="446"/>
+
+
+
+    <rect id="node12" x="422.59999999999997" y="270" width="27.6" height="197" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <text id="nodetext12" x="436.4" y="475" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 12</text>
+    
+<use xlink:href="#r"  x="423.59999999999997" y="272"/>
+
+<use xlink:href="#tg"  x="423.59999999999997" y="446"/>
+</svg>

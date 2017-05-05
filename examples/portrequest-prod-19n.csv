@@ -1,195 +1,258 @@
-srcnode, srchostname, dstnode, dsthostname, clientcomponent, servercomponent, port
-1, nnnxxxyyy01, 3, nnnxxxyyy03, R, MP, 4528
-1, nnnxxxyyy01, 3, nnnxxxyyy03, R, MP, 8998
-1, nnnxxxyyy01, 3, nnnxxxyyy03, R, MP, 8082
-1, nnnxxxyyy01, 3, nnnxxxyyy03, R, MP, 4527
-1, nnnxxxyyy01, 4, nnnxxxyyy04, R, MP, 4528
-1, nnnxxxyyy01, 4, nnnxxxyyy04, R, MP, 8998
-1, nnnxxxyyy01, 4, nnnxxxyyy04, R, MP, 8082
-1, nnnxxxyyy01, 4, nnnxxxyyy04, R, MP, 4527
-1, nnnxxxyyy01, 5, nnnxxxyyy05, R, MP, 4528
-1, nnnxxxyyy01, 5, nnnxxxyyy05, R, MP, 8998
-1, nnnxxxyyy01, 5, nnnxxxyyy05, R, MP, 8082
-1, nnnxxxyyy01, 5, nnnxxxyyy05, R, MP, 4527
-1, nnnxxxyyy01, 6, nnnxxxyyy06, R, MP, 4528
-1, nnnxxxyyy01, 6, nnnxxxyyy06, R, MP, 8998
-1, nnnxxxyyy01, 6, nnnxxxyyy06, R, MP, 8082
-1, nnnxxxyyy01, 6, nnnxxxyyy06, R, MP, 4527
-1, nnnxxxyyy01, 7, nnnxxxyyy07, R, MP, 4528
-1, nnnxxxyyy01, 7, nnnxxxyyy07, R, MP, 8998
-1, nnnxxxyyy01, 7, nnnxxxyyy07, R, MP, 8082
-1, nnnxxxyyy01, 7, nnnxxxyyy07, R, MP, 4527
-2, nnnxxxyyy02, 3, nnnxxxyyy03, R, MP, 4528
-2, nnnxxxyyy02, 3, nnnxxxyyy03, R, MP, 8998
-2, nnnxxxyyy02, 3, nnnxxxyyy03, R, MP, 8082
-2, nnnxxxyyy02, 3, nnnxxxyyy03, R, MP, 4527
-2, nnnxxxyyy02, 4, nnnxxxyyy04, R, MP, 4528
-2, nnnxxxyyy02, 4, nnnxxxyyy04, R, MP, 8998
-2, nnnxxxyyy02, 4, nnnxxxyyy04, R, MP, 8082
-2, nnnxxxyyy02, 4, nnnxxxyyy04, R, MP, 4527
-2, nnnxxxyyy02, 5, nnnxxxyyy05, R, MP, 4528
-2, nnnxxxyyy02, 5, nnnxxxyyy05, R, MP, 8998
-2, nnnxxxyyy02, 5, nnnxxxyyy05, R, MP, 8082
-2, nnnxxxyyy02, 5, nnnxxxyyy05, R, MP, 4527
-2, nnnxxxyyy02, 6, nnnxxxyyy06, R, MP, 4528
-2, nnnxxxyyy02, 6, nnnxxxyyy06, R, MP, 8998
-2, nnnxxxyyy02, 6, nnnxxxyyy06, R, MP, 8082
-2, nnnxxxyyy02, 6, nnnxxxyyy06, R, MP, 4527
-2, nnnxxxyyy02, 7, nnnxxxyyy07, R, MP, 4528
-2, nnnxxxyyy02, 7, nnnxxxyyy07, R, MP, 8998
-2, nnnxxxyyy02, 7, nnnxxxyyy07, R, MP, 8082
-2, nnnxxxyyy02, 7, nnnxxxyyy07, R, MP, 4527
-1, nnnxxxyyy01, 3, nnnxxxyyy03, R, MS, 8080
-2, nnnxxxyyy02, 3, nnnxxxyyy03, R, MS, 8080
-1, nnnxxxyyy01, 19, nnnxxxyyy19, R, QIS, 5672
-2, nnnxxxyyy02, 19, nnnxxxyyy19, R, QIS, 5672
-1, nnnxxxyyy01, 13, nnnxxxyyy13, R, ZK, 2181
-1, nnnxxxyyy01, 15, nnnxxxyyy15, R, ZK, 2181
-1, nnnxxxyyy01, 16, nnnxxxyyy16, R, ZK, 2181
-1, nnnxxxyyy01, 17, nnnxxxyyy17, R, ZK, 2181
-1, nnnxxxyyy01, 18, nnnxxxyyy18, R, ZK, 2181
-2, nnnxxxyyy02, 13, nnnxxxyyy13, R, ZK, 2181
-2, nnnxxxyyy02, 15, nnnxxxyyy15, R, ZK, 2181
-2, nnnxxxyyy02, 16, nnnxxxyyy16, R, ZK, 2181
-2, nnnxxxyyy02, 17, nnnxxxyyy17, R, ZK, 2181
-2, nnnxxxyyy02, 18, nnnxxxyyy18, R, ZK, 2181
-1, nnnxxxyyy01, 13, nnnxxxyyy13, R, CS, 9042
-1, nnnxxxyyy01, 13, nnnxxxyyy13, R, CS, 9160
-1, nnnxxxyyy01, 15, nnnxxxyyy15, R, CS, 9042
-1, nnnxxxyyy01, 15, nnnxxxyyy15, R, CS, 9160
-1, nnnxxxyyy01, 16, nnnxxxyyy16, R, CS, 9042
-1, nnnxxxyyy01, 16, nnnxxxyyy16, R, CS, 9160
-1, nnnxxxyyy01, 17, nnnxxxyyy17, R, CS, 9042
-1, nnnxxxyyy01, 17, nnnxxxyyy17, R, CS, 9160
-1, nnnxxxyyy01, 18, nnnxxxyyy18, R, CS, 9042
-1, nnnxxxyyy01, 18, nnnxxxyyy18, R, CS, 9160
-2, nnnxxxyyy02, 13, nnnxxxyyy13, R, CS, 9042
-2, nnnxxxyyy02, 13, nnnxxxyyy13, R, CS, 9160
-2, nnnxxxyyy02, 15, nnnxxxyyy15, R, CS, 9042
-2, nnnxxxyyy02, 15, nnnxxxyyy15, R, CS, 9160
-2, nnnxxxyyy02, 16, nnnxxxyyy16, R, CS, 9042
-2, nnnxxxyyy02, 16, nnnxxxyyy16, R, CS, 9160
-2, nnnxxxyyy02, 17, nnnxxxyyy17, R, CS, 9042
-2, nnnxxxyyy02, 17, nnnxxxyyy17, R, CS, 9160
-2, nnnxxxyyy02, 18, nnnxxxyyy18, R, CS, 9042
-2, nnnxxxyyy02, 18, nnnxxxyyy18, R, CS, 9160
-3, nnnxxxyyy03, 19, nnnxxxyyy19, MP, QIS, 4529
-4, nnnxxxyyy04, 19, nnnxxxyyy19, MP, QIS, 4529
-5, nnnxxxyyy05, 19, nnnxxxyyy19, MP, QIS, 4529
-6, nnnxxxyyy06, 19, nnnxxxyyy19, MP, QIS, 4529
-7, nnnxxxyyy07, 19, nnnxxxyyy19, MP, QIS, 4529
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MP, ZK, 2181
-3, nnnxxxyyy03, 15, nnnxxxyyy15, MP, ZK, 2181
-3, nnnxxxyyy03, 16, nnnxxxyyy16, MP, ZK, 2181
-3, nnnxxxyyy03, 17, nnnxxxyyy17, MP, ZK, 2181
-3, nnnxxxyyy03, 18, nnnxxxyyy18, MP, ZK, 2181
-4, nnnxxxyyy04, 13, nnnxxxyyy13, MP, ZK, 2181
-4, nnnxxxyyy04, 15, nnnxxxyyy15, MP, ZK, 2181
-4, nnnxxxyyy04, 16, nnnxxxyyy16, MP, ZK, 2181
-4, nnnxxxyyy04, 17, nnnxxxyyy17, MP, ZK, 2181
-4, nnnxxxyyy04, 18, nnnxxxyyy18, MP, ZK, 2181
-5, nnnxxxyyy05, 13, nnnxxxyyy13, MP, ZK, 2181
-5, nnnxxxyyy05, 15, nnnxxxyyy15, MP, ZK, 2181
-5, nnnxxxyyy05, 16, nnnxxxyyy16, MP, ZK, 2181
-5, nnnxxxyyy05, 17, nnnxxxyyy17, MP, ZK, 2181
-5, nnnxxxyyy05, 18, nnnxxxyyy18, MP, ZK, 2181
-6, nnnxxxyyy06, 13, nnnxxxyyy13, MP, ZK, 2181
-6, nnnxxxyyy06, 15, nnnxxxyyy15, MP, ZK, 2181
-6, nnnxxxyyy06, 16, nnnxxxyyy16, MP, ZK, 2181
-6, nnnxxxyyy06, 17, nnnxxxyyy17, MP, ZK, 2181
-6, nnnxxxyyy06, 18, nnnxxxyyy18, MP, ZK, 2181
-7, nnnxxxyyy07, 13, nnnxxxyyy13, MP, ZK, 2181
-7, nnnxxxyyy07, 15, nnnxxxyyy15, MP, ZK, 2181
-7, nnnxxxyyy07, 16, nnnxxxyyy16, MP, ZK, 2181
-7, nnnxxxyyy07, 17, nnnxxxyyy17, MP, ZK, 2181
-7, nnnxxxyyy07, 18, nnnxxxyyy18, MP, ZK, 2181
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MP, CS, 9042
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MP, CS, 9160
-3, nnnxxxyyy03, 15, nnnxxxyyy15, MP, CS, 9042
-3, nnnxxxyyy03, 15, nnnxxxyyy15, MP, CS, 9160
-3, nnnxxxyyy03, 16, nnnxxxyyy16, MP, CS, 9042
-3, nnnxxxyyy03, 16, nnnxxxyyy16, MP, CS, 9160
-3, nnnxxxyyy03, 17, nnnxxxyyy17, MP, CS, 9042
-3, nnnxxxyyy03, 17, nnnxxxyyy17, MP, CS, 9160
-3, nnnxxxyyy03, 18, nnnxxxyyy18, MP, CS, 9042
-3, nnnxxxyyy03, 18, nnnxxxyyy18, MP, CS, 9160
-4, nnnxxxyyy04, 13, nnnxxxyyy13, MP, CS, 9042
-4, nnnxxxyyy04, 13, nnnxxxyyy13, MP, CS, 9160
-4, nnnxxxyyy04, 15, nnnxxxyyy15, MP, CS, 9042
-4, nnnxxxyyy04, 15, nnnxxxyyy15, MP, CS, 9160
-4, nnnxxxyyy04, 16, nnnxxxyyy16, MP, CS, 9042
-4, nnnxxxyyy04, 16, nnnxxxyyy16, MP, CS, 9160
-4, nnnxxxyyy04, 17, nnnxxxyyy17, MP, CS, 9042
-4, nnnxxxyyy04, 17, nnnxxxyyy17, MP, CS, 9160
-4, nnnxxxyyy04, 18, nnnxxxyyy18, MP, CS, 9042
-4, nnnxxxyyy04, 18, nnnxxxyyy18, MP, CS, 9160
-5, nnnxxxyyy05, 13, nnnxxxyyy13, MP, CS, 9042
-5, nnnxxxyyy05, 13, nnnxxxyyy13, MP, CS, 9160
-5, nnnxxxyyy05, 15, nnnxxxyyy15, MP, CS, 9042
-5, nnnxxxyyy05, 15, nnnxxxyyy15, MP, CS, 9160
-5, nnnxxxyyy05, 16, nnnxxxyyy16, MP, CS, 9042
-5, nnnxxxyyy05, 16, nnnxxxyyy16, MP, CS, 9160
-5, nnnxxxyyy05, 17, nnnxxxyyy17, MP, CS, 9042
-5, nnnxxxyyy05, 17, nnnxxxyyy17, MP, CS, 9160
-5, nnnxxxyyy05, 18, nnnxxxyyy18, MP, CS, 9042
-5, nnnxxxyyy05, 18, nnnxxxyyy18, MP, CS, 9160
-6, nnnxxxyyy06, 13, nnnxxxyyy13, MP, CS, 9042
-6, nnnxxxyyy06, 13, nnnxxxyyy13, MP, CS, 9160
-6, nnnxxxyyy06, 15, nnnxxxyyy15, MP, CS, 9042
-6, nnnxxxyyy06, 15, nnnxxxyyy15, MP, CS, 9160
-6, nnnxxxyyy06, 16, nnnxxxyyy16, MP, CS, 9042
-6, nnnxxxyyy06, 16, nnnxxxyyy16, MP, CS, 9160
-6, nnnxxxyyy06, 17, nnnxxxyyy17, MP, CS, 9042
-6, nnnxxxyyy06, 17, nnnxxxyyy17, MP, CS, 9160
-6, nnnxxxyyy06, 18, nnnxxxyyy18, MP, CS, 9042
-6, nnnxxxyyy06, 18, nnnxxxyyy18, MP, CS, 9160
-7, nnnxxxyyy07, 13, nnnxxxyyy13, MP, CS, 9042
-7, nnnxxxyyy07, 13, nnnxxxyyy13, MP, CS, 9160
-7, nnnxxxyyy07, 15, nnnxxxyyy15, MP, CS, 9042
-7, nnnxxxyyy07, 15, nnnxxxyyy15, MP, CS, 9160
-7, nnnxxxyyy07, 16, nnnxxxyyy16, MP, CS, 9042
-7, nnnxxxyyy07, 16, nnnxxxyyy16, MP, CS, 9160
-7, nnnxxxyyy07, 17, nnnxxxyyy17, MP, CS, 9042
-7, nnnxxxyyy07, 17, nnnxxxyyy17, MP, CS, 9160
-7, nnnxxxyyy07, 18, nnnxxxyyy18, MP, CS, 9042
-7, nnnxxxyyy07, 18, nnnxxxyyy18, MP, CS, 9160
-3, nnnxxxyyy03, 19, nnnxxxyyy19, MS, QIS, 4529
-3, nnnxxxyyy03, 19, nnnxxxyyy19, MS, QIS, 8083
-3, nnnxxxyyy03, 19, nnnxxxyyy19, MS, PS, 4530
-3, nnnxxxyyy03, 19, nnnxxxyyy19, MS, PS, 8084
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MS, ZK, 2181
-3, nnnxxxyyy03, 15, nnnxxxyyy15, MS, ZK, 2181
-3, nnnxxxyyy03, 16, nnnxxxyyy16, MS, ZK, 2181
-3, nnnxxxyyy03, 17, nnnxxxyyy17, MS, ZK, 2181
-3, nnnxxxyyy03, 18, nnnxxxyyy18, MS, ZK, 2181
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MS, CS, 9042
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MS, CS, 9160
-3, nnnxxxyyy03, 15, nnnxxxyyy15, MS, CS, 9042
-3, nnnxxxyyy03, 15, nnnxxxyyy15, MS, CS, 9160
-3, nnnxxxyyy03, 16, nnnxxxyyy16, MS, CS, 9042
-3, nnnxxxyyy03, 16, nnnxxxyyy16, MS, CS, 9160
-3, nnnxxxyyy03, 17, nnnxxxyyy17, MS, CS, 9042
-3, nnnxxxyyy03, 17, nnnxxxyyy17, MS, CS, 9160
-3, nnnxxxyyy03, 18, nnnxxxyyy18, MS, CS, 9042
-3, nnnxxxyyy03, 18, nnnxxxyyy18, MS, CS, 9160
-3, nnnxxxyyy03, 1, nnnxxxyyy01, MS, R, 4527
-3, nnnxxxyyy03, 1, nnnxxxyyy01, MS, R, 8081
-3, nnnxxxyyy03, 2, nnnxxxyyy02, MS, R, 4527
-3, nnnxxxyyy03, 2, nnnxxxyyy02, MS, R, 8081
-3, nnnxxxyyy03, 13, nnnxxxyyy13, MS, OL, 10389
-19, nnnxxxyyy19, 3, nnnxxxyyy03, QIS, MS, 8080
-19, nnnxxxyyy19, 13, nnnxxxyyy13, QIS, ZK, 2181
-19, nnnxxxyyy19, 15, nnnxxxyyy15, QIS, ZK, 2181
-19, nnnxxxyyy19, 16, nnnxxxyyy16, QIS, ZK, 2181
-19, nnnxxxyyy19, 17, nnnxxxyyy17, QIS, ZK, 2181
-19, nnnxxxyyy19, 18, nnnxxxyyy18, QIS, ZK, 2181
-19, nnnxxxyyy19, 13, nnnxxxyyy13, QIS, CS, 9042
-19, nnnxxxyyy19, 13, nnnxxxyyy13, QIS, CS, 9160
-19, nnnxxxyyy19, 15, nnnxxxyyy15, QIS, CS, 9042
-19, nnnxxxyyy19, 15, nnnxxxyyy15, QIS, CS, 9160
-19, nnnxxxyyy19, 16, nnnxxxyyy16, QIS, CS, 9042
-19, nnnxxxyyy19, 16, nnnxxxyyy16, QIS, CS, 9160
-19, nnnxxxyyy19, 17, nnnxxxyyy17, QIS, CS, 9042
-19, nnnxxxyyy19, 17, nnnxxxyyy17, QIS, CS, 9160
-19, nnnxxxyyy19, 18, nnnxxxyyy18, QIS, CS, 9042
-19, nnnxxxyyy19, 18, nnnxxxyyy18, QIS, CS, 9160
+category, srcnode, srchostname, srcip, dstnode, dsthostname, dstip, clientcomponent, servercomponent, port
+incoming, -1, client, 0.0.0.0/0, 3, nnnxxxyyy03, 10.119.3.203, UICLNT, UI, 9000
+incoming, -1, client, 0.0.0.0/0, 3, nnnxxxyyy03, 10.119.3.203, UICLNT, UI, 9443
+incoming, -1, client, 0.0.0.0/0, 10, nnnxxxyyy10, 10.119.3.210, UICLNT, BS, 9000
+incoming, -1, client, 0.0.0.0/0, 10, nnnxxxyyy10, 10.119.3.210, UICLNT, BS, 9443
+incoming, -1, client, 0.0.0.0/0, 11, nnnxxxyyy11, 10.119.3.211, UICLNT, BS, 9000
+incoming, -1, client, 0.0.0.0/0, 11, nnnxxxyyy11, 10.119.3.211, UICLNT, BS, 9443
+incoming, -1, client, 0.0.0.0/0, 3, nnnxxxyyy03, 10.119.3.203, MSCLNT, UI, 8080
+incoming, -1, client, 0.0.0.0/0, 3, nnnxxxyyy03, 10.119.3.203, MSCLNT, UI, 8443
+incoming, -1, client, 0.0.0.0/0, 10, nnnxxxyyy10, 10.119.3.210, MSCLNT, BS, 8080
+incoming, -1, client, 0.0.0.0/0, 10, nnnxxxyyy10, 10.119.3.210, MSCLNT, BS, 8443
+incoming, -1, client, 0.0.0.0/0, 11, nnnxxxyyy11, 10.119.3.211, MSCLNT, BS, 8080
+incoming, -1, client, 0.0.0.0/0, 11, nnnxxxyyy11, 10.119.3.211, MSCLNT, BS, 8443
+incoming, -1, client, 0.0.0.0/0, 1, nnnxxxyyy01, 10.119.3.201, VHOST, R, 9000-9200
+incoming, -1, client, 0.0.0.0/0, 2, nnnxxxyyy02, 10.119.3.202, VHOST, R, 9000-9200
+incoming, -1, client, 0.0.0.0/0, 1, nnnxxxyyy01, 10.119.3.201, HBCLNT, R, 15999
+incoming, -1, client, 0.0.0.0/0, 2, nnnxxxyyy02, 10.119.3.202, HBCLNT, R, 15999
+incoming, -1, client, 0.0.0.0/0, 3, nnnxxxyyy03, 10.119.3.203, JMX, MS, 1099
+incoming, -1, client, 0.0.0.0/0, 3, nnnxxxyyy03, 10.119.3.203, JMX, MP, 1101
+incoming, -1, client, 0.0.0.0/0, 4, nnnxxxyyy04, 10.119.3.204, JMX, MP, 1101
+incoming, -1, client, 0.0.0.0/0, 5, nnnxxxyyy05, 10.119.3.205, JMX, MP, 1101
+incoming, -1, client, 0.0.0.0/0, 6, nnnxxxyyy06, 10.119.3.206, JMX, MP, 1101
+incoming, -1, client, 0.0.0.0/0, 7, nnnxxxyyy07, 10.119.3.207, JMX, MP, 1101
+incoming, -1, client, 0.0.0.0/0, 19, nnnxxxyyy19, 10.119.3.219, JMX, QIS, 1102
+incoming, -1, client, 0.0.0.0/0, 19, nnnxxxyyy19, 10.119.3.219, JMX, PS, 1103
+incoming, -1, client, 0.0.0.0/0, 13, nnnxxxyyy13, 10.119.3.213, JMX, CS, 7199
+incoming, -1, client, 0.0.0.0/0, 15, nnnxxxyyy15, 10.119.3.215, JMX, CS, 7199
+incoming, -1, client, 0.0.0.0/0, 16, nnnxxxyyy16, 10.119.3.216, JMX, CS, 7199
+incoming, -1, client, 0.0.0.0/0, 17, nnnxxxyyy17, 10.119.3.217, JMX, CS, 7199
+incoming, -1, client, 0.0.0.0/0, 18, nnnxxxyyy18, 10.119.3.218, JMX, CS, 7199
+internal, 1, nnnxxxyyy01, 10.119.3.201, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 4528
+internal, 1, nnnxxxyyy01, 10.119.3.201, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 8998
+internal, 1, nnnxxxyyy01, 10.119.3.201, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 8082
+internal, 1, nnnxxxyyy01, 10.119.3.201, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 4527
+internal, 1, nnnxxxyyy01, 10.119.3.201, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 4528
+internal, 1, nnnxxxyyy01, 10.119.3.201, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 8998
+internal, 1, nnnxxxyyy01, 10.119.3.201, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 8082
+internal, 1, nnnxxxyyy01, 10.119.3.201, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 4527
+internal, 1, nnnxxxyyy01, 10.119.3.201, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 4528
+internal, 1, nnnxxxyyy01, 10.119.3.201, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 8998
+internal, 1, nnnxxxyyy01, 10.119.3.201, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 8082
+internal, 1, nnnxxxyyy01, 10.119.3.201, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 4527
+internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 4528
+internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 8998
+internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 8082
+internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 4527
+internal, 1, nnnxxxyyy01, 10.119.3.201, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 4528
+internal, 1, nnnxxxyyy01, 10.119.3.201, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 8998
+internal, 1, nnnxxxyyy01, 10.119.3.201, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 8082
+internal, 1, nnnxxxyyy01, 10.119.3.201, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 4527
+internal, 2, nnnxxxyyy02, 10.119.3.202, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 4528
+internal, 2, nnnxxxyyy02, 10.119.3.202, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 8998
+internal, 2, nnnxxxyyy02, 10.119.3.202, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 8082
+internal, 2, nnnxxxyyy02, 10.119.3.202, 3, nnnxxxyyy03, 10.119.3.203, R, MP, 4527
+internal, 2, nnnxxxyyy02, 10.119.3.202, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 4528
+internal, 2, nnnxxxyyy02, 10.119.3.202, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 8998
+internal, 2, nnnxxxyyy02, 10.119.3.202, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 8082
+internal, 2, nnnxxxyyy02, 10.119.3.202, 4, nnnxxxyyy04, 10.119.3.204, R, MP, 4527
+internal, 2, nnnxxxyyy02, 10.119.3.202, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 4528
+internal, 2, nnnxxxyyy02, 10.119.3.202, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 8998
+internal, 2, nnnxxxyyy02, 10.119.3.202, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 8082
+internal, 2, nnnxxxyyy02, 10.119.3.202, 5, nnnxxxyyy05, 10.119.3.205, R, MP, 4527
+internal, 2, nnnxxxyyy02, 10.119.3.202, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 4528
+internal, 2, nnnxxxyyy02, 10.119.3.202, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 8998
+internal, 2, nnnxxxyyy02, 10.119.3.202, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 8082
+internal, 2, nnnxxxyyy02, 10.119.3.202, 6, nnnxxxyyy06, 10.119.3.206, R, MP, 4527
+internal, 2, nnnxxxyyy02, 10.119.3.202, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 4528
+internal, 2, nnnxxxyyy02, 10.119.3.202, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 8998
+internal, 2, nnnxxxyyy02, 10.119.3.202, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 8082
+internal, 2, nnnxxxyyy02, 10.119.3.202, 7, nnnxxxyyy07, 10.119.3.207, R, MP, 4527
+internal, 1, nnnxxxyyy01, 10.119.3.201, 3, nnnxxxyyy03, 10.119.3.203, R, MS, 8080
+internal, 2, nnnxxxyyy02, 10.119.3.202, 3, nnnxxxyyy03, 10.119.3.203, R, MS, 8080
+internal, 1, nnnxxxyyy01, 10.119.3.201, 19, nnnxxxyyy19, 10.119.3.219, R, QIS, 5672
+internal, 2, nnnxxxyyy02, 10.119.3.202, 19, nnnxxxyyy19, 10.119.3.219, R, QIS, 5672
+internal, 1, nnnxxxyyy01, 10.119.3.201, 13, nnnxxxyyy13, 10.119.3.213, R, ZK, 2181
+internal, 1, nnnxxxyyy01, 10.119.3.201, 15, nnnxxxyyy15, 10.119.3.215, R, ZK, 2181
+internal, 1, nnnxxxyyy01, 10.119.3.201, 16, nnnxxxyyy16, 10.119.3.216, R, ZK, 2181
+internal, 1, nnnxxxyyy01, 10.119.3.201, 17, nnnxxxyyy17, 10.119.3.217, R, ZK, 2181
+internal, 1, nnnxxxyyy01, 10.119.3.201, 18, nnnxxxyyy18, 10.119.3.218, R, ZK, 2181
+internal, 2, nnnxxxyyy02, 10.119.3.202, 13, nnnxxxyyy13, 10.119.3.213, R, ZK, 2181
+internal, 2, nnnxxxyyy02, 10.119.3.202, 15, nnnxxxyyy15, 10.119.3.215, R, ZK, 2181
+internal, 2, nnnxxxyyy02, 10.119.3.202, 16, nnnxxxyyy16, 10.119.3.216, R, ZK, 2181
+internal, 2, nnnxxxyyy02, 10.119.3.202, 17, nnnxxxyyy17, 10.119.3.217, R, ZK, 2181
+internal, 2, nnnxxxyyy02, 10.119.3.202, 18, nnnxxxyyy18, 10.119.3.218, R, ZK, 2181
+internal, 1, nnnxxxyyy01, 10.119.3.201, 13, nnnxxxyyy13, 10.119.3.213, R, CS, 9042
+internal, 1, nnnxxxyyy01, 10.119.3.201, 13, nnnxxxyyy13, 10.119.3.213, R, CS, 9160
+internal, 1, nnnxxxyyy01, 10.119.3.201, 15, nnnxxxyyy15, 10.119.3.215, R, CS, 9042
+internal, 1, nnnxxxyyy01, 10.119.3.201, 15, nnnxxxyyy15, 10.119.3.215, R, CS, 9160
+internal, 1, nnnxxxyyy01, 10.119.3.201, 16, nnnxxxyyy16, 10.119.3.216, R, CS, 9042
+internal, 1, nnnxxxyyy01, 10.119.3.201, 16, nnnxxxyyy16, 10.119.3.216, R, CS, 9160
+internal, 1, nnnxxxyyy01, 10.119.3.201, 17, nnnxxxyyy17, 10.119.3.217, R, CS, 9042
+internal, 1, nnnxxxyyy01, 10.119.3.201, 17, nnnxxxyyy17, 10.119.3.217, R, CS, 9160
+internal, 1, nnnxxxyyy01, 10.119.3.201, 18, nnnxxxyyy18, 10.119.3.218, R, CS, 9042
+internal, 1, nnnxxxyyy01, 10.119.3.201, 18, nnnxxxyyy18, 10.119.3.218, R, CS, 9160
+internal, 2, nnnxxxyyy02, 10.119.3.202, 13, nnnxxxyyy13, 10.119.3.213, R, CS, 9042
+internal, 2, nnnxxxyyy02, 10.119.3.202, 13, nnnxxxyyy13, 10.119.3.213, R, CS, 9160
+internal, 2, nnnxxxyyy02, 10.119.3.202, 15, nnnxxxyyy15, 10.119.3.215, R, CS, 9042
+internal, 2, nnnxxxyyy02, 10.119.3.202, 15, nnnxxxyyy15, 10.119.3.215, R, CS, 9160
+internal, 2, nnnxxxyyy02, 10.119.3.202, 16, nnnxxxyyy16, 10.119.3.216, R, CS, 9042
+internal, 2, nnnxxxyyy02, 10.119.3.202, 16, nnnxxxyyy16, 10.119.3.216, R, CS, 9160
+internal, 2, nnnxxxyyy02, 10.119.3.202, 17, nnnxxxyyy17, 10.119.3.217, R, CS, 9042
+internal, 2, nnnxxxyyy02, 10.119.3.202, 17, nnnxxxyyy17, 10.119.3.217, R, CS, 9160
+internal, 2, nnnxxxyyy02, 10.119.3.202, 18, nnnxxxyyy18, 10.119.3.218, R, CS, 9042
+internal, 2, nnnxxxyyy02, 10.119.3.202, 18, nnnxxxyyy18, 10.119.3.218, R, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 19, nnnxxxyyy19, 10.119.3.219, MP, QIS, 5672
+internal, 4, nnnxxxyyy04, 10.119.3.204, 19, nnnxxxyyy19, 10.119.3.219, MP, QIS, 5672
+internal, 5, nnnxxxyyy05, 10.119.3.205, 19, nnnxxxyyy19, 10.119.3.219, MP, QIS, 5672
+internal, 6, nnnxxxyyy06, 10.119.3.206, 19, nnnxxxyyy19, 10.119.3.219, MP, QIS, 5672
+internal, 7, nnnxxxyyy07, 10.119.3.207, 19, nnnxxxyyy19, 10.119.3.219, MP, QIS, 5672
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MP, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 15, nnnxxxyyy15, 10.119.3.215, MP, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 16, nnnxxxyyy16, 10.119.3.216, MP, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 17, nnnxxxyyy17, 10.119.3.217, MP, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 18, nnnxxxyyy18, 10.119.3.218, MP, ZK, 2181
+internal, 4, nnnxxxyyy04, 10.119.3.204, 13, nnnxxxyyy13, 10.119.3.213, MP, ZK, 2181
+internal, 4, nnnxxxyyy04, 10.119.3.204, 15, nnnxxxyyy15, 10.119.3.215, MP, ZK, 2181
+internal, 4, nnnxxxyyy04, 10.119.3.204, 16, nnnxxxyyy16, 10.119.3.216, MP, ZK, 2181
+internal, 4, nnnxxxyyy04, 10.119.3.204, 17, nnnxxxyyy17, 10.119.3.217, MP, ZK, 2181
+internal, 4, nnnxxxyyy04, 10.119.3.204, 18, nnnxxxyyy18, 10.119.3.218, MP, ZK, 2181
+internal, 5, nnnxxxyyy05, 10.119.3.205, 13, nnnxxxyyy13, 10.119.3.213, MP, ZK, 2181
+internal, 5, nnnxxxyyy05, 10.119.3.205, 15, nnnxxxyyy15, 10.119.3.215, MP, ZK, 2181
+internal, 5, nnnxxxyyy05, 10.119.3.205, 16, nnnxxxyyy16, 10.119.3.216, MP, ZK, 2181
+internal, 5, nnnxxxyyy05, 10.119.3.205, 17, nnnxxxyyy17, 10.119.3.217, MP, ZK, 2181
+internal, 5, nnnxxxyyy05, 10.119.3.205, 18, nnnxxxyyy18, 10.119.3.218, MP, ZK, 2181
+internal, 6, nnnxxxyyy06, 10.119.3.206, 13, nnnxxxyyy13, 10.119.3.213, MP, ZK, 2181
+internal, 6, nnnxxxyyy06, 10.119.3.206, 15, nnnxxxyyy15, 10.119.3.215, MP, ZK, 2181
+internal, 6, nnnxxxyyy06, 10.119.3.206, 16, nnnxxxyyy16, 10.119.3.216, MP, ZK, 2181
+internal, 6, nnnxxxyyy06, 10.119.3.206, 17, nnnxxxyyy17, 10.119.3.217, MP, ZK, 2181
+internal, 6, nnnxxxyyy06, 10.119.3.206, 18, nnnxxxyyy18, 10.119.3.218, MP, ZK, 2181
+internal, 7, nnnxxxyyy07, 10.119.3.207, 13, nnnxxxyyy13, 10.119.3.213, MP, ZK, 2181
+internal, 7, nnnxxxyyy07, 10.119.3.207, 15, nnnxxxyyy15, 10.119.3.215, MP, ZK, 2181
+internal, 7, nnnxxxyyy07, 10.119.3.207, 16, nnnxxxyyy16, 10.119.3.216, MP, ZK, 2181
+internal, 7, nnnxxxyyy07, 10.119.3.207, 17, nnnxxxyyy17, 10.119.3.217, MP, ZK, 2181
+internal, 7, nnnxxxyyy07, 10.119.3.207, 18, nnnxxxyyy18, 10.119.3.218, MP, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9160
+internal, 4, nnnxxxyyy04, 10.119.3.204, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9042
+internal, 4, nnnxxxyyy04, 10.119.3.204, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9160
+internal, 4, nnnxxxyyy04, 10.119.3.204, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9042
+internal, 4, nnnxxxyyy04, 10.119.3.204, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9160
+internal, 4, nnnxxxyyy04, 10.119.3.204, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9042
+internal, 4, nnnxxxyyy04, 10.119.3.204, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9160
+internal, 4, nnnxxxyyy04, 10.119.3.204, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9042
+internal, 4, nnnxxxyyy04, 10.119.3.204, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9160
+internal, 4, nnnxxxyyy04, 10.119.3.204, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9042
+internal, 4, nnnxxxyyy04, 10.119.3.204, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9160
+internal, 5, nnnxxxyyy05, 10.119.3.205, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9042
+internal, 5, nnnxxxyyy05, 10.119.3.205, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9160
+internal, 5, nnnxxxyyy05, 10.119.3.205, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9042
+internal, 5, nnnxxxyyy05, 10.119.3.205, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9160
+internal, 5, nnnxxxyyy05, 10.119.3.205, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9042
+internal, 5, nnnxxxyyy05, 10.119.3.205, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9160
+internal, 5, nnnxxxyyy05, 10.119.3.205, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9042
+internal, 5, nnnxxxyyy05, 10.119.3.205, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9160
+internal, 5, nnnxxxyyy05, 10.119.3.205, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9042
+internal, 5, nnnxxxyyy05, 10.119.3.205, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9160
+internal, 6, nnnxxxyyy06, 10.119.3.206, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9042
+internal, 6, nnnxxxyyy06, 10.119.3.206, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9160
+internal, 6, nnnxxxyyy06, 10.119.3.206, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9042
+internal, 6, nnnxxxyyy06, 10.119.3.206, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9160
+internal, 6, nnnxxxyyy06, 10.119.3.206, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9042
+internal, 6, nnnxxxyyy06, 10.119.3.206, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9160
+internal, 6, nnnxxxyyy06, 10.119.3.206, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9042
+internal, 6, nnnxxxyyy06, 10.119.3.206, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9160
+internal, 6, nnnxxxyyy06, 10.119.3.206, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9042
+internal, 6, nnnxxxyyy06, 10.119.3.206, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9160
+internal, 7, nnnxxxyyy07, 10.119.3.207, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9042
+internal, 7, nnnxxxyyy07, 10.119.3.207, 13, nnnxxxyyy13, 10.119.3.213, MP, CS, 9160
+internal, 7, nnnxxxyyy07, 10.119.3.207, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9042
+internal, 7, nnnxxxyyy07, 10.119.3.207, 15, nnnxxxyyy15, 10.119.3.215, MP, CS, 9160
+internal, 7, nnnxxxyyy07, 10.119.3.207, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9042
+internal, 7, nnnxxxyyy07, 10.119.3.207, 16, nnnxxxyyy16, 10.119.3.216, MP, CS, 9160
+internal, 7, nnnxxxyyy07, 10.119.3.207, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9042
+internal, 7, nnnxxxyyy07, 10.119.3.207, 17, nnnxxxyyy17, 10.119.3.217, MP, CS, 9160
+internal, 7, nnnxxxyyy07, 10.119.3.207, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9042
+internal, 7, nnnxxxyyy07, 10.119.3.207, 18, nnnxxxyyy18, 10.119.3.218, MP, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 19, nnnxxxyyy19, 10.119.3.219, MS, QIS, 4529
+internal, 3, nnnxxxyyy03, 10.119.3.203, 19, nnnxxxyyy19, 10.119.3.219, MS, QIS, 8083
+internal, 3, nnnxxxyyy03, 10.119.3.203, 19, nnnxxxyyy19, 10.119.3.219, MS, PS, 4530
+internal, 3, nnnxxxyyy03, 10.119.3.203, 19, nnnxxxyyy19, 10.119.3.219, MS, PS, 8084
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MS, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 15, nnnxxxyyy15, 10.119.3.215, MS, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 16, nnnxxxyyy16, 10.119.3.216, MS, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 17, nnnxxxyyy17, 10.119.3.217, MS, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 18, nnnxxxyyy18, 10.119.3.218, MS, ZK, 2181
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MS, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MS, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 15, nnnxxxyyy15, 10.119.3.215, MS, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 15, nnnxxxyyy15, 10.119.3.215, MS, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 16, nnnxxxyyy16, 10.119.3.216, MS, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 16, nnnxxxyyy16, 10.119.3.216, MS, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 17, nnnxxxyyy17, 10.119.3.217, MS, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 17, nnnxxxyyy17, 10.119.3.217, MS, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 18, nnnxxxyyy18, 10.119.3.218, MS, CS, 9042
+internal, 3, nnnxxxyyy03, 10.119.3.203, 18, nnnxxxyyy18, 10.119.3.218, MS, CS, 9160
+internal, 3, nnnxxxyyy03, 10.119.3.203, 1, nnnxxxyyy01, 10.119.3.201, MS, R, 4527
+internal, 3, nnnxxxyyy03, 10.119.3.203, 1, nnnxxxyyy01, 10.119.3.201, MS, R, 8081
+internal, 3, nnnxxxyyy03, 10.119.3.203, 2, nnnxxxyyy02, 10.119.3.202, MS, R, 4527
+internal, 3, nnnxxxyyy03, 10.119.3.203, 2, nnnxxxyyy02, 10.119.3.202, MS, R, 8081
+internal, 3, nnnxxxyyy03, 10.119.3.203, 13, nnnxxxyyy13, 10.119.3.213, MS, OL, 10389
+internal, 3, nnnxxxyyy03, 10.119.3.203, -2, server, 0.0.0.0/0, UI, SMTP, 25
+internal, 19, nnnxxxyyy19, 10.119.3.219, 3, nnnxxxyyy03, 10.119.3.203, QIS, MS, 8080
+internal, 19, nnnxxxyyy19, 10.119.3.219, 13, nnnxxxyyy13, 10.119.3.213, QIS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 15, nnnxxxyyy15, 10.119.3.215, QIS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 16, nnnxxxyyy16, 10.119.3.216, QIS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 17, nnnxxxyyy17, 10.119.3.217, QIS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 18, nnnxxxyyy18, 10.119.3.218, QIS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 13, nnnxxxyyy13, 10.119.3.213, QIS, CS, 9042
+internal, 19, nnnxxxyyy19, 10.119.3.219, 13, nnnxxxyyy13, 10.119.3.213, QIS, CS, 9160
+internal, 19, nnnxxxyyy19, 10.119.3.219, 15, nnnxxxyyy15, 10.119.3.215, QIS, CS, 9042
+internal, 19, nnnxxxyyy19, 10.119.3.219, 15, nnnxxxyyy15, 10.119.3.215, QIS, CS, 9160
+internal, 19, nnnxxxyyy19, 10.119.3.219, 16, nnnxxxyyy16, 10.119.3.216, QIS, CS, 9042
+internal, 19, nnnxxxyyy19, 10.119.3.219, 16, nnnxxxyyy16, 10.119.3.216, QIS, CS, 9160
+internal, 19, nnnxxxyyy19, 10.119.3.219, 17, nnnxxxyyy17, 10.119.3.217, QIS, CS, 9042
+internal, 19, nnnxxxyyy19, 10.119.3.219, 17, nnnxxxyyy17, 10.119.3.217, QIS, CS, 9160
+internal, 19, nnnxxxyyy19, 10.119.3.219, 18, nnnxxxyyy18, 10.119.3.218, QIS, CS, 9042
+internal, 19, nnnxxxyyy19, 10.119.3.219, 18, nnnxxxyyy18, 10.119.3.218, QIS, CS, 9160
+internal, 19, nnnxxxyyy19, 10.119.3.219, 13, nnnxxxyyy13, 10.119.3.213, PS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 15, nnnxxxyyy15, 10.119.3.215, PS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 16, nnnxxxyyy16, 10.119.3.216, PS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 17, nnnxxxyyy17, 10.119.3.217, PS, ZK, 2181
+internal, 19, nnnxxxyyy19, 10.119.3.219, 18, nnnxxxyyy18, 10.119.3.218, PS, ZK, 2181
+internal, 10, nnnxxxyyy10, 10.119.3.210, 13, nnnxxxyyy13, 10.119.3.213, BS, CS, 9042
+internal, 10, nnnxxxyyy10, 10.119.3.210, 13, nnnxxxyyy13, 10.119.3.213, BS, CS, 9160
+internal, 10, nnnxxxyyy10, 10.119.3.210, 15, nnnxxxyyy15, 10.119.3.215, BS, CS, 9042
+internal, 10, nnnxxxyyy10, 10.119.3.210, 15, nnnxxxyyy15, 10.119.3.215, BS, CS, 9160
+internal, 10, nnnxxxyyy10, 10.119.3.210, 16, nnnxxxyyy16, 10.119.3.216, BS, CS, 9042
+internal, 10, nnnxxxyyy10, 10.119.3.210, 16, nnnxxxyyy16, 10.119.3.216, BS, CS, 9160
+internal, 10, nnnxxxyyy10, 10.119.3.210, 17, nnnxxxyyy17, 10.119.3.217, BS, CS, 9042
+internal, 10, nnnxxxyyy10, 10.119.3.210, 17, nnnxxxyyy17, 10.119.3.217, BS, CS, 9160
+internal, 10, nnnxxxyyy10, 10.119.3.210, 18, nnnxxxyyy18, 10.119.3.218, BS, CS, 9042
+internal, 10, nnnxxxyyy10, 10.119.3.210, 18, nnnxxxyyy18, 10.119.3.218, BS, CS, 9160
+internal, 11, nnnxxxyyy11, 10.119.3.211, 13, nnnxxxyyy13, 10.119.3.213, BS, CS, 9042
+internal, 11, nnnxxxyyy11, 10.119.3.211, 13, nnnxxxyyy13, 10.119.3.213, BS, CS, 9160
+internal, 11, nnnxxxyyy11, 10.119.3.211, 15, nnnxxxyyy15, 10.119.3.215, BS, CS, 9042
+internal, 11, nnnxxxyyy11, 10.119.3.211, 15, nnnxxxyyy15, 10.119.3.215, BS, CS, 9160
+internal, 11, nnnxxxyyy11, 10.119.3.211, 16, nnnxxxyyy16, 10.119.3.216, BS, CS, 9042
+internal, 11, nnnxxxyyy11, 10.119.3.211, 16, nnnxxxyyy16, 10.119.3.216, BS, CS, 9160
+internal, 11, nnnxxxyyy11, 10.119.3.211, 17, nnnxxxyyy17, 10.119.3.217, BS, CS, 9042
+internal, 11, nnnxxxyyy11, 10.119.3.211, 17, nnnxxxyyy17, 10.119.3.217, BS, CS, 9160
+internal, 11, nnnxxxyyy11, 10.119.3.211, 18, nnnxxxyyy18, 10.119.3.218, BS, CS, 9042
+internal, 11, nnnxxxyyy11, 10.119.3.211, 18, nnnxxxyyy18, 10.119.3.218, BS, CS, 9160
+internal, 10, nnnxxxyyy10, 10.119.3.210, -2, server, 0.0.0.0/0, BS, SMTP, 25
+internal, 11, nnnxxxyyy11, 10.119.3.211, -2, server, 0.0.0.0/0, BS, SMTP, 25
+internal, 8, nnnxxxyyy08, 10.119.3.208, 1, nnnxxxyyy01, 10.119.3.201, DP, R, 59002
+internal, 8, nnnxxxyyy08, 10.119.3.208, 2, nnnxxxyyy02, 10.119.3.202, DP, R, 59002
+internal, 9, nnnxxxyyy09, 10.119.3.209, 1, nnnxxxyyy01, 10.119.3.201, DP, R, 59002
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, DP, R, 59002
+internal, 8, nnnxxxyyy08, 10.119.3.208, -2, server, 0.0.0.0/0, DP, SMTP, 25
+internal, 9, nnnxxxyyy09, 10.119.3.209, -2, server, 0.0.0.0/0, DP, SMTP, 25
