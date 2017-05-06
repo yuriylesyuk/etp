@@ -266,7 +266,6 @@ id="svg2">
     var compTemplate = fp.template('<use xlink:href="#<%= comp %>"  x="<%= x %>" y="<%= y %>"/>');
 
     var nodeWidth = 27.6;
-    var nodeHeight = 16;        // *Calculated
     var nodeSpacingH = 3;
     var nodePadding = 2;
 
@@ -281,6 +280,7 @@ id="svg2">
     var subnetPaddingH = 7;
     var subnetPaddingV = 3;
 
+    var subnetFooter = 20;
     var subnetSpacingH = 15;
 
     var subnetTemplate = fp.template('\n<rect id="subnet<%= id %>" x="<%= x %>" y="<%= y %>" width="<%= width %>" height="<%= height %>" style="fill:#f2f2f2;stroke:#bfbfbf"/>');
@@ -297,13 +297,17 @@ id="svg2">
     // Calculate Layout Geometry
     var nodesSvg = [];    // svg shapes accumulator
 
-    var maxNodeComponents = fp.max( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets).map( node => node.components.length ) );
+    function getNodeHeight( comps ){
+        return compHeight * comps
+            + (comps-1)*nodeSpacingH
+            + nodePadding*2 + 6;
+    };
 
-    var nodeHeightTotal = nodeHeight*maxNodeComponents
-        + (maxNodeComponents-1)*nodeSpacingH
-        + nodePadding*2 + 6;
-
-    var subnetHeight = nodeHeightTotal+20;   // 20 -- node name + paddings
+// RIP: [Refactoring in process]: if we switch layout on tier-by-tier for node height, we do not need maxNodeComponents anymore
+//    var maxNodeComponents = fp.max( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets).map( node => node.components.length ) );
+//
+//    var nodeHeight = getNodeHeight( maxNodeComponents );
+//    var subnetHeight = getNodeHeight( maxNodeComponents) + subnetFooter;   // -- node name + paddings
 
     // var tierHeight = tierHeader + subnetHeight;  // 40 -- tier divider and name + subnet name + paddings
 
@@ -318,25 +322,30 @@ id="svg2">
 
     // Iterate collection of subnets by tier -- vertical layout
 
-    // Pass I: calculate Maximum Tier Width Array
-    var tierWidthsPairs = fp.map( tier => {
+    // Pass I: calculate Maximum Tier Width and Tier Subnets TotalHeight Array
+    var tierSizes = fp.keyBy( "tier" )
+            (fp.map( tier => {
 
-       var tierWidth = fp.map(
-            subnet => 
-                getSubnetWidth( subnet )
-            )(
-            fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
-        ).reduce( (max, width) => max += width === 0 ? width : subnetSpacingH + width, 0 );
+            var tierSize = fp.map( 
+                    subnet => {
+                        var subnetWidth = getSubnetWidth( subnet );
+                        var subnetMaxComps = fp.max( fp.map( node => node.components.length )(subnet.nodes) );
 
-        return { tier: tier.name, width: tierWidth }
+                        return { width: subnetWidth, maxComps: subnetMaxComps };
+                    })(
+                    fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+                ).reduce( ( tierSize, subnetSize ) => { 
+                                return { 
+                                    width: tierSize.width === 0 ? subnetSize.width : tierSize.width + subnetSpacingH + subnetSize.width, 
+                                    maxNodeComponents: tierSize.maxNodeComponents > subnetSize.maxComps ? tierSize.maxNodeComponents : subnetSize.maxComps
+                                }
+                }, { width: 0, maxNodeComponents: 0 }  );
 
-    })(topology.regions[0].tiers);
+                return { tier: tier.name, width: tierSize.width, nodeHeight: getNodeHeight( tierSize.maxNodeComponents ) }
 
-    var tierWidths = fp(tierWidthsPairs).reduce( (tierWidths, tierWidth) => {
-        tierWidths[tierWidth.tier] = tierWidth.width;
-        return tierWidths;
-    }, {} );
-    var maxTierWidth = fp(tierWidthsPairs).reduce( 
+            })(topology.regions[0].tiers));
+
+    var maxTierWidth = fp(tierSizes).reduce( 
         (maxtiersize, tiersize) => { 
             return maxtiersize > tiersize.width? maxtiersize: tiersize.width 
         }, 0
@@ -355,14 +364,14 @@ id="svg2">
             name: tier.name.toUpperCase(),  
         }) );
 
-        subnetX = (maxTierWidth - tierWidths[ tier.name ])/2;    // Center this tier subnets
+        subnetX = ( maxTierWidth - tierSizes[ tier.name ].width )/2;    // Center this tier subnets
         subnetY += tierHeader
 
         fp.map(
             subnet => {
                 //console.log(subnet);              
 
-                drawSubnet( subnet )
+                drawSubnet( subnet, tierSizes[tier.name].nodeHeight )
 
                 subnetX += getSubnetWidth( subnet ) + subnetSpacingH;
 
@@ -370,7 +379,7 @@ id="svg2">
             })(
             fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
         )
-        subnetY += subnetHeight + tierSpacingV;
+        subnetY += tierSizes[tier.name].nodeHeight+subnetFooter + tierSpacingV;
 
     })(topology.regions[0].tiers)
 
@@ -380,11 +389,11 @@ id="svg2">
     }
 
 
-    function drawSubnet( subnet ){
+    function drawSubnet( subnet, nodeHeight ){
 
             var subnetWidth = getSubnetWidth( subnet );
 
-            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, width:  subnetWidth, height: subnetHeight  }) );
+            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, width:  subnetWidth, height: nodeHeight+subnetFooter  }) );
 
             var nodeX = 0;
             var nodeY = 0;
@@ -398,7 +407,7 @@ id="svg2">
                             id: node.id, 
                             x: 1+subnetX + subnetPaddingH + nodeX, 
                             y: subnetY + subnetPaddingV + nodeY, 
-                            height: nodeHeightTotal,
+                            height: nodeHeight,
                             textx: function(){ return this.x + nodeWidth/2 }, 
                             texty: function(){ return this.y + this.height + 8 },
                             text: function() { return "Node " + this.id }
@@ -422,7 +431,7 @@ id="svg2">
                         acc.push( drawComponents( fp(node.components).filter(comp=>isApigee[comp]), compPadding, compPadding, compY => compHeight + compSpacingV ) );
 
                         // Generate components: 3rd Parties
-                        acc.push( drawComponents( fp(node.components).filter(comp=>!isApigee[comp]).reverse(), compPadding, nodeHeightTotal - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
+                        acc.push( drawComponents( fp(node.components).filter(comp=>!isApigee[comp]).reverse(), compPadding, nodeHeight - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
                        
                         nodeX += nodeWidth + nodeSpacingH;
                         return acc;
