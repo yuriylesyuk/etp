@@ -64,11 +64,12 @@
                     {
                         "component": "MS",
                         "ports": [
-                            "8080"
+                            "8080",
+                            "8443"
                         ]
                     },
                     {
-                        "component": "QIS",
+                        "component": "QD",
                         "ports": [
                             "5672"
                         ]
@@ -128,6 +129,12 @@
                         ]
                     },
                     {
+                        "component": "PG",
+                        "ports": [
+                            "5432"
+                        ]
+                    },
+                    {
                         "component": "ZK",
                         "ports": [
                             "2181"
@@ -137,7 +144,8 @@
                         "component": "CS",
                         "ports": [
                             "9042",
-                            "9160"
+                            "9160",
+                            "7199"
                         ]
                     },
                     {
@@ -164,7 +172,8 @@
                     {
                         "component": "MS",
                         "ports": [
-                            "8080"
+                            "8080",
+                            "8443"
                         ]
                     },
                     {
@@ -174,7 +183,7 @@
                         ]
                     },
                     {
-                        "component": "QIS",
+                        "component": "QD",
                         "ports": [
                             "5672"
                         ]
@@ -208,7 +217,8 @@
                     {
                         "component": "MS",
                         "ports": [
-                            "8080"
+                            "8080",
+                            "8443"
                         ]
                     },
                     {
@@ -228,7 +238,8 @@
                     {
                         "component": "MS",
                         "ports": [
-                            "8080"
+                            "8080",
+                            "8443"
                         ]
                     },
                     {
@@ -390,6 +401,25 @@
                 "apigee": true,
                 "servers": [
                     {
+                        "component": "MY",
+                        "ports": [
+                            "3306"
+                        ]
+                    },
+                    {
+                        "component": "PG",
+                        "ports": [
+                            "5432"
+                        ]
+                    },
+                    {
+                        "component": "MS",
+                        "ports": [
+                            "8080",
+                            "8443"
+                        ]
+                    },
+                    {
                         "component": "R",
                         "ports": [
                             "59002"
@@ -426,7 +456,8 @@
                     {
                         "component": "BS",
                         "ports": [
-                            "8080"
+                            "8080",
+                            "8443"
                         ]
                     }
                 ]

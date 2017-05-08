@@ -1,0 +1,387 @@
+{
+    "planet": "PROD",
+    "regions" : [
+        {
+            "id" : "1",
+            "name": "dc-1",
+            "subnets": [
+                {
+                    "name": "routers",
+                    "tier" : "dmz",
+                    "nodes": [
+                                {
+                                    "id": 1,
+                                    "hostname": "dc1snrtsn01",
+                                    "ip": "10.119.3.201",
+                                    "components": [ "R" ] 
+                                },
+                                {
+                                    "id": 2,
+                                    "hostname": "dc1snrtsn02",
+                                    "ip": "10.119.3.202",
+                                    "components": [ "R" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "devportals",
+                    "tier" : "dmz",
+                    "nodes": [
+                                {
+                                    "id": 8,
+                                    "hostname": "dc1sndpsn08",
+                                    "ip": "10.119.3.208",
+                                    "components": [ "DP", "HT" ] 
+                                },
+                                {
+                                    "id": 9,
+                                    "hostname": "dc1sndpsn09",
+                                    "ip": "10.119.3.209",
+                                    "components": [ "DP", "HT" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "gateway",
+                    "tier" : "api-gateway",
+                    "nodes": [
+                                {
+                                    "id": 3,
+                                    "hostname": "dc1sngwsn03",
+                                    "ip": "10.119.3.203",
+                                    "components": [ "MP", "MS", "UI" ] 
+                                },
+                                {
+                                    "id": 4,
+                                    "hostname": "dc1sngwsn04",
+                                    "ip": "10.119.3.204",
+                                    "components": [ "MP" ] 
+                                },
+                                {
+                                    "id": 5,
+                                    "hostname": "dc1sngwsn05",
+                                    "ip": "10.119.3.205",
+                                    "components": [ "MP" ] 
+                                },
+                                {
+                                    "id": 6,
+                                    "hostname": "dc1sngwsn06",
+                                    "ip": "10.119.3.206",
+                                    "components": [ "MP" ] 
+                                },
+                                {
+                                    "id": 7,
+                                    "hostname": "dc1sngwsn07",
+                                    "ip": "10.119.3.207",
+                                    "components": [ "MP" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "baas",
+                    "tier" : "api-gateway",
+                    "nodes": [
+                                {
+                                    "id": 10,
+                                    "hostname": "dc1snbasn10",
+                                    "ip": "10.119.3.210",
+                                    "components": [ "BS", "BP", "NX", "ES" ] 
+                                },
+                                {
+                                    "id": 11,
+                                    "hostname": "dc1snbasn11",
+                                    "ip": "10.119.3.211",
+                                    "components": [ "BS", "BP", "NX", "ES" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "cicd",
+                    "tier" : "api-gateway",
+                    "nodes": [
+                                {
+                                    "id": 12,
+                                    "hostname": "dc1sncicn12",
+                                    "ip": "10.119.3.212",
+                                    "components": [ "GIT", "Jnk", "Mvn" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "datastore",
+                    "tier" : "db",
+                    "nodes": [
+                                {
+                                    "id": 13,
+                                    "hostname": "dc1sndstn13",
+                                    "ip": "10.119.3.213",
+                                    "components": [ "OL", "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 15,
+                                    "hostname": "dc1sndstn15",
+                                    "ip": "10.119.3.215",
+                                    "components": [ "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 16,
+                                    "hostname": "dc1sndstn16",
+                                    "ip": "10.119.3.216",
+                                    "components": [ "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 17,
+                                    "hostname": "dc1sndstn17",
+                                    "ip": "10.119.3.217",
+                                    "components": [ "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 18,
+                                    "hostname": "dc1sndstn18",
+                                    "ip": "10.119.3.218",
+                                    "components": [ "CS", "ZK" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "analytics",
+                    "tier" : "db",
+                    "nodes": [
+                                {
+                                    "id": 19,
+                                    "hostname": "dc1snanxn19",
+                                    "ip": "10.119.3.219",
+                                    "components": [ "PS", "QIS", "PGm", "QD" ] 
+                                },
+                                {
+                                    "id": 29,
+                                    "hostname": "dc1snanxn20",
+                                    "ip": "10.119.3.220",
+                                    "components": [ "QD" ] 
+                                }
+                    ]
+                }
+            ],
+            "tiers": [
+                { "name": "dmz" },
+                { "name": "api-gateway" },
+                { "name": "db" }
+            ],
+            "externalclients": [
+                {
+                    "name": "UICLNT",
+                    "source": "0.0.0.0/0"
+                }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "dmz-r-ha",
+                    "nodes": [ 1, 2 ]
+                },
+                {
+                    "name": "dmz-dp-ha",
+                    "nodes": [ 8, 9 ]
+                },
+                {
+                    "name": "app-ui-ms",
+                    "nodes": [ 3 ]
+                },
+                {
+                    "name": "app-bs",
+                    "nodes": [ 10, 11 ]
+                }
+            ]
+        },
+        {
+            "id" : "2",
+            "name": "dc-2",
+            "subnets": [
+                {
+                    "name": "routers",
+                    "tier" : "dmz",
+                    "nodes": [
+                                {
+                                    "id": 1,
+                                    "hostname": "dc2snrtsn01",
+                                    "ip": "10.119.5.201",
+                                    "components": [ "R" ] 
+                                },
+                                {
+                                    "id": 2,
+                                    "hostname": "dc2snrtsn02",
+                                    "ip": "10.119.5.202",
+                                    "components": [ "R" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "devportals",
+                    "tier" : "dmz",
+                    "nodes": [
+                                {
+                                    "id": 8,
+                                    "hostname": "dc2sndpsn08",
+                                    "ip": "10.119.5.208",
+                                    "components": [ "DP", "HT" ] 
+                                },
+                                {
+                                    "id": 9,
+                                    "hostname": "dc2sndpsn09",
+                                    "ip": "10.119.5.209",
+                                    "components": [ "DP", "HT" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "gateway",
+                    "tier" : "api-gateway",
+                    "nodes": [
+                                {
+                                    "id": 3,
+                                    "hostname": "dc2sngwsn03",
+                                    "ip": "10.119.5.203",
+                                    "components": [ "MP", "MS", "UI" ] 
+                                },
+                                {
+                                    "id": 4,
+                                    "hostname": "dc2sngwsn04",
+                                    "ip": "10.119.5.204",
+                                    "components": [ "MP" ] 
+                                },
+                                {
+                                    "id": 5,
+                                    "hostname": "dc2sngwsn05",
+                                    "ip": "10.119.5.205",
+                                    "components": [ "MP" ] 
+                                },
+                                {
+                                    "id": 6,
+                                    "hostname": "dc2sngwsn06",
+                                    "ip": "10.119.5.206",
+                                    "components": [ "MP" ] 
+                                },
+                                {
+                                    "id": 7,
+                                    "hostname": "dc2sngwsn07",
+                                    "ip": "10.119.5.207",
+                                    "components": [ "MP" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "baas",
+                    "tier" : "api-gateway",
+                    "nodes": [
+                                {
+                                    "id": 10,
+                                    "hostname": "dc2snbasn10",
+                                    "ip": "10.119.5.210",
+                                    "components": [ "BS", "BP", "NX", "ES" ] 
+                                },
+                                {
+                                    "id": 11,
+                                    "hostname": "dc2snbasn11",
+                                    "ip": "10.119.5.211",
+                                    "components": [ "BS", "BP", "NX", "ES" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "cicd",
+                    "tier" : "api-gateway",
+                    "nodes": [
+                                {
+                                    "id": 12,
+                                    "hostname": "dc2sncicn12",
+                                    "ip": "10.119.5.212",
+                                    "components": [ "GIT", "Jnk", "Mvn" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "datastore",
+                    "tier" : "db",
+                    "nodes": [
+                                {
+                                    "id": 13,
+                                    "hostname": "dc2sndstn13",
+                                    "ip": "10.119.5.213",
+                                    "components": [ "OL", "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 15,
+                                    "hostname": "dc2sndstn15",
+                                    "ip": "10.119.5.215",
+                                    "components": [ "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 16,
+                                    "hostname": "dc2sndstn16",
+                                    "ip": "10.119.5.216",
+                                    "components": [ "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 17,
+                                    "hostname": "dc2sndstn17",
+                                    "ip": "10.119.5.217",
+                                    "components": [ "CS", "ZK" ] 
+                                },
+                                {
+                                    "id": 18,
+                                    "hostname": "dc2sndstn18",
+                                    "ip": "10.119.5.218",
+                                    "components": [ "CS", "ZK" ] 
+                                }
+                    ]
+                },
+                {
+                    "name": "analytics",
+                    "tier" : "db",
+                    "nodes": [
+                                {
+                                    "id": 19,
+                                    "hostname": "dc2snanxn19",
+                                    "ip": "10.119.5.219",
+                                    "components": [ "PS", "QIS", "PGm", "QD" ] 
+                                },
+                                {
+                                    "id": 29,
+                                    "hostname": "dc2snanxn20",
+                                    "ip": "10.119.5.220",
+                                    "components": [ "QD" ] 
+                                }
+                    ]
+                }
+            ],
+            "tiers": [
+                { "name": "dmz" },
+                { "name": "api-gateway" },
+                { "name": "db" }
+            ],
+            "externalclients": [
+                {
+                    "name": "UICLNT",
+                    "source": "0.0.0.0/0"
+                }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "dmz-r-ha",
+                    "nodes": [ 1, 2 ]
+                },
+                {
+                    "name": "dmz-dp-ha",
+                    "nodes": [ 8, 9 ]
+                },
+                {
+                    "name": "app-ui-ms",
+                    "nodes": [ 3 ]
+                },
+                {
+                    "name": "app-bs",
+                    "nodes": [ 10, 11 ]
+                }
+            ]
+        }
+    ]
+}
