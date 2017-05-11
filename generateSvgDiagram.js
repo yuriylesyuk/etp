@@ -270,7 +270,9 @@ id="svg2">
     var nodePadding = 2;
 
     var nodeTemplate = fp.template(`\n
-    <rect id="node<%= id %>" x="<%= x %>" y="<%= y %>" width="27.6" height="<%= height %>" style="fill:#ffffff;stroke:#bfbfbf"/>
+    <rect id="node<%= id %>" x="<%= x %>" y="<%= y %>" width="27.6" height="<%= height %>" style="fill:#ffffff;stroke:#bfbfbf">
+        <title><%= tooltip %></title>
+    </rect>
     <text id="nodetext<%= id %>" x="<%= textx() %>" y="<%= texty() %>" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle"><%= text() %></text>
     `);
@@ -283,7 +285,11 @@ id="svg2">
     var subnetFooter = 20;
     var subnetSpacingH = 15;
 
-    var subnetTemplate = fp.template('\n<rect id="subnet<%= id %>" x="<%= x %>" y="<%= y %>" width="<%= width %>" height="<%= height %>" style="fill:#f2f2f2;stroke:#bfbfbf"/>');
+    var subnetTemplate = fp.template(
+                `\n<rect id="subnet<%= id %>" x="<%= x %>" y="<%= y %>" width="<%= width %>" height="<%= height %>" style="fill:#f2f2f2;stroke:#bfbfbf">
+                    <title><%= tooltip %></title>
+                </rect>`
+            );
 
     var tierHeader = 20;
     var tierSpacingV = 10;
@@ -393,7 +399,13 @@ id="svg2">
 
             var subnetWidth = getSubnetWidth( subnet );
 
-            nodesSvg.push( subnetTemplate({id: 1, x: subnetX, y: subnetY, width:  subnetWidth, height: nodeHeight+subnetFooter  }) );
+            nodesSvg.push( subnetTemplate(
+                {   
+                    id: 1, x: subnetX, y: subnetY, 
+                    width:  subnetWidth, height: nodeHeight+subnetFooter,
+                    tooltip: "Subnet: " + subnet.name
+                }) 
+            );
 
             var nodeX = 0;
             var nodeY = 0;
@@ -405,6 +417,7 @@ id="svg2">
                     
                         acc.push( nodeTemplate({ 
                             id: node.id, 
+                            tooltip: "Node: " + node.id + "\nHost Name: " + node.hostname + "\nIP: " + node.ip,
                             x: 1+subnetX + subnetPaddingH + nodeX, 
                             y: subnetY + subnetPaddingV + nodeY, 
                             height: nodeHeight,

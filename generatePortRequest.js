@@ -143,12 +143,39 @@ module.exports = function ( topologyFile, outputFile ){
 
     var columns = [ "category", "srcnode", "srchostname", "srcip", "dstnode", "dsthostname", "dstip", "clientcomponent", "servercomponent", "port" ];
 
-
+    // redundant records
     var csv = [ fp.chain( firewallPortRequestsList[0] ).pick(columns).keys().value().join( ", ") ];
 
     fp.forEach( portRecord => 
         csv.push( fp.chain( portRecord ).pick(columns).values().value().join( ", ") )
     )(firewallPortRequestsList);
+
+
+    // compact records
+    var firewallPortCompactList = fp.flow(
+        fp.groupBy(r=> r.srcip+"|"+r.dstip+"|"+r.port ),
+        fp.map(groups=>({v:groups[0].srcip, d:groups[0].dstip,
+            cc: fp.compose(
+                 fp.join(';'),   fp.uniq,fp.map('clientcomponent')
+                )(groups),
+            ss: fp.compose(
+                fp.join(';'),fp.uniq,fp.map('servercomponent')
+            )(groups)
+        }))
+    )(firewallPortRequestsList)
+
+    var csvCompact = [];
+    fp.forEach( portRecord => 
+        csvCompact.push( portRecord.v + "," + portRecord.d + "," +  portRecord.cc + "," +  portRecord.ss )
+    )(firewallPortCompactList);
+
+
+    fs = require('fs');
+    fs.writeFile( outputFile+".compact", csvCompact.join("\n"), function (err) {
+        if (err) 
+            return console.log(err);
+        console.log("File successfully written out");
+    });
 
 
     fs = require('fs');
