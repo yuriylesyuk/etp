@@ -10,17 +10,18 @@ module.exports = function ( topologyFile, outputFile ){
 
     // TODO: templatize height and width of svg
 
-    var svgHeader = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    var svgHeaderTemplate = fp.template( `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
 xmlns:svg="http://www.w3.org/2000/svg"
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink"
-height="600"
-width="600"
+height="<%= height %>"
+width="<%= width %>"
 xml:space="preserve"
 version="1.1"
 id="svg2">
-
+` );
+    var svgSymbols = `
 <symbol id="struct">
     <rect id="compcs2" x="1.5" y="1.5" width="23" height="16" rx="3" style="stroke-width:1.5"/>
 </symbol>
@@ -298,6 +299,18 @@ id="svg2">
         <text id="text1488" x="<%= x %>" y="<%= y %>" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end"><%= name %></text>
     `);
 
+    var regionHeader = 12;
+    var regionFooter = 12;
+    var regionPaddingH = 7;
+    var regionSpacingH = 30;
+    var regionHeaderTemplate = fp.template(`
+        <text id="text1488" x="<%= x %>" y="<%= y %>" style="font-weight:bold;font-size:10px;font-family:Arial;" text-anchor="start"><%= name %></text>
+    `);
+    var regionSeparatorTemplate = fp.template(`
+        <line id="lineSep1" x1="<%= x1 %>" y1="<%= y1 %>" x2="<%= x2 %>" y2="<%= y2 %>" style="stroke:#7f7f7f;;stroke-width:2;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+    `);
+
+
     var tpComponents = [ "OL", "ZK", "CS", "HT", "No", "QD", "PG", "MY"];
 
     // Calculate Layout Geometry
@@ -326,76 +339,109 @@ id="svg2">
         return comps;
     }, {});
 
-    // Iterate collection of subnets by tier -- vertical layout
+    //
+    // Pan-Diagram variables coordinate accumulators
+    //
+    var regionX = 0;
+    var regionY = 0;
 
-    // Pass I: calculate Maximum Tier Width and Tier Subnets TotalHeight Array
-    var tierSizes = fp.keyBy( "tier" )
-            (fp.map( tier => {
+    // Iterate by regions/data centres
+    fp.map(region => {
+        regionX += regionPaddingH
+        regionY = regionHeader;
+        nodesSvg.push( regionHeaderTemplate({ 
+            x: regionX, y: regionY + 4 , 
+            name: region.name.toUpperCase(),  
+        }) );  
+        regionY += regionHeader;
 
-            var tierSize = fp.map( 
-                    subnet => {
-                        var subnetWidth = getSubnetWidth( subnet );
-                        var subnetMaxComps = fp.max( fp.map( node => node.components.length )(subnet.nodes) );
+        separatorY = regionY;
 
-                        return { width: subnetWidth, maxComps: subnetMaxComps };
-                    })(
-                    fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
-                ).reduce( ( tierSize, subnetSize ) => { 
-                                return { 
-                                    width: tierSize.width === 0 ? subnetSize.width : tierSize.width + subnetSpacingH + subnetSize.width, 
-                                    maxNodeComponents: tierSize.maxNodeComponents > subnetSize.maxComps ? tierSize.maxNodeComponents : subnetSize.maxComps
-                                }
-                }, { width: 0, maxNodeComponents: 0 }  );
+        drawRegion( region );
 
-                return { tier: tier.name, width: tierSize.width, nodeHeight: getNodeHeight( tierSize.maxNodeComponents ) }
+        nodesSvg.push( regionSeparatorTemplate({ 
+            x1: regionX + regionSpacingH/2, y1: separatorY, 
+            x2: regionX + regionSpacingH/2, y2: regionY
+        }) );  
 
-            })(topology.regions[0].tiers));
+        regionX += regionSpacingH;
 
-    var maxTierWidth = fp(tierSizes).reduce( 
-        (maxtiersize, tiersize) => { 
-            return maxtiersize > tiersize.width? maxtiersize: tiersize.width 
-        }, 0
-    )
-
-    // Pass II: generate tier layout
-
-    var subnetX = 0;
-    var subnetY = 0;
-
-    fp.map( tier => {
-
-        nodesSvg.push( tierHeaderTemplate({ 
-            x1: 0, y1: subnetY, x2: maxTierWidth, y2: subnetY,
-            x: maxTierWidth, y: subnetY+8, 
-            name: tier.name.toUpperCase(),  
-        }) );
-
-        subnetX = ( maxTierWidth - tierSizes[ tier.name ].width )/2;    // Center this tier subnets
-        subnetY += tierHeader
-
-        fp.map(
-            subnet => {
-                //console.log(subnet);              
-
-                drawSubnet( subnet, tierSizes[tier.name].nodeHeight )
-
-                subnetX += getSubnetWidth( subnet ) + subnetSpacingH;
+    })(topology.regions)
 
 
-            })(
-            fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+    function drawRegion( region ){
+        // Iterate collection of subnets by tier -- vertical layout
+        // Pass I: calculate Maximum Tier Width and Tier Subnets TotalHeight Array
+        var tierSizes = fp.keyBy( "tier" )
+                (fp.map( tier => {
+
+                var tierSize = fp.map( 
+                        subnet => {
+                            var subnetWidth = getSubnetWidth( subnet );
+                            var subnetMaxComps = fp.max( fp.map( node => node.components.length )(subnet.nodes) );
+
+                            return { width: subnetWidth, maxComps: subnetMaxComps };
+                        })(
+                        fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+                    ).reduce( ( tierSize, subnetSize ) => { 
+                                    return { 
+                                        width: tierSize.width === 0 ? subnetSize.width : tierSize.width + subnetSpacingH + subnetSize.width, 
+                                        maxNodeComponents: tierSize.maxNodeComponents > subnetSize.maxComps ? tierSize.maxNodeComponents : subnetSize.maxComps
+                                    }
+                    }, { width: 0, maxNodeComponents: 0 }  );
+
+                    return { tier: tier.name, width: tierSize.width, nodeHeight: getNodeHeight( tierSize.maxNodeComponents ) }
+
+                })(topology.regions[0].tiers));
+
+        var maxTierWidth = fp(tierSizes).reduce( 
+            (maxtiersize, tiersize) => { 
+                return maxtiersize > tiersize.width? maxtiersize: tiersize.width 
+            }, 0
         )
-        subnetY += tierSizes[tier.name].nodeHeight+subnetFooter + tierSpacingV;
 
-    })(topology.regions[0].tiers)
+        // Pass II: generate tier layout
+        var subnetX = 0;
+        var subnetY = 0;
 
+        fp.map( tier => {
+
+            nodesSvg.push( tierHeaderTemplate({ 
+                x1: regionX + 0, y1: regionY + subnetY, 
+                x2: regionX + maxTierWidth, y2: regionY + subnetY,
+                x: regionX + maxTierWidth, y: regionY + subnetY+8, 
+                name: tier.name.toUpperCase(),  
+            }) );
+
+            subnetX = ( maxTierWidth - tierSizes[ tier.name ].width )/2;    // Center this tier subnets
+            subnetY += tierHeader
+
+            fp.map(
+                subnet => {
+                    //console.log(subnet);              
+
+                    drawSubnet( subnet, tierSizes[tier.name].nodeHeight, regionX + subnetX, regionY + subnetY )
+
+                    subnetX += getSubnetWidth( subnet ) + subnetSpacingH;
+
+
+                })(
+                fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+            )
+            subnetY += tierSizes[tier.name].nodeHeight+subnetFooter + tierSpacingV;
+
+        })( region.tiers );
+
+        regionX += maxTierWidth;
+        regionY = subnetY;
+   }
 
     function getSubnetWidth( subnet ){
         return subnet.nodes.length* nodeWidth + (subnet.nodes.length-1)*nodeSpacingH + subnetPaddingH*2;
     }
 
 
-    function drawSubnet( subnet, nodeHeight ){
+    function drawSubnet( subnet, nodeHeight, subnetX, subnetY  ){
 
             var subnetWidth = getSubnetWidth( subnet );
 
@@ -460,7 +506,8 @@ id="svg2">
 
     fs = require('fs');
     var svgstream = fs.createWriteStream( outputFile );
-    svgstream.write( svgHeader);
+    svgstream.write( svgHeaderTemplate( { height: regionY + regionFooter + 10, width: regionX + regionPaddingH } ));
+    svgstream.write( svgSymbols );
     svgstream.write( nodesSvg.join('\n') );
     svgstream.write( svgFooter);
     svgstream.end();

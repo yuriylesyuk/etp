@@ -10,19 +10,15 @@ module.exports = function ( topologyFile, outputFile ){
 
 
     // Edge External Clients: Incoming
-    var edge_ext_inc = [ "UICLNT", "MSCLNT", "VHOST", "HBCLNT", "SMTP", "JMX", "IFCLNT", "GFCLNT" ];
 
     // Edge External Clients: Outgoing
-    var edge_ext_outg = [ "TE", "SMTP" ];
 
     // TODO: in topology, "externalclients" section contant client component ID with "source" property override 
     //       that supposed to be overlayed as an easy implementation
 
 
     // TODO: PGM, PGS, "OL"
-    var edge_int = [ "R", "MP", "MS", "UI", "QIS", "PG", "ZK", "CS" ];
 
-    var edge_mon = [ "TG", "IF", "GF" ];
 
     // Iteration rules:
     // 1. R->>all MP
