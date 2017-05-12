@@ -345,29 +345,37 @@ id="svg2">
     var regionX = 0;
     var regionY = 0;
 
+    var separatorFlipOn = false;
+    var separatorY = 0;
+
     // Iterate by regions/data centres
+    regionX += regionPaddingH
     fp.map(region => {
-        regionX += regionPaddingH
         regionY = regionHeader;
+
+        if( separatorFlipOn ){
+            nodesSvg.push( regionSeparatorTemplate({ 
+                x1: regionX + regionSpacingH/2, y1: regionY, 
+                x2: regionX + regionSpacingH/2, y2: separatorY
+            }) );  
+
+            regionX += regionSpacingH;
+        }else{
+            separatorFlipOn = true;
+        }
+
         nodesSvg.push( regionHeaderTemplate({ 
             x: regionX, y: regionY + 4 , 
             name: region.name.toUpperCase(),  
         }) );  
         regionY += regionHeader;
 
-        separatorY = regionY;
-
         drawRegion( region );
 
-        nodesSvg.push( regionSeparatorTemplate({ 
-            x1: regionX + regionSpacingH/2, y1: separatorY, 
-            x2: regionX + regionSpacingH/2, y2: regionY
-        }) );  
-
-        regionX += regionSpacingH;
+        separatorY = regionY;
 
     })(topology.regions)
-
+    regionX += regionPaddingH
 
     function drawRegion( region ){
         // Iterate collection of subnets by tier -- vertical layout
@@ -506,7 +514,7 @@ id="svg2">
 
     fs = require('fs');
     var svgstream = fs.createWriteStream( outputFile );
-    svgstream.write( svgHeaderTemplate( { height: regionY + regionFooter + 10, width: regionX + regionPaddingH } ));
+    svgstream.write( svgHeaderTemplate( { height: regionY + regionFooter + 10, width: regionX } ));
     svgstream.write( svgSymbols );
     svgstream.write( nodesSvg.join('\n') );
     svgstream.write( svgFooter);
