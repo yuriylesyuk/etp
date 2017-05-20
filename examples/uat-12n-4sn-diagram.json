@@ -3,8 +3,8 @@
 xmlns:svg="http://www.w3.org/2000/svg"
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink"
-height="600"
-width="600"
+height="345"
+width="352.40000000000003"
 xml:space="preserve"
 version="1.1"
 id="svg2">
@@ -241,220 +241,216 @@ id="svg2">
 </symbol>
 
 
-        <line x1="0" y1="0" x2="307.8" y2="0" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
-        <text id="text1488" x="307.8" y="8" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DMZ</text>
+        <text id="text1488" x="7" y="16" style="font-weight:bold;font-size:10px;font-family:Arial;" text-anchor="start">DC-1</text>
     
 
-<rect id="subnet1" x="74.2" y="20" width="72.2" height="65" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+        <line x1="7" y1="24" x2="345.40000000000003" y2="24" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="345.40000000000003" y="32" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DMZ</text>
+    
+
+<rect id="subnet1" x="124.80000000000001" y="44" width="102.80000000000001" height="84" style="fill:#f2f2f2;stroke:#bfbfbf">
+                    <title>Subnet: external</title>
+                </rect>
 
 
-    <rect id="node1" x="82.2" y="23" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext1" x="96" y="76" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node1" x="132.8" y="47" width="27.6" height="64" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 1
+Host Name: nnnxxxyyy01
+IP: 10.119.3.201</title>
+    </rect>
+    <text id="nodetext1" x="146.60000000000002" y="119" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 1</text>
     
-<use xlink:href="#r"  x="83.2" y="25"/>
+
+<use xlink:href="#ht"  x="133.8" y="90"/>
+<use xlink:href="#no"  x="133.8" y="71"/>
+<use xlink:href="#dp"  x="133.8" y="52"/>
 
 
 
-
-    <rect id="node2" x="112.80000000000001" y="23" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext2" x="126.60000000000001" y="76" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 2</text>
-    
-<use xlink:href="#r"  x="113.80000000000001" y="25"/>
-
-
-
-<rect id="subnet1" x="161.4" y="20" width="72.2" height="65" style="fill:#f2f2f2;stroke:#bfbfbf"/>
-
-
-    <rect id="node8" x="169.4" y="23" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext8" x="183.20000000000002" y="76" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 8</text>
-    
-<use xlink:href="#dp"  x="170.4" y="25"/>
-
-<use xlink:href="#ht"  x="170.4" y="47"/>
-
-
-
-    <rect id="node9" x="200" y="23" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext9" x="213.8" y="76" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 9</text>
-    
-<use xlink:href="#dp"  x="201" y="25"/>
-
-<use xlink:href="#ht"  x="201" y="47"/>
-
-
-        <line x1="0" y1="95" x2="307.8" y2="95" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
-        <text id="text1488" x="307.8" y="103" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">API-GATEWAY</text>
-    
-
-<rect id="subnet1" x="0" y="115" width="164" height="103" style="fill:#f2f2f2;stroke:#bfbfbf"/>
-
-
-    <rect id="node3" x="8" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext3" x="21.8" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 3</text>
-    
-<use xlink:href="#mp"  x="9" y="120"/>
-<use xlink:href="#ms"  x="9" y="139"/>
-<use xlink:href="#ui"  x="9" y="158"/>
-
-
-
-
-    <rect id="node4" x="38.6" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext4" x="52.400000000000006" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 4</text>
-    
-<use xlink:href="#mp"  x="39.6" y="120"/>
-
-
-
-
-    <rect id="node5" x="69.2" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext5" x="83" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 5</text>
-    
-<use xlink:href="#mp"  x="70.2" y="120"/>
-
-
-
-
-    <rect id="node6" x="99.80000000000001" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext6" x="113.60000000000001" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 6</text>
-    
-<use xlink:href="#mp"  x="100.80000000000001" y="120"/>
-
-
-
-
-    <rect id="node7" x="130.4" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext7" x="144.20000000000002" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node7" x="163.4" y="47" width="27.6" height="64" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 7
+Host Name: nnnxxxyyy07
+IP: 10.119.3.207</title>
+    </rect>
+    <text id="nodetext7" x="177.20000000000002" y="119" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 7</text>
     
-<use xlink:href="#mp"  x="131.4" y="120"/>
+
+<use xlink:href="#tg"  x="164.4" y="90"/>
+<use xlink:href="#r"  x="164.4" y="71"/>
 
 
 
-<rect id="subnet1" x="179" y="115" width="72.2" height="103" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+    <rect id="node8" x="194" y="47" width="27.6" height="64" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 8
+Host Name: nnnxxxyyy08
+IP: 10.119.3.208</title>
+    </rect>
+    <text id="nodetext8" x="207.8" y="119" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 8</text>
+    
+
+<use xlink:href="#tg"  x="195" y="90"/>
+<use xlink:href="#r"  x="195" y="71"/>
 
 
-    <rect id="node10" x="187" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext10" x="200.8" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        <line x1="7" y1="138" x2="345.40000000000003" y2="138" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="345.40000000000003" y="146" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
+    
+
+<rect id="subnet1" x="7" y="158" width="164" height="179" style="fill:#f2f2f2;stroke:#bfbfbf">
+                    <title>Subnet: gateway-baas</title>
+                </rect>
+
+
+    <rect id="node9" x="15" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 9
+Host Name: nnnxxxyyy09
+IP: 10.119.3.209</title>
+    </rect>
+    <text id="nodetext9" x="28.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 9</text>
+    
+
+<use xlink:href="#tg"  x="16" y="299"/>
+<use xlink:href="#ms"  x="16" y="280"/>
+<use xlink:href="#ui"  x="16" y="261"/>
+<use xlink:href="#mp"  x="16" y="242"/>
+
+
+
+    <rect id="node10" x="45.6" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 10
+Host Name: nnnxxxyyy10
+IP: 10.119.3.210</title>
+    </rect>
+    <text id="nodetext10" x="59.400000000000006" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 10</text>
     
-<use xlink:href="#bs"  x="188" y="120"/>
-<use xlink:href="#bp"  x="188" y="139"/>
 
-<use xlink:href="#es"  x="188" y="180"/>
-<use xlink:href="#nx"  x="188" y="161"/>
+<use xlink:href="#tg"  x="46.6" y="299"/>
+<use xlink:href="#mp"  x="46.6" y="280"/>
 
 
 
-    <rect id="node11" x="217.6" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext11" x="231.4" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <rect id="node11" x="76.2" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 11
+Host Name: nnnxxxyyy11
+IP: 10.119.3.211</title>
+    </rect>
+    <text id="nodetext11" x="90" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 11</text>
     
-<use xlink:href="#bs"  x="218.6" y="120"/>
-<use xlink:href="#bp"  x="218.6" y="139"/>
 
-<use xlink:href="#es"  x="218.6" y="180"/>
-<use xlink:href="#nx"  x="218.6" y="161"/>
-
-
-<rect id="subnet1" x="266.2" y="115" width="41.6" height="103" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+<use xlink:href="#tg"  x="77.2" y="299"/>
+<use xlink:href="#mp"  x="77.2" y="280"/>
+<use xlink:href="#r"  x="77.2" y="261"/>
 
 
-    <rect id="node12" x="274.2" y="118" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext12" x="288" y="209" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+
+    <rect id="node12" x="106.80000000000001" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 12
+Host Name: nnnxxxyyy12
+IP: 10.119.3.212</title>
+    </rect>
+    <text id="nodetext12" x="120.60000000000001" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 12</text>
     
 
-<use xlink:href="#mvn"  x="275.2" y="180"/>
-<use xlink:href="#jnk"  x="275.2" y="161"/>
-<use xlink:href="#git"  x="275.2" y="142"/>
+<use xlink:href="#tg"  x="107.80000000000001" y="299"/>
+<use xlink:href="#mp"  x="107.80000000000001" y="280"/>
+<use xlink:href="#r"  x="107.80000000000001" y="261"/>
 
 
-        <line x1="0" y1="228" x2="307.8" y2="228" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
-        <text id="text1488" x="307.8" y="236" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DB</text>
+
+    <rect id="node5" x="137.4" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 5
+Host Name: nnnxxxyyy05
+IP: 10.119.3.205</title>
+    </rect>
+    <text id="nodetext5" x="151.20000000000002" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 5</text>
     
 
-<rect id="subnet1" x="28.30000000000001" y="248" width="164" height="103" style="fill:#f2f2f2;stroke:#bfbfbf"/>
+<use xlink:href="#tg"  x="138.4" y="299"/>
+<use xlink:href="#if"  x="138.4" y="280"/>
+<use xlink:href="#gf"  x="138.4" y="261"/>
+<use xlink:href="#qd"  x="138.4" y="242"/>
+<use xlink:href="#tc"  x="138.4" y="223"/>
+<use xlink:href="#qis"  x="138.4" y="204"/>
+<use xlink:href="#bp"  x="138.4" y="185"/>
+<use xlink:href="#bs"  x="138.4" y="166"/>
 
 
-    <rect id="node13" x="36.30000000000001" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext13" x="50.10000000000001" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 13</text>
+<rect id="subnet1" x="186" y="158" width="102.80000000000001" height="179" style="fill:#f2f2f2;stroke:#bfbfbf">
+                    <title>Subnet: data-storage</title>
+                </rect>
+
+
+    <rect id="node2" x="194" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 2
+Host Name: nnnxxxyyy02
+IP: 10.119.3.202</title>
+    </rect>
+    <text id="nodetext2" x="207.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 2</text>
     
 
-<use xlink:href="#zk"  x="37.30000000000001" y="313"/>
-<use xlink:href="#cs"  x="37.30000000000001" y="294"/>
-<use xlink:href="#ol"  x="37.30000000000001" y="275"/>
+<use xlink:href="#tg"  x="195" y="299"/>
+<use xlink:href="#zk"  x="195" y="280"/>
+<use xlink:href="#cs"  x="195" y="261"/>
+<use xlink:href="#ol"  x="195" y="242"/>
 
 
 
-    <rect id="node15" x="66.9" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext15" x="80.7" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 15</text>
+    <rect id="node3" x="224.6" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 3
+Host Name: nnnxxxyyy03
+IP: 10.119.3.203</title>
+    </rect>
+    <text id="nodetext3" x="238.4" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 
-<use xlink:href="#zk"  x="67.9" y="313"/>
-<use xlink:href="#cs"  x="67.9" y="294"/>
+<use xlink:href="#tg"  x="225.6" y="299"/>
+<use xlink:href="#zk"  x="225.6" y="280"/>
+<use xlink:href="#cs"  x="225.6" y="261"/>
 
 
 
-    <rect id="node16" x="97.50000000000001" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext16" x="111.30000000000001" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 16</text>
+    <rect id="node4" x="255.2" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 4
+Host Name: nnnxxxyyy04
+IP: 10.119.3.204</title>
+    </rect>
+    <text id="nodetext4" x="269" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 4</text>
     
 
-<use xlink:href="#zk"  x="98.50000000000001" y="313"/>
-<use xlink:href="#cs"  x="98.50000000000001" y="294"/>
+<use xlink:href="#tg"  x="256.2" y="299"/>
+<use xlink:href="#zk"  x="256.2" y="280"/>
+<use xlink:href="#cs"  x="256.2" y="261"/>
 
 
+<rect id="subnet1" x="303.8" y="158" width="41.6" height="179" style="fill:#f2f2f2;stroke:#bfbfbf">
+                    <title>Subnet: analytics</title>
+                </rect>
 
-    <rect id="node17" x="128.10000000000002" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext17" x="141.90000000000003" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 17</text>
+
+    <rect id="node6" x="311.8" y="161" width="27.6" height="159" style="fill:#ffffff;stroke:#bfbfbf">
+        <title>Node: 6
+Host Name: nnnxxxyyy06
+IP: 10.119.3.206</title>
+    </rect>
+    <text id="nodetext6" x="325.6" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+        alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
 
-<use xlink:href="#zk"  x="129.10000000000002" y="313"/>
-<use xlink:href="#cs"  x="129.10000000000002" y="294"/>
-
-
-
-    <rect id="node18" x="158.70000000000002" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext18" x="172.50000000000003" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 18</text>
-    
-
-<use xlink:href="#zk"  x="159.70000000000002" y="313"/>
-<use xlink:href="#cs"  x="159.70000000000002" y="294"/>
-
-
-<rect id="subnet1" x="207.3" y="248" width="72.2" height="103" style="fill:#f2f2f2;stroke:#bfbfbf"/>
-
-
-    <rect id="node19" x="215.3" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext19" x="229.10000000000002" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 19</text>
-    
-<use xlink:href="#ps"  x="216.3" y="253"/>
-<use xlink:href="#qis"  x="216.3" y="272"/>
-
-<use xlink:href="#qd"  x="216.3" y="313"/>
-<use xlink:href="#pgm"  x="216.3" y="294"/>
-
-
-
-    <rect id="node29" x="245.9" y="251" width="27.6" height="83" style="fill:#ffffff;stroke:#bfbfbf"/>
-    <text id="nodetext29" x="259.7" y="342" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
-        alignment-baseline="middle" text-anchor="middle">Node 29</text>
-    
-
-<use xlink:href="#qd"  x="246.9" y="313"/>
+<use xlink:href="#tg"  x="312.8" y="299"/>
+<use xlink:href="#my"  x="312.8" y="280"/>
+<use xlink:href="#pg"  x="312.8" y="261"/>
+<use xlink:href="#qd"  x="312.8" y="242"/>
+<use xlink:href="#qis"  x="312.8" y="223"/>
+<use xlink:href="#ps"  x="312.8" y="204"/>
 </svg>

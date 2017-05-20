@@ -323,7 +323,7 @@ id="svg2">
     };
 
 // RIP: [Refactoring in process]: if we switch layout on tier-by-tier for node height, we do not need maxNodeComponents anymore
-//    var maxNodeComponents = fp.max( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets).map( node => node.components.length ) );
+//    var maxNodeComponents = fp.max( fp.flatMap( subnet => subnet.nodes  )(region.subnets).map( node => node.components.length ) );
 //
 //    var nodeHeight = getNodeHeight( maxNodeComponents );
 //    var subnetHeight = getNodeHeight( maxNodeComponents) + subnetFooter;   // -- node name + paddings
@@ -390,7 +390,7 @@ id="svg2">
 
                             return { width: subnetWidth, maxComps: subnetMaxComps };
                         })(
-                        fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+                        fp.filter( { "tier": tier.name } )(region.subnets)
                     ).reduce( ( tierSize, subnetSize ) => { 
                                     return { 
                                         width: tierSize.width === 0 ? subnetSize.width : tierSize.width + subnetSpacingH + subnetSize.width, 
@@ -400,7 +400,7 @@ id="svg2">
 
                     return { tier: tier.name, width: tierSize.width, nodeHeight: getNodeHeight( tierSize.maxNodeComponents ) }
 
-                })(topology.regions[0].tiers));
+                })(region.tiers));
 
         var maxTierWidth = fp(tierSizes).reduce( 
             (maxtiersize, tiersize) => { 
@@ -434,7 +434,7 @@ id="svg2">
 
 
                 })(
-                fp.filter( { "tier": tier.name } )(topology.regions[0].subnets)
+                fp.filter( { "tier": tier.name } )(region.subnets)
             )
             subnetY += tierSizes[tier.name].nodeHeight+subnetFooter + tierSpacingV;
 
