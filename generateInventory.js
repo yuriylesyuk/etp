@@ -2,7 +2,7 @@ var fp = require("lodash/fp");
 
 
 
-module.exports = function ( topologyFile, outputFile ){
+module.exports = function ( topologyFile, outputFile, program ){
 
     var portdefs = require("./edge-port-defs.json");
 
@@ -136,7 +136,6 @@ module.exports = function ( topologyFile, outputFile ){
     //
 
 
-    //console.log( htmlNodesInventory.join('\n') );
 
     //---------------------------------------
     fs = require('fs');
@@ -147,6 +146,49 @@ module.exports = function ( topologyFile, outputFile ){
     svgstream.write( htmlInventoryNodes.join('\n') );
     svgstream.write( htmlInventoryFooter );
     svgstream.end();
+
+    //---------------------------------------
+    
+
+    // generate ansible file and ansible playbook invocation script
+
+    // I.E.:
+    // [edge]
+    // n01 ansible_host=10.119.131.11 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+    var ansibleHosts = [ "[edge]" ];
+
+    var ansibleHostTemplate = fp.template( '<%= id %> ansible_host=<%= ip %><%= ansible_user %><%= ansible_key %>' );
+
+    // function genRegionIdNodeId( onlySingleDC,  dcid, nodeid ){
+    //     return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
+    // }
+    var genRegionIdNodeId = fp.curry( (onlySingleDC,  dcid, nodeid ) => {
+        return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
+    })
+    var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
+
+    fp.reduce( (list, node) => {
+        //console.log(node);
+        list.push( ansibleHostTemplate({
+            id: genNodeId( node.dcid, node.id), 
+            ip: node.ip,
+            ansible_user: ((program.ansible_user || "") === "") ? "" : " ansible_user="+program.ansible_host,
+            ansible_key: ((program.ansible_key || "") === "") ? "" : " ansible_ssh_private_key_file="+program.ansible_key
+        }) );
+        return list;
+    }, ansibleHosts)(fp.sortBy(["dcid","id"])(nodes));   
+
+    //--------------------------- 
+    fs = require('fs');
+    var svgstream = fs.createWriteStream( "hosts" );
+    svgstream.write( ansibleHosts.join('\n') );
+    svgstream.end();
+
+    // TODO:
+    // ansible top-level script
+
+    //var edgeComponentInstallOrder = [ "ZK", "CS", "OL", "MS", "MP", "R", "PS", "QS" ];
+
 
 };
 
