@@ -13,12 +13,14 @@
                                     "id": 1,
                                     "hostname": "nnnxxxyyy01",
                                     "ip": "10.119.3.201",
+                                    "rack": "1",
                                     "components": [ "R" ] 
                                 },
                                 {
                                     "id": 2,
                                     "hostname": "nnnxxxyyy02",
                                     "ip": "10.119.3.202",
+                                    "rack": "2",
                                     "components": [ "R" ] 
                                 }
                     ]
@@ -31,6 +33,7 @@
                                     "id": 8,
                                     "hostname": "nnnxxxyyy08",
                                     "ip": "10.119.3.208",
+                                    "rack": "1",
                                     "components": [ "DP", "HT" ] 
                                 },
                                 {
@@ -115,30 +118,35 @@
                                     "id": 13,
                                     "hostname": "nnnxxxyyy13",
                                     "ip": "10.119.3.213",
+                                    "rack": "1",
                                     "components": [ "OL", "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 15,
                                     "hostname": "nnnxxxyyy15",
                                     "ip": "10.119.3.215",
+                                    "rack": "2",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 16,
                                     "hostname": "nnnxxxyyy16",
                                     "ip": "10.119.3.216",
+                                    "rack": "3",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 17,
                                     "hostname": "nnnxxxyyy17",
                                     "ip": "10.119.3.217",
+                                    "rack": "1",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 18,
                                     "hostname": "nnnxxxyyy18",
                                     "ip": "10.119.3.218",
+                                    "rack": "2",
                                     "components": [ "CS", "ZK" ] 
                                 }
                     ]

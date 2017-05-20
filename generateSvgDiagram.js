@@ -333,6 +333,7 @@ id="svg2">
     // 
     // 
 
+    // TODO: refactor to utils
     // make lookup table for component:isApigee check
     var isApigee = fp(portdefs.mappings.edge).reduce( (comps, comp) => {
         comps[comp.client.component] = comp.client.apigee;

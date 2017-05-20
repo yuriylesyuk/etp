@@ -19,7 +19,7 @@ program.on('*', function () {
     program.help();
 })
 
-var supportedArtifactTypes = ["diagram", "portrequest", "checkports"];
+var supportedArtifactTypes = ["diagram", "portrequest", "checkports", "inventory"];
 
 program.on('--help', function () {
     console.log(' Supported artifact:  ' + supportedArtifactTypes.join(", "));
@@ -49,4 +49,8 @@ if( artifactType === "portrequest"){
     var generateSvgDiagram = require( "./generateSvgDiagram.js" );
 
     generateSvgDiagram(topologyFile, outputFile);
+}else if (artifactType === "inventory" ){
+    var generateInventory = require( "./generateInventory.js" );
+
+    generateInventory(topologyFile, outputFile);
 }

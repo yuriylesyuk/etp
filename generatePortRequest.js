@@ -68,9 +68,7 @@ module.exports = function ( topologyFile, outputFile ){
 
     // nodes reference collection for hostname, ip lookups
     // overlay nodes
-    var nodes = fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  )(topology.regions[0].subnets) );
-
-    var nodesX = fp.fromPairs( 
+    var nodes = fp.fromPairs( 
         fp.flatMap( region => 
             fp.flatMap( subnet => 
                 fp.map( node => 
@@ -80,13 +78,9 @@ module.exports = function ( topologyFile, outputFile ){
         )(topology.regions)
     );
 
-    fp.forEach( 
-        o => nodes[o.id] = o )( fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  
-    )( portdefs.externalclientspseudosubnets ) ) );
-
     fp.map( region => 
         fp.forEach( 
-            o => nodesX[ region.id+'-'+o.id] = o )( fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  
+            o => nodes[ region.id+'-'+o.id] = o )( fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  
         )( portdefs.externalclientspseudosubnets ) ) )
     )(topology.regions);
 
@@ -117,7 +111,7 @@ module.exports = function ( topologyFile, outputFile ){
     fp.map( ldc => 
         fp.map( rdc => {
             console.log(ldc+":"+rdc);
-            firewallPortRequestsList = firewallPortRequestsList.concat( genFirewallPortRequestsList( overlayRegion(ldc), overlayRegion(rdc), portdefs, nodesX ) );
+            firewallPortRequestsList = firewallPortRequestsList.concat( genFirewallPortRequestsList( overlayRegion(ldc), overlayRegion(rdc), portdefs, nodes ) );
         })(fp.map('id')(topology.regions))
     )(fp.map('id')(topology.regions));
 
