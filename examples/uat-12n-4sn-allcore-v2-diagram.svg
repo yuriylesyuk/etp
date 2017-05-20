@@ -265,13 +265,13 @@ IP: 10.119.131.11</title>
     <text id="nodetext1" x="28.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 1</text>
     
+<use xlink:href="#ps"  x="16" y="106"/>
+<use xlink:href="#qis"  x="16" y="125"/>
 
 <use xlink:href="#tg"  x="16" y="299"/>
 <use xlink:href="#my"  x="16" y="280"/>
 <use xlink:href="#pgm"  x="16" y="261"/>
 <use xlink:href="#qd"  x="16" y="242"/>
-<use xlink:href="#qis"  x="16" y="223"/>
-<use xlink:href="#ps"  x="16" y="204"/>
 
 
 
@@ -283,13 +283,13 @@ IP: 10.119.131.12</title>
     <text id="nodetext13" x="59.400000000000006" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 13</text>
     
+<use xlink:href="#ps"  x="46.6" y="106"/>
+<use xlink:href="#qis"  x="46.6" y="125"/>
 
 <use xlink:href="#tg"  x="46.6" y="299"/>
 <use xlink:href="#my"  x="46.6" y="280"/>
 <use xlink:href="#pgs"  x="46.6" y="261"/>
 <use xlink:href="#qd"  x="46.6" y="242"/>
-<use xlink:href="#qis"  x="46.6" y="223"/>
-<use xlink:href="#ps"  x="46.6" y="204"/>
 
 
 <rect id="subnet1" x="94.2" y="101" width="102.80000000000001" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
@@ -355,6 +355,11 @@ IP: 10.119.133.15</title>
     <text id="nodetext9" x="233.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 9</text>
     
+<use xlink:href="#ui"  x="221" y="106"/>
+<use xlink:href="#ms"  x="221" y="125"/>
+<use xlink:href="#bs"  x="221" y="144"/>
+<use xlink:href="#bp"  x="221" y="163"/>
+<use xlink:href="#qis"  x="221" y="182"/>
 
 <use xlink:href="#tg"  x="221" y="299"/>
 <use xlink:href="#if"  x="221" y="280"/>
@@ -362,11 +367,6 @@ IP: 10.119.133.15</title>
 <use xlink:href="#qd"  x="221" y="242"/>
 <use xlink:href="#tc"  x="221" y="223"/>
 <use xlink:href="#es"  x="221" y="204"/>
-<use xlink:href="#qis"  x="221" y="185"/>
-<use xlink:href="#bp"  x="221" y="166"/>
-<use xlink:href="#bs"  x="221" y="147"/>
-<use xlink:href="#ms"  x="221" y="128"/>
-<use xlink:href="#ui"  x="221" y="109"/>
 
 
 
@@ -378,16 +378,16 @@ IP: 10.119.133.16</title>
     <text id="nodetext14" x="264.4" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 14</text>
     
+<use xlink:href="#ui"  x="251.6" y="106"/>
+<use xlink:href="#ms"  x="251.6" y="125"/>
+<use xlink:href="#bs"  x="251.6" y="144"/>
+<use xlink:href="#bp"  x="251.6" y="163"/>
+<use xlink:href="#qis"  x="251.6" y="182"/>
 
 <use xlink:href="#tg"  x="251.6" y="299"/>
 <use xlink:href="#qd"  x="251.6" y="280"/>
 <use xlink:href="#tc"  x="251.6" y="261"/>
 <use xlink:href="#es"  x="251.6" y="242"/>
-<use xlink:href="#qis"  x="251.6" y="223"/>
-<use xlink:href="#bp"  x="251.6" y="204"/>
-<use xlink:href="#bs"  x="251.6" y="185"/>
-<use xlink:href="#ms"  x="251.6" y="166"/>
-<use xlink:href="#ui"  x="251.6" y="147"/>
 
 
 
@@ -399,10 +399,10 @@ IP: 10.119.133.13</title>
     <text id="nodetext7" x="295" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 7</text>
     
+<use xlink:href="#r"  x="282.2" y="106"/>
+<use xlink:href="#mp"  x="282.2" y="125"/>
 
 <use xlink:href="#tg"  x="282.2" y="299"/>
-<use xlink:href="#mp"  x="282.2" y="280"/>
-<use xlink:href="#r"  x="282.2" y="261"/>
 
 
 
@@ -414,10 +414,10 @@ IP: 10.119.133.14</title>
     <text id="nodetext8" x="325.6" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 8</text>
     
+<use xlink:href="#r"  x="312.8" y="106"/>
+<use xlink:href="#mp"  x="312.8" y="125"/>
 
 <use xlink:href="#tg"  x="312.8" y="299"/>
-<use xlink:href="#mp"  x="312.8" y="280"/>
-<use xlink:href="#r"  x="312.8" y="261"/>
 
 
 
@@ -429,9 +429,9 @@ IP: 10.119.133.11</title>
     <text id="nodetext5" x="356.2" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 5</text>
     
+<use xlink:href="#mp"  x="343.4" y="106"/>
 
 <use xlink:href="#tg"  x="343.4" y="299"/>
-<use xlink:href="#mp"  x="343.4" y="280"/>
 
 
 
@@ -443,9 +443,9 @@ IP: 10.119.133.12</title>
     <text id="nodetext6" x="386.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
+<use xlink:href="#mp"  x="374" y="106"/>
 
 <use xlink:href="#tg"  x="374" y="299"/>
-<use xlink:href="#mp"  x="374" y="280"/>
 
 
 <rect id="subnet1" x="421.6" y="101" width="133.4" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
@@ -461,10 +461,10 @@ IP: 10.119.134.11</title>
     <text id="nodetext10" x="443.40000000000003" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 10</text>
     
+<use xlink:href="#dp"  x="430.6" y="106"/>
 
 <use xlink:href="#ht"  x="430.6" y="299"/>
 <use xlink:href="#no"  x="430.6" y="280"/>
-<use xlink:href="#dp"  x="430.6" y="261"/>
 
 
 
@@ -476,10 +476,10 @@ IP: 10.119.134.14</title>
     <text id="nodetext15" x="474.00000000000006" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 15</text>
     
+<use xlink:href="#dp"  x="461.20000000000005" y="106"/>
 
 <use xlink:href="#ht"  x="461.20000000000005" y="299"/>
 <use xlink:href="#no"  x="461.20000000000005" y="280"/>
-<use xlink:href="#dp"  x="461.20000000000005" y="261"/>
 
 
 
@@ -491,9 +491,9 @@ IP: 10.119.134.12</title>
     <text id="nodetext11" x="504.6" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 11</text>
     
+<use xlink:href="#r"  x="491.8" y="106"/>
 
 <use xlink:href="#tg"  x="491.8" y="299"/>
-<use xlink:href="#r"  x="491.8" y="280"/>
 
 
 
@@ -505,7 +505,7 @@ IP: 10.119.134.13</title>
     <text id="nodetext12" x="535.2" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 12</text>
     
+<use xlink:href="#r"  x="522.4000000000001" y="106"/>
 
 <use xlink:href="#tg"  x="522.4000000000001" y="299"/>
-<use xlink:href="#r"  x="522.4000000000001" y="280"/>
 </svg>

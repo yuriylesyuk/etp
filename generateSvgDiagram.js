@@ -2,7 +2,7 @@ var fp = require("lodash/fp");
 
 
 module.exports = function ( topologyFile, outputFile ){
-    var portDefs = require("./edge-port-defs.json");
+    var portdefs = require("./edge-port-defs.json");
 
     var topology = require( topologyFile );
     //var topology = require("./uat-19n-3sn-topology.json");
@@ -334,7 +334,7 @@ id="svg2">
     // 
 
     // make lookup table for component:isApigee check
-    var isApigee = fp(portDefs.edge).reduce( (comps, comp) => {
+    var isApigee = fp(portdefs.mappings.edge).reduce( (comps, comp) => {
         comps[comp.client.component] = comp.client.apigee;
         return comps;
     }, {});
