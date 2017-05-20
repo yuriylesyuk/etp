@@ -6,6 +6,8 @@ program
     .version(require('./package').version);
 
 program
+    .option('-u, --ansible_user [ansible_user]', 'Ansinble User Name')
+    .option('-k, --ansible_key [ansible_key]', 'Ansible SSH Private Key File')
     .command("generate <artifact> <topology> [<output>]").alias("g")
     .description('Generate artifact')
     .action(function (artifact, topology, output) {
@@ -52,5 +54,5 @@ if( artifactType === "portrequest"){
 }else if (artifactType === "inventory" ){
     var generateInventory = require( "./generateInventory.js" );
 
-    generateInventory(topologyFile, outputFile);
+    generateInventory(topologyFile, outputFile, program);
 }
