@@ -944,5 +944,8 @@
                 }
             ]
         }
+    ],
+    "edgecomponentinstallsequence": [ 
+        "ZK", "CS", "OL", "MS", "MP", "R", "PS", "QIS" 
     ]
 }

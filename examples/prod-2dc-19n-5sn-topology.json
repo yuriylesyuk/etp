@@ -1,8 +1,9 @@
 {
     "planet": "PROD",
+    "version": "0.3.19",
     "regions" : [
         {
-            "id" : "1",
+            "id" : 1,
             "name": "dc-1",
             "subnets": [
                 {
@@ -11,6 +12,7 @@
                     "nodes": [
                                 {
                                     "id": 1,
+                                    "rack": 2,
                                     "hostname": "dc1snrtsn01",
                                     "ip": "10.119.3.201",
                                     "components": [ "R" ] 
@@ -113,30 +115,35 @@
                     "nodes": [
                                 {
                                     "id": 13,
+                                    "rack": 1,
                                     "hostname": "dc1sndstn13",
                                     "ip": "10.119.3.213",
                                     "components": [ "OL", "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 15,
+                                    "rack": 2,
                                     "hostname": "dc1sndstn15",
                                     "ip": "10.119.3.215",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 16,
+                                    "rack": 3,
                                     "hostname": "dc1sndstn16",
                                     "ip": "10.119.3.216",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 17,
+                                    "rack": 2,
                                     "hostname": "dc1sndstn17",
                                     "ip": "10.119.3.217",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 18,
+                                    "rack": 3,
                                     "hostname": "dc1sndstn18",
                                     "ip": "10.119.3.218",
                                     "components": [ "CS", "ZK" ] 
@@ -193,7 +200,7 @@
             ]
         },
         {
-            "id" : "2",
+            "id" : 2,
             "name": "dc-2",
             "subnets": [
                 {
@@ -304,30 +311,35 @@
                     "nodes": [
                                 {
                                     "id": 13,
+                                    "rack": 2,
                                     "hostname": "dc2sndstn13",
                                     "ip": "10.119.5.213",
                                     "components": [ "OL", "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 15,
+                                    "rack": 3,
                                     "hostname": "dc2sndstn15",
                                     "ip": "10.119.5.215",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 16,
+                                    "rack": 1,
                                     "hostname": "dc2sndstn16",
                                     "ip": "10.119.5.216",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 17,
+                                    "rack": 2,
                                     "hostname": "dc2sndstn17",
                                     "ip": "10.119.5.217",
                                     "components": [ "CS", "ZK" ] 
                                 },
                                 {
                                     "id": 18,
+                                    "rack": 3,
                                     "hostname": "dc2sndstn18",
                                     "ip": "10.119.5.218",
                                     "components": [ "CS", "ZK" ] 

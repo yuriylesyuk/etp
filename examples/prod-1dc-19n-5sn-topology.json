@@ -13,7 +13,7 @@
                                     "id": 1,
                                     "hostname": "nnnxxxyyy01",
                                     "ip": "10.119.3.201",
-                                    "rack": "1",
+                                    "rack": 1,
                                     "components": [ "R" ] 
                                 },
                                 {
@@ -33,7 +33,7 @@
                                     "id": 8,
                                     "hostname": "nnnxxxyyy08",
                                     "ip": "10.119.3.208",
-                                    "rack": "1",
+                                    "rack": 1,
                                     "components": [ "DP", "HT" ] 
                                 },
                                 {

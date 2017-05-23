@@ -6,7 +6,9 @@ program
     .version(require('./package').version);
 
 program
-    .option('-u, --ansible_user [ansible_user]', 'Ansinble User Name')
+    .option('-a, --ansible_script [ansible_script]', 'Ansible top-level playbook invocation snippet')
+    .option('-x, --prefix [prefix]', 'File prefix for multi-dc artifacts')
+    .option('-u, --ansible_user [ansible_user]', 'Ansible User Name')
     .option('-k, --ansible_key [ansible_key]', 'Ansible SSH Private Key File')
     .command("generate <artifact> <topology> [<output>]").alias("g")
     .description('Generate artifact')
