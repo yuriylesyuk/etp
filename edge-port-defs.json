@@ -899,16 +899,52 @@
         ]
     },
     "ports": [
-        {
-            "id": "8080",
-            "type": "http",
-            "description": "Management API Calls"
-        },
-        {
-            "id": "59002",
-            "type": "http",
-            "description": "SmartDocs"
-        }
+        { "id": "25", "type": "rmi", "description": "Defalt SMTP Server port" },
+
+        { "id": "1099", "type": "rmi", "description": "JMX Management" },
+        { "id": "1100", "type": "rmi", "description": "JMX Management" },
+        { "id": "1101", "type": "rmi", "description": "JMX Management" },
+        { "id": "1102", "type": "rmi", "description": "JMX Management" },
+        { "id": "1103", "type": "rmi", "description": "JMX Management" },
+        { "id": "2181", "type": "???", "description": "Zookeeper internode management" },
+        { "id": "2888", "type": "???", "description": "Zookeeper internode management" },
+        { "id": "3888", "type": "???", "description": "Zookeeper internode management" },
+        { "id": "4526", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Management Server" },
+        { "id": "4527", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Router" },
+        { "id": "4528", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Message Processor" },
+        { "id": "4529", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Qpid Server" },
+        { "id": "4530", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Postgres Server" },
+
+        { "id": "5432", "type": "???", "description": "Postgres client" },
+        { "id": "5672", "type": "???", "description": "Sending analytics from Router and Message Processor to Qpid" },
+
+        { "id": "7000", "type": "???", "description": "Cassandra inter-node communications" },
+
+        { "id": "7199", "type": "???", "description": "JMX management. Must be open for access on the Cassandra node by the Management Server." },
+
+        { "id": "8080", "type": "http", "description": "Default Management API Calls" },
+        { "id": "8443", "type": "http", "description": "Default Management API Calls via TLS" },
+
+        { "id": "8081", "type": "http", "description": "Issuing API requests directly to Router" },
+        { "id": "8082", "type": "http", "description": "Issuing API requests directly to Message Processor" },
+        { "id": "8083", "type": "http", "description": "Issuing API requests directly to Qpid Server" },
+        { "id": "8084", "type": "http", "description": "Issuing API requests directly to Postgres Server" },
+
+        { "id": "8998", "type": "http", "description": "Communication between Router and Message Processor" },
+        { "id": "9000", "type": "http", "description": "Default Edge management UI port" },
+        { "id": "9443", "type": "http", "description": "Default Edge management UI port via TLS" },
+
+        { "id": "9042", "type": "???", "description": "CQL native transport" },
+
+        { "id": "9160", "type": "???", "description": "Cassandra thrift client" },
+
+        { "id": "10389", "type": "???", "description": "LDAP port" },
+
+        { "id": "15999", "type": "???", "description": "Health check port for a load balancer" },
+
+
+        { "id": "59001", "type": "http", "description": "Port used by the apigee-validate utility to test the Edge installation" },
+        { "id": "59002", "type": "http", "description": "The router port where SmartDocs page requests are sent" }
     ],
     "externalclientspseudosubnets": [
         {

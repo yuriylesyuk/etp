@@ -78,6 +78,10 @@ module.exports = function ( topologyFile, outputFile ){
         )(topology.regions)
     );
 
+    // ports reference collection for port type, description
+    var ports = fp.keyBy("id")(portdefs.ports);
+
+
     fp.map( region => 
         fp.forEach( 
             o => nodes[ region.id+'-'+o.id] = o )( fp.keyBy( "id" )( fp.flatMap( subnet => subnet.nodes  
@@ -111,7 +115,7 @@ module.exports = function ( topologyFile, outputFile ){
     fp.map( ldc => 
         fp.map( rdc => {
             console.log(ldc+":"+rdc);
-            firewallPortRequestsList = firewallPortRequestsList.concat( genFirewallPortRequestsList( overlayRegion(ldc), overlayRegion(rdc), portdefs, nodes ) );
+            firewallPortRequestsList = firewallPortRequestsList.concat( genFirewallPortRequestsList( overlayRegion(ldc), overlayRegion(rdc), portdefs, nodes, ports ) );
         })(fp.map('id')(topology.regions))
     )(fp.map('id')(topology.regions));
 
@@ -143,7 +147,7 @@ module.exports = function ( topologyFile, outputFile ){
     // Generate CSV 
     //console.log(firewallPortRequests);
 
-    var columns = [ "category", "srcnode", "srchostname", "srcip", "dstnode", "dsthostname", "dstip", "clientcomponent", "servercomponent", "port" ];
+    var columns = [ "category", "srcnode", "srchostname", "srcip", "dstnode", "dsthostname", "dstip", "clientcomponent", "servercomponent", "port", "description" ];
 
     // redundant records
     var csv = [ fp.chain( firewallPortRequestsList[0] ).pick(columns).keys().value().join( ", ") ];
@@ -194,7 +198,7 @@ module.exports = function ( topologyFile, outputFile ){
 // clientregion.id === serverregion.id generates ports for single-dc topology
 // clientregion.id === serverregion.id generates multi-dc ports
 
-function genFirewallPortRequestsList( clientregion, serverregion, portdefs, nodes  ){
+function genFirewallPortRequestsList( clientregion, serverregion, portdefs, nodes, ports  ){
 
     var mapping = clientregion.id === serverregion.id ? "edge" : "multidc";
 
@@ -239,7 +243,8 @@ function genFirewallPortRequestsList( clientregion, serverregion, portdefs, node
                                         dstip: nodes[ serverregion.id+'-'+ss.node ].ip, 
                                         clientcomponent: clientComponent, 
                                         servercomponent: sc.component, 
-                                        port: port 
+                                        port: port, 
+                                        description: (ports[port] ? ports[port].description : "")
                                     }; 
                                 } )(sc.ports)
                             );
