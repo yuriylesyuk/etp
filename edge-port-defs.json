@@ -909,6 +909,9 @@
         { "id": "2181", "type": "???", "description": "Zookeeper internode management" },
         { "id": "2888", "type": "???", "description": "Zookeeper internode management" },
         { "id": "3888", "type": "???", "description": "Zookeeper internode management" },
+
+        { "id": "3306", "type": "tcp/udp", "description": "DEVPortal to MariaDB/MySQL" },
+
         { "id": "4526", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Management Server" },
         { "id": "4527", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Router" },
         { "id": "4528", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Message Processor" },
@@ -929,6 +932,10 @@
         { "id": "8082", "type": "http", "description": "Issuing API requests directly to Message Processor" },
         { "id": "8083", "type": "http", "description": "Issuing API requests directly to Qpid Server" },
         { "id": "8084", "type": "http", "description": "Issuing API requests directly to Postgres Server" },
+
+        { "id": "8086", "type": "http", "description": "Telegraph to Influx DB" },
+        { "id": "8183", "type": "http", "description": "Browser to InfluxDB" },
+        { "id": "3000", "type": "http", "description": "Browser to Graphana" },
 
         { "id": "8998", "type": "http", "description": "Communication between Router and Message Processor" },
         { "id": "9000", "type": "http", "description": "Default Edge management UI port" },
