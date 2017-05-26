@@ -7,7 +7,34 @@ Utility to generate different artifacts using Edge topology configuration defini
 
 A configuration is written using JSON format. 
 
-Examples of configurations can be seen in the examples folder.
+
+
+## Introduction
+The ETP potential target audiences are:
+* GAs implementing non-trivial topologies;
+* SEs/Sales;
+* Partners, implementing Private Cloud installations;
+* Customers of Edge Private Cloud edition.
+ 
+We do support true Multi-DC planets. Ie., more than 2.
+ 
+There is more artifacts generated out-of-the-box using input topology definition:
+ 
+- SVG Diagrams;
+- Firewall Port requests
+- automated check if a port is open (ansible script-based)
+- Html nodes Inventory;
+- DC silent install configuration files /per DC [WIP]
+- Ansible top-level playbook invocation file/Planet-wide [WIP]
+ 
+With support of
+* Versioning;
+* Racks;
+* Subnets
+* Logical Deployment Tiers
+* Port requests with port descriptions (small, but super-important for customer!)
+* External Client ports
+
 
 ## Quick Start Guide
 
@@ -102,6 +129,8 @@ An example for a 12 node topologies is given below.
 }
 ```
 
+For additional examples, see a collection of topologies in an examples/ folder.
+
 ## Firewall Ports Request
 
 The etp generates a typical port request spreadsheet that you can use to submit to your Firewall/Security teams to create firewall rules. The generated file is in .csv format and can easily be opened in Excel or your preferred spreadsheet program.
@@ -128,11 +157,11 @@ Sample Diagrams for example u12 and u19 topologies are:
 
 uat-12n:
 
-<img src="docs/uat-1dc-15n-4sn-diagram.svg" width="600">
+<img src="docs/uat-1dc-15n-diagram.png" width="600">
 
 2 data-centre prod-19n:
 
-<img src="docs/prod-2dc-15n-4sn-diagram.svg" width="600">
+<img src="docs/prod-2dc-15n-diagram.png" width="600">
 
 Svg diagrams support additional information in a form of tooltips.
 
@@ -145,7 +174,7 @@ Here is an example of a 4 data-centre topology.
 <img src="docs/prod-4dc-19n-5sn-diagram.svg" width="600">
 
 
-## Iventory List
+## Inventory List
 
 The 'etp generate inventory' command generates a number of useful artifacts which make a documeting of your topology an easy and pleasurable experience. 
 
