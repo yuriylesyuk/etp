@@ -1,5 +1,6 @@
-# etp alpha release
-
+<hr>
+# etp closed beta release
+<hr>
 
 # ETP Edge Topology Processor
 
@@ -171,7 +172,7 @@ Svg diagrams support additional information in a form of tooltips.
 
 Here is an example of a 4 data-centre topology.
 
-<img src="docs/prod-4dc-19n-5sn-diagram.svg" width="600">
+<img src="docs/prod-4dc-diagram.png" width="600">
 
 
 ## Inventory List
