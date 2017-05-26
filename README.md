@@ -28,17 +28,35 @@ wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/prod-2dc-
 
 3. Generate svg diagram for the topology.
 ```shell
-etp generate diagram $PWD/uat-12n-4sn-topology.json $PWD/svgdiagram-uat-12n.svg
+etp generate diagram $PWD/uat-1dc-15n-4sn-topology.json $PWD/uat-1dc-15n-4sn-diagram.svg
 ```
 4. Open generated svg file in your browser.
-
+```
+open -a /Applications/Google\ Chrome.app/ uat-1dc-15n-4sn-diagram.svg
+```
 
 5. Generate firewall ports request
 ```shell
-etp generate portrequest $PWD/uat-12n-4sn-topology.json $PWD/portrequest-uat-12n.csv
+etp generate portrequest $PWD/uat-1dc-15n-4sn-topology.json $PWD/uat-1dc-15n-4sn-portrequest.csv
 ```
 
 6. Open generated portrequest.cvs file in Excel.
+
+7. Generate Inventory and suppementary files
+```
+etp generate inventory \
+ -u opapiadmin \
+ -k ~/.ssh/id_ansible \
+ -x uat-1dc-15n-4sn- \
+ -a uat-1dc-15n-4sn-ansible.sh \
+ $PWD/uat-1dc-15n-4sn-topology.json $PWD/uat-1dc-15n-4sn-inventory.html
+ ```
+
+8. Open inventory.html file in a browser
+```
+ open -a /Applications/Google\ Chrome.app/ uat-1dc-15n-4sn-inventory.html
+```
+
 
 ## Edge Topology Definition
 
@@ -68,142 +86,11 @@ An example for a 12 node topologies is given below.
                                     "HT"
                                 ]
                         },
-                        {
-                            "id": 7,
-                            "hostname": "nnnxxxyyy07",
-                            "ip": "10.119.3.207",
-                            "components": [
-                                "R",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 8,
-                            "hostname": "nnnxxxyyy08",
-                            "ip": "10.119.3.208",
-                            "components": [
-                                "R",
-                                "TG"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "gateway-baas",
-                    "tier": "core",
-                    "nodes": [
-                        {
-                            "id": 9,
-                            "hostname": "nnnxxxyyy09",
-                            "ip": "10.119.3.209",
-                            "components": [
-                                "MP",
-                                "UI",
-                                "MS",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 10,
-                            "hostname": "nnnxxxyyy10",
-                            "ip": "10.119.3.210",
-                            "components": [
-                                "MP",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 11,
-                            "hostname": "nnnxxxyyy11",
-                            "ip": "10.119.3.211",
-                            "components": [
-                                "R",
-                                "MP",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 12,
-                            "hostname": "nnnxxxyyy12",
-                            "ip": "10.119.3.212",
-                            "components": [
-                                "R",
-                                "MP",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 5,
-                            "hostname": "nnnxxxyyy05",
-                            "ip": "10.119.3.205",
-                            "components": [
-                                "BS",
-                                "BP",
-                                "QIS",
-                                "TC",
-                                "QD",
-                                "GF",
-                                "IF",
-                                "TG"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "data-storage",
-                    "tier": "core",
-                    "nodes": [
-                        {
-                            "id": 2,
-                            "hostname": "nnnxxxyyy02",
-                            "ip": "10.119.3.202",
-                            "components": [
-                                "OL",
-                                "CS",
-                                "ZK",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "hostname": "nnnxxxyyy03",
-                            "ip": "10.119.3.203",
-                            "components": [
-                                "CS",
-                                "ZK",
-                                "TG"
-                            ]
-                        },
-                        {
-                            "id": 4,
-                            "hostname": "nnnxxxyyy04",
-                            "ip": "10.119.3.204",
-                            "components": [
-                                "CS",
-                                "ZK",
-                                "TG"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "analytics",
-                    "tier": "core",
-                    "nodes": [
-                        {
-                            "id": 6,
-                            "hostname": "nnnxxxyyy06",
-                            "ip": "10.119.3.206",
-                            "components": [
-                                "PS",
-                                "QIS",
-                                "QD",
-                                "PG",
-                                "MY",
-                                "TG"
-                            ]
-                        }
-                    ]
+
+
+...............
+
+
                 }
             ],
             "tiers": [
@@ -221,22 +108,285 @@ The etp generates a typical port request spreadsheet that you can use to submit 
 
 Example contents can be seen on the following screenshot.
 
-![alt port requests](docs/fwportrequest.png)
+![alt port requests](docs/firewall-portrequest-full.png)
+
+Depending on a use case, you might want a full list of port pairs as your Security Department would want to go through it item
+by item, component by component, and so some source-ip, destination-ip, and port tuples will not be unique.
+
+When your Firewall Department goes through the list to configure ports, they would want only non-repeatable combinations. There is an option that lets you generete a compact firewall request. The compnents in such a request will be grouped in comma-separated lists and source and destination groups of components will be separeted by semicolon.
+
+
+![alt port requests](docs/firewall-portrequest-full-compact.png)
+
+
 
 ## Topology Diagram
 
 The 'g diagram' command will generate an svg file that depicts Edge's topology.
 
-Diagrams for example u12 and u19 topologies are:
+Sample Diagrams for example u12 and u19 topologies are:
 
 uat-12n:
 
-<img src="docs/svgdiagram-uat-12n.png" width="400">
+<img src="docs/uat-1dc-15n-4sn-diagram.svg" width="600">
 
-prod-19n:
+2 data-centre prod-19n:
 
-<img src="docs/svgdiagram-prod-19n.png" width="400">
+<img src="docs/prod-2dc-15n-4sn-diagram.svg" width="600">
 
+Svg diagrams support additional information in a form of tooltips.
+
+
+<img src="docs/svgdiagramtooltip.png" width="400">
+
+
+Here is an example of a 4 data-centre topology.
+
+<img src="docs/prod-4dc-19n-5sn-diagram.svg" width="600">
+
+
+## Iventory List
+
+The 'etp generate inventory' command generates a number of useful artifacts which make a documeting of your topology an easy and pleasurable experience. 
+
+For a 2-data-centre topolopy above, the inventory html table would looklike
+
+<img src="docs/prod-2dc-15n-inventory.png" width="500">
+
+A set of color coding conventions make the reading of the table easier:
+
+Edge and non-edge components are marked in Apigee-Red and Dark-Blue colours respectively.
+
+The Racka are colour-coded as well.
+
+
+## Fragments of silent configuration files
+
+Currently, fragments of silent configuration files are generated. 
+
+Examples for a 2 DC topology.
+
+An .cfg file for DC1
+
+_prod-2dc-15n-4sn-dc1.cfg:_
+```
+# Planet: UAT; Version: . Generated by etp at: Fri May 26 2017 15:50:47 GMT+0100 (BST)
+
+#--------------------------------------------------------------------------
+# Datacentre: 1
+#--------------------------------------------------------------------------
+IPDC1N01=10.119.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC1N02=10.119.132.11             # OL, CS, ZK, TG
+IPDC1N03=10.119.132.12             # OL, CS, ZK, TG
+IPDC1N04=10.119.132.13             # CS, ZK, TG
+IPDC1N05=10.119.133.11             # MP, TG
+IPDC1N06=10.119.133.12             # MP, TG
+IPDC1N07=10.119.133.13             # R, MP, TG
+IPDC1N08=10.119.133.14             # R, MP, TG
+IPDC1N09=10.119.133.15             # UI, MS, BS, BP, ES, TC, TG
+IPDC1N10=10.119.134.11             # DP, NO, HT
+IPDC1N11=10.119.134.12             # R, TG
+IPDC1N12=10.119.134.13             # R, TG
+IPDC1N13=10.119.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC1N14=10.119.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
+IPDC1N15=10.119.134.14             # DP, NO, HT
+
+#--------------------------------------------------------------------------
+# Datacentre: 2
+#--------------------------------------------------------------------------
+IPDC2N01=10.219.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC2N02=10.219.132.11             # OL, CS, ZK, TG
+IPDC2N03=10.219.132.12             # OL, CS, ZK, TG
+IPDC2N04=10.219.132.13             # CS, ZK, TG
+IPDC2N05=10.219.133.11             # MP, TG
+IPDC2N06=10.219.133.12             # MP, TG
+IPDC2N07=10.219.133.13             # R, MP, TG
+IPDC2N08=10.219.133.14             # R, MP, TG
+IPDC2N09=10.219.133.15             # UI, MS, BS, BP, ES, TC, TG
+IPDC2N10=10.219.134.11             # DP, NO, HT
+IPDC2N11=10.219.134.12             # R, TG
+IPDC2N12=10.219.134.13             # R, TG
+IPDC2N13=10.219.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC2N14=10.219.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
+IPDC2N15=10.219.134.14             # DP, NO, HT
+
+-------------
+ZK_HOSTS="$IPDC1N02 $IPDC1N03 $IPDC1N04 $IPDC2N02,$IPDC2N03,$IPDC2N04:observer"
+ZK_CLIENT_HOSTS="$IPDC1N02 $IPDC1N03 $IPDC1N04"
+CASS_HOSTS="$IPDC1N02:1,1 $IPDC1N03:1,1 $IPDC1N04:1,1 $IPDC2N02:2,1 $IPDC2N03:2,1 $IPDC2N04:2,1"
+
+```
+
+*prod-2dc-15n-4sn-dc2.cfg:*
+```
+# Planet: UAT; Version: . Generated by etp at: Fri May 26 2017 15:50:47 GMT+0100 (BST)
+
+#--------------------------------------------------------------------------
+# Datacentre: 1
+#--------------------------------------------------------------------------
+IPDC1N01=10.119.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC1N02=10.119.132.11             # OL, CS, ZK, TG
+IPDC1N03=10.119.132.12             # OL, CS, ZK, TG
+IPDC1N04=10.119.132.13             # CS, ZK, TG
+IPDC1N05=10.119.133.11             # MP, TG
+IPDC1N06=10.119.133.12             # MP, TG
+IPDC1N07=10.119.133.13             # R, MP, TG
+IPDC1N08=10.119.133.14             # R, MP, TG
+IPDC1N09=10.119.133.15             # UI, MS, BS, BP, ES, TC, TG
+IPDC1N10=10.119.134.11             # DP, NO, HT
+IPDC1N11=10.119.134.12             # R, TG
+IPDC1N12=10.119.134.13             # R, TG
+IPDC1N13=10.119.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC1N14=10.119.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
+IPDC1N15=10.119.134.14             # DP, NO, HT
+
+#--------------------------------------------------------------------------
+# Datacentre: 2
+#--------------------------------------------------------------------------
+IPDC2N01=10.219.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC2N02=10.219.132.11             # OL, CS, ZK, TG
+IPDC2N03=10.219.132.12             # OL, CS, ZK, TG
+IPDC2N04=10.219.132.13             # CS, ZK, TG
+IPDC2N05=10.219.133.11             # MP, TG
+IPDC2N06=10.219.133.12             # MP, TG
+IPDC2N07=10.219.133.13             # R, MP, TG
+IPDC2N08=10.219.133.14             # R, MP, TG
+IPDC2N09=10.219.133.15             # UI, MS, BS, BP, ES, TC, TG
+IPDC2N10=10.219.134.11             # DP, NO, HT
+IPDC2N11=10.219.134.12             # R, TG
+IPDC2N12=10.219.134.13             # R, TG
+IPDC2N13=10.219.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC2N14=10.219.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
+IPDC2N15=10.219.134.14             # DP, NO, HT
+
+-------------
+ZK_HOSTS="$IPDC2N02 $IPDC2N03 $IPDC2N04:observer $IPDC1N02,$IPDC1N03,$IPDC1N04"
+ZK_CLIENT_HOSTS="$IPDC2N02 $IPDC2N03 $IPDC2N04"
+CASS_HOSTS="$IPDC2N02:2,1 $IPDC2N03:2,1 $IPDC2N04:2,1 $IPDC1N02:1,1 $IPDC1N03:1,1 $IPDC1N04:1,1"
+```
+
+
+
+## ansible hosts file
+
+Ansible hosts file is generated. Two additional options, -u and -k let you provide specific values for ansible_user and ansible_ssh_private_key_file parameters.
+
+```
+etp generate inventory \
+ -u opapiadmin \
+ -k ~/.ssh/id_ansible \
+ -x prod-2dc-15n-4sn- \
+ -a prod-2dc-15n-4sn-ansible.sh \
+ $PWD/prod-2dc-15n-4sn-topology.json $PWD/prod-2dc-15n-4sn-inventory.html
+```
+
+
+~/ansible/hosts:
+```
+[edge]
+dc1n01 ansible_host=10.119.131.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n02 ansible_host=10.119.132.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n03 ansible_host=10.119.132.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n04 ansible_host=10.119.132.13 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n05 ansible_host=10.119.133.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n06 ansible_host=10.119.133.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n07 ansible_host=10.119.133.13 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n08 ansible_host=10.119.133.14 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n09 ansible_host=10.119.133.15 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n10 ansible_host=10.119.134.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n11 ansible_host=10.119.134.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n12 ansible_host=10.119.134.13 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n13 ansible_host=10.119.131.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n14 ansible_host=10.119.133.16 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc1n15 ansible_host=10.119.134.14 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n01 ansible_host=10.219.131.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n02 ansible_host=10.219.132.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n03 ansible_host=10.219.132.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n04 ansible_host=10.219.132.13 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n05 ansible_host=10.219.133.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n06 ansible_host=10.219.133.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n07 ansible_host=10.219.133.13 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n08 ansible_host=10.219.133.14 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n09 ansible_host=10.219.133.15 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n10 ansible_host=10.219.134.11 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n11 ansible_host=10.219.134.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n12 ansible_host=10.219.134.13 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n13 ansible_host=10.219.131.12 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n14 ansible_host=10.219.133.16 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+dc2n15 ansible_host=10.219.134.14 ansible_user=opapiadmin ansible_ssh_private_key_file=/Users/yuriylesyuk/.ssh/id_ansible
+```
+
+
+## Top-level ansible playbook or bash script
+
+As we already know a lot about topology of our planet, it is just logical now to continue generate useful artifacts. 
+
+Another one that etp can provide is a top-level ansible playbook invocation file. 
+
+Currently there is a number of ansible-based installation automation initiatives at Google. As a part of the Beta the plan is to provide alternative generators for many of them. To illustrate the approach, though, the currently generated file complies with the https://github.com/yuriylesyuk/edge-ops project ansible playbooks.
+
+
+```
+ansible-playbook -l dc1n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n04 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=cs CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=cs CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n04 $OPS_HOME/edge-comp-setup.yml -e "COMP=cs CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=ol CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=ol CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n09 $OPS_HOME/edge-comp-setup.yml -e "COMP=ms CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n14 $OPS_HOME/edge-comp-setup.yml -e "COMP=ms CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n05 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n06 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n07 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n08 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n07 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n08 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n11 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n12 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc1n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc1.cfg"
+
+ansible-playbook -l dc2n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n04 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=cs CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=cs CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n04 $OPS_HOME/edge-comp-setup.yml -e "COMP=cs CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=ol CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=ol CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n09 $OPS_HOME/edge-comp-setup.yml -e "COMP=ms CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n14 $OPS_HOME/edge-comp-setup.yml -e "COMP=ms CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n05 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n06 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n07 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n08 $OPS_HOME/edge-comp-setup.yml -e "COMP=mp CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n07 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n08 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n11 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n12 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc2.cfg"
+
+ansible-playbook -l dc2n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc2.cfg"
+```
 
 ## Check Ports functionality
 
