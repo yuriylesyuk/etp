@@ -1,6 +1,16 @@
 var fs = require('fs');
 var fp = require("lodash/fp");
 
+// TODO: move to utils
+function rgb(r, g, b){
+    function c(d){
+        var h = d.toString(16);        
+        return h.length ===1 ? "0" + h : h;
+    }
+
+    return "#" + c(r) + c(g) + c(b);
+}
+
 module.exports = function ( topologyFile, outputFile, program ){
 
     var portdefs = require("./edge-port-defs.json");
@@ -82,9 +92,9 @@ module.exports = function ( topologyFile, outputFile, program ){
     var htmlInventoryHeader = `<table>\n
 <thead>
     <tr>
+        <th>DC</th>
         <th>Node #</th>
         <th>Role(s)</th>
-        <th>DC</th>
         <th>Rack</th>
         <th>Subnet</th>
         <th>Hostname</th>
@@ -98,25 +108,32 @@ module.exports = function ( topologyFile, outputFile, program ){
 
     var htmlTDTemplate = fp.template( 
 `<tr>
+    <td>dc-<%= dcid %></td>
     <td>Node <bold><%= id %></bold></td>
     <td><%= roles %></td>
-    <td>dc-<%= dcid %></td>
     <%= rackcell %>
     <td><%= subnet %></td>
     <td><%= hostname %></td>
     <td><%= ip %></td>
 </tr>`);
 
-    // http://htmlcolorcodes.com/assets/downloads/flat-design-colors/flat-design-color-chart.png
-    var rackLabel = {
-        1: "#f2d7d5",
-        1: "#ebdef0",
-        2: "#dfe6f1",
-        3: "#d1f2eb",
-        4: "#fcf3cf",
-        5: "#fdebd0",
-        6: "#fae5d3",
-        7: "#f6ddcc"
+    // https://s-media-cache-ak0.pinimg.com/564x/be/54/8f/be548f0f7eb1a29259a1e5c980b0d1e7.jpg
+    var rackColor = {
+        1: rgb( 21, 151, 2 ),
+        2: rgb( 121, 235, 14 ),
+        3: rgb( 198, 255, 72 ),
+        4: rgb( 217, 255, 134 ),
+        5: rgb( 164, 255, 84 ),
+        6: rgb( 126, 239, 125 )
+    }
+
+    // http://img.bhs4.com/e1/8/e18d5f8ec497dc8baf51ca1d2462932e71d972ce_large.jpg
+    var subnetColor = {
+        1: rgb( 84, 87, 72 ),
+        2: rgb( 180, 189, 131 ),
+        3: rgb( 216, 208, 123 ),
+        4: rgb( 242, 216, 109 ),
+        5: rgb( 254, 196, 44 )
     }
 
     // Generate html table
@@ -125,10 +142,10 @@ module.exports = function ( topologyFile, outputFile, program ){
     fp.reduce( (list, node) => {
         //console.log(node);
         list.push( htmlTDTemplate({
+            dcid: node.dcid, 
             id: '<span class="nodeID">'+node.id+'</span>', 
             roles: fp.map( role => isApigee[role]?'<span class="roleApigee">'+role+'</span>':'<span class="role3rdParty">'+role+'</span>' )(node.roles).join(','), 
-            dcid: node.dcid, 
-            rackcell: typeof node.rack === "undefined" ? '<td/>' : '<td style="text-align:right; background-color:'+rackLabel[node.rack]+';">'+node.rack+'</td>', 
+            rackcell: typeof node.rack === "undefined" ? '<td/>' : '<td style="text-align:right; background-color:'+rackColor[node.rack]+';">'+node.rack+'</td>', 
             subnet: node.subnet,
             hostname: node.hostname, 
             ip: node.ip}) );

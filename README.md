@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/uat-12n-4
 ```
 or
 ```shell
-wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/prod-19n-5sn-topology.json
+wget https://raw.githubusercontent.com/yuriylesyuk/etp/master/examples/prod-2dc-19n-5sn-topology.json
 ```
 
 3. Generate svg diagram for the topology.

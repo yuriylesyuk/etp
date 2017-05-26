@@ -162,17 +162,18 @@ module.exports = function ( topologyFile, outputFile ){
         fp.groupBy(r=> r.srcip+"|"+r.dstip+"|"+r.port ),
         fp.map(groups=>({v:groups[0].srcip, d:groups[0].dstip,
             cc: fp.compose(
-                 fp.join(';'),   fp.uniq,fp.map('clientcomponent')
+                fp.join(';'),   fp.uniq,fp.map('clientcomponent')
                 )(groups),
             ss: fp.compose(
                 fp.join(';'),fp.uniq,fp.map('servercomponent')
-            )(groups)
+            )(groups),
+            p: groups[0].port
         }))
     )(firewallPortRequestsList)
 
     var csvCompact = [];
     fp.forEach( portRecord => 
-        csvCompact.push( portRecord.v + "," + portRecord.d + "," +  portRecord.cc + "," +  portRecord.ss )
+        csvCompact.push( portRecord.v + "," + portRecord.d + "," +  portRecord.cc + "," +  portRecord.ss + ","+portRecord.p )
     )(firewallPortCompactList);
 
 
