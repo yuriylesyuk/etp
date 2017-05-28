@@ -157,6 +157,13 @@ module.exports = function ( topologyFile, outputFile ){
     )(firewallPortRequestsList);
 
 
+    fs = require('fs');
+    fs.writeFile( outputFile, csv.join("\n" ), function (err) {
+        if (err) 
+            return console.log(err);
+        console.log("File successfully written out");
+    });
+
     // compact records
     var firewallPortCompactList = fp.flow(
         fp.groupBy(r=> r.srcip+"|"+r.dstip+"|"+r.port ),
@@ -169,7 +176,7 @@ module.exports = function ( topologyFile, outputFile ){
             )(groups),
             p: groups[0].port
         }))
-    )(firewallPortRequestsList)
+    )(firewallPortRequestsList);
 
     var csvCompact = [];
     fp.forEach( portRecord => 
@@ -185,13 +192,34 @@ module.exports = function ( topologyFile, outputFile ){
     });
 
 
+
+    // super-compact records
+    //
+    //
+    //
+    var firewallPortSuperCompactList = fp.flow(
+        fp.groupBy(r=> r.srcip+"|"+r.dstip ),
+        fp.map(groups=>({v:groups[0].srcip, d:groups[0].dstip,
+            pp: fp.compose(
+                fp.join(';'),   fp.uniq,fp.map('port')
+                )(groups)
+        }))
+    )(firewallPortRequestsList)
+
+    var csvSuperCompact = [];
+    fp.forEach( portRecord => 
+        csvSuperCompact.push( portRecord.v + "," + portRecord.d + "," +  portRecord.pp )
+    )(firewallPortSuperCompactList);
+
+
     fs = require('fs');
-    fs.writeFile( outputFile, csv.join("\n" ), function (err) {
+    fs.writeFile( outputFile+".supercompact", csvSuperCompact.join("\n"), function (err) {
         if (err) 
             return console.log(err);
         console.log("File successfully written out");
     });
 }
+
 
 //
 // returns list of firewall ports

@@ -11,35 +11,38 @@ A configuration is written using JSON format.
 
 
 ## Introduction
+
+
 The ETP potential target audiences are:
+ 
 * GAs implementing non-trivial topologies;
-* SEs/Sales;
+* SEs/Sales generating POC topology diagrams for inclusion into Slides for  workshops and presentations;
 * Partners, implementing Private Cloud installations;
-* Customers of Edge Private Cloud edition.
+* Customers of Edge Private Cloud edition;
  
 We do support true Multi-DC planets. Ie., more than 2.
  
-There is more artifacts generated out-of-the-box using input topology definition:
+There are more artefacts generated out-of-the-box using input topology definition:
  
-- SVG Diagrams;
-- Firewall Port requests
-- automated check if a port is open (ansible script-based)
-- Html nodes Inventory;
-- DC silent install configuration files /per DC [WIP]
-- Ansible top-level playbook invocation file/Planet-wide [WIP]
+* SVG Diagrams;
+* Firewall Port requests
+* Automated check if all required ports are open (ansible script-based)
+* Html nodes Inventory;
+* DC silent install configuration files /per DC [WIP]
+* Ansible top-level playbook invocation file/Planet-wide [WIP]
  
 With support of
 * Versioning;
 * Racks;
 * Subnets
 * Logical Deployment Tiers
-* Port requests with port descriptions (small, but super-important for customer!)
+* Port requests with port descriptions (a small feature, but super-important for the customer!)
 * External Client ports
-
 
 ## Quick Start Guide
 
-1. install utility from github
+1. Install utility on your local drive directly from github
+NOTE: node.js is a prerequisite.
 
 npm install -g https://github.com/yuriylesyuk/etp/tarball/master
 
@@ -84,7 +87,7 @@ etp generate inventory \
 ```
  open -a /Applications/Google\ Chrome.app/ uat-1dc-15n-4sn-inventory.html
 ```
-
+9. Look for generated ansible hosts, .cfg files, et al.
 
 ## Edge Topology Definition
 
