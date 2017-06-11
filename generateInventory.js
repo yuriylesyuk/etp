@@ -11,11 +11,84 @@ function rgb(r, g, b){
     return "#" + c(r) + c(g) + c(b);
 }
 
+
+// function genRegionIdNodeId( onlySingleDC,  dcid, nodeid ){
+//     return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
+// }
+var genRegionIdNodeId = fp.curry( (onlySingleDC,  dcid, nodeid ) => {
+    return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
+})
+
+function gatherComp( topology, comp ){
+    var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
+    var ipT = fp.template( "IPDC<%= dcid %>N<%= nodeidref %>" );
+    var drT = fp.template( "$<%= ipref %>:<%= dcid %>,<%= rackid %>" );
+    var ndT = fp.template( "<%= nodeipref %> # <%= roles %>" );
+
+    var comps = [];
+    fp.map(
+        region => fp.map(
+            subnet =>  
+                fp.reduce( (css, node) => {
+                    // * to return for any component or "XX" component name to return for specific one
+                    if( comp === "*" || fp.includes( comp )(node.components) ){
+                        var c = { 
+                            dcid: region.id, 
+                            nodeid: node.id, 
+                            rackid: (typeof node.rack === "undefined"? 1 : node.rack), 
+                            ip: node.ip
+                        };
+                        c.nodeidref = fp.padCharsStart('0')(2)(c.nodeid);
+
+                        c.regionidnodeidref = genNodeId( c.dcid, c.nodeid );
+
+                        c.ipref = ipT({ dcid: c.dcid, nodeidref: c.nodeidref });
+                        c.drref = drT({ ipref: c.ipref, dcid: c.dcid, rackid: c.rackid } );
+
+                        c.roles = node.components.join(", ");
+
+                        c.nodeipref = ndT({ nodeipref: fp.padCharsEnd(' ')(34)( c.ipref + "=" + c.ip ), roles: c.roles });
+                        comps.push( c );
+                    }
+                    return comps;
+                }, comps )(subnet.nodes)
+        )(region.subnets)
+    )(topology.regions);
+
+    return fp.sortBy(["dcid","nodeid"])(comps);
+}
+
+var compName = {
+    "MS": "edge-managementserver",
+
+    "MS": "edge-management-server", 
+    "UI": "edge-sap-ui", 
+    "R": "edge-router", 
+    "MP": "edge-message-processor", 
+    "QIS": "edge-qpid-server", 
+    "PS": "edge-postgres-server", 
+    "ZK": "apigee-zookeeper", 
+    "CS": "apigee-cassandra", 
+    "OL": "apigee-openldap", 
+    "QD": "apigee-qpidd", 
+    "PG": "apigee-postgresql",
+    "PGm": "apigee-postgresql",
+    "PGs": "apigee-postgresql",
+
+    "BS": "baas-sap-usergrid",
+    "BP": "baas-sap-portal",
+    "ES": "apigee-elasticsearch",
+    "TC": "apigee-tomcat"
+}
+
+
 module.exports = function ( topologyFile, outputFile, program ){
 
     var portdefs = require("./edge-port-defs.json");
 
     var topology = require( topologyFile );
+
+    var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
 
 
 
@@ -177,13 +250,6 @@ module.exports = function ( topologyFile, outputFile, program ){
 
     var ansibleHostTemplate = fp.template( '<%= id %> ansible_host=<%= ip %><%= ansible_user %><%= ansible_key %>' );
 
-    // function genRegionIdNodeId( onlySingleDC,  dcid, nodeid ){
-    //     return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
-    // }
-    var genRegionIdNodeId = fp.curry( (onlySingleDC,  dcid, nodeid ) => {
-        return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
-    })
-    var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
 
     fp.reduce( (list, node) => {
         //console.log(node);
@@ -260,44 +326,6 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 //  } )(topology.regions);
 
     var cfgT = fp.template( "<%= planetprefix %>dc<%= dcid %>.cfg" );
-
-    var ndT = fp.template( "<%= nodeipref %> # <%= roles %>" );
-    var ipT = fp.template( "IPDC<%= dcid %>N<%= nodeidref %>" );
-    var drT = fp.template( "$<%= ipref %>:<%= dcid %>,<%= rackid %>" );
-
-    function gatherComp( topology, comp ){
-        var comps = [];
-        fp.map(
-            region => fp.map(
-                subnet =>  
-                    fp.reduce( (css, node) => {
-                        // * to return for any component or "XX" component name to return for specific one
-                        if( comp === "*" || fp.includes( comp )(node.components) ){
-                            var c = { 
-                                dcid: region.id, 
-                                nodeid: node.id, 
-                                rackid: (typeof node.rack === "undefined"? 1 : node.rack), 
-                                ip: node.ip
-                            };
-                            c.nodeidref = fp.padCharsStart('0')(2)(c.nodeid);
-
-                            c.regionidnodeidref = genNodeId( c.dcid, c.nodeid );
-
-                            c.ipref = ipT({ dcid: c.dcid, nodeidref: c.nodeidref });
-                            c.drref = drT({ ipref: c.ipref, dcid: c.dcid, rackid: c.rackid } );
-
-                            c.roles = node.components.join(", ");
-
-                            c.nodeipref = ndT({ nodeipref: fp.padCharsEnd(' ')(34)( c.ipref + "=" + c.ip ), roles: c.roles });
-                            comps.push( c );
-                        }
-                        return comps;
-                    }, comps )(subnet.nodes)
-            )(region.subnets)
-        )(topology.regions);
-
-        return fp.sortBy(["dcid","nodeid"])(comps);
-    }
 
     var all = gatherComp(topology, "*");
 
@@ -410,7 +438,49 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
         //-------------------------------------------------------------------------- 
     }
 
+    // TODO: WIP: generate start/stop sequence
+    //
+    //if( program.ansible_script ){
 
 
+        // TODO: add support of BRAND=apigee|sap
+        // TODO: add DP and as a resulp, versions (DP is only 17.01+)
+
+        //var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/edge-comp-setup.yml -e "COMP=<%= comp %> CFG=<%= cfg %>"' );
+        var startT = fp.template( 'ansible <%= regionidnodeidref %> -a "apigee-service <%= comp %> start"' );
+        genSequence(topology, portdefs.edgecomponentstartsequence, startT, "start-edge.sh")
+
+        var stopT = fp.template( 'ansible <%= regionidnodeidref %> -a "apigee-service <%= comp %> stop"' );
+        genSequence(topology, portdefs.edgecomponentstopsequence, stopT, "stop-edge.sh")
+    //}
 };
 
+
+
+function genSequence(topology, sequence, template, file){
+    //-------------------------------------------------------------------------- 
+    // TODO:
+    // ansible top-level script
+
+        var ansiblestream = fs.createWriteStream( file );
+
+
+        fp.map( comp =>
+
+            fp.map( region => {
+                // TODO: needed for cfg-aware scripts, ie., install 
+                //var cfgfile = cfgT({planetprefix: program.prefix, dcid: region.id });
+    
+                ansiblestream.write(
+                    fp.map(
+                        // TODO: refactor cfg-aware functionality: n => template({ regionidnodeidref: n.regionidnodeidref, comp: comp.toLowerCase(), cfg: cfgfile })
+                        n => template({ regionidnodeidref: n.regionidnodeidref, comp: compName[ comp ] })
+                    )( fp.filter({dcid: region.id} )(gatherComp(topology, comp )) ).join('\n') +
+                    "\n\n"
+                )
+            })(topology.regions)
+        )(sequence);
+
+        ansiblestream.end();
+        //-------------------------------------------------------------------------- 
+}

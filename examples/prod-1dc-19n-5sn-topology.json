@@ -1,5 +1,6 @@
 {
     "planet": "PROD",
+    "brand": "sap",
     "regions" : [
         {
             "id" : "1",
