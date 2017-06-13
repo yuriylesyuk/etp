@@ -25,11 +25,12 @@ We do support true Multi-DC planets. Ie., more than 2.
 There are more artefacts generated out-of-the-box using input topology definition:
  
 * SVG Diagrams;
-* Firewall Port requests
+* Firewall Port requests (with full, compact, and supercompact versions)
 * Automated check if all required ports are open (ansible script-based)
 * Html nodes Inventory;
 * DC silent install configuration files /per DC [WIP]
 * Ansible top-level playbook invocation file/Planet-wide [WIP]
+* Scripts to start/stop a planet in a correct order
  
 With support of
 * Versioning;
@@ -449,11 +450,52 @@ The etp utility automatically generates check ports input configuration for all 
 
 You invoke it using following command line.
 
-TODO: right now the configuration file is hard-coded as openapi-dev-ports.json in a playbook folder, but it also is generated when running 'g portrequest' command under same name. So all it good, but to be changed later.
+TODO: right now the configuration file is hard-coded as openapi-dev-ports.json in a playbook folder, but it also is generated when running 'g portrequest' command under same name. Good enought for now, but to be changed later.
 
 ```shell
 ansible-playbook -i "localhost," checkports.yml
 ```
+
+
+## Set up ansible identity on nodes from jumpbox
+
+A number of generated scripts provide additional value when used with a syster project https://github.com/yuriylesyuk/edge-ops.
+
+For this, you would need to setup ssh/ansible passwordless access. 
+
+It is still a good idea to use passwords, though. 
+
+It is a one-off operation. Here is an efficient secure way to perfrom it.
+Here is a quick steps to perform a set up. 
+
+1. Nominate a jumpbox, ie. a VM (could be one of the Edge Nodes) that is able to ssh to all nodes of the planet in every DC.
+
+2. Generate id_ansible
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096  -f id_ansible
+
+NODE: Do use password!!
+
+2. Use etp to generate ~/ansible/hosts files for the planet.
+
+3. For each node in the planet do
+ssh-copy-id -i ~/.ssh/id_ansible <adminuser>@<node>
+
+4. define ~/.ansible.cfg
+[defaults]
+inventory = ~/ansible/hosts
+
+?. Test the setup. On the jumpbox
+ansible edge -m ping
+
+NOTE: for id_ansible with passphrase: at the beginning of each session: 
+ssh-agent bash; 
+ssh-add <key>
+export $OPS_HOME=<path to the ansible folder of edge-ops project>
+
+
+
+
 
 ## Team
 Yuriy

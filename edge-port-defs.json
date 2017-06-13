@@ -989,7 +989,7 @@
         }
     ],
     "edgecomponentinstallsequence": [ 
-        "ZK", "CS", "OL", "MS", "UI", "QIS", "PG", "PGM", "PGs", "R", "MP", "DP", "BS", "BP"  
+        "ZK", "CS", "OL", "MS", "UI", "QIS", "PG", "PGm", "PGs", "R", "MP", "DP", "BS", "BP"  
     ],
     "edgecomponentstartsequence": [ 
         "ZK", "CS", "OL", "QD", "PGm", "PGs", "PG", "MS", "R", "MP", "QIS", "PS", "UI", "ES", "BS", "BP"
