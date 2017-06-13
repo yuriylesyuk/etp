@@ -468,6 +468,7 @@ It is still a good idea to use passwords, though.
 It is a one-off operation. Here is an efficient secure way to perfrom it.
 Here is a quick steps to perform a set up. 
 
+```
 1. Nominate a jumpbox, ie. a VM (could be one of the Edge Nodes) that is able to ssh to all nodes of the planet in every DC.
 
 2. Generate id_ansible
@@ -492,7 +493,7 @@ NOTE: for id_ansible with passphrase: at the beginning of each session:
 ssh-agent bash; 
 ssh-add <key>
 export $OPS_HOME=<path to the ansible folder of edge-ops project>
-
+```
 
 
 
