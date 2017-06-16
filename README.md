@@ -30,7 +30,7 @@ There are more artefacts generated out-of-the-box using input topology definitio
 * Html nodes Inventory;
 * DC silent install configuration files /per DC [WIP]
 * Ansible top-level playbook invocation file/Planet-wide [WIP]
-* Scripts to start/stop a planet in a correct order
+* Scripts to start/stop for the whole planet in a correct order
  
 With support of
 * Versioning;
@@ -459,32 +459,32 @@ ansible-playbook -i "localhost," checkports.yml
 
 ## Set up ansible identity on nodes from jumpbox
 
-A number of generated scripts provide additional value when used with a syster project https://github.com/yuriylesyuk/edge-ops.
+A number of generated scripts provide additional value when used with a sister project https://github.com/yuriylesyuk/edge-ops.
 
 For this, you would need to setup ssh/ansible passwordless access. 
 
 It is still a good idea to use passwords, though. 
 
-It is a one-off operation. Here is an efficient secure way to perfrom it.
-Here is a quick steps to perform a set up. 
+It is a one-off operation. Here is an efficient and secure way to perform it.
 
 ```
 1. Nominate a jumpbox, ie. a VM (could be one of the Edge Nodes) that is able to ssh to all nodes of the planet in every DC.
 
-2. Generate id_ansible
+2. Generate id_ansible identity
 cd ~/.ssh
 ssh-keygen -t rsa -b 4096  -f id_ansible
 
-NODE: Do use password!!
+NOTE: Do use password!!
 
 2. Use etp to generate ~/ansible/hosts files for the planet.
 
 3. For each node in the planet do
 ssh-copy-id -i ~/.ssh/id_ansible <adminuser>@<node>
 
-4. define ~/.ansible.cfg
+4. define ~/.ansible.cfg and reference the nodes file
 [defaults]
 inventory = ~/ansible/hosts
+fork = 50
 
 ?. Test the setup. On the jumpbox
 ansible edge -m ping
@@ -499,6 +499,5 @@ export $OPS_HOME=<path to the ansible folder of edge-ops project>
 
 
 ## Team
-Yuriy
-
+Yuriy 
 Nicola

@@ -75,10 +75,46 @@ var compName = {
     "PGm": "apigee-postgresql",
     "PGs": "apigee-postgresql",
 
+    "DP": "apigee-drupal-devportal", 
+
     "BS": "baas-sap-usergrid",
     "BP": "baas-sap-portal",
     "ES": "apigee-elasticsearch",
-    "TC": "apigee-tomcat"
+    "TC": "apigee-tomcat",
+
+    "IF": "apigee-influx",
+    "TG": "apigee-telegraf",
+    "GF": "apigee-grafana"
+}
+
+// [ ] Install Rule: for v. 17.01+ dp might be different
+
+// [ ] Install Rule: ps installs PS and PG*
+// [ ] Install Rule: qs installs QS and QID
+// [ ] Install Rule: if MS and OL on different nodes, USER_LDAP_REMOTE_HOST=y
+// [ ] Install Rule: if MS and UI on same node, do MS, ignore UI for this node
+
+var compInst = {
+    "ZK": "zk", 
+    "CS": "c", 
+    "OL": "ld", 
+    "MS": "ms", 
+    "UI": "ui",
+    "QIS": "qs", 
+    "PS": "ps", 
+    "R": "r", 
+    "MP": "mp", 
+
+    "DP": "dp", 
+    "PGd": "pdb",
+
+    "ES": "e",
+    "BS": "b", 
+    "BP": "p", 
+
+    "IF": "", 
+    "TG": "", 
+    "GF": ""
 }
 
 
@@ -427,7 +463,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                 
                 ansiblestream.write(
                     fp.map(
-                        n => ansibleT({ regionidnodeidref: n.regionidnodeidref, comp: comp.toLowerCase(), cfg: cfgfile })
+                        n => ansibleT({ regionidnodeidref: n.regionidnodeidref, comp: compInst[ comp ], cfg: cfgfile })
                     )( fp.filter({dcid: region.id} )(gatherComp(topology, comp )) ).join('\n') +
                     "\n\n"
                 )
