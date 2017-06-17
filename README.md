@@ -27,7 +27,9 @@ There are more artefacts generated out-of-the-box using input topology definitio
 * SVG Diagrams;
 * Firewall Port requests (with full, compact, and supercompact versions)
 * Automated check if all required ports are open (ansible script-based)
-* Html nodes Inventory;
+* Html nodes Inventory
+* Ansible hosts file
+* ssh config file
 * DC silent install configuration files /per DC [WIP]
 * Ansible top-level playbook invocation file/Planet-wide [WIP]
 * Scripts to start/stop for the whole planet in a correct order
@@ -489,10 +491,13 @@ fork = 50
 ?. Test the setup. On the jumpbox
 ansible edge -m ping
 
-NOTE: for id_ansible with passphrase: at the beginning of each session: 
+NOTE: For id_ansible with passphrase: at the beginning of each session: 
 ssh-agent bash; 
 ssh-add <key>
 export $OPS_HOME=<path to the ansible folder of edge-ops project>
+
+NOTE: For putty on Windows, use puttygen to convert ssh key to .ppk file and 
+use pageant to manage the password for a session.
 ```
 
 

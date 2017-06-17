@@ -275,8 +275,6 @@ module.exports = function ( topologyFile, outputFile, program ){
     svgstream.end();
 
     //---------------------------------------
-    
-
     // generate ansible file and ansible playbook invocation script
 
     // I.E.:
@@ -284,12 +282,12 @@ module.exports = function ( topologyFile, outputFile, program ){
     // n01 ansible_host=10.119.131.11 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
     var ansibleHosts = [ "[edge]" ];
 
-    var ansibleHostTemplate = fp.template( '<%= id %> ansible_host=<%= ip %><%= ansible_user %><%= ansible_key %>' );
+    var ansibleHostT = fp.template( '<%= id %> ansible_host=<%= ip %><%= ansible_user %><%= ansible_key %>' );
 
 
     fp.reduce( (list, node) => {
         //console.log(node);
-        list.push( ansibleHostTemplate({
+        list.push( ansibleHostT({
             id: genNodeId( node.dcid, node.id), 
             ip: node.ip,
             ansible_user: ((program.ansible_user || "") === "") ? "" : " ansible_user="+program.ansible_user,
@@ -298,10 +296,46 @@ module.exports = function ( topologyFile, outputFile, program ){
         return list;
     }, ansibleHosts)(fp.sortBy(["dcid","id"])(nodes));   
 
-    //-------------------------------------------------------------------------- 
     var svgstream = fs.createWriteStream( "hosts" );
     svgstream.write( ansibleHosts.join('\n') );
     svgstream.end();
+    //-------------------------------------------------------------------------- 
+
+    //---------------------------------------
+    // generate ssh config file 
+
+    // TODO: Refactor to re-use with ansibleHosts: practically same code
+
+    // I.E.:
+    // Host n02
+    //     HostName 10.119.132.11
+    //     IdentityFile ~/.ssh/id_ansible
+    var sshConfig = [];
+
+    var sshConfigT = fp.template( "Host <%= id %>\n" +
+                                  "    HostName <%= ip %>\n" +
+                                  "    IdentityFile <%= ansible_key %>\n" );
+
+
+    fp.reduce( (list, node) => {
+        //console.log(node);
+        list.push( sshConfigT({
+            id: genNodeId( node.dcid, node.id), 
+            ip: node.ip,
+            ansible_key: ((program.ansible_key || "") === "") ? "" : program.ansible_key
+        }) );
+        return list;
+    }, sshConfig)(fp.sortBy(["dcid","id"])(nodes));   
+
+    var svgstream = fs.createWriteStream( "config" );
+    svgstream.write( sshConfig.join('\n') );
+    svgstream.end();
+    //-------------------------------------------------------------------------- 
+
+
+
+
+
 
     // TODO:
     // ansible top-level script
