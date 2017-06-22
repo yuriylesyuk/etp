@@ -517,23 +517,83 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
         // TODO: add DP and as a resulp, versions (DP is only 17.01+)
 
         //var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/edge-comp-setup.yml -e "COMP=<%= comp %> CFG=<%= cfg %>"' );
-        var startT = fp.template( 'ansible <%= regionidnodeidref %> -a "apigee-service <%= comp %> start"' );
-        genSequence(topology, portdefs.edgecomponentstartsequence, startT, "start-edge.sh")
+        var prologT = fp.template(`#!/bin/bash
+# check mandatory options
 
-        var stopT = fp.template( 'ansible <%= regionidnodeidref %> -a "apigee-service <%= comp %> stop"' );
-        genSequence(topology, portdefs.edgecomponentstopsequence, stopT, "stop-edge.sh")
+help(){
+        echo ""
+        echo "planetcontrol.sh <target> <action> [dryrun]"
+        echo ""
+        echo "Arguments:"
+        echo ""
+        echo " <target>: planet or dc-1 or dc-2"
+        echo " <action>: start or stop"
+        echo ""
+        echo " <dryrun>: optional, if present the output command will be produced but not executed"
+        echo ""
+}
+
+if [ "$#" -lt 2 ]
+then
+        echo "Wrong number of mandatory arguments supplied."
+        echo.
+    help
+    exit 1
+fi
+
+
+TARGET=$1
+ACTION=$2
+DRYRUN=$3
+
+if [[ ! ";dc-1;dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   echo "Unsupported target: $TARGET"
+   help
+   exit 1
+fi
+
+
+if [[ ! ";start;stop;" =~ ";$ACTION;" ]]
+then
+   echo "Unsupported Action: $ACTION"
+   help
+   exit 1
+fi
+
+if [[ ! "$DRYRUN" == "" ]]
+then
+    DRYRUN="echo "
+fi
+
+`);
+
+
+// TODO: prolog is currently hacker. REFACTOR!!! 
+// TODO:
+// TODO: escape dollar, remove space
+
+        var compControlT = fp.template( `
+if [[ ";<%= regionref %>;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible <%= regionidnodeidref %> -a "apigee-service <%= comp %> $ACTION"
+fi
+
+` );
+        genSequence(topology, portdefs.edgecomponentstartsequence, compControlT, prologT,  "planetcontrol.sh")
     //}
 };
 
 
 
-function genSequence(topology, sequence, template, file){
+function genSequence(topology, sequence, template, prologtemplate, file){
     //-------------------------------------------------------------------------- 
     // TODO:
     // ansible top-level script
 
         var ansiblestream = fs.createWriteStream( file );
 
+        ansiblestream.write( prologtemplate() );
 
         fp.map( comp =>
 
@@ -544,7 +604,7 @@ function genSequence(topology, sequence, template, file){
                 ansiblestream.write(
                     fp.map(
                         // TODO: refactor cfg-aware functionality: n => template({ regionidnodeidref: n.regionidnodeidref, comp: comp.toLowerCase(), cfg: cfgfile })
-                        n => template({ regionidnodeidref: n.regionidnodeidref, comp: compName[ comp ] })
+                        n => template({ regionref: region.name, regionidnodeidref: n.regionidnodeidref, comp: compName[ comp ] })
                     )( fp.filter({dcid: region.id} )(gatherComp(topology, comp )) ).join('\n') +
                     "\n\n"
                 )
