@@ -45,6 +45,8 @@ fi
 if [[ ! "$DRYRUN" == "" ]]
 then
     DRYRUN="echo "
+    DRYESC=""
+    DRYQUOTE='"'
 fi
 
 
@@ -62,35 +64,40 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n13 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc1n13 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n15 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc1n15 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n16 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc1n16 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n17 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc1n17 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n18 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc1n18 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -98,107 +105,40 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n13 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc2n13 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n15 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc2n15 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n16 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc2n16 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n17 -a "apigee-service apigee-zookeeper $ACTION"
+   $DRYRUN ansible dc2n17 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n18 -a "apigee-service apigee-zookeeper $ACTION"
-fi
-
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n13 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n15 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n16 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n17 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n18 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n13 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n15 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n16 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n17 -a "apigee-service apigee-cassandra $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n18 -a "apigee-service apigee-cassandra $ACTION"
+   $DRYRUN ansible dc2n18 -a $DRYESC$DRYQUOTE"apigee-service apigee-zookeeper $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -206,7 +146,40 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n13 -a "apigee-service apigee-openldap $ACTION"
+   $DRYRUN ansible dc1n13 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n15 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n16 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n17 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n18 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -214,7 +187,40 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n13 -a "apigee-service apigee-openldap $ACTION"
+   $DRYRUN ansible dc2n13 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n15 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n16 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n17 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n18 -a $DRYESC$DRYQUOTE"apigee-service apigee-cassandra $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -222,14 +228,8 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n19 -a "apigee-service apigee-qpidd $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n29 -a "apigee-service apigee-qpidd $ACTION"
+   $DRYRUN ansible dc1n13 -a $DRYESC$DRYQUOTE"apigee-service apigee-openldap $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -237,14 +237,8 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n19 -a "apigee-service apigee-qpidd $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n29 -a "apigee-service apigee-qpidd $ACTION"
+   $DRYRUN ansible dc2n13 -a $DRYESC$DRYQUOTE"apigee-service apigee-openldap $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -252,7 +246,16 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n19 -a "apigee-service apigee-postgresql $ACTION"
+   $DRYRUN ansible dc1n19 -a $DRYESC$DRYQUOTE"apigee-service apigee-qpidd $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n29 -a $DRYESC$DRYQUOTE"apigee-service apigee-qpidd $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -260,7 +263,34 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n19 -a "apigee-service apigee-postgresql $ACTION"
+   $DRYRUN ansible dc2n19 -a $DRYESC$DRYQUOTE"apigee-service apigee-qpidd $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n29 -a $DRYESC$DRYQUOTE"apigee-service apigee-qpidd $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n19 -a $DRYESC$DRYQUOTE"apigee-service apigee-postgresql $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n19 -a $DRYESC$DRYQUOTE"apigee-service apigee-postgresql $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -276,7 +306,8 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n03 -a "apigee-service edge-management-server $ACTION"
+   $DRYRUN ansible dc1n03 -a $DRYESC$DRYQUOTE"apigee-service edge-management-server $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -284,7 +315,8 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n03 -a "apigee-service edge-management-server $ACTION"
+   $DRYRUN ansible dc2n03 -a $DRYESC$DRYQUOTE"apigee-service edge-management-server $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -292,14 +324,16 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n01 -a "apigee-service edge-router $ACTION"
+   $DRYRUN ansible dc1n01 -a $DRYESC$DRYQUOTE"apigee-service edge-router $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n02 -a "apigee-service edge-router $ACTION"
+   $DRYRUN ansible dc1n02 -a $DRYESC$DRYQUOTE"apigee-service edge-router $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -307,86 +341,16 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n01 -a "apigee-service edge-router $ACTION"
+   $DRYRUN ansible dc2n01 -a $DRYESC$DRYQUOTE"apigee-service edge-router $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n02 -a "apigee-service edge-router $ACTION"
-fi
-
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n03 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n04 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n05 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n06 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n07 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n03 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n04 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n05 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n06 -a "apigee-service edge-message-processor $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n07 -a "apigee-service edge-message-processor $ACTION"
+   $DRYRUN ansible dc2n02 -a $DRYESC$DRYQUOTE"apigee-service edge-router $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -394,7 +358,40 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n19 -a "apigee-service edge-qpid-server $ACTION"
+   $DRYRUN ansible dc1n03 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n04 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n05 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n06 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n07 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -402,7 +399,40 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n19 -a "apigee-service edge-qpid-server $ACTION"
+   $DRYRUN ansible dc2n03 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n04 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n05 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n06 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n07 -a $DRYESC$DRYQUOTE"apigee-service edge-message-processor $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -410,7 +440,8 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n19 -a "apigee-service edge-postgres-server $ACTION"
+   $DRYRUN ansible dc1n19 -a $DRYESC$DRYQUOTE"apigee-service edge-qpid-server $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -418,7 +449,8 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n19 -a "apigee-service edge-postgres-server $ACTION"
+   $DRYRUN ansible dc2n19 -a $DRYESC$DRYQUOTE"apigee-service edge-qpid-server $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -426,7 +458,8 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n03 -a "apigee-service edge-sap-ui $ACTION"
+   $DRYRUN ansible dc1n19 -a $DRYESC$DRYQUOTE"apigee-service edge-postgres-server $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -434,7 +467,8 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n03 -a "apigee-service edge-sap-ui $ACTION"
+   $DRYRUN ansible dc2n19 -a $DRYESC$DRYQUOTE"apigee-service edge-postgres-server $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -442,14 +476,8 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n10 -a "apigee-service apigee-elasticsearch $ACTION"
-fi
-
-
-
-if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc1n11 -a "apigee-service apigee-elasticsearch $ACTION"
+   $DRYRUN ansible dc1n03 -a $DRYESC$DRYQUOTE"apigee-service edge-sap-ui $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -457,14 +485,8 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n10 -a "apigee-service apigee-elasticsearch $ACTION"
-fi
-
-
-
-if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible dc2n11 -a "apigee-service apigee-elasticsearch $ACTION"
+   $DRYRUN ansible dc2n03 -a $DRYESC$DRYQUOTE"apigee-service edge-sap-ui $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -472,14 +494,16 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n10 -a "apigee-service baas-sap-usergrid $ACTION"
+   $DRYRUN ansible dc1n10 -a $DRYESC$DRYQUOTE"apigee-service apigee-elasticsearch $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n11 -a "apigee-service baas-sap-usergrid $ACTION"
+   $DRYRUN ansible dc1n11 -a $DRYESC$DRYQUOTE"apigee-service apigee-elasticsearch $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -487,14 +511,16 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n10 -a "apigee-service baas-sap-usergrid $ACTION"
+   $DRYRUN ansible dc2n10 -a $DRYESC$DRYQUOTE"apigee-service apigee-elasticsearch $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n11 -a "apigee-service baas-sap-usergrid $ACTION"
+   $DRYRUN ansible dc2n11 -a $DRYESC$DRYQUOTE"apigee-service apigee-elasticsearch $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -502,14 +528,16 @@ fi
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n10 -a "apigee-service baas-sap-portal $ACTION"
+   $DRYRUN ansible dc1n10 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-usergrid $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc1n11 -a "apigee-service baas-sap-portal $ACTION"
+   $DRYRUN ansible dc1n11 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-usergrid $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
@@ -517,14 +545,50 @@ fi
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n10 -a "apigee-service baas-sap-portal $ACTION"
+   $DRYRUN ansible dc2n10 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-usergrid $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 
 
 if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible dc2n11 -a "apigee-service baas-sap-portal $ACTION"
+   $DRYRUN ansible dc2n11 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-usergrid $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n10 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-portal $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc1n11 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-portal $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n10 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-portal $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
+fi
+
+
+
+if [[ ";dc-2;planet;" =~ ";$TARGET;" ]]
+then
+   $DRYRUN ansible dc2n11 -a $DRYESC$DRYQUOTE"apigee-service baas-sap-portal $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 

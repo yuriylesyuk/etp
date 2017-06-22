@@ -564,6 +564,8 @@ fi
 if [[ ! "$DRYRUN" == "" ]]
 then
     DRYRUN="echo "
+    DRYESC="\"
+    DRYQUOTE='"'
 fi
 
 `);
@@ -576,7 +578,8 @@ fi
         var compControlT = fp.template( `
 if [[ ";<%= regionref %>;planet;" =~ ";$TARGET;" ]]
 then
-   $DRYRUN ansible <%= regionidnodeidref %> -a "apigee-service <%= comp %> $ACTION"
+   $DRYRUN ansible <%= regionidnodeidref %> -a $DRYESC$DRYQUOTE"apigee-service <%= comp %> $ACTION$DRYESC$DRYQUOTE"
+   if [[ $? -ne 0 ]]; then exit 1; fi
 fi
 
 ` );
