@@ -432,8 +432,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                             fp(zks).takeRight(observers).map(n=> ({ dcid: n.dcid, zkref: "$"+n.ipref + ":observer" }) ).value()
                         );
 
-            var ZK_HOSTS = fp(_zks).filter({dcid: region.id}).map(n=>n.zkref).concat(
-                fp(_zks).reject({dcid: region.id}).map(n=>n.zkref) ).value().join(" ");
+            var ZK_HOSTS = fp(_zks).map(n=>n.zkref).value().join(" ");
 
 
             var ZK_CLIENT_HOSTS = fp(zks).filter({dcid: region.id}).map(n=> "$"+n.ipref).value().join(" ") 
