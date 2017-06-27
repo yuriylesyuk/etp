@@ -155,6 +155,18 @@
                             ]
                         },
                         {
+                            "component": "PGm",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "PGs",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
                             "component": "ZK",
                             "ports": [
                                 "2181"
