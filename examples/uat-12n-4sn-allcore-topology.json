@@ -14,12 +14,12 @@
                             "hostname": "LVMOPAPIQD2U",
                             "ip": "10.119.131.11",
                             "components": [
-                                "PS",
-                                "QIS",
-                                "QD",
-                                "PG",
-                                "MY",
-                                "TG"
+                                {"comp":"PS"},
+                                {"comp":"QS"},
+                                {"comp":"QD"},
+                                {"comp":"PG"},
+                                {"comp":"MY"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]
@@ -33,10 +33,10 @@
                             "hostname": "LVMOPAPICS1U",
                             "ip": "10.119.132.11",
                             "components": [
-                                "OL",
-                                "CS",
-                                "ZK",
-                                "TG"
+                                {"comp":"OL"},
+                                {"comp":"CS"},
+                                {"comp":"ZK"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -44,9 +44,9 @@
                             "hostname": "LVMOPAPICS2U",
                             "ip": "10.119.132.12",
                             "components": [
-                                "CS",
-                                "ZK",
-                                "TG"
+                                {"comp":"CS"},
+                                {"comp":"ZK"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -54,9 +54,9 @@
                             "hostname": "LVMOPAPICS3U",
                             "ip": "10.119.132.13",
                             "components": [
-                                "CS",
-                                "ZK",
-                                "TG"
+                                {"comp":"CS"},
+                                {"comp":"ZK"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]
@@ -70,17 +70,17 @@
                             "hostname": "LVMOPAPIQD1U",
                             "ip": "10.119.133.15",
                             "components": [
-                                "UI",
-                                "MS",
-                                "BS",
-                                "BP",
-                                "QIS",
-                                "ES",
-                                "TC",
-                                "QD",
-                                "GF",
-                                "IF",
-                                "TG"
+                                {"comp":"UI"},
+                                {"comp":"MS"},
+                                {"comp":"BS"},
+                                {"comp":"BP"},
+                                {"comp":"QS"},
+                                {"comp":"ES"},
+                                {"comp":"TC"},
+                                {"comp":"QD"},
+                                {"comp":"GF"},
+                                {"comp":"IF"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -88,9 +88,9 @@
                             "hostname": "LVMOPAPIRMP1U",
                             "ip": "10.119.133.13",
                             "components": [
-                                "R",
-                                "MP",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -98,9 +98,9 @@
                             "hostname": "LVMOPAPIRMP2U",
                             "ip": "10.119.133.14",
                             "components": [
-                                "R",
-                                "MP",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -108,8 +108,8 @@
                             "hostname": "LVMOPAPIMP1U",
                             "ip": "10.119.133.11",
                             "components": [
-                                "MP",
-                                "TG"
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -117,8 +117,8 @@
                             "hostname": "LVMOPAPIMP2U",
                             "ip": "10.119.133.12",
                             "components": [
-                                "MP",
-                                "TG"
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]
@@ -132,9 +132,9 @@
                             "hostname": "LVMOPAPIDPU",
                             "ip": "10.119.134.11",
                             "components": [
-                                    "DP",
-                                    "NO",
-                                    "HT"
+                                    {"comp":"DP"},
+                                    {"comp":"NO"},
+                                    {"comp":"HT"}
                                 ]
                         },
                         {
@@ -142,8 +142,8 @@
                             "hostname": "LVMOPAPIR1U",
                             "ip": "10.119.134.12",
                             "components": [
-                                "R",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -151,8 +151,8 @@
                             "hostname": "LVMOPAPIR2U",
                             "ip": "10.119.134.13",
                             "components": [
-                                "R",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]

@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 var program = require("commander");
+var fs = require("fs");
 
 program
     .version(require('./package').version);
 
 program
-    .option('-a, --ansible_script [ansible_script]', 'Ansible top-level playbook invocation snippet')
-    .option('-x, --prefix [prefix]', 'File prefix for multi-dc artifacts')
+    .option('-d, --directory [directory]', 'Directory where all non-uniquely-named artifacts are generated. Default: minus -topology.json')
     .option('-u, --ansible_user [ansible_user]', 'Ansible User Name')
     .option('-k, --ansible_key [ansible_key]', 'Ansible SSH Private Key File')
     .command("generate <artifact> <topology> [<output>]").alias("g")
@@ -16,6 +16,8 @@ program
         artifactType = artifact || "<notprovided>";
         topologyFile = topology;
         outputFile = output || 'con';
+
+        program.directory = program.directory || topologyFile.replace( /-topology\.json$/, "" ); 
     });
 
 program.on('*', function () {
@@ -41,6 +43,12 @@ if (supportedArtifactTypes.indexOf(artifactType) == -1) {
     process.exit(1);
 }
 
+// create an output directory for generated artifacts
+if (!fs.existsSync( program.directory )){
+    fs.mkdirSync( program.directory );
+}
+
+
 //console.log(artifactType);
 //console.log(topologyFile);
 //console.log(outputFile);
@@ -48,7 +56,7 @@ if (supportedArtifactTypes.indexOf(artifactType) == -1) {
 if( artifactType === "portrequest"){
     var generatePortRequest = require( "./generatePortRequest.js" );
 
-    generatePortRequest(topologyFile, outputFile);
+    generatePortRequest(topologyFile, outputFile, program);
 }else if (artifactType === "diagram" ){
     var generateSvgDiagram = require( "./generateSvgDiagram.js" );
 

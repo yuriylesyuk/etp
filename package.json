@@ -1,6 +1,6 @@
 {
   "name": "etp",
-  "version": "0.5.57",
+  "version": "0.6.99",
   "description": "etp -- edge topology processor",
   "main": "index.js",
   "scripts": {

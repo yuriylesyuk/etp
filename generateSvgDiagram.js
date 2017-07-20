@@ -2,7 +2,7 @@ var fp = require("lodash/fp");
 
 
 module.exports = function ( topologyFile, outputFile ){
-    var portdefs = require("./edge-port-defs.json");
+    var portdefs = require("./edge-defs.json");
 
     var topology = require( topologyFile );
     //var topology = require("./uat-19n-3sn-topology.json");
@@ -130,12 +130,12 @@ id="svg2">
     >PS</text>
 </symbol>
 
-<symbol id="qis">
+<symbol id="qs">
     <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
-    >QIS</text>
+    >QS</text>
 </symbol>
 
 
@@ -485,7 +485,7 @@ id="svg2">
 
                             var comps = fp(comps).reduce(
                                 (acc, c) => {
-                                    acc.push( compTemplate({comp: c.toLowerCase(), x: subnetX + subnetPaddingH + nodeX + compX, y: subnetY + subnetPaddingV + compY }) );
+                                    acc.push( compTemplate({comp: c.comp.toLowerCase(), x: subnetX + subnetPaddingH + nodeX + compX, y: subnetY + subnetPaddingV + compY }) );
                                     compY += compInc();
 
                                     return acc;
@@ -496,10 +496,10 @@ id="svg2">
                         };
 
                         // Generate components: Apigee
-                        acc.push( drawComponents( fp(node.components).filter(comp=>isApigee[comp]), compPadding, compPadding, compY => compHeight + compSpacingV ) );
+                        acc.push( drawComponents( fp(node.components).filter(comp=>isApigee[comp.comp]), compPadding, compPadding, compY => compHeight + compSpacingV ) );
 
                         // Generate components: 3rd Parties
-                        acc.push( drawComponents( fp(node.components).filter(comp=>!isApigee[comp]).reverse(), compPadding, nodeHeight - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
+                        acc.push( drawComponents( fp(node.components).filter(comp=>!isApigee[comp.comp]).reverse(), compPadding, nodeHeight - compPadding - compHeight -3, compY => -(compHeight + compSpacingV) ) );
                        
                         nodeX += nodeWidth + nodeSpacingH;
                         return acc;

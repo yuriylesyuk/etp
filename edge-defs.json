@@ -29,7 +29,7 @@
                 "MP", 
                 "MS", 
                 "UI", 
-                "QIS", 
+                "QS", 
                 "PS",
                 "PG", 
                 "PGs", 
@@ -59,7 +59,7 @@
                 "CS",
                 "ZK",
                 "OL",
-                "QIS",
+                "QS",
                 "PGm",
                 "PGs"
             ]
@@ -135,7 +135,7 @@
                             ]
                         },
                         {
-                            "component": "QIS",
+                            "component": "QS",
                             "ports": [
                                 "4529",
                                 "8083"
@@ -264,7 +264,7 @@
             },
             {
                 "client": {
-                    "component": "QIS",
+                    "component": "QS",
                     "apigee": true,
                     "servers": [
                         {
@@ -659,7 +659,7 @@
                             ]
                         },
                         {
-                            "component": "QIS",
+                            "component": "QS",
                             "ports": [
                                 "1102"
                             ]
@@ -840,7 +840,7 @@
             },
             {
                 "client": {
-                    "component": "QIS",
+                    "component": "QS",
                     "apigee": true,
                     "servers": [
                         {
@@ -1001,12 +1001,31 @@
         }
     ],
     "edgecomponentinstallsequence": [ 
-        "ZK", "CS", "OL", "MS", "UI", "QIS", "PS", "R", "MP", "ES", "BS", "BP", "DP", "IF", "TG", "GF"
+        "ZK", "CS", "OL", "MS", "UI", "QS", "PS", "R", "MP", "ES", "BS", "BP", "DP", "IF", "TG", "GF"
     ],
     "edgecomponentstartsequence": [ 
-        "IF", "TG", "GF", "ZK", "CS", "OL", "QD", "PGm", "PGs", "PG", "MS", "R", "MP", "QIS", "PS", "UI", "ES", "BS", "BP"
+        "IF", "TG", "GF", "ZK", "CS", "OL", "PGm", "PGs", "PG", "PS", "QD", "QS", "MS", "MP", "R", "UI", "ES", "BS", "BP"
     ],
     "edgecomponentstopsequence": [ 
-        "BP", "BS", "ES", "UI", "MS", "R", "MP", "QIS", "PS", "OL", "QD", "PG", "PGs", "PGm", "CS", "ZK", "GF", "TG", "IF"
-    ]
+        "BP", "BS", "ES", "UI", "R", "MP", "MS", "QS", "QD", "PS", "PG", "PGs", "PGm", "OL", "CS", "ZK", "GF", "TG", "IF"
+    ],
+
+    "customer": {
+        "adminEmail": "admin@apigee.com",
+        "adminPassword": "Apigee123!",
+        "licenseFile": "/opt/apigee-install/license.txt",
+        "mpPod": "gateway",
+        "region": "dc-1",
+        "cassAuth": "y",
+        "cassUsername": "cassandra",
+        "cassPassword": "cassandra",
+        "cassClustername": "Apigee",
+        "ldapPassword": "Apigee123!",
+        "skipSmtp": "y",
+        "smtpHost": "192.168.56.1",
+        "smtpPort": "25",
+        "smtpUser": "0",
+        "smtpPassword": "0",
+        "smtpSsl": "n"
+    }
 }

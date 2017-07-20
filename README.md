@@ -81,8 +81,7 @@ etp generate portrequest $PWD/uat-1dc-15n-4sn-topology.json $PWD/uat-1dc-15n-4sn
 etp generate inventory \
  -u opapiadmin \
  -k ~/.ssh/id_ansible \
- -x uat-1dc-15n-4sn- \
- -a uat-1dc-15n-4sn-ansible.sh \
+ -d uat-1dc-15n-4sn \
  $PWD/uat-1dc-15n-4sn-topology.json $PWD/uat-1dc-15n-4sn-inventory.html
  ```
 
@@ -115,10 +114,15 @@ An example for a 12 node topologies is given below.
                             "hostname": "nnnxxxyyy01",
                             "ip": "10.119.3.201",
                             "components": [
-                                    "DP",
-                                    "NO",
-                                    "HT"
-                                ]
+                                {
+                                    "comp": "DP"
+                                },
+                                {
+                                    "comp": "NO"
+                                },
+                                {
+                                    "comp": "HT"
+                                }
                         },
 
 
@@ -211,7 +215,7 @@ _prod-2dc-15n-4sn-dc1.cfg:_
 #--------------------------------------------------------------------------
 # Datacentre: 1
 #--------------------------------------------------------------------------
-IPDC1N01=10.119.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC1N01=10.119.131.11             # PS, QS, QD, PGm, MY, TG
 IPDC1N02=10.119.132.11             # OL, CS, ZK, TG
 IPDC1N03=10.119.132.12             # OL, CS, ZK, TG
 IPDC1N04=10.119.132.13             # CS, ZK, TG
@@ -223,14 +227,14 @@ IPDC1N09=10.119.133.15             # UI, MS, BS, BP, ES, TC, TG
 IPDC1N10=10.119.134.11             # DP, NO, HT
 IPDC1N11=10.119.134.12             # R, TG
 IPDC1N12=10.119.134.13             # R, TG
-IPDC1N13=10.119.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC1N13=10.119.131.12             # PS, QS, QD, PGs, MY, TG
 IPDC1N14=10.119.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
 IPDC1N15=10.119.134.14             # DP, NO, HT
 
 #--------------------------------------------------------------------------
 # Datacentre: 2
 #--------------------------------------------------------------------------
-IPDC2N01=10.219.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC2N01=10.219.131.11             # PS, QS, QD, PGm, MY, TG
 IPDC2N02=10.219.132.11             # OL, CS, ZK, TG
 IPDC2N03=10.219.132.12             # OL, CS, ZK, TG
 IPDC2N04=10.219.132.13             # CS, ZK, TG
@@ -242,7 +246,7 @@ IPDC2N09=10.219.133.15             # UI, MS, BS, BP, ES, TC, TG
 IPDC2N10=10.219.134.11             # DP, NO, HT
 IPDC2N11=10.219.134.12             # R, TG
 IPDC2N12=10.219.134.13             # R, TG
-IPDC2N13=10.219.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC2N13=10.219.131.12             # PS, QS, QD, PGs, MY, TG
 IPDC2N14=10.219.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
 IPDC2N15=10.219.134.14             # DP, NO, HT
 
@@ -260,7 +264,7 @@ CASS_HOSTS="$IPDC1N02:1,1 $IPDC1N03:1,1 $IPDC1N04:1,1 $IPDC2N02:2,1 $IPDC2N03:2,
 #--------------------------------------------------------------------------
 # Datacentre: 1
 #--------------------------------------------------------------------------
-IPDC1N01=10.119.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC1N01=10.119.131.11             # PS, QS, QD, PGm, MY, TG
 IPDC1N02=10.119.132.11             # OL, CS, ZK, TG
 IPDC1N03=10.119.132.12             # OL, CS, ZK, TG
 IPDC1N04=10.119.132.13             # CS, ZK, TG
@@ -272,14 +276,14 @@ IPDC1N09=10.119.133.15             # UI, MS, BS, BP, ES, TC, TG
 IPDC1N10=10.119.134.11             # DP, NO, HT
 IPDC1N11=10.119.134.12             # R, TG
 IPDC1N12=10.119.134.13             # R, TG
-IPDC1N13=10.119.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC1N13=10.119.131.12             # PS, QS, QD, PGs, MY, TG
 IPDC1N14=10.119.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
 IPDC1N15=10.119.134.14             # DP, NO, HT
 
 #--------------------------------------------------------------------------
 # Datacentre: 2
 #--------------------------------------------------------------------------
-IPDC2N01=10.219.131.11             # PS, QIS, QD, PGm, MY, TG
+IPDC2N01=10.219.131.11             # PS, QS, QD, PGm, MY, TG
 IPDC2N02=10.219.132.11             # OL, CS, ZK, TG
 IPDC2N03=10.219.132.12             # OL, CS, ZK, TG
 IPDC2N04=10.219.132.13             # CS, ZK, TG
@@ -291,7 +295,7 @@ IPDC2N09=10.219.133.15             # UI, MS, BS, BP, ES, TC, TG
 IPDC2N10=10.219.134.11             # DP, NO, HT
 IPDC2N11=10.219.134.12             # R, TG
 IPDC2N12=10.219.134.13             # R, TG
-IPDC2N13=10.219.131.12             # PS, QIS, QD, PGs, MY, TG
+IPDC2N13=10.219.131.12             # PS, QS, QD, PGs, MY, TG
 IPDC2N14=10.219.133.16             # UI, MS, BS, BP, ES, TC, GF, IF, TG
 IPDC2N15=10.219.134.14             # DP, NO, HT
 
@@ -390,8 +394,8 @@ ansible-playbook -l dc1n12 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc
 ansible-playbook -l dc1n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc1.cfg"
 ansible-playbook -l dc1n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc1.cfg"
 
-ansible-playbook -l dc1n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc1.cfg"
-ansible-playbook -l dc1n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=QS CFG=prod-2dc-15n-4sn-dc1.cfg"
+ansible-playbook -l dc1n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=QS CFG=prod-2dc-15n-4sn-dc1.cfg"
 
 ansible-playbook -l dc2n02 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc2.cfg"
 ansible-playbook -l dc2n03 $OPS_HOME/edge-comp-setup.yml -e "COMP=zk CFG=prod-2dc-15n-4sn-dc2.cfg"
@@ -420,8 +424,8 @@ ansible-playbook -l dc2n12 $OPS_HOME/edge-comp-setup.yml -e "COMP=r CFG=prod-2dc
 ansible-playbook -l dc2n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc2.cfg"
 ansible-playbook -l dc2n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=ps CFG=prod-2dc-15n-4sn-dc2.cfg"
 
-ansible-playbook -l dc2n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc2.cfg"
-ansible-playbook -l dc2n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=qis CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n01 $OPS_HOME/edge-comp-setup.yml -e "COMP=QS CFG=prod-2dc-15n-4sn-dc2.cfg"
+ansible-playbook -l dc2n13 $OPS_HOME/edge-comp-setup.yml -e "COMP=QS CFG=prod-2dc-15n-4sn-dc2.cfg"
 ```
 
 ## Check Ports functionality

@@ -117,12 +117,12 @@ id="svg2">
     >PS</text>
 </symbol>
 
-<symbol id="qis">
+<symbol id="qs">
     <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
-    >QIS</text>
+    >QS</text>
 </symbol>
 
 
@@ -374,7 +374,7 @@ IP: 10.119.3.205</title>
     
 <use xlink:href="#bs"  x="138.4" y="163"/>
 <use xlink:href="#bp"  x="138.4" y="182"/>
-<use xlink:href="#qis"  x="138.4" y="201"/>
+<use xlink:href="#qs"  x="138.4" y="201"/>
 
 <use xlink:href="#tg"  x="138.4" y="299"/>
 <use xlink:href="#if"  x="138.4" y="280"/>
@@ -447,7 +447,7 @@ IP: 10.119.3.206</title>
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
 <use xlink:href="#ps"  x="312.8" y="163"/>
-<use xlink:href="#qis"  x="312.8" y="182"/>
+<use xlink:href="#qs"  x="312.8" y="182"/>
 
 <use xlink:href="#tg"  x="312.8" y="299"/>
 <use xlink:href="#my"  x="312.8" y="280"/>

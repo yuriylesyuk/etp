@@ -19,11 +19,12 @@ var genRegionIdNodeId = fp.curry( (onlySingleDC,  dcid, nodeid ) => {
     return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
 })
 
-function gatherComp( topology, comp ){
+var ipT = fp.template( "IPDC<%= dcid %>N<%= ('0'+nodeid).slice(-2) %>" );
+var drT = fp.template( "$<%= ipref %>:<%= dcid %>,<%= rackid %>" );
+var ndT = fp.template( "<%= nodeipref %> # <%= roles %>" );
+
+function gatherComp( topology, compType ){
     var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
-    var ipT = fp.template( "IPDC<%= dcid %>N<%= nodeidref %>" );
-    var drT = fp.template( "$<%= ipref %>:<%= dcid %>,<%= rackid %>" );
-    var ndT = fp.template( "<%= nodeipref %> # <%= roles %>" );
 
     var comps = [];
     fp.map(
@@ -31,21 +32,23 @@ function gatherComp( topology, comp ){
             subnet =>  
                 fp.reduce( (css, node) => {
                     // * to return for any component or "XX" component name to return for specific one
-                    if( comp === "*" || fp.includes( comp )(node.components) ){
+                    if( compType === "*" || fp.find( { comp: compType } )(node.components) ){
                         var c = { 
                             dcid: region.id, 
                             nodeid: node.id, 
                             rackid: (typeof node.rack === "undefined"? 1 : node.rack), 
                             ip: node.ip
                         };
-                        c.nodeidref = fp.padCharsStart('0')(2)(c.nodeid);
 
                         c.regionidnodeidref = genNodeId( c.dcid, c.nodeid );
 
-                        c.ipref = ipT({ dcid: c.dcid, nodeidref: c.nodeidref });
+                        c.ipref = ipT({ dcid: c.dcid, nodeid: c.nodeid });
                         c.drref = drT({ ipref: c.ipref, dcid: c.dcid, rackid: c.rackid } );
 
-                        c.roles = node.components.join(", ");
+
+                        // "Invert" components
+                        c.components = fp.keyBy("comp")(node.components);
+                        c.roles = fp.map(comp => comp.comp)(node.components).join(", ");
 
                         c.nodeipref = ndT({ nodeipref: fp.padCharsEnd(' ')(34)( c.ipref + "=" + c.ip ), roles: c.roles });
                         comps.push( c );
@@ -65,7 +68,7 @@ var compName = {
     "UI": "edge-sap-ui", 
     "R": "edge-router", 
     "MP": "edge-message-processor", 
-    "QIS": "edge-qpid-server", 
+    "QS": "edge-qpid-server", 
     "PS": "edge-postgres-server", 
     "ZK": "apigee-zookeeper", 
     "CS": "apigee-cassandra", 
@@ -95,37 +98,69 @@ var compName = {
 // [ ] Install Rule: if MS and UI on same node, do MS, ignore UI for this node
 
 var compInst = {
-    "ZK": "zk", 
-    "CS": "c", 
-    "OL": "ld", 
-    "MS": "ms", 
-    "UI": "ui",
-    "QIS": "qs", 
-    "PS": "ps", 
-    "R": "r", 
-    "MP": "mp", 
+    "ZK": { comp: "zk", ansible: "edge-comp-setup.yml" }, 
+    "CS": { comp: "c", ansible: "edge-comp-setup.yml" }, 
+    "OL": { comp: "ld", ansible: "edge-comp-setup.yml" }, 
+    "MS": { comp: "ms", ansible: "edge-comp-setup.yml" }, 
+    "UI": { comp: "ui", ansible: "edge-comp-setup.yml" },
+    "QS": { comp: "qs", ansible: "edge-comp-setup.yml" }, 
+    "PS": { comp: "ps", ansible: "edge-comp-setup.yml" }, 
+    "R": { comp: "r", ansible: "edge-comp-setup.yml" }, 
+    "MP": { comp: "mp", ansible: "edge-comp-setup.yml" }, 
 
-    "DP": "dp", 
-    "PGd": "pdb",
+    "DP": { comp: "dp", ansible: "edge-comp-setup.yml" }, 
+    "PGd": { comp: "pdb", ansible: "edge-comp-setup.yml" },
 
-    "ES": "e",
-    "BS": "b", 
-    "BP": "p", 
+    "ES": { comp: "e", ansible: "edge-comp-setup.yml" },
+    "BS": { comp: "b", ansible: "edge-comp-setup.yml" }, 
+    "BP": { comp: "p", ansible: "edge-comp-setup.yml" }, 
 
-    "IF": "", 
-    "TG": "", 
-    "GF": ""
+    "IF": { comp: "influxdb", ansible: "edge-comp.yml" }, 
+    "TG": { comp: "telegraf", ansible: "edge-comp.yml" }, 
+    "GF": { comp: "grafana", ansible: "edge-comp.yml" }
+}
+
+
+var getTopologyPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, property ) => {
+    var val = fp.get( property, topology )
+    return typeof val === "undefined" ? fp.get( property, portdefs ) : val;
+})
+
+
+
+
+
+
+var getComponentPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, component, property ) => {
+    var val = fp.get( property, topology )
+    return typeof val === "undefined" ? fp.get( property, portdefs ) : val;
+})
+
+
+// If component requires custum configuration file, the table provides parametrization information for it
+var compConfig = {
+    // in case of multiple MSs, For MS .primary = true
+    "ALL" : [ "hosts", "sysadmin", "license", "cassandra", "smtp" ],
+
+    "OL": [ "hosts","ldap" ],
+    "PG": [ "hosts","pg" ],
+    "BS": [ "hosts", "smtp" ],
+    "MS": [ "hosts", "sysadmin", "cassandra", "smtp" ]
 }
 
 
 module.exports = function ( topologyFile, outputFile, program ){
 
-    var portdefs = require("./edge-port-defs.json");
+    var portdefs = require("./edge-defs.json");
 
     var topology = require( topologyFile );
 
     var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
 
+    // I.E.: ...= getTopologyProperty("customer.cassPassword");
+    var getTopologyProperty= getTopologyPropertyFromTopologyPortdefs( portdefs, topology );
+
+    var getComponentProperty= getComponentPropertyFromTopologyPortdefs( portdefs, topology );
 
 
 //--- TODO: Refactor to utils.js -------------
@@ -145,7 +180,7 @@ module.exports = function ( topologyFile, outputFile, program ){
     var nodes = fp.flatMap( region => 
             fp.flatMap( subnet => 
                 fp.map( node => {
-                    node.roles = node.components;
+                    node.roles = fp.map(comp=>comp.comp)(node.components);
 
                     node.dcid = region.id;
 
@@ -296,7 +331,7 @@ module.exports = function ( topologyFile, outputFile, program ){
         return list;
     }, ansibleHosts)(fp.sortBy(["dcid","id"])(nodes));   
 
-    var svgstream = fs.createWriteStream( "hosts" );
+    var svgstream = fs.createWriteStream( program.directory + '/' + "hosts" );
     svgstream.write( ansibleHosts.join('\n') );
     svgstream.end();
     //-------------------------------------------------------------------------- 
@@ -327,7 +362,7 @@ module.exports = function ( topologyFile, outputFile, program ){
         return list;
     }, sshConfig)(fp.sortBy(["dcid","id"])(nodes));   
 
-    var svgstream = fs.createWriteStream( "config" );
+    var svgstream = fs.createWriteStream( program.directory + '/' + "config" );
     svgstream.write( sshConfig.join('\n') );
     svgstream.end();
     //-------------------------------------------------------------------------- 
@@ -395,84 +430,187 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 //     console.log(id, components);
 //  } )(topology.regions);
 
-    var cfgT = fp.template( "<%= planetprefix %>dc<%= dcid %>.cfg" );
+    var genCfgFileName = function( planet, regionId, nodeId, compType, isPrimaryMS ){
+        var cfgT = fp.template( "<%= planet %>-dc<%= dcid %>-<%= nodeidref %>-<%= compprefix %>.cfg" );
+
+        // Define config file prefix
+        var nodeidref = "all";
+        var comp = compType.toLowerCase();
+        if( compType === "MS" && isPrimaryMS ){
+
+        }else if( compConfig[compType] === undefined ){
+            comp = "ms";
+        }else{
+            nodeidref = 'n'+('0'+nodeId).slice(-2);
+        }
+
+        return cfgT({planet: planet.toLowerCase(), dcid: regionId, nodeidref: nodeidref, compprefix: comp })
+    }
 
     var all = gatherComp(topology, "*");
+
+    var mss = gatherComp(topology, "MS");
+
+    var ols = gatherComp(topology, "OL");
+    // TODO: PG, PGm, PGs
+    // Then add: ,{compType:"PG", comps:pgs}
+//    var pgs = gatherComp(topology, "OL");
 
     var css = gatherComp(topology, "CS");
     var zks = gatherComp(topology, "CS");
     
+    var bss = gatherComp(topology, "BL");
 
     // Generate .cfg CS/ZK fragments
-    if( program.prefix ){
+    // TODO: add an option for a type of artifact to be generated
+    if( true ){
+        // top-level iteration by region/DC
         fp.map( region => {
-            // top-level iteration by region/DC
 
-            var cfgstream = fs.createWriteStream( cfgT({planetprefix: program.prefix, dcid: region.id }) );
+            // next-level iteration by list of nodes for a component type
+            fp.map( configurations => {
+                fp.map( compnode => {
 
+                    var cfgstream = fs.createWriteStream( program.directory + '/' + genCfgFileName( topology.planet, region.id, compnode.nodeid, configurations.compType, compnode.components[configurations.compType].primary ) );
 
-            cfgstream.write( versionT({ comment: '#', planet: topology.planet, version: topology.version, genat: new Date() } ));
-            cfgstream.write("\n\n");
-
-
-            // list nodes
-            fp.toPairs(fp.groupBy("dcid")(all)).map(
-                dc => {
-                    cfgstream.write( "#--------------------------------------------------------------------------\n");
-                    cfgstream.write( "# Datacentre: " + dc[0] + "\n" );
-                    cfgstream.write( "#--------------------------------------------------------------------------\n");
-                    cfgstream.write(dc[1].map(n=>n.nodeipref).join('\n'));
+                    cfgstream.write( versionT({ comment: '#', planet: topology.planet, version: topology.version, genat: new Date() } ));
                     cfgstream.write("\n\n");
-            })
-            cfgstream.write("");
-        
-            var observers = (zks.length % 2)===0 ? 1: 2
-
-            var _zks = fp(zks).take(zks.length-observers).map(n=> ({dcid: n.dcid, zkref: "$"+n.ipref}) ).value().concat(
-                            fp(zks).takeRight(observers).map(n=> ({ dcid: n.dcid, zkref: "$"+n.ipref + ":observer" }) ).value()
-                        );
-
-            var ZK_HOSTS = fp(_zks).map(n=>n.zkref).value().join(" ");
 
 
-            var ZK_CLIENT_HOSTS = fp(zks).filter({dcid: region.id}).map(n=> "$"+n.ipref).value().join(" ") 
+                    // list nodes
+                    if( fp.includes("hosts")(compConfig[configurations.compType]) ){
+                        fp.toPairs(fp.groupBy("dcid")(all)).map(
+                            dc => {
+                                cfgstream.write( "#--------------------------------------------------------------------------\n");
+                                cfgstream.write( "# Datacentre: " + dc[0] + "\n" );
+                                cfgstream.write( "#--------------------------------------------------------------------------\n");
+                                cfgstream.write(dc[1].map(n=>n.nodeipref).join('\n'));
+                                cfgstream.write("\n\n");
+                        })
+                        cfgstream.write("");
 
-            var CASS_HOSTS = fp(css).filter({dcid: region.id}).map(n=>n.drref).value().join(" ") 
-                        + " " + fp(css).reject({dcid: region.id}).map(n=>n.drref).value().join(" ");
+                        cfgstream.write("HOSTIP=$(hostname -i)\n");
+                    }
 
-            cfgstream.write( "-------------\n")
-            cfgstream.write( "ZK_HOSTS=\""+ZK_HOSTS+"\"\n" );
-            cfgstream.write( "ZK_CLIENT_HOSTS=\""+ZK_CLIENT_HOSTS+"\"\n" );
-            cfgstream.write( "CASS_HOSTS=\""+CASS_HOSTS+"\"\n" );
+                    // BRAND: generated if present
+                    if( brand = getTopologyProperty("customer.brand")){
+                        cfgstream.write( `BRAND=${brand}\n` );
+                    }
+
+                    if( fp.includes("sysadmin")(compConfig[configurations.compType]) ){
+                        cfgstream.write( `ADMIN_EMAIL=${getTopologyProperty("customer.adminEmail")}\n` );
+                        cfgstream.write( `APIGEE_ADMINPW=${getTopologyProperty("customer.adminPassword")}\n` );
+                    }
+                
+                    if( fp.includes("license")(compConfig[configurations.compType]) ){
+                        cfgstream.write( `LICENSE_FILE=${getTopologyProperty("customer.licenseFile")}\n` );
+                    }
+
+                    // MP_POD: generated if present
+                    if( mpPod = getTopologyProperty("customer.mpPod")){
+                        cfgstream.write( `MP_POD=${mpPod}\n` );
+                    }
+
+                    // REGION
+                    cfgstream.write( `REGION=${region.name}\n` );
+
+                    // MS section:
+                    /*
+                    -- if more than one MS in a datacentre, 
+                        seek for a primary, 
+                        if absent, use first found for ALL, 
+                        use <current> for each other -ms-
+                    */
+
+                    /*
+                        
+                    -- if MS override present, use override
+                        xx
+                    -- if MS and OL on the same node, pair them
+
+                    */
 
 
-            // TODO: LDAP
-
-    /*------------------------
-    LDAP properties affected are:
-
-    USE_LDAP_REMOTE_HOST=y
-    LDAP_HOST=
-    APIGEE_LDAPPW=
-    LDAP_PORT=
-    for multi DC: LDAP_TYPE=2; if standalone, i..e no replication needed: LDAP_TYPE=1
-
-    LDAP_SID=1,2,3 etc for the ID of each node in sequence
-    LDAP_PEER=
-
-    for up to 2 LDAP nodes LDAP_PEER point to each other. For more I have the logic. Limit to 2 LDAP peers for now in your logic
-
-    for total  >2 nodes is LDAP multimaster replication across 3 or more nodes.
-
-    */
-
-        //-------------------
-            // TODO: PG/PGm/PGs
 
 
+                    // TODO: LDAP
 
-            cfgstream.end();
+            /*------------------------
+            LDAP properties affected are:
 
+            USE_LDAP_REMOTE_HOST=y
+            LDAP_HOST=
+            APIGEE_LDAPPW=
+            LDAP_PORT=
+            for multi DC: LDAP_TYPE=2; if standalone, i..e no replication needed: LDAP_TYPE=1
+
+            LDAP_SID=1,2,3 etc for the ID of each node in sequence
+            LDAP_PEER=
+
+            for up to 2 LDAP nodes LDAP_PEER point to each other. For more I have the logic. Limit to 2 LDAP peers for now in your logic
+
+            for total  >2 nodes is LDAP multimaster replication across 3 or more nodes.
+
+            */
+
+                if( fp.includes("cassandra")(compConfig[configurations.compType]) ){
+
+                    var observers = (zks.length % 2)===0 ? 1: 2
+
+                    var _zks = fp(zks).take(zks.length-observers).map(n=> ({dcid: n.dcid, zkref: "$"+n.ipref}) ).value().concat(
+                                    fp(zks).takeRight(observers).map(n=> ({ dcid: n.dcid, zkref: "$"+n.ipref + ":observer" }) ).value()
+                                );
+
+                    var ZK_HOSTS = fp(_zks).map(n=>n.zkref).value().join(" ");
+
+
+                    var ZK_CLIENT_HOSTS = fp(zks).filter({dcid: region.id}).map(n=> "$"+n.ipref).value().join(" ") 
+
+                    var CASS_HOSTS = fp(css).filter({dcid: region.id}).map(n=>n.drref).value().join(" ") 
+                                + " " + fp(css).reject({dcid: region.id}).map(n=>n.drref).value().join(" ");
+
+                    cfgstream.write( "-------------\n")
+                    cfgstream.write( "ZK_HOSTS=\""+ZK_HOSTS+"\"\n" );
+                    cfgstream.write( "ZK_CLIENT_HOSTS=\""+ZK_CLIENT_HOSTS+"\"\n" );
+                    cfgstream.write( "CASS_HOSTS=\""+CASS_HOSTS+"\"\n" );
+                    cfgstream.write( "\n" );
+                }
+
+
+                if( fp.includes("ldap")(compConfig[configurations.compType]) ){
+                    cfgstream.write( "\n" );
+
+
+                    // TODO: check USE_LDAP_REMOTE_HOST
+
+                    cfgstream.write( `LDAP_TYPE=${compnode.components["OL"].ldapType}\n` );
+                    cfgstream.write( `LDAP_SID=${compnode.components["OL"].ldapSid}\n` );
+                    cfgstream.write( `LDAP_PEER=${
+                        ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
+                           ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
+                        )
+                    }\n` );
+                    cfgstream.write( `LDAP_SID=${getTopologyProperty("customer.ldapPassword")}\n` );
+
+                }
+                    //-------------------
+                        // TODO: PG/PGm/PGs
+
+
+                if( fp.includes("smtp")(compConfig[configurations.compType]) ){
+                    cfgstream.write( "\n" );
+                    cfgstream.write( `SKIP_SMTP=${getTopologyProperty("customer.skipSmtp")}\n` )
+                    cfgstream.write( `SMTPHOST=${getTopologyProperty("customer.smtpHost")}\n` )
+                    cfgstream.write( `SMTPPORT=${getTopologyProperty("customer.smtpPort")}\n` )
+                    cfgstream.write( `SMTPUSER=${getTopologyProperty("customer.smtpUser")}\n` )
+                    cfgstream.write( `SMTPPASSWORD=${getTopologyProperty("customer.smtpPassword")}\n` )
+                    cfgstream.write( `SMTPSSL=${getTopologyProperty("customer.smtpSsl")}\n` )
+                }
+                
+                cfgstream.end();
+                    
+                })(configurations.compNodes)
+            })([{compType:"MS", compNodes: mss},{compType:"OL", compNodes:ols},{compType:"BS", compNodes: bss}])
         })(topology.regions)
     }
     // end: program.prefix
@@ -484,19 +622,21 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     // TODO:
     // ansible top-level script
 
-    if( program.ansible_script ){
-        var ansiblestream = fs.createWriteStream( program.ansible_script );
+    // TODO: add as an optional 
+    if( true ){
+        var ansiblestream = fs.createWriteStream( program.directory + '/' + "ansible-install.sh" );
 
-        var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/edge-comp-setup.yml -e "COMP=<%= comp %> CFG=<%= cfg %>"' );
+        var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/<%= comp.ansible %> -e "COMP=<%= comp.comp %> CFG=<%= cfg %>"' );
 
         fp.map( region => {
-            var cfgfile = cfgT({planetprefix: program.prefix, dcid: region.id });
 
             fp.map( comp =>
-                
                 ansiblestream.write(
                     fp.map(
-                        n => ansibleT({ regionidnodeidref: n.regionidnodeidref, comp: compInst[ comp ], cfg: cfgfile })
+                        compnode => ansibleT({ 
+                            regionidnodeidref: compnode.regionidnodeidref, 
+                            comp: compInst[ comp ], 
+                            cfg: genCfgFileName( topology.planet, region.id, compnode.nodeid, comp, comp==="MS"?compnode.components[comp].primary:false ) })
                     )( fp.filter({dcid: region.id} )(gatherComp(topology, comp )) ).join('\n') +
                     "\n\n"
                 )
@@ -582,7 +722,7 @@ then
 fi
 
 ` );
-        genSequence(topology, portdefs.edgecomponentstartsequence, compControlT, prologT,  "planetcontrol.sh")
+        genSequence(topology, portdefs.edgecomponentstartsequence, compControlT, prologT, program.directory + '/' + "planetcontrol.sh")
     //}
 };
 
@@ -597,17 +737,14 @@ function genSequence(topology, sequence, template, prologtemplate, file){
 
         ansiblestream.write( prologtemplate() );
 
-        fp.map( comp =>
+        fp.map( compType =>
 
             fp.map( region => {
-                // TODO: needed for cfg-aware scripts, ie., install 
-                //var cfgfile = cfgT({planetprefix: program.prefix, dcid: region.id });
     
                 ansiblestream.write(
                     fp.map(
-                        // TODO: refactor cfg-aware functionality: n => template({ regionidnodeidref: n.regionidnodeidref, comp: comp.toLowerCase(), cfg: cfgfile })
-                        n => template({ regionref: region.name, regionidnodeidref: n.regionidnodeidref, comp: compName[ comp ] })
-                    )( fp.filter({dcid: region.id} )(gatherComp(topology, comp )) ).join('\n') +
+                        n => template({ regionref: region.name, regionidnodeidref: n.regionidnodeidref, comp: compName[ compType ] })
+                    )( fp.filter({dcid: region.id} )(gatherComp(topology, compType )) ).join('\n') +
                     "\n\n"
                 )
             })(topology.regions)

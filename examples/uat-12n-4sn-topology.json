@@ -14,9 +14,9 @@
                             "hostname": "nnnxxxyyy01",
                             "ip": "10.119.3.201",
                             "components": [
-                                    "DP",
-                                    "NO",
-                                    "HT"
+                                    {"comp":"DP"},
+                                    {"comp":"NO"},
+                                    {"comp":"HT"}
                                 ]
                         },
                         {
@@ -24,8 +24,8 @@
                             "hostname": "nnnxxxyyy07",
                             "ip": "10.119.3.207",
                             "components": [
-                                "R",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -33,8 +33,8 @@
                             "hostname": "nnnxxxyyy08",
                             "ip": "10.119.3.208",
                             "components": [
-                                "R",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]
@@ -48,10 +48,10 @@
                             "hostname": "nnnxxxyyy09",
                             "ip": "10.119.3.209",
                             "components": [
-                                "MP",
-                                "UI",
-                                "MS",
-                                "TG"
+                                {"comp":"MP"},
+                                {"comp":"UI"},
+                                {"comp":"MS"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -59,8 +59,8 @@
                             "hostname": "nnnxxxyyy10",
                             "ip": "10.119.3.210",
                             "components": [
-                                "MP",
-                                "TG"
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -68,9 +68,9 @@
                             "hostname": "nnnxxxyyy11",
                             "ip": "10.119.3.211",
                             "components": [
-                                "R",
-                                "MP",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -78,9 +78,9 @@
                             "hostname": "nnnxxxyyy12",
                             "ip": "10.119.3.212",
                             "components": [
-                                "R",
-                                "MP",
-                                "TG"
+                                {"comp":"R"},
+                                {"comp":"MP"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -88,14 +88,14 @@
                             "hostname": "nnnxxxyyy05",
                             "ip": "10.119.3.205",
                             "components": [
-                                "BS",
-                                "BP",
-                                "QIS",
-                                "TC",
-                                "QD",
-                                "GF",
-                                "IF",
-                                "TG"
+                                {"comp":"BS"},
+                                {"comp":"BP"},
+                                {"comp":"QS"},
+                                {"comp":"TC"},
+                                {"comp":"QD"},
+                                {"comp":"GF"},
+                                {"comp":"IF"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]
@@ -109,10 +109,10 @@
                             "hostname": "nnnxxxyyy02",
                             "ip": "10.119.3.202",
                             "components": [
-                                "OL",
-                                "CS",
-                                "ZK",
-                                "TG"
+                                {"comp":"OL"},
+                                {"comp":"CS"},
+                                {"comp":"ZK"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -120,9 +120,9 @@
                             "hostname": "nnnxxxyyy03",
                             "ip": "10.119.3.203",
                             "components": [
-                                "CS",
-                                "ZK",
-                                "TG"
+                                {"comp":"CS"},
+                                {"comp":"ZK"},
+                                {"comp":"TG"}
                             ]
                         },
                         {
@@ -130,9 +130,9 @@
                             "hostname": "nnnxxxyyy04",
                             "ip": "10.119.3.204",
                             "components": [
-                                "CS",
-                                "ZK",
-                                "TG"
+                                {"comp":"CS"},
+                                {"comp":"ZK"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]
@@ -146,12 +146,12 @@
                             "hostname": "nnnxxxyyy06",
                             "ip": "10.119.3.206",
                             "components": [
-                                "PS",
-                                "QIS",
-                                "QD",
-                                "PG",
-                                "MY",
-                                "TG"
+                                {"comp":"PS"},
+                                {"comp":"QS"},
+                                {"comp":"QD"},
+                                {"comp":"PG"},
+                                {"comp":"MY"},
+                                {"comp":"TG"}
                             ]
                         }
                     ]

@@ -117,12 +117,12 @@ id="svg2">
     >PS</text>
 </symbol>
 
-<symbol id="qis">
+<symbol id="qs">
     <use xlink:href="#struct" style="fill:#7a9543;stroke:#7a9543;"/>
     <text id="text1488" x="12.5" y="10.5"
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
         alignment-baseline="middle" text-anchor="middle"
-    >QIS</text>
+    >QS</text>
 </symbol>
 
 
@@ -266,7 +266,7 @@ IP: 10.119.131.11</title>
         alignment-baseline="middle" text-anchor="middle">Node 1</text>
     
 <use xlink:href="#ps"  x="16" y="106"/>
-<use xlink:href="#qis"  x="16" y="125"/>
+<use xlink:href="#qs"  x="16" y="125"/>
 
 <use xlink:href="#tg"  x="16" y="299"/>
 <use xlink:href="#my"  x="16" y="280"/>
@@ -284,7 +284,7 @@ IP: 10.119.131.12</title>
         alignment-baseline="middle" text-anchor="middle">Node 13</text>
     
 <use xlink:href="#ps"  x="46.6" y="106"/>
-<use xlink:href="#qis"  x="46.6" y="125"/>
+<use xlink:href="#qs"  x="46.6" y="125"/>
 
 <use xlink:href="#tg"  x="46.6" y="299"/>
 <use xlink:href="#my"  x="46.6" y="280"/>
@@ -325,6 +325,7 @@ IP: 10.119.132.12</title>
 <use xlink:href="#tg"  x="133.8" y="299"/>
 <use xlink:href="#zk"  x="133.8" y="280"/>
 <use xlink:href="#cs"  x="133.8" y="261"/>
+<use xlink:href="#ol"  x="133.8" y="242"/>
 
 
 
@@ -359,7 +360,7 @@ IP: 10.119.133.15</title>
 <use xlink:href="#ms"  x="221" y="125"/>
 <use xlink:href="#bs"  x="221" y="144"/>
 <use xlink:href="#bp"  x="221" y="163"/>
-<use xlink:href="#qis"  x="221" y="182"/>
+<use xlink:href="#qs"  x="221" y="182"/>
 
 <use xlink:href="#tg"  x="221" y="299"/>
 <use xlink:href="#if"  x="221" y="280"/>
@@ -382,7 +383,7 @@ IP: 10.119.133.16</title>
 <use xlink:href="#ms"  x="251.6" y="125"/>
 <use xlink:href="#bs"  x="251.6" y="144"/>
 <use xlink:href="#bp"  x="251.6" y="163"/>
-<use xlink:href="#qis"  x="251.6" y="182"/>
+<use xlink:href="#qs"  x="251.6" y="182"/>
 
 <use xlink:href="#tg"  x="251.6" y="299"/>
 <use xlink:href="#qd"  x="251.6" y="280"/>

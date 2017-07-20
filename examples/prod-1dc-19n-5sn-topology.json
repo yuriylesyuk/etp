@@ -1,180 +1,325 @@
 {
     "planet": "PROD",
     "brand": "sap",
-    "regions" : [
+    "regions": [
         {
-            "id" : "1",
+            "id": "1",
             "name": "dc-1",
             "subnets": [
                 {
                     "name": "routers",
-                    "tier" : "dmz",
+                    "tier": "dmz",
                     "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "nnnxxxyyy01",
+                            "ip": "10.119.3.201",
+                            "rack": 1,
+                            "components": [
                                 {
-                                    "id": 1,
-                                    "hostname": "nnnxxxyyy01",
-                                    "ip": "10.119.3.201",
-                                    "rack": 1,
-                                    "components": [ "R" ] 
-                                },
-                                {
-                                    "id": 2,
-                                    "hostname": "nnnxxxyyy02",
-                                    "ip": "10.119.3.202",
-                                    "rack": "2",
-                                    "components": [ "R" ] 
+                                    "comp": "R"
                                 }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "hostname": "nnnxxxyyy02",
+                            "ip": "10.119.3.202",
+                            "rack": "2",
+                            "components": [
+                                {
+                                    "comp": "R"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
                     "name": "devportals",
-                    "tier" : "dmz",
+                    "tier": "dmz",
                     "nodes": [
+                        {
+                            "id": 8,
+                            "hostname": "nnnxxxyyy08",
+                            "ip": "10.119.3.208",
+                            "rack": 1,
+                            "components": [
                                 {
-                                    "id": 8,
-                                    "hostname": "nnnxxxyyy08",
-                                    "ip": "10.119.3.208",
-                                    "rack": 1,
-                                    "components": [ "DP", "HT" ] 
+                                    "comp": "DP"
                                 },
                                 {
-                                    "id": 9,
-                                    "hostname": "nnnxxxyyy09",
-                                    "ip": "10.119.3.209",
-                                    "components": [ "DP", "HT" ] 
+                                    "comp": "HT"
                                 }
+                            ]
+                        },
+                        {
+                            "id": 9,
+                            "hostname": "nnnxxxyyy09",
+                            "ip": "10.119.3.209",
+                            "components": [
+                                {
+                                    "comp": "DP"
+                                },
+                                {
+                                    "comp": "HT"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
                     "name": "gateway",
-                    "tier" : "api-gateway",
+                    "tier": "api-gateway",
                     "nodes": [
+                        {
+                            "id": 3,
+                            "hostname": "nnnxxxyyy03",
+                            "ip": "10.119.3.203",
+                            "components": [
                                 {
-                                    "id": 3,
-                                    "hostname": "nnnxxxyyy03",
-                                    "ip": "10.119.3.203",
-                                    "components": [ "MP", "MS", "UI" ] 
+                                    "comp": "MP"
                                 },
                                 {
-                                    "id": 4,
-                                    "hostname": "nnnxxxyyy04",
-                                    "ip": "10.119.3.204",
-                                    "components": [ "MP" ] 
+                                    "comp": "MS"
                                 },
                                 {
-                                    "id": 5,
-                                    "hostname": "nnnxxxyyy05",
-                                    "ip": "10.119.3.205",
-                                    "components": [ "MP" ] 
-                                },
-                                {
-                                    "id": 6,
-                                    "hostname": "nnnxxxyyy06",
-                                    "ip": "10.119.3.206",
-                                    "components": [ "MP" ] 
-                                },
-                                {
-                                    "id": 7,
-                                    "hostname": "nnnxxxyyy07",
-                                    "ip": "10.119.3.207",
-                                    "components": [ "MP" ] 
+                                    "comp": "UI"
                                 }
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "hostname": "nnnxxxyyy04",
+                            "ip": "10.119.3.204",
+                            "components": [
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "hostname": "nnnxxxyyy05",
+                            "ip": "10.119.3.205",
+                            "components": [
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "hostname": "nnnxxxyyy06",
+                            "ip": "10.119.3.206",
+                            "components": [
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "hostname": "nnnxxxyyy07",
+                            "ip": "10.119.3.207",
+                            "components": [
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
                     "name": "baas",
-                    "tier" : "api-gateway",
+                    "tier": "api-gateway",
                     "nodes": [
+                        {
+                            "id": 10,
+                            "hostname": "nnnxxxyyy10",
+                            "ip": "10.119.3.210",
+                            "components": [
                                 {
-                                    "id": 10,
-                                    "hostname": "nnnxxxyyy10",
-                                    "ip": "10.119.3.210",
-                                    "components": [ "BS", "BP", "NX", "ES" ] 
+                                    "comp": "BS"
                                 },
                                 {
-                                    "id": 11,
-                                    "hostname": "nnnxxxyyy11",
-                                    "ip": "10.119.3.211",
-                                    "components": [ "BS", "BP", "NX", "ES" ] 
+                                    "comp": "BP"
+                                },
+                                {
+                                    "comp": "NX"
+                                },
+                                {
+                                    "comp": "ES"
                                 }
+                            ]
+                        },
+                        {
+                            "id": 11,
+                            "hostname": "nnnxxxyyy11",
+                            "ip": "10.119.3.211",
+                            "components": [
+                                {
+                                    "comp": "BS"
+                                },
+                                {
+                                    "comp": "BP"
+                                },
+                                {
+                                    "comp": "NX"
+                                },
+                                {
+                                    "comp": "ES"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
                     "name": "cicd",
-                    "tier" : "api-gateway",
+                    "tier": "api-gateway",
                     "nodes": [
+                        {
+                            "id": 12,
+                            "hostname": "nnnxxxyyy12",
+                            "ip": "10.119.3.212",
+                            "components": [
                                 {
-                                    "id": 12,
-                                    "hostname": "nnnxxxyyy12",
-                                    "ip": "10.119.3.212",
-                                    "components": [ "GIT", "Jnk", "Mvn" ] 
+                                    "comp": "GIT"
+                                },
+                                {
+                                    "comp": "Jnk"
+                                },
+                                {
+                                    "comp": "Mvn"
                                 }
+                            ]
+                        }
                     ]
                 },
                 {
                     "name": "datastore",
-                    "tier" : "db",
+                    "tier": "db",
                     "nodes": [
+                        {
+                            "id": 13,
+                            "hostname": "nnnxxxyyy13",
+                            "ip": "10.119.3.213",
+                            "rack": "1",
+                            "components": [
                                 {
-                                    "id": 13,
-                                    "hostname": "nnnxxxyyy13",
-                                    "ip": "10.119.3.213",
-                                    "rack": "1",
-                                    "components": [ "OL", "CS", "ZK" ] 
+                                    "comp": "OL"
                                 },
                                 {
-                                    "id": 15,
-                                    "hostname": "nnnxxxyyy15",
-                                    "ip": "10.119.3.215",
-                                    "rack": "2",
-                                    "components": [ "CS", "ZK" ] 
+                                    "comp": "CS"
                                 },
                                 {
-                                    "id": 16,
-                                    "hostname": "nnnxxxyyy16",
-                                    "ip": "10.119.3.216",
-                                    "rack": "3",
-                                    "components": [ "CS", "ZK" ] 
-                                },
-                                {
-                                    "id": 17,
-                                    "hostname": "nnnxxxyyy17",
-                                    "ip": "10.119.3.217",
-                                    "rack": "1",
-                                    "components": [ "CS", "ZK" ] 
-                                },
-                                {
-                                    "id": 18,
-                                    "hostname": "nnnxxxyyy18",
-                                    "ip": "10.119.3.218",
-                                    "rack": "2",
-                                    "components": [ "CS", "ZK" ] 
+                                    "comp": "ZK"
                                 }
+                            ]
+                        },
+                        {
+                            "id": 15,
+                            "hostname": "nnnxxxyyy15",
+                            "ip": "10.119.3.215",
+                            "rack": "2",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 16,
+                            "hostname": "nnnxxxyyy16",
+                            "ip": "10.119.3.216",
+                            "rack": "3",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 17,
+                            "hostname": "nnnxxxyyy17",
+                            "ip": "10.119.3.217",
+                            "rack": "1",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 18,
+                            "hostname": "nnnxxxyyy18",
+                            "ip": "10.119.3.218",
+                            "rack": "2",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
                     "name": "analytics",
-                    "tier" : "db",
+                    "tier": "db",
                     "nodes": [
+                        {
+                            "id": 19,
+                            "hostname": "nnnxxxyyy19",
+                            "ip": "10.119.3.219",
+                            "components": [
                                 {
-                                    "id": 19,
-                                    "hostname": "nnnxxxyyy19",
-                                    "ip": "10.119.3.219",
-                                    "components": [ "PS", "QIS", "PGm", "QD" ] 
+                                    "comp": "PS"
                                 },
                                 {
-                                    "id": 29,
-                                    "hostname": "nnnxxxyyy20",
-                                    "ip": "10.119.3.220",
-                                    "components": [ "QD" ] 
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "PGm"
+                                },
+                                {
+                                    "comp": "QD"
                                 }
+                            ]
+                        },
+                        {
+                            "id": 29,
+                            "hostname": "nnnxxxyyy20",
+                            "ip": "10.119.3.220",
+                            "components": [
+                                {
+                                    "comp": "QD"
+                                }
+                            ]
+                        }
                     ]
                 }
             ],
             "tiers": [
-                { "name": "dmz" },
-                { "name": "api-gateway" },
-                { "name": "db" }
+                {
+                    "name": "dmz"
+                },
+                {
+                    "name": "api-gateway"
+                },
+                {
+                    "name": "db"
+                }
             ],
             "externalclients": [
                 {
@@ -185,19 +330,30 @@
             "loadbalancers": [
                 {
                     "name": "dmz-r-ha",
-                    "nodes": [ 1, 2 ]
+                    "nodes": [
+                        1,
+                        2
+                    ]
                 },
                 {
                     "name": "dmz-dp-ha",
-                    "nodes": [ 8, 9 ]
+                    "nodes": [
+                        8,
+                        9
+                    ]
                 },
                 {
                     "name": "app-ui-ms",
-                    "nodes": [ 3 ]
+                    "nodes": [
+                        3
+                    ]
                 },
                 {
                     "name": "app-bs",
-                    "nodes": [ 10, 11 ]
+                    "nodes": [
+                        10,
+                        11
+                    ]
                 }
             ]
         }

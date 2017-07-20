@@ -1,9 +1,9 @@
 var fp = require("lodash/fp");
 
 
-module.exports = function ( topologyFile, outputFile ){
+module.exports = function ( topologyFile, outputFile, program ){
 
-    var portdefs = require("./edge-port-defs.json");
+    var portdefs = require("./edge-defs.json");
 
     //var topology = require("./uat-12n-4sn-topology.json");
     var topology = require( topologyFile );
@@ -19,7 +19,7 @@ module.exports = function ( topologyFile, outputFile ){
 
     // TODO: PGM, PGS, "OL"
 
-    // MultiDC comments; applied to: edge-port-defs.json multidc section
+    // MultiDC comments; applied to: edge-defs.json multidc section
 
         //  http://docs.apigee.com/private-cloud/latest/installation-requirements
         //  MP --> MP(4528)
@@ -27,7 +27,7 @@ module.exports = function ( topologyFile, outputFile ){
         //  MS, CS  --> CS(7000,7199,9160)
         //  ZK --> ZK: 2181, 2888,3888
         //  OL --> OL(10389)
-        //  QIS --> PGother 5432
+        //  QS --> PGother 5432
         //  PGm --> PGs 5432
         //  
         //  Target Backends:
@@ -133,7 +133,7 @@ module.exports = function ( topologyFile, outputFile ){
                     };
 
     fs = require('fs');
-    fs.writeFile('openapi-dev-ports.json', JSON.stringify(testport, null, 4), function (err) {
+    fs.writeFile( program.directory + '/' + "openapi-dev-ports.json", JSON.stringify(testport, null, 4), function (err) {
         if (err) 
             return console.log(err);
         console.log("File successfully written out");
@@ -238,7 +238,7 @@ function genFirewallPortRequestsList( clientregion, serverregion, portdefs, node
 
             var clientsubnets = fp.flatMap( subnet => 
                                     fp.filter( 
-                                        node => fp(node.components).includes(clientComponent) 
+                                        node => fp.find({comp:clientComponent})(node.components)
                                     )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
                                 )(clientregion.subnets);
 
@@ -248,7 +248,7 @@ function genFirewallPortRequestsList( clientregion, serverregion, portdefs, node
             fp.map( sc =>{
                 var serversubnets = fp.flatMap( subnet => 
                                         fp.filter( 
-                                            node => fp(node.components).includes(sc.component) 
+                                            node => fp.find({comp:sc.component})(node.components)
                                         )(subnet.nodes).map(n=>{ return {node: n.id, subnet: subnet.name}; } )  
                                     )(serverregion.subnets);
                     
