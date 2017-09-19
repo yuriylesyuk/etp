@@ -357,5 +357,71 @@
                 }
             ]
         }
+    ],
+    "loadbalancers": [
+        {
+            "name": "dmz-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/3",
+                    "/dc/1/n/5",
+                    "/dc/1/n/5",
+                    "/dc/1/n/5",
+                    "/dc/2/n/7"
+            ]
+        },
+        {
+            "name": "dmz-r-ha",
+            "comp": "DP", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/2/n/7"
+            ]
+        },
+        {
+            "name": "dmz-r-ha",
+            "comp": "DP", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/2/n/7"
+            ]
+        },
+        {
+            "name": "dmz-r-ha",
+            "comp": "DP", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/2/n/7"
+            ]
+        },
+        {
+            "name": "dmz-r-ha",
+            "comp": "DP", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/2/n/7"
+            ]
+        }
     ]
 }

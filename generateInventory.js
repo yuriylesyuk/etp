@@ -140,12 +140,12 @@ var getComponentPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, c
 // If component requires custum configuration file, the table provides parametrization information for it
 var compConfig = {
     // in case of multiple MSs, For MS .primary = true
-    "ALL" : [ "hosts", "sysadmin", "license", "cassandra", "smtp" ],
+    "ALL" : [ "hosts", "sysadmin", "license", "ldap", "cassandra", "smtp" ],
 
     "OL": [ "hosts","ldap" ],
     "PG": [ "hosts","pg" ],
     "BS": [ "hosts", "smtp" ],
-    "MS": [ "hosts", "sysadmin", "cassandra", "smtp" ]
+    "MS": [ "hosts", "sysadmin", "ldap", "cassandra", "smtp" ]
 }
 
 
@@ -580,17 +580,21 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                 if( fp.includes("ldap")(compConfig[configurations.compType]) ){
                     cfgstream.write( "\n" );
 
+// TODO: MSIP for MS section also LDAP_REMOTE_HOST=y if it is not collocated with an MS 
+// TODO: MS
 
                     // TODO: check USE_LDAP_REMOTE_HOST
 
                     cfgstream.write( `LDAP_TYPE=${compnode.components["OL"].ldapType}\n` );
                     cfgstream.write( `LDAP_SID=${compnode.components["OL"].ldapSid}\n` );
-                    cfgstream.write( `LDAP_PEER=${
-                        ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
-                           ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
-                        )
-                    }\n` );
-                    cfgstream.write( `LDAP_SID=${getTopologyProperty("customer.ldapPassword")}\n` );
+                    if( typeof compnode.components["OL"].ldapPeer !== "undefined" ){
+                        cfgstream.write( `LDAP_PEER=${
+                            ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
+                            ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
+                            )
+                        }\n` );
+                    }
+                    cfgstream.write( `APIGEE_LDAPPW=${getTopologyProperty("customer.ldapPassword")}\n` );
 
                 }
                     //-------------------

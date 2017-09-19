@@ -225,7 +225,7 @@ module.exports = function ( topologyFile, outputFile, program ){
 // returns list of firewall ports
 //
 // clientregion.id === serverregion.id generates ports for single-dc topology
-// clientregion.id === serverregion.id generates multi-dc ports
+// clientregion.id !== serverregion.id generates multi-dc ports
 
 function genFirewallPortRequestsList( clientregion, serverregion, portdefs, nodes, ports  ){
 
@@ -258,7 +258,8 @@ function genFirewallPortRequestsList( clientregion, serverregion, portdefs, node
                 // bottom-level reduce by subnet analysis
                 var n = fp.flatMap( cs => 
                     fp.reduce( (plist, ss ) => {
-                            ss.subnet == cs.subnet ? plist : plist.push( 
+                            //  TODO: [DECISION] subnets are intrinsically different between datacenters if if named the same
+                            serverregion.name + ":" + ss.subnet == clientregion.name + ":" + cs.subnet ? plist : plist.push( 
                                 // flatMap by sc.ports
                                 // { src: cs.node, dst: ss.node, port: sc.ports }
                                 fp.map( port => { 

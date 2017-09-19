@@ -1013,7 +1013,7 @@
     "customer": {
         "adminEmail": "admin@apigee.com",
         "adminPassword": "Apigee123!",
-        "licenseFile": "/opt/apigee-install/license.txt",
+        "licenseFile": "/opt/apigee-install/configs/license.txt",
         "mpPod": "gateway",
         "region": "dc-1",
         "cassAuth": "y",

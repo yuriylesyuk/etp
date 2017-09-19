@@ -253,6 +253,12 @@ id="svg2">
     >GF</text>
 </symbol>
 
+<symbol id="lb">
+    <text id="text1488" x="12.5" y="11.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;text-decoration: underline;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >LB:</text>
+</symbol>
 `;
 
     var svgFooter = '</svg>';
@@ -349,10 +355,87 @@ id="svg2">
     var separatorFlipOn = false;
     var separatorY = 0;
 
+    //------------------------------------- load balancers ---
+    // Global Load Balancers
+    var globalLbH = 20;
+    var lbNodeWidthAndHPad = 30;
+
+    var lbPH = 10;
+
+// <g>
+//     <use xlink:href="#lb"  x="89.2" y="16"/>
+//     <use xlink:href="#r"  x="190" y="37" transform="scale(0.6)"/>
+//     <use xlink:href="#r"  x="220" y="37" transform="scale(0.6)"/>
+// </g>
+
+/* 
+<g onmouseover="showvis('visible')" onmouseout="showvis('hidden')" transform="translate(100,13)">
+    <rect id="node1" x="1.5" y="1.5" width="80" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
+            <title>Load Balancer: </title>
+    </rect>
+    <use xlink:href="#lb"/>
+    <use xlink:href="#r"  transform="scale(0.6) translate(40,10)"/>
+    <use xlink:href="#r"  transform="scale(0.6) translate(68,10)"/>
+</g> 
+*/
+    var lbT = fp.template(`<g transform="translate(<%= x %>,<%= y %>)">
+    <rect id="node1" x="0" y="0" width="<%= width %>" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
+            <title><%= tooltip %></title>
+    </rect> 
+    <use xlink:href="#lb"/>
+    <%= lbcomps %>
+</g>`);
+    var lbNodeT = fp.template(`<use xlink:href="#<%= comp %>" transform="scale(0.6) translate(<%= x %>,<%= y %>)"/>`);
+
+
+    var xoffset = 10;
+    var yoffset = 5;
+
+    // TODO: soft-code and calc from the DC geometry
+    var lbTotalWidth = 250;
+
+    fp.map(
+        lb => {
+            lbwidth = drawLoadBalancer( lb, xoffset, yoffset );
+xoffset += lbPH + lbwidth;
+console.log(lbwidth);
+            if( xoffset > lbTotalWidth ){
+                xoffset = 10;
+                yoffset += 20
+            }
+        }
+    )(topology.loadbalancers);
+
+    globalLbH += yoffset;
+
+    function drawLoadBalancer(lb, xoffset, yoffset ){
+
+        var lbNodesSvg = []
+
+        var lbNodeX = 40;
+        var lbNodeH = 8;
+        var lbNodeI = 0;
+        fp.reduce(
+            (acc, lbcomp) => {
+                lbNodesSvg.push( lbNodeT( { comp: lb.comp.toLowerCase(), x: lbNodeX + lbNodeWidthAndHPad*lbNodeI++, y: lbNodeH } ) );
+
+                return acc;
+            }, lbNodesSvg
+
+        )(lb.nodes);
+
+        lbWidth =  (lbNodeX + lbNodeWidthAndHPad*lbNodeI)*0.6;
+
+        nodesSvg.push( lbT({x: xoffset, y: yoffset, width: lbWidth, tooltip: "tooltip", lbcomps: lbNodesSvg.join("\n")} ) );
+
+        return lbWidth;
+    }
+    //------------------------------------- load balancers ---
+
     // Iterate by regions/data centres
     regionX += regionPaddingH
     fp.map(region => {
-        regionY = regionHeader;
+        regionY = globalLbH + regionHeader;
 
         if( separatorFlipOn ){
             nodesSvg.push( regionSeparatorTemplate({ 
@@ -370,6 +453,13 @@ id="svg2">
             name: region.name.toUpperCase(),  
         }) );  
         regionY += regionHeader;
+
+        // dc-level load balances
+        
+        // XXXXXX
+
+
+
 
         drawRegion( region );
 
@@ -515,7 +605,7 @@ id="svg2">
 
     fs = require('fs');
     var svgstream = fs.createWriteStream( outputFile );
-    svgstream.write( svgHeaderTemplate( { height: regionY + regionFooter + 10, width: regionX } ));
+    svgstream.write( svgHeaderTemplate( { height: globalLbH + regionY + regionFooter + 10, width: regionX } ));
     svgstream.write( svgSymbols );
     svgstream.write( nodesSvg.join('\n') );
     svgstream.write( svgFooter);
