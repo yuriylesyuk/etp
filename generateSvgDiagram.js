@@ -285,6 +285,11 @@ id="svg2">
     `);
 
 
+    //------------------------------------- load balancers ---
+    var lbNodeWidthAndHPad = 30;
+    var dcLbH = 30;
+    var lbPH = 10;
+            
     //var subnetWidth = 15;
     var subnetPaddingH = 7;
     var subnetPaddingV = 3;
@@ -355,12 +360,6 @@ id="svg2">
     var separatorFlipOn = false;
     var separatorY = 0;
 
-    //------------------------------------- load balancers ---
-    // Global Load Balancers
-    var globalLbH = 20;
-    var lbNodeWidthAndHPad = 30;
-
-    var lbPH = 10;
 
 // <g>
 //     <use xlink:href="#lb"  x="89.2" y="16"/>
@@ -378,38 +377,46 @@ id="svg2">
     <use xlink:href="#r"  transform="scale(0.6) translate(68,10)"/>
 </g> 
 */
-    var lbT = fp.template(`<g transform="translate(<%= x %>,<%= y %>)">
-    <rect id="node1" x="0" y="0" width="<%= width %>" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
-            <title><%= tooltip %></title>
-    </rect> 
-    <use xlink:href="#lb"/>
-    <%= lbcomps %>
-</g>`);
-    var lbNodeT = fp.template(`<use xlink:href="#<%= comp %>" transform="scale(0.6) translate(<%= x %>,<%= y %>)"/>`);
+
+    // 
+    // returns yoffset 
+    //
+    function drawLoadBalancers( loadbalancers, lbsX, lbsY, lbTotalWidth){
 
 
-    var xoffset = 10;
-    var yoffset = 5;
+        var xoffset = 10;
+        var yoffset = 5;
 
-    // TODO: soft-code and calc from the DC geometry
-    var lbTotalWidth = 250;
 
-    fp.map(
-        lb => {
-            lbwidth = drawLoadBalancer( lb, xoffset, yoffset );
-xoffset += lbPH + lbwidth;
-console.log(lbwidth);
-            if( xoffset > lbTotalWidth ){
-                xoffset = 10;
-                yoffset += 20
+        fp.map(
+            lb => {
+                lbwidth = drawLoadBalancer( lb, lbsX + xoffset, lbsY + yoffset );
+
+                xoffset += lbPH + lbwidth;
+
+    console.log(lbwidth);
+                if( xoffset > lbTotalWidth ){
+                    xoffset = 10;
+                    yoffset += 20
+                }
             }
-        }
-    )(topology.loadbalancers);
+        )(loadbalancers);
 
-    globalLbH += yoffset;
+        return yoffset
+    }
 
     function drawLoadBalancer(lb, xoffset, yoffset ){
+        var lbNodeT = fp.template(`<use xlink:href="#<%= comp %>" transform="scale(0.6) translate(<%= x %>,<%= y %>)"/>`);
+    
+        var lbT = fp.template(`<g transform="translate(<%= x %>,<%= y %>)">
+        <rect id="node1" x="0" y="0" width="<%= width %>" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
+                <title><%= tooltip %></title>
+        </rect> 
+        <use xlink:href="#lb"/>
+        <%= lbcomps %>
+</g>`);
 
+    
         var lbNodesSvg = []
 
         var lbNodeX = 40;
@@ -431,6 +438,15 @@ console.log(lbwidth);
         return lbWidth;
     }
     //------------------------------------- load balancers ---
+
+    // Global Load Balancers geometry
+    var globalLbH = 20;
+        
+    // TODO: soft-code and calc from the DC geometry
+    var lbTotalWidth = 250;
+        
+    globalLbH += drawLoadBalancers( topology.loadbalancers, 0, 10, lbTotalWidth );
+
 
     // Iterate by regions/data centres
     regionX += regionPaddingH
@@ -456,10 +472,8 @@ console.log(lbwidth);
 
         // dc-level load balances
         
-        // XXXXXX
-
-
-
+        // TODO: XXX: hard-coded width for LB 'viewport'
+        regionY += drawLoadBalancers( region.loadbalancers, regionX, regionY, 250 ) + dcLbH;
 
         drawRegion( region );
 
@@ -605,7 +619,7 @@ console.log(lbwidth);
 
     fs = require('fs');
     var svgstream = fs.createWriteStream( outputFile );
-    svgstream.write( svgHeaderTemplate( { height: globalLbH + regionY + regionFooter + 10, width: regionX } ));
+    svgstream.write( svgHeaderTemplate( { height: globalLbH + dcLbH + regionY + regionFooter + 10, width: regionX } ));
     svgstream.write( svgSymbols );
     svgstream.write( nodesSvg.join('\n') );
     svgstream.write( svgFooter);

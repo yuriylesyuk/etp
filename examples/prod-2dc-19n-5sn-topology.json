@@ -328,29 +328,16 @@
             "loadbalancers": [
                 {
                     "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
                     "nodes": [
-                        1,
-                        2
-                    ]
-                },
-                {
-                    "name": "dmz-dp-ha",
-                    "nodes": [
-                        8,
-                        9
-                    ]
-                },
-                {
-                    "name": "app-ui-ms",
-                    "nodes": [
-                        3
-                    ]
-                },
-                {
-                    "name": "app-bs",
-                    "nodes": [
-                        10,
-                        11
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/3"
                     ]
                 }
             ]
@@ -680,31 +667,44 @@
             "loadbalancers": [
                 {
                     "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
                     "nodes": [
-                        1,
-                        2
-                    ]
-                },
-                {
-                    "name": "dmz-dp-ha",
-                    "nodes": [
-                        8,
-                        9
-                    ]
-                },
-                {
-                    "name": "app-ui-ms",
-                    "nodes": [
-                        3
-                    ]
-                },
-                {
-                    "name": "app-bs",
-                    "nodes": [
-                        10,
-                        11
+                            "/dc/2/n/1",
+                            "/dc/2/n/3"
                     ]
                 }
+            ]
+        }
+    ],
+    "loadbalancers": [
+        {
+            "name": "gtm-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/2",
+                    "/dc/2/n/1",
+                    "/dc/2/n/2"
+            ]
+        },
+        {
+            "name": "gtm-dp-ha",
+            "comp": "DP", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/8",
+                    "/dc/2/n/8"
             ]
         }
     ],
