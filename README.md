@@ -102,7 +102,7 @@ An example for a 12 node topologies is given below.
     "planet": "UAT",
     "regions": [
         {
-            "id": "1",
+            "id": 1,
             "name": "dc-1",
             "subnets": [
                 {

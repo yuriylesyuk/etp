@@ -23,6 +23,16 @@ var ipT = fp.template( "IPDC<%= dcid %>N<%= ('0'+nodeid).slice(-2) %>" );
 var drT = fp.template( "$<%= ipref %>:<%= dcid %>,<%= rackid %>" );
 var ndT = fp.template( "<%= nodeipref %> # <%= roles %>" );
 
+function getIpRefObject( ipref ){
+    // ignore "regexpmatch" using tail
+    return fp.zipObject( [ "dcid", "nodeid" ] )(fp.tail(/\/dc\/(\d+)\/n\/(\d+)/.exec( ipref )).map(i=>Number(i)));
+}
+
+function getNodeByIpRef( nodes, ipref){
+
+    return fp.find( getIpRefObject( ipref ) )( nodes );
+}
+
 function gatherComp( topology, compType ){
     var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
 
@@ -135,6 +145,8 @@ var getComponentPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, c
     var val = fp.get( property, topology )
     return typeof val === "undefined" ? fp.get( property, portdefs ) : val;
 })
+
+
 
 
 // If component requires custum configuration file, the table provides parametrization information for it
@@ -584,18 +596,34 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 // TODO: MS
 
                     // TODO: check USE_LDAP_REMOTE_HOST
+                    if( configurations.compType == "OL"){
+                        cfgstream.write( `LDAP_TYPE=${compnode.components["OL"].ldapType}\n` );
+                        cfgstream.write( `LDAP_SID=${compnode.components["OL"].ldapSid}\n` );
+                        if( typeof compnode.components["OL"].ldapPeer !== "undefined" ){
+                            cfgstream.write( `LDAP_PEER=${
+                                ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
+                                ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
+                                )
+                            }\n` );
+                        }
+                        cfgstream.write( `APIGEE_LDAPPW=${getTopologyProperty("customer.ldapPassword")}\n` );
+                    }else if( configurations.compType == "MS"){
+                        if( typeof compnode.components["MS"].ldapHost == "undefined" ){
+                            // OL is collocated with MS
+                            cfgstream.write( `USE_LDAP_REMOTE_HOST=n\n` );
 
-                    cfgstream.write( `LDAP_TYPE=${compnode.components["OL"].ldapType}\n` );
-                    cfgstream.write( `LDAP_SID=${compnode.components["OL"].ldapSid}\n` );
-                    if( typeof compnode.components["OL"].ldapPeer !== "undefined" ){
-                        cfgstream.write( `LDAP_PEER=${
-                            ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
-                            ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
-                            )
-                        }\n` );
+                        }else{
+                            // OL is remote
+                            cfgstream.write( `USE_LDAP_REMOTE_HOST=y\n` );
+
+                            // Deref OL for MS
+                            var ldapNode = getNodeByIpRef( all, compnode.components["MS"].ldapHost );
+
+                            cfgstream.write( `LDAP_HOST=${ldapNode.ipref}\n` );
+                            cfgstream.write( `LDAP_TYPE=${ldapNode.components["OL"].ldapType}\n` );
+                            cfgstream.write( `LDAP_SID=${ldapNode.components["OL"].ldapSid}\n` );
+                        }
                     }
-                    cfgstream.write( `APIGEE_LDAPPW=${getTopologyProperty("customer.ldapPassword")}\n` );
-
                 }
                     //-------------------
                         // TODO: PG/PGm/PGs

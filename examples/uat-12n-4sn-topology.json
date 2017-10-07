@@ -2,7 +2,7 @@
     "planet": "UAT",
     "regions": [
         {
-            "id": "1",
+            "id": 1,
             "name": "dc-1",
             "subnets": [
                 {
@@ -50,7 +50,7 @@
                             "components": [
                                 {"comp":"MP"},
                                 {"comp":"UI"},
-                                {"comp":"MS"},
+                                {"comp":"MS","ldapHost": "/dc/1/n/2"},
                                 {"comp":"TG"}
                             ]
                         },
@@ -109,7 +109,10 @@
                             "hostname": "nnnxxxyyy02",
                             "ip": "10.119.3.202",
                             "components": [
-                                {"comp":"OL"},
+                                {"comp":"OL",
+                                    "ldapType": 2,
+                                    "ldapSid": 1
+                                },
                                 {"comp":"CS"},
                                 {"comp":"ZK"},
                                 {"comp":"TG"}

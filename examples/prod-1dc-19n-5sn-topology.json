@@ -3,7 +3,7 @@
     "brand": "sap",
     "regions": [
         {
-            "id": "1",
+            "id": 1,
             "name": "dc-1",
             "subnets": [
                 {
@@ -25,7 +25,7 @@
                             "id": 2,
                             "hostname": "nnnxxxyyy02",
                             "ip": "10.119.3.202",
-                            "rack": "2",
+                            "rack": 2,
                             "components": [
                                 {
                                     "comp": "R"
@@ -80,7 +80,8 @@
                                     "comp": "MP"
                                 },
                                 {
-                                    "comp": "MS"
+                                    "comp": "MS",
+                                    "ldapHost": "/dc/1/n/13"
                                 },
                                 {
                                     "comp": "UI"
@@ -203,10 +204,13 @@
                             "id": 13,
                             "hostname": "nnnxxxyyy13",
                             "ip": "10.119.3.213",
-                            "rack": "1",
+                            "rack": 1,
                             "components": [
                                 {
-                                    "comp": "OL"
+                                    "comp": "OL",
+                                    "ldapType": 2,
+                                    "ldapSid": 1,
+                                    "ldapPeer": "/dc/1/n/3"
                                 },
                                 {
                                     "comp": "CS"
@@ -220,7 +224,7 @@
                             "id": 15,
                             "hostname": "nnnxxxyyy15",
                             "ip": "10.119.3.215",
-                            "rack": "2",
+                            "rack": 2,
                             "components": [
                                 {
                                     "comp": "CS"
@@ -248,7 +252,7 @@
                             "id": 17,
                             "hostname": "nnnxxxyyy17",
                             "ip": "10.119.3.217",
-                            "rack": "1",
+                            "rack": 1,
                             "components": [
                                 {
                                     "comp": "CS"
@@ -262,7 +266,7 @@
                             "id": 18,
                             "hostname": "nnnxxxyyy18",
                             "ip": "10.119.3.218",
-                            "rack": "2",
+                            "rack": 2,
                             "components": [
                                 {
                                     "comp": "CS"
@@ -325,35 +329,6 @@
                 {
                     "name": "UICLNT",
                     "source": "0.0.0.0/0"
-                }
-            ],
-            "loadbalancers": [
-                {
-                    "name": "dmz-r-ha",
-                    "nodes": [
-                        1,
-                        2
-                    ]
-                },
-                {
-                    "name": "dmz-dp-ha",
-                    "nodes": [
-                        8,
-                        9
-                    ]
-                },
-                {
-                    "name": "app-ui-ms",
-                    "nodes": [
-                        3
-                    ]
-                },
-                {
-                    "name": "app-bs",
-                    "nodes": [
-                        10,
-                        11
-                    ]
                 }
             ]
         }

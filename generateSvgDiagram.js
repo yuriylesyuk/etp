@@ -384,27 +384,62 @@ id="svg2">
     function drawLoadBalancers( loadbalancers, lbsX, lbsY, lbTotalWidth){
 
 
-        var xoffset = 10;
-        var yoffset = 5;
+        var xoffset = 0;
+        var yoffset = 0;
+        // Phase I: Dry-run for calculating rows of LBs relative to lbTotalWidth viewport
+        xoffset = 0;
+
+        var lbWidth = 0;
+        var lbRows = [];
+        fp.reduce(
+            (rows, lb) => {
+                lbWidth = getLoadBalancerWidth( lb );
 
 
+    console.log(xoffset, lbWidth);
+                if( xoffset + lbPH + lbWidth > lbTotalWidth ){
+                    rows.push( xoffset );
+
+                    xoffset = lbWidth;
+                }else{
+                    xoffset += lbPH + lbWidth;
+                }
+                return rows;                
+            }, lbRows
+        )(loadbalancers);
+        // process last row
+        lbRows.push( xoffset );
+
+        // Phase II: Draw the LBs
+        var row = 0;
+        xoffset = (lbTotalWidth - lbRows[row])/2;
+        yoffset = 5;
+        
         fp.map(
             lb => {
-                lbwidth = drawLoadBalancer( lb, lbsX + xoffset, lbsY + yoffset );
+    console.log(xoffset, lbWidth);
+                if( xoffset + lbPH + lbWidth > lbTotalWidth ){
+                    row++
 
-                xoffset += lbPH + lbwidth;
-
-    console.log(lbwidth);
-                if( xoffset > lbTotalWidth ){
-                    xoffset = 10;
+                    xoffset = (lbTotalWidth - lbRows[row])/2;
                     yoffset += 20
                 }
+
+                lbWidth = drawLoadBalancer( lb, lbsX + xoffset, lbsY + yoffset );
+
+                xoffset += lbPH + lbWidth;
             }
         )(loadbalancers);
 
         return yoffset
     }
 
+    var lbNodeX = 40;
+    
+
+    function getLoadBalancerWidth(lb){
+        return (lbNodeX + lbNodeWidthAndHPad*lb.nodes.length)*0.6;
+    }
     function drawLoadBalancer(lb, xoffset, yoffset ){
         var lbNodeT = fp.template(`<use xlink:href="#<%= comp %>" transform="scale(0.6) translate(<%= x %>,<%= y %>)"/>`);
     
@@ -419,9 +454,9 @@ id="svg2">
     
         var lbNodesSvg = []
 
-        var lbNodeX = 40;
         var lbNodeH = 8;
         var lbNodeI = 0;
+
         fp.reduce(
             (acc, lbcomp) => {
                 lbNodesSvg.push( lbNodeT( { comp: lb.comp.toLowerCase(), x: lbNodeX + lbNodeWidthAndHPad*lbNodeI++, y: lbNodeH } ) );
@@ -431,26 +466,41 @@ id="svg2">
 
         )(lb.nodes);
 
-        lbWidth =  (lbNodeX + lbNodeWidthAndHPad*lbNodeI)*0.6;
+        lbWidth = getLoadBalancerWidth(lb)
 
         nodesSvg.push( lbT({x: xoffset, y: yoffset, width: lbWidth, tooltip: "tooltip", lbcomps: lbNodesSvg.join("\n")} ) );
 
-        return lbWidth;
+        return getLoadBalancerWidth(lb);
     }
     //------------------------------------- load balancers ---
 
     // Global Load Balancers geometry
     var globalLbH = 20;
         
-    // TODO: soft-code and calc from the DC geometry
-    var lbTotalWidth = 250;
-        
-    globalLbH += drawLoadBalancers( topology.loadbalancers, 0, 10, lbTotalWidth );
+    // TODO: [ ] soft-code and calc from the DC geometry
+    // TODO: SIC: DCs could have different sizes, ie, hight and width. 
+    //      in addition, there potencially could be a 'long' LB that would be
+    //      wider than its DC.
+    //      But right now, its biggest DC defines  
+
+    // Planet Pass I: get Topology Geometry
+
+    var planetTotalWidth = fp.map(
+        region => 2*regionPaddingH+ getRegionWidth( getTierSizes(region) )
+    )(topology.regions).reduce( (twidth, rwidth) => twidth + regionSpacingH +  rwidth );
 
 
-    // Iterate by regions/data centres
+    
+    globalLbH += drawLoadBalancers( topology.loadbalancers, 0, 10, planetTotalWidth );
+
+
+    // Iterate by regions/data centres for Load Balancers
     regionX += regionPaddingH
+
+    var lbHeights = [];
     fp.map(region => {
+        var regionWidth = getRegionWidth(getTierSizes(region));
+
         regionY = globalLbH + regionHeader;
 
         if( separatorFlipOn ){
@@ -473,45 +523,81 @@ id="svg2">
         // dc-level load balances
         
         // TODO: XXX: hard-coded width for LB 'viewport'
-        regionY += drawLoadBalancers( region.loadbalancers, regionX, regionY, 250 ) + dcLbH;
-
-        drawRegion( region );
+        lbHeight = drawLoadBalancers( region.loadbalancers, regionX, regionY, regionWidth ) + dcLbH;
+        lbHeights.push( lbHeight );
 
         separatorY = regionY;
 
+        regionX += regionWidth;
+        regionX += regionPaddingH
+    })(topology.regions)
+    
+    // Calc regionY for Region Subnets
+    regionY = globalLbH + regionHeader + fp.max(lbHeights);
+
+    // Iterate by regions/data centres for Edge Subnets
+    regionX = regionPaddingH;
+
+    var regionHeights = []
+    fp.map(region => {
+        var regionWidth = getRegionWidth(getTierSizes(region));
+
+        regionHeight = drawRegion( region, regionX, regionY );
+        regionHeights.push (regionHeight );
+
+        regionX += regionSpacingH;
+        
+        separatorY = regionY;
+
+        regionX += regionWidth;
+        regionX += regionPaddingH
     })(topology.regions)
     regionX += regionPaddingH
 
-    function drawRegion( region ){
+    maxRegionHeight = fp.max(regionHeights) + regionPaddingH*2;
+
+    function getTierSizes(region){
         // Iterate collection of subnets by tier -- vertical layout
-        // Pass I: calculate Maximum Tier Width and Tier Subnets TotalHeight Array
         var tierSizes = fp.keyBy( "tier" )
-                (fp.map( tier => {
+        (fp.map( tier => {
 
-                var tierSize = fp.map( 
-                        subnet => {
-                            var subnetWidth = getSubnetWidth( subnet );
-                            var subnetMaxComps = fp.max( fp.map( node => node.components.length )(subnet.nodes) );
+        var tierSize = fp.map( 
+                subnet => {
+                    var subnetWidth = getSubnetWidth( subnet );
+                    var subnetMaxComps = fp.max( fp.map( node => node.components.length )(subnet.nodes) );
 
-                            return { width: subnetWidth, maxComps: subnetMaxComps };
-                        })(
-                        fp.filter( { "tier": tier.name } )(region.subnets)
-                    ).reduce( ( tierSize, subnetSize ) => { 
-                                    return { 
-                                        width: tierSize.width === 0 ? subnetSize.width : tierSize.width + subnetSpacingH + subnetSize.width, 
-                                        maxNodeComponents: tierSize.maxNodeComponents > subnetSize.maxComps ? tierSize.maxNodeComponents : subnetSize.maxComps
-                                    }
-                    }, { width: 0, maxNodeComponents: 0 }  );
+                    return { width: subnetWidth, maxComps: subnetMaxComps };
+                })(
+                fp.filter( { "tier": tier.name } )(region.subnets)
+            ).reduce( ( tierSize, subnetSize ) => { 
+                            return { 
+                                width: tierSize.width === 0 ? subnetSize.width : tierSize.width + subnetSpacingH + subnetSize.width, 
+                                maxNodeComponents: tierSize.maxNodeComponents > subnetSize.maxComps ? tierSize.maxNodeComponents : subnetSize.maxComps
+                            }
+            }, { width: 0, maxNodeComponents: 0 }  );
 
-                    return { tier: tier.name, width: tierSize.width, nodeHeight: getNodeHeight( tierSize.maxNodeComponents ) }
+            return { tier: tier.name, width: tierSize.width, nodeHeight: getNodeHeight( tierSize.maxNodeComponents ) }
 
-                })(region.tiers));
+        })(region.tiers));
 
+        return tierSizes;
+    }
+
+
+    function getRegionWidth(tierSizes){
         var maxTierWidth = fp(tierSizes).reduce( 
             (maxtiersize, tiersize) => { 
                 return maxtiersize > tiersize.width? maxtiersize: tiersize.width 
             }, 0
         )
+        
+        return maxTierWidth
+    }
+
+    function drawRegion( region, regionX, regionY ){
+        // Pass I: calculate Maximum Tier Width and Tier Subnets TotalHeight Array
+        var tierSizes = getTierSizes(region);
+        var maxTierWidth = getRegionWidth(tierSizes);
 
         // Pass II: generate tier layout
         var subnetX = 0;
@@ -545,8 +631,7 @@ id="svg2">
 
         })( region.tiers );
 
-        regionX += maxTierWidth;
-        regionY = subnetY;
+        return subnetY;   // region Width
    }
 
     function getSubnetWidth( subnet ){
@@ -619,7 +704,7 @@ id="svg2">
 
     fs = require('fs');
     var svgstream = fs.createWriteStream( outputFile );
-    svgstream.write( svgHeaderTemplate( { height: globalLbH + dcLbH + regionY + regionFooter + 10, width: regionX } ));
+    svgstream.write( svgHeaderTemplate( { height: globalLbH + dcLbH + regionHeader +  maxRegionHeight + regionFooter + 10, width: regionX } ));
     svgstream.write( svgSymbols );
     svgstream.write( nodesSvg.join('\n') );
     svgstream.write( svgFooter);

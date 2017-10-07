@@ -2,7 +2,7 @@
     "planet": "UAT",
     "regions": [
         {
-            "id": "1",
+            "id": 1,
             "name": "dc-1",
             "subnets": [
                 {
@@ -94,7 +94,8 @@
                             "components": [
                                 {"comp":"UI"},
                                 {"comp":"MS",
-                                    "primary": true
+                                    "primary": true,
+                                    "ldapHost": "/dc/1/n/2"
                                 },
                                 {"comp":"BS"},
                                 {"comp":"BP"},

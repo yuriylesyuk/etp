@@ -257,10 +257,50 @@ internal, 8, dc1sndpsn08, 10.119.3.208, 1, dc1snrtsn01, 10.119.3.201, DP, R, 590
 internal, 8, dc1sndpsn08, 10.119.3.208, 2, dc1snrtsn02, 10.119.3.202, DP, R, 59002, The router port where SmartDocs page requests are sent
 internal, 9, dc1sndpsn09, 10.119.3.209, 1, dc1snrtsn01, 10.119.3.201, DP, R, 59002, The router port where SmartDocs page requests are sent
 internal, 9, dc1sndpsn09, 10.119.3.209, 2, dc1snrtsn02, 10.119.3.202, DP, R, 59002, The router port where SmartDocs page requests are sent
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 3, dc2sngwsn03, 10.119.5.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 4, dc2sngwsn04, 10.119.5.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 5, dc2sngwsn05, 10.119.5.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 6, dc2sngwsn06, 10.119.5.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 7, dc2sngwsn07, 10.119.5.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc1sngwsn04, 10.119.3.204, 3, dc2sngwsn03, 10.119.5.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc1sngwsn04, 10.119.3.204, 4, dc2sngwsn04, 10.119.5.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc1sngwsn04, 10.119.3.204, 5, dc2sngwsn05, 10.119.5.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc1sngwsn04, 10.119.3.204, 6, dc2sngwsn06, 10.119.5.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc1sngwsn04, 10.119.3.204, 7, dc2sngwsn07, 10.119.5.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc1sngwsn05, 10.119.3.205, 3, dc2sngwsn03, 10.119.5.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc1sngwsn05, 10.119.3.205, 4, dc2sngwsn04, 10.119.5.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc1sngwsn05, 10.119.3.205, 5, dc2sngwsn05, 10.119.5.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc1sngwsn05, 10.119.3.205, 6, dc2sngwsn06, 10.119.5.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc1sngwsn05, 10.119.3.205, 7, dc2sngwsn07, 10.119.5.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc1sngwsn06, 10.119.3.206, 3, dc2sngwsn03, 10.119.5.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc1sngwsn06, 10.119.3.206, 4, dc2sngwsn04, 10.119.5.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc1sngwsn06, 10.119.3.206, 5, dc2sngwsn05, 10.119.5.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc1sngwsn06, 10.119.3.206, 6, dc2sngwsn06, 10.119.5.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc1sngwsn06, 10.119.3.206, 7, dc2sngwsn07, 10.119.5.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc1sngwsn07, 10.119.3.207, 3, dc2sngwsn03, 10.119.5.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc1sngwsn07, 10.119.3.207, 4, dc2sngwsn04, 10.119.5.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc1sngwsn07, 10.119.3.207, 5, dc2sngwsn05, 10.119.5.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc1sngwsn07, 10.119.3.207, 6, dc2sngwsn06, 10.119.5.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc1sngwsn07, 10.119.3.207, 7, dc2sngwsn07, 10.119.5.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 1, dc2snrtsn01, 10.119.5.201, MS, R, 1100, JMX Management
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 1, dc2snrtsn01, 10.119.5.201, MS, R, 8081, Issuing API requests directly to Router
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 2, dc2snrtsn02, 10.119.5.202, MS, R, 1100, JMX Management
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 2, dc2snrtsn02, 10.119.5.202, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 3, dc2sngwsn03, 10.119.5.203, MS, MP, 1101, JMX Management
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 3, dc2sngwsn03, 10.119.5.203, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 3, dc2sngwsn03, 10.119.5.203, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 4, dc2sngwsn04, 10.119.5.204, MS, MP, 1101, JMX Management
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 4, dc2sngwsn04, 10.119.5.204, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 4, dc2sngwsn04, 10.119.5.204, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 5, dc2sngwsn05, 10.119.5.205, MS, MP, 1101, JMX Management
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 5, dc2sngwsn05, 10.119.5.205, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 5, dc2sngwsn05, 10.119.5.205, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 6, dc2sngwsn06, 10.119.5.206, MS, MP, 1101, JMX Management
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 6, dc2sngwsn06, 10.119.5.206, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 6, dc2sngwsn06, 10.119.5.206, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 7, dc2sngwsn07, 10.119.5.207, MS, MP, 1101, JMX Management
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 7, dc2sngwsn07, 10.119.5.207, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc1sngwsn03, 10.119.3.203, 7, dc2sngwsn07, 10.119.5.207, MS, MP, 8082, Issuing API requests directly to Message Processor
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 13, dc2sndstn13, 10.119.5.213, MS, CS, 7000, Cassandra inter-node communications
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 13, dc2sndstn13, 10.119.5.213, MS, CS, 9042, CQL native transport
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 13, dc2sndstn13, 10.119.5.213, MS, CS, 9160, Cassandra thrift client
@@ -282,10 +322,229 @@ multi-dc, 3, dc1sngwsn03, 10.119.3.203, 18, dc2sndstn18, 10.119.5.218, MS, CS, 9
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 18, dc2sndstn18, 10.119.5.218, MS, CS, 9160, Cassandra thrift client
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 18, dc2sndstn18, 10.119.5.218, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
 multi-dc, 3, dc1sngwsn03, 10.119.3.203, 19, dc2snanxn19, 10.119.5.219, MS, PGs, 5432, Postgres client
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc1sndstn15, 10.119.3.215, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc1sndstn16, 10.119.3.216, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc1sndstn17, 10.119.3.217, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 13, dc2sndstn13, 10.119.5.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 15, dc2sndstn15, 10.119.5.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 16, dc2sndstn16, 10.119.5.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 17, dc2sndstn17, 10.119.5.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc1sndstn18, 10.119.3.218, 18, dc2sndstn18, 10.119.5.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc1sndstn13, 10.119.3.213, 13, dc2sndstn13, 10.119.5.213, OL, OL, 10389, LDAP port
+multi-dc, 19, dc1snanxn19, 10.119.3.219, 19, dc2snanxn19, 10.119.5.219, QS, PGs, 5432, Postgres client
+multi-dc, 19, dc1snanxn19, 10.119.3.219, 19, dc2snanxn19, 10.119.5.219, PGm, PGs, 22, 
+multi-dc, 19, dc1snanxn19, 10.119.3.219, 19, dc2snanxn19, 10.119.5.219, PGm, PGs, 5432, Postgres client
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 3, dc1sngwsn03, 10.119.3.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 4, dc1sngwsn04, 10.119.3.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 5, dc1sngwsn05, 10.119.3.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 6, dc1sngwsn06, 10.119.3.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 7, dc1sngwsn07, 10.119.3.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc2sngwsn04, 10.119.5.204, 3, dc1sngwsn03, 10.119.3.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc2sngwsn04, 10.119.5.204, 4, dc1sngwsn04, 10.119.3.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc2sngwsn04, 10.119.5.204, 5, dc1sngwsn05, 10.119.3.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc2sngwsn04, 10.119.5.204, 6, dc1sngwsn06, 10.119.3.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 4, dc2sngwsn04, 10.119.5.204, 7, dc1sngwsn07, 10.119.3.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc2sngwsn05, 10.119.5.205, 3, dc1sngwsn03, 10.119.3.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc2sngwsn05, 10.119.5.205, 4, dc1sngwsn04, 10.119.3.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc2sngwsn05, 10.119.5.205, 5, dc1sngwsn05, 10.119.3.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc2sngwsn05, 10.119.5.205, 6, dc1sngwsn06, 10.119.3.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 5, dc2sngwsn05, 10.119.5.205, 7, dc1sngwsn07, 10.119.3.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc2sngwsn06, 10.119.5.206, 3, dc1sngwsn03, 10.119.3.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc2sngwsn06, 10.119.5.206, 4, dc1sngwsn04, 10.119.3.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc2sngwsn06, 10.119.5.206, 5, dc1sngwsn05, 10.119.3.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc2sngwsn06, 10.119.5.206, 6, dc1sngwsn06, 10.119.3.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 6, dc2sngwsn06, 10.119.5.206, 7, dc1sngwsn07, 10.119.3.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc2sngwsn07, 10.119.5.207, 3, dc1sngwsn03, 10.119.3.203, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc2sngwsn07, 10.119.5.207, 4, dc1sngwsn04, 10.119.3.204, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc2sngwsn07, 10.119.5.207, 5, dc1sngwsn05, 10.119.3.205, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc2sngwsn07, 10.119.5.207, 6, dc1sngwsn06, 10.119.3.206, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 7, dc2sngwsn07, 10.119.5.207, 7, dc1sngwsn07, 10.119.3.207, MP, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 1, dc1snrtsn01, 10.119.3.201, MS, R, 1100, JMX Management
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 1, dc1snrtsn01, 10.119.3.201, MS, R, 8081, Issuing API requests directly to Router
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 2, dc1snrtsn02, 10.119.3.202, MS, R, 1100, JMX Management
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 2, dc1snrtsn02, 10.119.3.202, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 3, dc1sngwsn03, 10.119.3.203, MS, MP, 1101, JMX Management
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 3, dc1sngwsn03, 10.119.3.203, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 3, dc1sngwsn03, 10.119.3.203, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 4, dc1sngwsn04, 10.119.3.204, MS, MP, 1101, JMX Management
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 4, dc1sngwsn04, 10.119.3.204, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 4, dc1sngwsn04, 10.119.3.204, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 5, dc1sngwsn05, 10.119.3.205, MS, MP, 1101, JMX Management
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 5, dc1sngwsn05, 10.119.3.205, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 5, dc1sngwsn05, 10.119.3.205, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 6, dc1sngwsn06, 10.119.3.206, MS, MP, 1101, JMX Management
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 6, dc1sngwsn06, 10.119.3.206, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 6, dc1sngwsn06, 10.119.3.206, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 7, dc1sngwsn07, 10.119.3.207, MS, MP, 1101, JMX Management
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 7, dc1sngwsn07, 10.119.3.207, MS, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+multi-dc, 3, dc2sngwsn03, 10.119.5.203, 7, dc1sngwsn07, 10.119.3.207, MS, MP, 8082, Issuing API requests directly to Message Processor
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 13, dc1sndstn13, 10.119.3.213, MS, CS, 7000, Cassandra inter-node communications
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 13, dc1sndstn13, 10.119.3.213, MS, CS, 9042, CQL native transport
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 13, dc1sndstn13, 10.119.3.213, MS, CS, 9160, Cassandra thrift client
@@ -307,6 +566,185 @@ multi-dc, 3, dc2sngwsn03, 10.119.5.203, 18, dc1sndstn18, 10.119.3.218, MS, CS, 9
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 18, dc1sndstn18, 10.119.3.218, MS, CS, 9160, Cassandra thrift client
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 18, dc1sndstn18, 10.119.3.218, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
 multi-dc, 3, dc2sngwsn03, 10.119.5.203, 19, dc1snanxn19, 10.119.3.219, MS, PGm, 5432, Postgres client
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9042, CQL native transport
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9042, CQL native transport
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9042, CQL native transport
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9042, CQL native transport
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, CS, CS, 9160, Cassandra thrift client
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7000, Cassandra inter-node communications
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, CS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9042, CQL native transport
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, CS, CS, 9160, Cassandra thrift client
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 15, dc2sndstn15, 10.119.5.215, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 16, dc2sndstn16, 10.119.5.216, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 17, dc2sndstn17, 10.119.5.217, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 13, dc1sndstn13, 10.119.3.213, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 15, dc1sndstn15, 10.119.3.215, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 16, dc1sndstn16, 10.119.3.216, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 17, dc1sndstn17, 10.119.3.217, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2181, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 2888, Zookeeper internode management
+multi-dc, 18, dc2sndstn18, 10.119.5.218, 18, dc1sndstn18, 10.119.3.218, ZK, ZK, 3888, Zookeeper internode management
+multi-dc, 13, dc2sndstn13, 10.119.5.213, 13, dc1sndstn13, 10.119.3.213, OL, OL, 10389, LDAP port
+multi-dc, 19, dc2snanxn19, 10.119.5.219, 19, dc1snanxn19, 10.119.3.219, QS, PGm, 5432, Postgres client
+multi-dc, 19, dc2snanxn19, 10.119.5.219, 19, dc1snanxn19, 10.119.3.219, PGs, PGm, 22, 
+multi-dc, 19, dc2snanxn19, 10.119.5.219, 19, dc1snanxn19, 10.119.3.219, PGs, PGm, 5432, Postgres client
 internal, 1, dc2snrtsn01, 10.119.5.201, 3, dc2sngwsn03, 10.119.5.203, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
 internal, 1, dc2snrtsn01, 10.119.5.201, 3, dc2sngwsn03, 10.119.5.203, R, MP, 8998, Communication between Router and Message Processor
 internal, 1, dc2snrtsn01, 10.119.5.201, 3, dc2sngwsn03, 10.119.5.203, R, MP, 8082, Issuing API requests directly to Message Processor

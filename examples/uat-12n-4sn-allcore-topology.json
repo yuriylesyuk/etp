@@ -2,7 +2,7 @@
     "planet": "UAT",
     "regions": [
         {
-            "id": "1",
+            "id": 1,
             "name": "dc-1",
             "subnets": [
                 {

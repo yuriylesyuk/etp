@@ -337,6 +337,64 @@
                             "/dc/2/n/1",
                             "/dc/2/n/1",
                             "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/3"
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
+                    "nodes": [
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/3"
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
+                    "nodes": [
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/3"
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
+                    "nodes": [
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/1",
+                            "/dc/2/n/3"
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
+                    "nodes": [
+                            "/dc/2/n/1",
                             "/dc/2/n/3"
                     ]
                 }
@@ -681,6 +739,76 @@
         }
     ],
     "loadbalancers": [
+        {
+            "name": "gtm-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/2",
+                    "/dc/2/n/1",
+                    "/dc/2/n/2"
+            ]
+        },
+        {
+            "name": "gtm-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/2",
+                    "/dc/2/n/1",
+                    "/dc/2/n/2"
+            ]
+        },
+        {
+            "name": "gtm-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/2",
+                    "/dc/2/n/1",
+                    "/dc/2/n/2"
+            ]
+        },
+        {
+            "name": "gtm-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/2",
+                    "/dc/2/n/1",
+                    "/dc/2/n/2"
+            ]
+        },
+        {
+            "name": "gtm-r-ha",
+            "comp": "R", 
+            "heartbeaturi": "http://xxxx",
+            "port": 8080,
+            "heartbeattype": "socket",
+            "responsecode": 200,
+            "nodes": [
+                    "/dc/1/n/1",
+                    "/dc/1/n/2",
+                    "/dc/2/n/1",
+                    "/dc/2/n/2"
+            ]
+        },
         {
             "name": "gtm-r-ha",
             "comp": "R", 
