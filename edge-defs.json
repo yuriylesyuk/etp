@@ -1011,6 +1011,8 @@
     ],
 
     "customer": {
+        "bindOnAllInterfaces": "y",
+        "enableSystemCheck": "y",
         "adminEmail": "admin@apigee.com",
         "adminPassword": "Apigee123!",
         "licenseFile": "/opt/apigee-install/configs/license.txt",
@@ -1021,6 +1023,8 @@
         "cassPassword": "cassandra",
         "cassClustername": "Apigee",
         "ldapPassword": "Apigee123!",
+        "pgUsername": "apigee",
+        "pgPassword": "postgres",
         "skipSmtp": "y",
         "smtpHost": "192.168.56.1",
         "smtpPort": "25",

@@ -1,3 +1,4 @@
+
 var fs = require('fs');
 var fp = require("lodash/fp");
 
@@ -10,6 +11,7 @@ function rgb(r, g, b){
 
     return "#" + c(r) + c(g) + c(b);
 }
+
 
 
 // function genRegionIdNodeId( onlySingleDC,  dcid, nodeid ){
@@ -137,27 +139,57 @@ var getTopologyPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, pr
 })
 
 
-
-
-
-
 var getComponentPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, component, property ) => {
     var val = fp.get( property, topology )
     return typeof val === "undefined" ? fp.get( property, portdefs ) : val;
 })
 
+// TODO: move to utils
+// TODo: DOCO:
+// wrapper over <stream>.write that implements Optional/Required for environment parameters
+//   if flag [O/R] is O, nothing is written in in the stream and therefore the default for Edge 
+//    install command is used. If needed to be overwritten, then define it in customer.<parameter> in 
+//    topology file. if flag is missed or "R", whatever is passed is generated.
+//      
+//   
+function streamProperty( stream, parameter, value, optional  ){
+    var optional = (typeof optional === "undefined" )? "R" : optional;
+    if( !( typeof value === "undefined" && optional === "O") ){
+        stream.write( `${parameter}=${value}\n` );
+    }
+}
+ 
 
+// TODO: move to utils
+// TODO: Refactor
+function ruleWarning( w ){
+
+    if( typeof w === 'string' ){
+        console.log( "WARNING: " + w);
+    }else{ 
+        // array of string
+        console.log( "WARNING: " + w );
+    }
+}
 
 
 // If component requires custum configuration file, the table provides parametrization information for it
 var compConfig = {
     // in case of multiple MSs, For MS .primary = true
-    "ALL" : [ "hosts", "sysadmin", "license", "ldap", "cassandra", "smtp" ],
+    "ALL" : [ "hosts", "hostip", "bind", "ms-creds", "license", "ldap-host", "dc", "rmp-pod", "cassandra", "pg-creds" ],
 
-    "OL": [ "hosts","ldap" ],
-    "PG": [ "hosts","pg" ],
+    "MS": [ "hosts", "hostip", "ms-creds", "license", "ldap-host", "ldap-creds", "dc", "rmp-pod", "cassandra", "pg-creds" ],
+    "OL": [ "hosts","ldap-host", "ldap-creds", "ldap-conf", "run-as" ],
+    "UI": [ "hosts", "brand", "hostip", "ms-creds", "run-as", "ldap-host", "smpt" ],
+    "CS": [ "hosts", "run-as" ],
+    "ZK": [ "hosts", "hostip", "run-as" ],
+    "R":  [ "hosts", "dc", "rmp-pod" ],
+    "MP": [ "hosts", "dc", "rmp-pod" ],
+    "PS": [ "hosts", "hostip", "dc", "rmp-pod", "run-as", "pg-conf", "pg-creds" ],
+    "QS": [ "hosts", "dc", "rmp-pod" ],
+    "UG": [ "hosts", "brand" ],
     "BS": [ "hosts", "smtp" ],
-    "MS": [ "hosts", "sysadmin", "ldap", "cassandra", "smtp" ]
+    "DP": [ "hosts","brand" ]
 }
 
 
@@ -464,16 +496,48 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     var mss = gatherComp(topology, "MS");
 
     var ols = gatherComp(topology, "OL");
+
+    var uis = gatherComp(topology, "UI");
+    
     // TODO: PG, PGm, PGs
     // Then add: ,{compType:"PG", comps:pgs}
-//    var pgs = gatherComp(topology, "OL");
-
+    // TODO: Refactor eventually to PG with master: property
+    var pss = gatherComp(topology, "PS");
+    var pgms = gatherComp(topology, "PGm");
+    var pgss = gatherComp(topology, "PGs");
+    
     var css = gatherComp(topology, "CS");
     var zks = gatherComp(topology, "CS");
     
     var bss = gatherComp(topology, "BL");
 
-    // Generate .cfg CS/ZK fragments
+    // Edge Components Integrity and Best Practtices Rules
+
+    // PS -- PGm, PGs
+    // each PS should have its PGm/PGs counterpart on its node
+    // TODO: let's evolve the language!! DSL to describe topology integrity rules
+
+
+    // iRULE: single PGm across all Data centers
+    noOfPGms = pgms.length;
+    if( noOfPGms !== 1 ){
+        ruleWarning( `Rule: single PGm across Data Centers. Found ${noOfPGms}` )
+    }
+
+
+    // iRULE: Each PS should have a single PGm or PGs on the same node
+    ruleWarning( 
+        fp.reduce(
+            ( rerrors, ps ) => {
+                if( (ps.components.PGm === undefined? 0 : 1) + (ps.components.PGs === undefined? 0 : 1) ) {
+                    rerrors.push( `Rule: Each node containing PS component must have either PGm or PGs.` );
+                }
+                return rerrors;
+            }, []
+        )(pss) 
+    );
+
+
     // TODO: add an option for a type of artifact to be generated
     if( true ){
         // top-level iteration by region/DC
@@ -505,26 +569,37 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     }
 
                     // BRAND: generated if present
-                    if( brand = getTopologyProperty("customer.brand")){
-                        cfgstream.write( `BRAND=${brand}\n` );
+                    if( fp.includes("brand")(compConfig[configurations.compType]) ){
+                        streamProperty( cfgstream, "BRAND", getTopologyProperty("customer.brand"), "O" );
                     }
 
-                    if( fp.includes("sysadmin")(compConfig[configurations.compType]) ){
+                    if( fp.includes("ms-creds")(compConfig[configurations.compType]) ){
                         cfgstream.write( `ADMIN_EMAIL=${getTopologyProperty("customer.adminEmail")}\n` );
                         cfgstream.write( `APIGEE_ADMINPW=${getTopologyProperty("customer.adminPassword")}\n` );
                     }
                 
                     if( fp.includes("license")(compConfig[configurations.compType]) ){
-                        cfgstream.write( `LICENSE_FILE=${getTopologyProperty("customer.licenseFile")}\n` );
+                        streamProperty( cfgstream, "LICENSE_FILE", getTopologyProperty("licenseFile") );
+                    }
+
+                    if( fp.includes("bind")(compConfig[configurations.compType]) ){
+                        streamProperty( cfgstream, "BIND_ON_ALL_INTERFACES", getTopologyProperty("customer.bindOnAllInterfaces"), "O" );
+                    }
+
+                    if( fp.includes("run-as")(compConfig[configurations.compType]) ){
+                        streamProperty( cfgstream, "RUN_GROUP", getTopologyProperty("customer.runGroup"), "O" );
+                        streamProperty( cfgstream, "RUN_GROUP", getTopologyProperty("customer.runGroup"), "O" );
                     }
 
                     // MP_POD: generated if present
-                    if( mpPod = getTopologyProperty("customer.mpPod")){
-                        cfgstream.write( `MP_POD=${mpPod}\n` );
+                    if( fp.includes("rmp-pod")(compConfig[configurations.compType]) ){
+                        streamProperty( cfgstream, "MP_POD", getTopologyProperty("customer.mpPod"), "O" );
                     }
 
                     // REGION
-                    cfgstream.write( `REGION=${region.name}\n` );
+                    if( fp.includes("region")(compConfig[configurations.compType]) ){
+                        streamProperty( cfgstream, "REGION", region.name, "O" );
+                    }
 
                     // MS section:
                     /*
@@ -581,10 +656,10 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     var CASS_HOSTS = fp(css).filter({dcid: region.id}).map(n=>n.drref).value().join(" ") 
                                 + " " + fp(css).reject({dcid: region.id}).map(n=>n.drref).value().join(" ");
 
-                    cfgstream.write( "-------------\n")
-                    cfgstream.write( "ZK_HOSTS=\""+ZK_HOSTS+"\"\n" );
-                    cfgstream.write( "ZK_CLIENT_HOSTS=\""+ZK_CLIENT_HOSTS+"\"\n" );
-                    cfgstream.write( "CASS_HOSTS=\""+CASS_HOSTS+"\"\n" );
+                    streamProperty( cfgstream, "ZK_HOSTS", "\""+ZK_HOSTS+"\"", "R" );
+                    streamProperty( cfgstream, "ZK_CLIENT_HOSTS", "\""+ZK_CLIENT_HOSTS+"\"", "R" );
+                    streamProperty( cfgstream, "CASS_HOSTS", "\""+CASS_HOSTS+"\"", "R" );
+                    
                     cfgstream.write( "\n" );
                 }
 
@@ -627,22 +702,42 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                 }
                     //-------------------
                         // TODO: PG/PGm/PGs
+                if( fp.includes("pg-conf")(compConfig[configurations.compType]) ){
+                    cfgstream.write( "\n" );
 
+                    // PGm - a single master across Data Centres; checked by iRules;
+                    // PGs - either a current one or any, ie, a first from PGs collection
+                    var pgmnodeipref = (typeof compnode.PGm === 'undefined' ? pgms[0].ipref : compnode.ipref ); 
+                    var pgsnodeipref = (typeof compnode.PGs === 'undefined' ? pgss[0].ipref : compnode.ipref ); 
+
+                    streamProperty( cfgstream, "PG_MASTER", pgmnodeipref );
+                    streamProperty( cfgstream, "PG_STANDBY", pgsnodeipref );
+                }
+                        
+                if( fp.includes("pg-creds")(compConfig[configurations.compType]) ){
+                    cfgstream.write( "\n" );
+                    streamProperty( cfgstream, "PG_USER", getTopologyProperty("customer.pgUsername"), "R" );
+                    streamProperty( cfgstream, "PG_PWD", getTopologyProperty("customer.pgPassword"), "R" );
+                }
 
                 if( fp.includes("smtp")(compConfig[configurations.compType]) ){
                     cfgstream.write( "\n" );
-                    cfgstream.write( `SKIP_SMTP=${getTopologyProperty("customer.skipSmtp")}\n` )
-                    cfgstream.write( `SMTPHOST=${getTopologyProperty("customer.smtpHost")}\n` )
-                    cfgstream.write( `SMTPPORT=${getTopologyProperty("customer.smtpPort")}\n` )
-                    cfgstream.write( `SMTPUSER=${getTopologyProperty("customer.smtpUser")}\n` )
-                    cfgstream.write( `SMTPPASSWORD=${getTopologyProperty("customer.smtpPassword")}\n` )
-                    cfgstream.write( `SMTPSSL=${getTopologyProperty("customer.smtpSsl")}\n` )
+                    streamProperty( cfgstream, "SKIP_SMTP", getTopologyProperty("customer.skipSmtp"), "R" );
+                    streamProperty( cfgstream, "SMTPHOST", getTopologyProperty("customer.smtpHostp"), "O" );
+                    streamProperty( cfgstream, "SMTPPORT", getTopologyProperty("customer.smtpPort"), "O" );
+                    streamProperty( cfgstream, "SMTPUSER", getTopologyProperty("customer.smtpUser"), "O" );
+                    streamProperty( cfgstream, "SMTPPASSWORD", getTopologyProperty("customer.smtpPassword"), "O" );
+                    streamProperty( cfgstream, "SMTPSSL", getTopologyProperty("customer.smtpSsl"), "O" );
                 }
                 
                 cfgstream.end();
                     
                 })(configurations.compNodes)
-            })([{compType:"MS", compNodes: mss},{compType:"OL", compNodes:ols},{compType:"BS", compNodes: bss}])
+            })([{compType:"MS", compNodes: mss},
+                {compType:"OL", compNodes: ols},
+                {compType:"UI", compNodes: uis},
+                {compType:"PS", compNodes: pss},
+                {compType:"BS", compNodes: bss}])
         })(topology.regions)
     }
     // end: program.prefix
