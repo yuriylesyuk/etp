@@ -1028,8 +1028,6 @@
         "skipSmtp": "y",
         "smtpHost": "192.168.56.1",
         "smtpPort": "25",
-        "smtpUser": "0",
-        "smtpPassword": "0",
         "smtpSsl": "n"
     }
 }

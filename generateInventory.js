@@ -154,6 +154,12 @@ var getComponentPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, c
 //   
 function streamProperty( stream, parameter, value, optional  ){
     var optional = (typeof optional === "undefined" )? "R" : optional;
+
+    // WARNING: Required parameters undefined
+    if( typeof value === "undefined" && optional === "R" ){
+        ruleWarning( `Required Parameter: ${parameter} is undefined.`)
+    }
+
     if( !( typeof value === "undefined" && optional === "O") ){
         stream.write( `${parameter}=${value}\n` );
     }
@@ -180,7 +186,7 @@ var compConfig = {
 
     "MS": [ "hosts", "hostip", "ms-creds", "license", "ldap-host", "ldap-creds", "dc", "rmp-pod", "cassandra", "pg-creds" ],
     "OL": [ "hosts","ldap-host", "ldap-creds", "ldap-conf", "run-as" ],
-    "UI": [ "hosts", "brand", "hostip", "ms-creds", "run-as", "ldap-host", "smpt" ],
+    "UI": [ "hosts", "brand", "hostip", "ms-creds", "run-as", "ldap-host", "smtp" ],
     "CS": [ "hosts", "run-as" ],
     "ZK": [ "hosts", "hostip", "run-as" ],
     "R":  [ "hosts", "dc", "rmp-pod" ],
@@ -529,7 +535,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     ruleWarning( 
         fp.reduce(
             ( rerrors, ps ) => {
-                if( (ps.components.PGm === undefined? 0 : 1) + (ps.components.PGs === undefined? 0 : 1) ) {
+                if( (ps.components.PGm === undefined? 0 : 1) + (ps.components.PGs === undefined? 0 : 1) !== 1 ) {
                     rerrors.push( `Rule: Each node containing PS component must have either PGm or PGs.` );
                 }
                 return rerrors;
@@ -579,7 +585,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     }
                 
                     if( fp.includes("license")(compConfig[configurations.compType]) ){
-                        streamProperty( cfgstream, "LICENSE_FILE", getTopologyProperty("licenseFile") );
+                        streamProperty( cfgstream, "LICENSE_FILE", getTopologyProperty("customer.licenseFile") );
                     }
 
                     if( fp.includes("bind")(compConfig[configurations.compType]) ){
@@ -642,7 +648,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
                 if( fp.includes("cassandra")(compConfig[configurations.compType]) ){
 
-                    var observers = (zks.length % 2)===0 ? 1: 2
+                    var observers = (zks.length % 2)===0 ? 1: 0
 
                     var _zks = fp(zks).take(zks.length-observers).map(n=> ({dcid: n.dcid, zkref: "$"+n.ipref}) ).value().concat(
                                     fp(zks).takeRight(observers).map(n=> ({ dcid: n.dcid, zkref: "$"+n.ipref + ":observer" }) ).value()
@@ -727,6 +733,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     streamProperty( cfgstream, "SMTPPORT", getTopologyProperty("customer.smtpPort"), "O" );
                     streamProperty( cfgstream, "SMTPUSER", getTopologyProperty("customer.smtpUser"), "O" );
                     streamProperty( cfgstream, "SMTPPASSWORD", getTopologyProperty("customer.smtpPassword"), "O" );
+                    streamProperty( cfgstream, "SMTPMAILFROM", getTopologyProperty("customer.smtpMailFrom"), "R" );
                     streamProperty( cfgstream, "SMTPSSL", getTopologyProperty("customer.smtpSsl"), "O" );
                 }
                 
