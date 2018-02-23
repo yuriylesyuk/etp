@@ -35,7 +35,11 @@ function getNodeByIpRef( nodes, ipref){
     return fp.find( getIpRefObject( ipref ) )( nodes );
 }
 
-function gatherComp( topology, compType ){
+// supported compType:
+//    * all components
+//    * nodes node list
+//    * XX component
+function gatherComp( topology, compType, compList ){
     var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
 
     var comps = [];
@@ -43,8 +47,14 @@ function gatherComp( topology, compType ){
         region => fp.map(
             subnet =>  
                 fp.reduce( (css, node) => {
-                    // * to return for any component or "XX" component name to return for specific one
-                    if( compType === "*" || fp.find( { comp: compType } )(node.components) ){
+                    // compType:
+                    //      "all" to return for any component; no third parameter 
+                    //      "byNodes" to return for a list of nodes, in this case, third parameter is a list of nodes
+                    //      "XX" component type to return for specific type of component; no third parameter
+                    //
+                    if( compType === "*" 
+                     || (compType === "nodes" &&  fp.find( { dcid: region.id, nid: node.id} )( compList ) )
+                     || fp.find( { comp: compType } )(node.components) ){
                         var c = { 
                             dcid: region.id, 
                             nodeid: node.id, 
@@ -109,6 +119,8 @@ var compName = {
 // [ ] Install Rule: if MS and OL on different nodes, USER_LDAP_REMOTE_HOST=y
 // [ ] Install Rule: if MS and UI on same node, do MS, ignore UI for this node
 
+
+// TODO: WIP: REFACTOR: finish with IF, TG, FG, PGd
 var compInst = {
     "ZK": { comp: "zk", ansible: "edge-comp-setup.yml" }, 
     "CS": { comp: "c", ansible: "edge-comp-setup.yml" }, 
@@ -180,24 +192,125 @@ function ruleWarning( w ){
 
 
 // If component requires custum configuration file, the table provides parametrization information for it
-var compConfig = {
-    // in case of multiple MSs, For MS .primary = true
-    "ALL" : [ "hosts", "hostip", "bind", "ms-creds", "license", "ldap-host", "dc", "rmp-pod", "cassandra", "pg-creds" ],
 
-    "MS": [ "hosts", "hostip", "ms-creds", "license", "ldap-host", "ldap-creds", "dc", "rmp-pod", "cassandra", "pg-creds" ],
-    "OL": [ "hosts","ldap-host", "ldap-creds", "ldap-conf", "run-as" ],
-    "UI": [ "hosts", "brand", "hostip", "ms-creds", "run-as", "ldap-host", "smtp" ],
-    "CS": [ "hosts", "run-as" ],
-    "ZK": [ "hosts", "hostip", "run-as" ],
-    "R":  [ "hosts", "dc", "rmp-pod" ],
-    "MP": [ "hosts", "dc", "rmp-pod" ],
-    "PS": [ "hosts", "hostip", "dc", "rmp-pod", "run-as", "pg-conf", "pg-creds" ],
-    "QS": [ "hosts", "dc", "rmp-pod" ],
-    "UG": [ "hosts", "brand" ],
-    "BS": [ "hosts", "smtp" ],
-    "DP": [ "hosts","brand" ]
-}
-
+// NOTE: in array to guarantee traversal order; shifted to object for lookup retrieval
+// in case of multiple MSs, For MS .primary = true
+var compConfigurations = [
+    [ "OLMSUI", {
+        install: "ms",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "OL", "MS", "UI"],
+        pred: true,
+        config: [ "hosts", "hostip", "bind", "ms-host", "ms-creds", "license", "ldap-host", "dc", "rmp-pod", "cs-creds", "cs-hosts", "zk-hosts", "pg-creds" ]
+    } ],
+    [ "RMP", {
+        install: "rmp",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "R", "MP" ],
+        pred: true,
+        config: [ "hosts", "dc", "rmp-pod" ]
+    } ],
+    [ "DS", {
+        install: "ds",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "ZK", "CS" ],
+        pred: true,
+        config: [ "hosts", "hostip", "run-as", "cs-creds", "cs-hosts" ]
+    } ],
+    [ "SAX", {
+        install: "sax",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "QS", "PS" ],
+        pred: true,
+        config: [ "hosts", "hostip", "dc", "rmp-pod", "run-as", "pg-conf", "pg-creds" ]
+    } ],
+    [ "MS", {
+        install: "ms",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "MS" ],
+        pred: true,
+        config: [ "hosts", "hostip", "ms-host", "ms-creds", "license", "ldap-host", "ldap-creds", "dc", "rmp-pod", "cs-creds", "cs-hosts", "zk-hosts", "pg-creds" ]
+    } ],
+    [ "OL", {
+        install: "ld",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "OL" ],
+        pred: true,
+        config: [ "hosts","ldap-host", "ldap-creds", "ldap-conf", "run-as" ]
+    } ],
+    [ "UI", {
+        install: "ui",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "UI" ],
+        pred: true,
+        config: [ "hosts", "brand", "hostip", "ms-host", "ms-creds", "run-as", "ldap-host", "smtp" ]
+    } ],
+    [ "CS", {
+        install: "c",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "CS" ],
+        pred: true,
+        config: [ "hosts", "hostip", "run-as", "cs-creds", "cs-hosts" ]
+    } ],
+    [ "ZK", {
+        install: "zk",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "ZK" ],
+        pred: true,
+        config: [ "hosts", "hostip", "run-as", "zk-hosts" ]
+    } ],
+    [ "R",  {
+        install: "r",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "R" ],
+        pred: true,
+        config: [ "hosts", "dc", "rmp-pod" ]
+    } ],
+    [ "MP", {
+        install: "mp",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "MP" ],
+        pred: true,
+        config: [ "hosts", "dc", "rmp-pod" ]
+    } ],
+    [ "PS", {
+        install: "ps",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "PS" ],
+        pred: true,
+        config: [ "hosts", "hostip", "dc", "rmp-pod", "run-as", "pg-conf", "pg-creds" ]
+    } ],
+    [ "QS", {
+        install: "qs",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "QS" ],
+        pred: true,
+        config: [ "hosts", "dc", "rmp-pod" ]
+    } ],
+    [ "UG", {
+        install: "e",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "UG" ],
+        pred: true,
+        config: [ "hosts", "brand" ]
+    } ],
+    [ "BS", {
+        install: "b",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "BS" ],
+        pred: true,
+        config: [ "hosts", "smtp" ]
+    } ],
+    [ "DP", {
+        install: "dp",
+        ansible: "edge-comp-setup.yml",
+        comps: [ "DP" ],
+        pred: true,
+        config: [ "hosts","brand" ]
+    } ]
+];
+// Index values for lookup operations
+var compConfigurationsIdx = fp.fromPairs(compConfigurations);
 
 module.exports = function ( topologyFile, outputFile, program ){
 
@@ -420,17 +533,6 @@ module.exports = function ( topologyFile, outputFile, program ){
 
 
 
-
-
-    // TODO:
-    // ansible top-level script
-
-    //var edgeComponentInstallOrder = [ "ZK", "CS", "OL", "MS", "MP", "R", "PS", "QS" ];
-
-
-
-
-
     //-------------------------------------------------------------------------- 
 
     // TODO: 
@@ -488,7 +590,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
         var comp = compType.toLowerCase();
         if( compType === "MS" && isPrimaryMS ){
 
-        }else if( compConfig[compType] === undefined ){
+        }else if( compConfigurationsIdx[compType] === undefined ){
             comp = "ms";
         }else{
             nodeidref = 'n'+('0'+nodeId).slice(-2);
@@ -517,7 +619,79 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     
     var bss = gatherComp(topology, "BL");
 
-    // Edge Components Integrity and Best Practtices Rules
+
+    /* --------------------------------------------------------
+        WIP
+        
+        Gathering of component combinations
+
+    -------------------------------------------------------- */
+
+
+    // (1) collect component combinations
+    // step 1: populate compPlanet with comp info
+    var compPlanet = {};
+    fp.map( region => {
+        fp.map( subnet => {
+            fp.reduce( (compPlanet, node ) => {
+                console.log(node.components);
+                compPlanet[ `/dc/${node.dcid}/n/${node.id}` ] = {
+                        components: fp.map('comp')(node.components),
+                        node: { 
+                            dcid: node.dcid,
+                            nid: node.id,
+                        }
+                    };
+                return compPlanet;
+            }, compPlanet )(subnet.nodes);
+        })(region.subnets)
+    })(topology.regions);
+
+    // step 2: check if a collection of components is on a node then exclude it from compPlanet 
+    var compConfList =[];
+    fp.map( compConf => {
+        fp.reduce( (complist, key ) => {
+            if( fp.difference(compConf[1].comps,compPlanet[key].components).length === 0 ){
+                compPlanet[key].components = fp.difference(compPlanet[key].components, compConf[1].comps);
+
+                complist.push( { 
+                                compType: compConf[0], 
+                                node: compPlanet[key].node
+                               } );
+                var x = 0;   
+            }
+            return complist
+        }, compConfList )(fp.keys(compPlanet))
+    } )(compConfigurations);
+
+
+    // and 
+    // step 3: pivot nodes by compType; collect comps using gatherComp()
+    var configLayout = {};
+    fp.reduce( (configL, compConf)=>{
+        
+        (configL[compConf.compType]|| (configL[compConf.compType]=[])).push(compConf.node);
+
+        return configL;
+    }, configLayout )(compConfList);
+
+
+    // and
+    // step 4: collect comps by type
+    // .comps are in format: [ { dcid: 1, nid: 2 }, {}... ]
+    var configCompNodesByType = fp.map( 
+        comparr => {
+            return { 
+                compType: comparr[0], 
+                compNodes: gatherComp( topology, "nodes", comparr[1] ) }
+        }
+    )(fp.toPairs(configLayout))
+
+    //
+    //
+    // Edge Components Integrity and Best Practices Rules
+    //
+    //
 
     // PS -- PGm, PGs
     // each PS should have its PGm/PGs counterpart on its node
@@ -553,14 +727,16 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
             fp.map( configurations => {
                 fp.map( compnode => {
 
-                    var cfgstream = fs.createWriteStream( program.directory + '/' + genCfgFileName( topology.planet, region.id, compnode.nodeid, configurations.compType, compnode.components[configurations.compType].primary ) );
+                    // TODO: Refactor .primary marker with relation to the generated file name.
+                    // original value : compnode.components[configurations.compType].primary ) 
+                    var cfgstream = fs.createWriteStream( program.directory + '/' + genCfgFileName( topology.planet, region.id, compnode.nodeid, configurations.compType, false ) );
 
                     cfgstream.write( versionT({ comment: '#', planet: topology.planet, version: topology.version, genat: new Date() } ));
                     cfgstream.write("\n\n");
 
 
                     // list nodes
-                    if( fp.includes("hosts")(compConfig[configurations.compType]) ){
+                    if( fp.includes("hosts")(compConfigurationsIdx[configurations.compType].config) ){
                         fp.toPairs(fp.groupBy("dcid")(all)).map(
                             dc => {
                                 cfgstream.write( "#--------------------------------------------------------------------------\n");
@@ -575,37 +751,10 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     }
 
                     // BRAND: generated if present
-                    if( fp.includes("brand")(compConfig[configurations.compType]) ){
+                    if( fp.includes("brand")(compConfigurationsIdx[configurations.compType].config) ){
                         streamProperty( cfgstream, "BRAND", getTopologyProperty("customer.brand"), "O" );
                     }
 
-                    if( fp.includes("ms-creds")(compConfig[configurations.compType]) ){
-                        cfgstream.write( `ADMIN_EMAIL=${getTopologyProperty("customer.adminEmail")}\n` );
-                        cfgstream.write( `APIGEE_ADMINPW=${getTopologyProperty("customer.adminPassword")}\n` );
-                    }
-                
-                    if( fp.includes("license")(compConfig[configurations.compType]) ){
-                        streamProperty( cfgstream, "LICENSE_FILE", getTopologyProperty("customer.licenseFile") );
-                    }
-
-                    if( fp.includes("bind")(compConfig[configurations.compType]) ){
-                        streamProperty( cfgstream, "BIND_ON_ALL_INTERFACES", getTopologyProperty("customer.bindOnAllInterfaces"), "O" );
-                    }
-
-                    if( fp.includes("run-as")(compConfig[configurations.compType]) ){
-                        streamProperty( cfgstream, "RUN_GROUP", getTopologyProperty("customer.runGroup"), "O" );
-                        streamProperty( cfgstream, "RUN_GROUP", getTopologyProperty("customer.runGroup"), "O" );
-                    }
-
-                    // MP_POD: generated if present
-                    if( fp.includes("rmp-pod")(compConfig[configurations.compType]) ){
-                        streamProperty( cfgstream, "MP_POD", getTopologyProperty("customer.mpPod"), "O" );
-                    }
-
-                    // REGION
-                    if( fp.includes("region")(compConfig[configurations.compType]) ){
-                        streamProperty( cfgstream, "REGION", region.name, "O" );
-                    }
 
                     // MS section:
                     /*
@@ -622,7 +771,38 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     -- if MS and OL on the same node, pair them
 
                     */
+                    if( fp.includes("ms-host")(compConfigurationsIdx[configurations.compType].config) ){
+                        streamProperty( cfgstream, "MSIP", getTopologyProperty("<TODO: msip>"), "R" );
+                        streamProperty( cfgstream, "APIGEE_PORT_HTTP_MS", getTopologyProperty("customer.msPort"), "O" );
+                    }
 
+                    if( fp.includes("ms-creds")(compConfigurationsIdx[configurations.compType].config) ){
+                        cfgstream.write( `ADMIN_EMAIL=${getTopologyProperty("customer.adminEmail")}\n` );
+                        cfgstream.write( `APIGEE_ADMINPW=${getTopologyProperty("customer.adminPassword")}\n` );
+                    }
+                
+                    if( fp.includes("license")(compConfigurationsIdx[configurations.compType].config) ){
+                        streamProperty( cfgstream, "LICENSE_FILE", getTopologyProperty("customer.licenseFile") );
+                    }
+
+                    if( fp.includes("bind")(compConfigurationsIdx[configurations.compType].config) ){
+                        streamProperty( cfgstream, "BIND_ON_ALL_INTERFACES", getTopologyProperty("customer.bindOnAllInterfaces"), "O" );
+                    }
+
+                    if( fp.includes("run-as")(compConfigurationsIdx[configurations.compType].config) ){
+                        streamProperty( cfgstream, "RUN_GROUP", getTopologyProperty("customer.runGroup"), "O" );
+                        streamProperty( cfgstream, "RUN_GROUP", getTopologyProperty("customer.runGroup"), "O" );
+                    }
+
+                    // MP_POD: generated if present
+                    if( fp.includes("rmp-pod")(compConfigurationsIdx[configurations.compType].config) ){
+                        streamProperty( cfgstream, "MP_POD", getTopologyProperty("customer.mpPod"), "O" );
+                    }
+
+                    // REGION
+                    if( fp.includes("region")(compConfigurationsIdx[configurations.compType].config) ){
+                        streamProperty( cfgstream, "REGION", region.name, "O" );
+                    }
 
 
 
@@ -646,7 +826,10 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
             */
 
-                if( fp.includes("cassandra")(compConfig[configurations.compType]) ){
+            // TODO: break it down to cs* zk* sections
+                if( fp.includes("cassandra")(compConfigurationsIdx[configurations.compType].config) ){
+                    // TODO:  change the behavior of observer so that if some ZK nodes are marked as observer in the topology, then this choice marking is respected.
+                    cfgstream.write( "\n" );
 
                     var observers = (zks.length % 2)===0 ? 1: 0
 
@@ -666,29 +849,17 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     streamProperty( cfgstream, "ZK_CLIENT_HOSTS", "\""+ZK_CLIENT_HOSTS+"\"", "R" );
                     streamProperty( cfgstream, "CASS_HOSTS", "\""+CASS_HOSTS+"\"", "R" );
                     
-                    cfgstream.write( "\n" );
                 }
 
-
-                if( fp.includes("ldap")(compConfig[configurations.compType]) ){
+                if( fp.includes("ldap-host")(compConfigurationsIdx[configurations.compType].config) ){
                     cfgstream.write( "\n" );
 
 // TODO: MSIP for MS section also LDAP_REMOTE_HOST=y if it is not collocated with an MS 
 // TODO: MS
 
                     // TODO: check USE_LDAP_REMOTE_HOST
-                    if( configurations.compType == "OL"){
-                        cfgstream.write( `LDAP_TYPE=${compnode.components["OL"].ldapType}\n` );
-                        cfgstream.write( `LDAP_SID=${compnode.components["OL"].ldapSid}\n` );
-                        if( typeof compnode.components["OL"].ldapPeer !== "undefined" ){
-                            cfgstream.write( `LDAP_PEER=${
-                                ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
-                                ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
-                                )
-                            }\n` );
-                        }
-                        cfgstream.write( `APIGEE_LDAPPW=${getTopologyProperty("customer.ldapPassword")}\n` );
-                    }else if( configurations.compType == "MS"){
+
+                    if( configurations.compType == "MS"){
                         if( typeof compnode.components["MS"].ldapHost == "undefined" ){
                             // OL is collocated with MS
                             cfgstream.write( `USE_LDAP_REMOTE_HOST=n\n` );
@@ -706,9 +877,31 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                         }
                     }
                 }
-                    //-------------------
+                
+                if( fp.includes("ldap-conf")(compConfigurationsIdx[configurations.compType].config) ){
+                    cfgstream.write( "\n" );
+
+                    cfgstream.write( `LDAP_TYPE=${compnode.components["OL"].ldapType}\n` );
+                    cfgstream.write( `LDAP_SID=${compnode.components["OL"].ldapSid}\n` );
+                    if( typeof compnode.components["OL"].ldapPeer !== "undefined" ){
+                        cfgstream.write( `LDAP_PEER=$${
+                            ipT( fp.zipObject( [ "regexpmatch", "dcid", "nodeid" ] )
+                            ( /\/dc\/(\d+)\/n\/(\d+)/.exec( compnode.components["OL"].ldapPeer ) )
+                            )
+                        }\n` );
+                    }
+                }
+
+                if( fp.includes("ldap-creds")(compConfigurationsIdx[configurations.compType].config) ){
+// TODO: add other creds parameters
+
+                    streamProperty( cfgstream, "APIGEE_LDAPPW", getTopologyProperty("customer.ldapPassword"), "R" );
+                }                
+
+
+                //-------------------
                         // TODO: PG/PGm/PGs
-                if( fp.includes("pg-conf")(compConfig[configurations.compType]) ){
+                if( fp.includes("pg-conf")(compConfigurationsIdx[configurations.compType].config) ){
                     cfgstream.write( "\n" );
 
                     // PGm - a single master across Data Centres; checked by iRules;
@@ -716,17 +909,17 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     var pgmnodeipref = (typeof compnode.PGm === 'undefined' ? pgms[0].ipref : compnode.ipref ); 
                     var pgsnodeipref = (typeof compnode.PGs === 'undefined' ? pgss[0].ipref : compnode.ipref ); 
 
-                    streamProperty( cfgstream, "PG_MASTER", pgmnodeipref );
-                    streamProperty( cfgstream, "PG_STANDBY", pgsnodeipref );
+                    streamProperty( cfgstream, "PG_MASTER", "$"+ pgmnodeipref );
+                    streamProperty( cfgstream, "PG_STANDBY", "$" + pgsnodeipref );
                 }
                         
-                if( fp.includes("pg-creds")(compConfig[configurations.compType]) ){
+                if( fp.includes("pg-creds")(compConfigurationsIdx[configurations.compType].config) ){
                     cfgstream.write( "\n" );
                     streamProperty( cfgstream, "PG_USER", getTopologyProperty("customer.pgUsername"), "R" );
                     streamProperty( cfgstream, "PG_PWD", getTopologyProperty("customer.pgPassword"), "R" );
                 }
 
-                if( fp.includes("smtp")(compConfig[configurations.compType]) ){
+                if( fp.includes("smtp")(compConfigurationsIdx[configurations.compType].config) ){
                     cfgstream.write( "\n" );
                     streamProperty( cfgstream, "SKIP_SMTP", getTopologyProperty("customer.skipSmtp"), "R" );
                     streamProperty( cfgstream, "SMTPHOST", getTopologyProperty("customer.smtpHostp"), "O" );
@@ -740,11 +933,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                 cfgstream.end();
                     
                 })(configurations.compNodes)
-            })([{compType:"MS", compNodes: mss},
-                {compType:"OL", compNodes: ols},
-                {compType:"UI", compNodes: uis},
-                {compType:"PS", compNodes: pss},
-                {compType:"BS", compNodes: bss}])
+            })(configCompNodesByType)
         })(topology.regions)
     }
     // end: program.prefix
@@ -753,14 +942,22 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
 
     //-------------------------------------------------------------------------- 
+    //
     // TODO:
     // ansible top-level script
-
     // TODO: add as an optional 
-    if( true ){
-        var ansiblestream = fs.createWriteStream( program.directory + '/' + "ansible-install.sh" );
+    //
+    //-------------------------------------------------------------------------- 
 
-        var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/<%= comp.ansible %> -e "COMP=<%= comp.comp %> CFG=<%= cfg %>"' );
+
+    //
+    // ansible script using raw components: DEPRECATE AFTER REFACTOR of coarse-grained install sequence
+    //
+/*
+    if( true ){
+        var ansiblestream = fs.createWriteStream( program.directory + '/' + "ansible-install-finegrained.sh" );
+
+        var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/<%= comp.ansible %> -e "COMP=<%= comp.comp %> CFG=configs/<%= cfg %>"' );
 
         fp.map( region => {
 
@@ -780,6 +977,39 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
         ansiblestream.end();
         //-------------------------------------------------------------------------- 
     }
+*/
+
+    if( true ){
+        var ansiblestream = fs.createWriteStream( program.directory + '/' + "ansible-install.sh" );
+
+        var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/<%= comp.ansible %> -e "COMP=<%= comp.comp %> CFG=configs/<%= cfg %>"' );
+
+        // Use configCompNodesByType
+        //  type:
+        //     dcid
+        //     
+        fp.map( dcid => {
+
+            fp.map( comp =>
+                ansiblestream.write(
+                    fp.map(
+                        compnode => ansibleT({ 
+                            regionidnodeidref: genNodeId( dcid, compnode.nid ), 
+                            comp: compConfigurationsIdx[ comp ], 
+                                    // TODO: do we really need: comp==="MS"?compnode.components[comp].primary:false 
+                                    // as a 3rd parameter? me think not if yes remove after refactoring 
+                            cfg: genCfgFileName( topology.planet, dcid, compnode.nid, comp, false ) })
+                    )( fp.filter( {dcid: dcid} )( configLayout[comp] ) ).join('\n') +
+                    "\n\n"
+                )
+            )(portdefs.edgecomponentinstallsequence)
+        })(fp.map(region=> region.id)(topology.regions));
+
+        ansiblestream.end();
+        //-------------------------------------------------------------------------- 
+    }
+
+
 
     // TODO: WIP: generate start/stop sequence
     //

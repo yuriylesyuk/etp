@@ -1,0 +1,7 @@
+[edge]
+n01 ansible_host=10.36.11.19
+n02 ansible_host=10.36.10.30
+n03 ansible_host=10.36.10.22
+n04 ansible_host=10.36.8.23
+n05 ansible_host=10.36.8.22
+n06 ansible_host=10.36.8.22

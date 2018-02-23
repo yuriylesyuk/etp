@@ -1,0 +1,23 @@
+Host n01
+    HostName 10.36.11.19
+    IdentityFile 
+
+Host n02
+    HostName 10.36.10.30
+    IdentityFile 
+
+Host n03
+    HostName 10.36.10.22
+    IdentityFile 
+
+Host n04
+    HostName 10.36.8.23
+    IdentityFile 
+
+Host n05
+    HostName 10.36.8.22
+    IdentityFile 
+
+Host n06
+    HostName 10.36.8.22
+    IdentityFile 

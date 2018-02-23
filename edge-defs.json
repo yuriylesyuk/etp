@@ -1001,7 +1001,7 @@
         }
     ],
     "edgecomponentinstallsequence": [ 
-        "ZK", "CS", "OL", "MS", "UI", "QS", "PS", "R", "MP", "ES", "BS", "BP", "DP", "IF", "TG", "GF"
+        "DS", "ZK", "CS", "OLMSUI", "OL", "MS", "UI", "SAX", "QS", "PS", "RMP", "R", "MP", "ES", "BS", "BP", "DP", "IF", "TG", "GF"
     ],
     "edgecomponentstartsequence": [ 
         "IF", "TG", "GF", "ZK", "CS", "OL", "PGm", "PGs", "PG", "PS", "QD", "QS", "MS", "MP", "R", "UI", "ES", "BS", "BP"
@@ -1022,7 +1022,6 @@
         "cassUsername": "cassandra",
         "cassPassword": "cassandra",
         "cassClustername": "Apigee",
-        "ldapPassword": "Apigee123!",
         "pgUsername": "apigee",
         "pgPassword": "postgres",
         "skipSmtp": "y",
