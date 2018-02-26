@@ -131,10 +131,66 @@
             ],
             "tiers": [
                 { "name": "core" }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "ms-proxy",
+                    "comp": "MS", 
+                    "heartbeaturi": "http://xxxx",
+                    "ip": "10.10.10.88",
+                    "port": 8080,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
+                    "nodes": [
+                            "/dc/1/n/2",
+                            "/dc/1/n/3"
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha",
+                    "comp": "R", 
+                    "heartbeaturi": "http://xxxx",
+                    "ip": "10.10.10.88",
+                    "port": 9001,
+                    "heartbeattype": "socket",
+                    "responsecode": 200,
+                    "nodes": [
+                            "/dc/1/n/2",
+                            "/dc/1/n/3"
+                    ]
+                }
             ]
         }
     ],
-   "customer": {
+    "organizations": [
+        {
+            "name": "org",
+            "orgAdminName": "new@user.com",
+            "orgAdminPassword": "Apigee123!",
+            "environments": [
+                {
+                    "name": "prod",
+                    "virtualhosts": [
+                        {
+                            "name": "default",
+                            "port": 9001,
+                            "aliases": [
+                                "org-prod.apigee.net"
+                            ]
+                        },
+                        {
+                            "name": "secure",
+                            "port": 9005,
+                            "aliases": [
+                                "org-prod.apigee.net"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "customer": {
         "brand": "sap",
         "adminEmail": "apigee@exco.co.za",
         "adminPassword": "Apigee123!",

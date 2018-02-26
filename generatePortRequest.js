@@ -119,6 +119,20 @@ module.exports = function ( topologyFile, outputFile, program ){
         })(fp.map('id')(topology.regions))
     )(fp.map('id')(topology.regions));
 
+    //
+    // Processing Load Balancer sections
+    // 
+    fp.map( region => {
+            console.log( "lb: dc: "+region.id)
+            fp.map( lb => {
+                console.log( "lb: lb: "+lb.name)
+
+            })(region.loadbalancers)
+        }
+    )(topology.regions)
+
+
+
 
 
     var testportcolumns = [ "c", "s", "p"]
