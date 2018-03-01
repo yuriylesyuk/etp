@@ -1000,6 +1000,20 @@
             ]
         }
     ],
+    "lbhealthchecks" : {
+        "MS": {
+            "pingProtocol": "jmx",
+            "pingPort": "1101",
+            "pingPath": "",
+            "responsecode": 200
+        },
+        "R": {
+            "pingProtocol": "http",
+            "pingPort": 8081,
+            "pingPath": "http://$host:8081/v1/servers/self/up",
+            "responsecode": 200
+        }
+     },
     "edgecomponentinstallsequence": [ 
         "DS", "ZK", "CS", "OLMSUI", "OL", "MS", "UI", "SAX", "QS", "PS", "RMP", "R", "MP", "ES", "BS", "BP", "DP", "IF", "TG", "GF"
     ],

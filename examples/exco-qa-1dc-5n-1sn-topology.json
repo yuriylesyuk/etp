@@ -136,27 +136,44 @@
                 {
                     "name": "ms-proxy",
                     "comp": "MS", 
-                    "heartbeaturi": "http://xxxx",
                     "ip": "10.10.10.88",
                     "port": 8080,
-                    "heartbeattype": "socket",
-                    "responsecode": 200,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
                     "nodes": [
-                            "/dc/1/n/2",
-                            "/dc/1/n/3"
+                        { "host": "/dc/1/n/1", "port": 8080 }
                     ]
                 },
                 {
-                    "name": "dmz-r-ha",
+                    "name": "dmz-r-ha-default",
                     "comp": "R", 
-                    "heartbeaturi": "http://xxxx",
                     "ip": "10.10.10.88",
                     "port": 9001,
-                    "heartbeattype": "socket",
-                    "responsecode": 200,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
                     "nodes": [
-                            "/dc/1/n/2",
-                            "/dc/1/n/3"
+                        { "host": "/dc/1/n/2", "port": 9001 },
+                        { "host": "/dc/1/n/3", "port": 9001 }
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha-secure",
+                    "comp": "R", 
+                    "ip": "10.10.10.88",
+                    "port": 9005,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/*/n/*", "port": 9005 }
                     ]
                 }
             ]

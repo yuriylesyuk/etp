@@ -1,6 +1,21 @@
 var fp = require("lodash/fp");
 
 
+// Synopsis: 
+//  "/dc/*/n/*"
+function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
+    var nodes = {};
+
+    var myRe = /\/dc\/(.+)\/n\/(.+)d/g;
+    var myArray = myRe.exec( pattern );
+    console.log('The value of lastIndex is ' + myRe.lastIndex);
+
+
+    return 
+}
+
+
+
 module.exports = function ( topologyFile, outputFile, program ){
 
     var portdefs = require("./edge-defs.json");
