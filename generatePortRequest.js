@@ -3,15 +3,38 @@ var fp = require("lodash/fp");
 
 // Synopsis: 
 //  "/dc/*/n/*"
+//  "/dc/[3,4]/n/*"
 function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
     var nodes = {};
 
-    var myRe = /\/dc\/(.+)\/n\/(.+)d/g;
-    var myArray = myRe.exec( pattern );
-    console.log('The value of lastIndex is ' + myRe.lastIndex);
+    var regex = /\/dc\/(.+)\/n\/(.+)/;
+    var matches = regex.exec( pattern );
+    var dcPattern = matches[1];
+    var nPattern = matches[2]
 
+    var matches = function( pattern, token ){
+        // "*" or single id or list of ids [ id, ... ] 
+        if( pattern === "*" ){
+            return true;
+        }else if( pattern === token ) {
+            return true;
+        }else if( /\[.+\]/.exec( pattern )  ){
+            var tokenlist = /(\[.+\])/.exec( pattern )[1];
+            if( JSON.parse( tokenlist ).indexOf( token ) > -1 ){
+                return true;
+            }
+        }
+        return false;
+    };
 
-    return 
+    // scan topology and gather nodes
+    // fetch all references for nodes that contain compType components 
+
+    return fp.flatten( fp.map(r => fp.map(s =>
+        fp.map( n => {
+            return { dc: r.id, n: n.id } 
+        } )(fp.filter( {components:[{comp: compType }]}  )(s.nodes))
+    )(r.subnets))(topology.regions) );
 }
 
 
@@ -137,6 +160,9 @@ module.exports = function ( topologyFile, outputFile, program ){
     //
     // Processing Load Balancer sections
     // 
+    var nodelist = getTopologyComponentNodesByWildCard(topology, "R", "/dc/*/n/*" );
+
+
     fp.map( region => {
             console.log( "lb: dc: "+region.id)
             fp.map( lb => {
