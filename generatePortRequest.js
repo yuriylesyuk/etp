@@ -12,11 +12,12 @@ function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
     var dcPattern = matches[1];
     var nPattern = matches[2]
 
-    var matches = function( pattern, token ){
+    // compare pattern, ie, *, [x,y], x to a token ie, x
+    var includes = function( pattern, token ){
         // "*" or single id or list of ids [ id, ... ] 
         if( pattern === "*" ){
             return true;
-        }else if( pattern === token ) {
+        }else if( parseInt(pattern) === token ) {
             return true;
         }else if( /\[.+\]/.exec( pattern )  ){
             var tokenlist = /(\[.+\])/.exec( pattern )[1];
@@ -30,10 +31,14 @@ function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
     // scan topology and gather nodes
     // fetch all references for nodes that contain compType components 
 
-    return fp.flatten( fp.map(r => fp.map(s =>
-        fp.map( n => {
-            return { dc: r.id, n: n.id } 
-        } )(fp.filter( {components:[{comp: compType }]}  )(s.nodes))
+    return fp.flatten( fp.flatMap(r => fp.map(s =>
+        fp.reduce( ( ns, n ) => {
+console.log( r.id, n.id) 
+            if( includes( dcPattern, r.id ) && includes( nPattern, n.id ) ){
+                ns.push( { dc: r.id, n: n.id } )
+            }
+            return ns
+        }, [] )(fp.filter( {components:[{comp: compType }]}  )(s.nodes))
     )(r.subnets))(topology.regions) );
 }
 
@@ -162,15 +167,38 @@ module.exports = function ( topologyFile, outputFile, program ){
     // 
     var nodelist = getTopologyComponentNodesByWildCard(topology, "R", "/dc/*/n/*" );
 
-
+    // TODO: add support of lb referencing lbs, ie GTM LB to point to /dc/1/lb/ms-lb, /dc/*/lb/ms-lb
     fp.map( region => {
             console.log( "lb: dc: "+region.id)
             fp.map( lb => {
-                console.log( "lb: lb: "+lb.name)
+                console.log( "lb: lb: "+lb.name);
 
+                //  
+                var lbCompNodes = fp.uniqWith( fp.isEqual )( fp.flatMap(
+                        compNode=> fp.map( n => { n.port = compNode.port; return n; } )(getTopologyComponentNodesByWildCard(topology, lb.comp, compNode.host))
+                )(lb.nodes) );
+
+                // Generate a line of port request per lb's ip/port combination
+                fp.map( lbnode => {
+                    console.log( lbnode);
+
+                    firewallPortRequestsList.push( { 
+                        category: "loadbalancers",
+                        srcnode: "TODO: lbserver", 
+                        srchostname: "<TODO: lbhostname??>",  
+                        srcip: lb.ip, 
+                        dstnode: nodes[ lbnode.dc+'-'+lbnode.n  ].hostname,
+                        dsthostname: nodes[  lbnode.dc+'-'+lbnode.n ].hostname, 
+                        dstip: nodes[ lbnode.dc+'-'+lbnode.n ].ip,
+                        clientcomponent: "<TODO: clientComponent>", 
+                        servercomponent: "<TODO: sc.component>", 
+                        port: lbnode.port,
+                        description: "Load Balancer " + lb.name + " for " + lb.comp + "." 
+                    } ); 
+                } )(lbCompNodes);
+                
             })(region.loadbalancers)
-        }
-    )(topology.regions)
+    } )(topology.regions)
 
 
 
