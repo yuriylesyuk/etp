@@ -139,7 +139,7 @@
                     "ip": "10.10.10.88",
                     "port": 8080,
                     "healthcheck" : {
-                        "pingProtocol": "tcp",
+                        "pingProtocol": "tcpxx",
                         "pingPath": "http://xxxx",
                         "responsecode": 200
                     },

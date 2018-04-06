@@ -1,8 +1,33 @@
 var fp = require("lodash/fp");
 
 
+// TODO: keep going...
+// getHealthCheckProperty( "MS", "pingProtocol" )
+//   where in -topology.json:
+//     <either gtm- or dc- level>
+//      "lodalabancers": {
+//          "healthcheck": {
+//              "pingProtocol": "tcp"    
+//           }
+//      }
+//   in edge-defs.json
+//      "lbhealthchecks": {
+//          "MS": {
+//              "pingProtocol"
+//          }
+//      }
+//
+// Example:
+// var xxxlb = getHealthCheckProperty( topology.regions[0].loadbalancers[0], "pingProtocol" )
+//
+var getLbComponentHealthCheckPropertyFromTopologyPortdefs = fp.curry( ( portdefs, lbconfig, property ) => {
+    var val = fp.get( "healthcheck" + "." + property, lbconfig )
+    return typeof val === "undefined" ? fp.get( "lbhealthchecks" + "." + lbconfig.comp + "." + property, portdefs ) : val;
+})
+
 // Synopsis: 
 //  "/dc/*/n/*"
+//  "/dc/2/n/3"
 //  "/dc/[3,4]/n/*"
 function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
     var nodes = {};
@@ -51,6 +76,8 @@ module.exports = function ( topologyFile, outputFile, program ){
     //var topology = require("./uat-12n-4sn-topology.json");
     var topology = require( topologyFile );
 
+
+    var getHealthCheckProperty= getLbComponentHealthCheckPropertyFromTopologyPortdefs( portdefs );
 
     // Edge External Clients: Incoming
 
@@ -195,6 +222,22 @@ module.exports = function ( topologyFile, outputFile, program ){
                         port: lbnode.port,
                         description: "Load Balancer " + lb.name + " for " + lb.comp + "." 
                     } ); 
+
+                    // Generate record for this component LB node healthcheck
+                    firewallPortRequestsList.push( { 
+                        category: "loadbalancers",
+                        srcnode: "TODO: lbserver", 
+                        srchostname: "<TODO: lbhostname??>",  
+                        srcip: lb.ip, 
+                        dstnode: nodes[ lbnode.dc+'-'+lbnode.n  ].hostname,
+                        dsthostname: nodes[  lbnode.dc+'-'+lbnode.n ].hostname, 
+                        dstip: nodes[ lbnode.dc+'-'+lbnode.n ].ip,
+                        clientcomponent: "<TODO: clientComponent>", 
+                        servercomponent: "<TODO: sc.component>", 
+                        port: getHealthCheckProperty( lb, "pingPort" ),
+                        description: "Load Balancer Healthcheck " + lb.name + " for " + lb.comp + " on path " + getHealthCheckProperty( lb, "pingPort" ) + "." 
+                    } ); 
+
                 } )(lbCompNodes);
                 
             })(region.loadbalancers)
