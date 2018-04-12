@@ -216,6 +216,14 @@ id="svg2">
     >Mvn</text>
 </symbol>
 
+<symbol id="jb">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >JB</text>
+</symbol>
+
 <symbol id="tg">
     <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
     <text id="text1488" x="12.5" y="10.5"

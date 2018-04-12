@@ -906,11 +906,17 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
                     // PGm - a single master across Data Centres; checked by iRules;
                     // PGs - either a current one or any, ie, a first from PGs collection
-                    var pgmnodeipref = (typeof compnode.PGm === 'undefined' ? pgms[0].ipref : compnode.ipref ); 
-                    var pgsnodeipref = (typeof compnode.PGs === 'undefined' ? pgss[0].ipref : compnode.ipref ); 
 
-                    streamProperty( cfgstream, "PG_MASTER", "$"+ pgmnodeipref );
-                    streamProperty( cfgstream, "PG_STANDBY", "$" + pgsnodeipref );
+                    if( typeof compnode.components["PG"] !== 'undefined' ){
+
+                        // skip section generation 
+                    }else{
+                        var pgmnodeipref = (typeof compnode.components["PGm"] === 'undefined' ? pgms[0].ipref : compnode.ipref ); 
+                        var pgsnodeipref = (typeof compnode.components["PGs"] === 'undefined' ? pgss[0].ipref : compnode.ipref ); 
+
+                        streamProperty( cfgstream, "PG_MASTER", "$"+ pgmnodeipref );
+                        streamProperty( cfgstream, "PG_STANDBY", "$" + pgsnodeipref );
+                    }
                 }
                         
                 if( fp.includes("pg-creds")(compConfigurationsIdx[configurations.compType].config) ){

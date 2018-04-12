@@ -1,11 +1,11 @@
 category, srcnode, srchostname, srcip, dstnode, dsthostname, dstip, clientcomponent, servercomponent, port, description
 loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiman01, dbqapiman01, 10.36.11.19, <TODO: clientComponent>, <TODO: sc.component>, 8080, Load Balancer ms-proxy for MS.
-loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiman01, dbqapiman01, 10.36.11.19, <TODO: clientComponent>, <TODO: sc.component>, 1101, Load Balancer Healthcheckms-proxy for MS on path 1101.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiman01, dbqapiman01, 10.36.11.19, <TODO: clientComponent>, <TODO: sc.component>, 1101, Load Balancer Healthcheck ms-proxy for MS on path 1101.
 loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc01, dbqapiproc01, 10.36.10.30, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer dmz-r-ha-default for R.
-loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc01, dbqapiproc01, 10.36.10.30, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheckdmz-r-ha-default for R on path 8081.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc01, dbqapiproc01, 10.36.10.30, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheck dmz-r-ha-default for R on path 8081.
 loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc02, dbqapiproc02, 10.36.10.22, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer dmz-r-ha-default for R.
-loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc02, dbqapiproc02, 10.36.10.22, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheckdmz-r-ha-default for R on path 8081.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc02, dbqapiproc02, 10.36.10.22, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheck dmz-r-ha-default for R on path 8081.
 loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc01, dbqapiproc01, 10.36.10.30, <TODO: clientComponent>, <TODO: sc.component>, 9005, Load Balancer dmz-r-ha-secure for R.
-loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc01, dbqapiproc01, 10.36.10.30, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheckdmz-r-ha-secure for R on path 8081.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc01, dbqapiproc01, 10.36.10.30, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheck dmz-r-ha-secure for R on path 8081.
 loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc02, dbqapiproc02, 10.36.10.22, <TODO: clientComponent>, <TODO: sc.component>, 9005, Load Balancer dmz-r-ha-secure for R.
-loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc02, dbqapiproc02, 10.36.10.22, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheckdmz-r-ha-secure for R on path 8081.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.10.10.88, dbqapiproc02, dbqapiproc02, 10.36.10.22, <TODO: clientComponent>, <TODO: sc.component>, 8081, Load Balancer Healthcheck dmz-r-ha-secure for R on path 8081.

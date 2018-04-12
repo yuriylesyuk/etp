@@ -3,8 +3,8 @@
 xmlns:svg="http://www.w3.org/2000/svg"
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink"
-height="345"
-width="520.2"
+height="426"
+width="507.2"
 xml:space="preserve"
 version="1.1"
 id="svg2">
@@ -216,6 +216,14 @@ id="svg2">
     >Mvn</text>
 </symbol>
 
+<symbol id="jb">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#fb2b08;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#fb2b08;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >JB</text>
+</symbol>
+
 <symbol id="tg">
     <use xlink:href="#struct" style="fill:#ffffff;stroke:#ff6601;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -240,218 +248,224 @@ id="svg2">
     >GF</text>
 </symbol>
 
+<symbol id="lb">
+    <text id="text1488" x="12.5" y="11.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ff6601;text-decoration: underline;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >LB:</text>
+</symbol>
 
-        <text id="text1488" x="57" y="16" style="font-weight:bold;font-size:10px;font-family:Arial;" text-anchor="start">DC-1</text>
+        <text id="text1488" x="7" y="41" style="font-weight:bold;font-size:10px;font-family:Arial;" text-anchor="start">DC-1</text>
     
 
-        <line x1="57" y1="24" x2="513.2" y2="24" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
-        <text id="text1488" x="513.2" y="32" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DMZ</text>
+        <line x1="7" y1="72" x2="463.2" y2="72" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="463.2" y="80" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">DMZ</text>
     
 
-        <line x1="57" y1="81" x2="513.2" y2="81" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
-        <text id="text1488" x="513.2" y="89" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
+        <line x1="7" y1="129" x2="463.2" y2="129" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="463.2" y="137" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
     
 
-<rect id="subnet1" x="57" y="101" width="41.6" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
+<rect id="subnet1" x="7" y="149" width="41.6" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
                     <title>Subnet: analytics</title>
                 </rect>
 
 
-    <rect id="node1" x="65" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node1" x="15" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 1
 Host Name: LVMOPAPIQD2U
 IP: 10.119.131.11</title>
     </rect>
-    <text id="nodetext1" x="78.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext1" x="28.8" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 1</text>
     
-<use xlink:href="#ps"  x="66" y="106"/>
-<use xlink:href="#qs"  x="66" y="125"/>
+<use xlink:href="#ps"  x="16" y="154"/>
+<use xlink:href="#qs"  x="16" y="173"/>
 
-<use xlink:href="#tg"  x="66" y="299"/>
-<use xlink:href="#my"  x="66" y="280"/>
-<use xlink:href="#pg"  x="66" y="261"/>
-<use xlink:href="#qd"  x="66" y="242"/>
+<use xlink:href="#tg"  x="16" y="347"/>
+<use xlink:href="#my"  x="16" y="328"/>
+<use xlink:href="#pg"  x="16" y="309"/>
+<use xlink:href="#qd"  x="16" y="290"/>
 
 
-<rect id="subnet1" x="113.6" y="101" width="102.80000000000001" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
+<rect id="subnet1" x="63.6" y="149" width="102.80000000000001" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
                     <title>Subnet: data-storage</title>
                 </rect>
 
 
-    <rect id="node2" x="121.6" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node2" x="71.6" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 2
 Host Name: LVMOPAPICS1U
 IP: 10.119.132.11</title>
     </rect>
-    <text id="nodetext2" x="135.4" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext2" x="85.39999999999999" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 2</text>
     
 
-<use xlink:href="#tg"  x="122.6" y="299"/>
-<use xlink:href="#zk"  x="122.6" y="280"/>
-<use xlink:href="#cs"  x="122.6" y="261"/>
-<use xlink:href="#ol"  x="122.6" y="242"/>
+<use xlink:href="#tg"  x="72.6" y="347"/>
+<use xlink:href="#zk"  x="72.6" y="328"/>
+<use xlink:href="#cs"  x="72.6" y="309"/>
+<use xlink:href="#ol"  x="72.6" y="290"/>
 
 
 
-    <rect id="node3" x="152.2" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node3" x="102.19999999999999" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 3
 Host Name: LVMOPAPICS2U
 IP: 10.119.132.12</title>
     </rect>
-    <text id="nodetext3" x="166" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext3" x="115.99999999999999" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 
-<use xlink:href="#tg"  x="153.2" y="299"/>
-<use xlink:href="#zk"  x="153.2" y="280"/>
-<use xlink:href="#cs"  x="153.2" y="261"/>
+<use xlink:href="#tg"  x="103.19999999999999" y="347"/>
+<use xlink:href="#zk"  x="103.19999999999999" y="328"/>
+<use xlink:href="#cs"  x="103.19999999999999" y="309"/>
 
 
 
-    <rect id="node4" x="182.8" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node4" x="132.8" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 4
 Host Name: LVMOPAPICS3U
 IP: 10.119.132.13</title>
     </rect>
-    <text id="nodetext4" x="196.60000000000002" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext4" x="146.60000000000002" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 4</text>
     
 
-<use xlink:href="#tg"  x="183.8" y="299"/>
-<use xlink:href="#zk"  x="183.8" y="280"/>
-<use xlink:href="#cs"  x="183.8" y="261"/>
+<use xlink:href="#tg"  x="133.8" y="347"/>
+<use xlink:href="#zk"  x="133.8" y="328"/>
+<use xlink:href="#cs"  x="133.8" y="309"/>
 
 
-<rect id="subnet1" x="231.4" y="101" width="164" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
+<rect id="subnet1" x="181.4" y="149" width="164" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
                     <title>Subnet: gateway-baas</title>
                 </rect>
 
 
-    <rect id="node9" x="239.4" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node9" x="189.4" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 9
 Host Name: LVMOPAPIQD1U
 IP: 10.119.133.15</title>
     </rect>
-    <text id="nodetext9" x="253.20000000000002" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext9" x="203.20000000000002" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 9</text>
     
-<use xlink:href="#ui"  x="240.4" y="106"/>
-<use xlink:href="#ms"  x="240.4" y="125"/>
-<use xlink:href="#bs"  x="240.4" y="144"/>
-<use xlink:href="#bp"  x="240.4" y="163"/>
-<use xlink:href="#qs"  x="240.4" y="182"/>
+<use xlink:href="#ui"  x="190.4" y="154"/>
+<use xlink:href="#ms"  x="190.4" y="173"/>
+<use xlink:href="#bs"  x="190.4" y="192"/>
+<use xlink:href="#bp"  x="190.4" y="211"/>
+<use xlink:href="#qs"  x="190.4" y="230"/>
 
-<use xlink:href="#tg"  x="240.4" y="299"/>
-<use xlink:href="#if"  x="240.4" y="280"/>
-<use xlink:href="#gf"  x="240.4" y="261"/>
-<use xlink:href="#qd"  x="240.4" y="242"/>
-<use xlink:href="#tc"  x="240.4" y="223"/>
-<use xlink:href="#es"  x="240.4" y="204"/>
+<use xlink:href="#tg"  x="190.4" y="347"/>
+<use xlink:href="#if"  x="190.4" y="328"/>
+<use xlink:href="#gf"  x="190.4" y="309"/>
+<use xlink:href="#qd"  x="190.4" y="290"/>
+<use xlink:href="#tc"  x="190.4" y="271"/>
+<use xlink:href="#es"  x="190.4" y="252"/>
 
 
 
-    <rect id="node7" x="270" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node7" x="220" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 7
 Host Name: LVMOPAPIRMP1U
 IP: 10.119.133.13</title>
     </rect>
-    <text id="nodetext7" x="283.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext7" x="233.8" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 7</text>
     
-<use xlink:href="#r"  x="271" y="106"/>
-<use xlink:href="#mp"  x="271" y="125"/>
+<use xlink:href="#r"  x="221" y="154"/>
+<use xlink:href="#mp"  x="221" y="173"/>
 
-<use xlink:href="#tg"  x="271" y="299"/>
+<use xlink:href="#tg"  x="221" y="347"/>
 
 
 
-    <rect id="node8" x="300.6" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node8" x="250.60000000000002" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 8
 Host Name: LVMOPAPIRMP2U
 IP: 10.119.133.14</title>
     </rect>
-    <text id="nodetext8" x="314.40000000000003" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext8" x="264.40000000000003" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 8</text>
     
-<use xlink:href="#r"  x="301.6" y="106"/>
-<use xlink:href="#mp"  x="301.6" y="125"/>
+<use xlink:href="#r"  x="251.60000000000002" y="154"/>
+<use xlink:href="#mp"  x="251.60000000000002" y="173"/>
 
-<use xlink:href="#tg"  x="301.6" y="299"/>
+<use xlink:href="#tg"  x="251.60000000000002" y="347"/>
 
 
 
-    <rect id="node5" x="331.20000000000005" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node5" x="281.20000000000005" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 5
 Host Name: LVMOPAPIMP1U
 IP: 10.119.133.11</title>
     </rect>
-    <text id="nodetext5" x="345.00000000000006" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext5" x="295.00000000000006" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 5</text>
     
-<use xlink:href="#mp"  x="332.20000000000005" y="106"/>
+<use xlink:href="#mp"  x="282.20000000000005" y="154"/>
 
-<use xlink:href="#tg"  x="332.20000000000005" y="299"/>
+<use xlink:href="#tg"  x="282.20000000000005" y="347"/>
 
 
 
-    <rect id="node6" x="361.8" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node6" x="311.8" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 6
 Host Name: LVMOPAPIMP2U
 IP: 10.119.133.12</title>
     </rect>
-    <text id="nodetext6" x="375.6" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext6" x="325.6" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
-<use xlink:href="#mp"  x="362.8" y="106"/>
+<use xlink:href="#mp"  x="312.8" y="154"/>
 
-<use xlink:href="#tg"  x="362.8" y="299"/>
+<use xlink:href="#tg"  x="312.8" y="347"/>
 
 
-<rect id="subnet1" x="410.4" y="101" width="102.80000000000001" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
+<rect id="subnet1" x="360.4" y="149" width="102.80000000000001" height="236" style="fill:#f2f2f2;stroke:#bfbfbf">
                     <title>Subnet: external</title>
                 </rect>
 
 
-    <rect id="node10" x="418.4" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node10" x="368.4" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 10
 Host Name: LVMOPAPIDPU
 IP: 10.119.134.11</title>
     </rect>
-    <text id="nodetext10" x="432.2" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext10" x="382.2" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 10</text>
     
-<use xlink:href="#dp"  x="419.4" y="106"/>
+<use xlink:href="#dp"  x="369.4" y="154"/>
 
-<use xlink:href="#ht"  x="419.4" y="299"/>
-<use xlink:href="#no"  x="419.4" y="280"/>
+<use xlink:href="#ht"  x="369.4" y="347"/>
+<use xlink:href="#no"  x="369.4" y="328"/>
 
 
 
-    <rect id="node11" x="449" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node11" x="399" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 11
 Host Name: LVMOPAPIR1U
 IP: 10.119.134.12</title>
     </rect>
-    <text id="nodetext11" x="462.8" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext11" x="412.8" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 11</text>
     
-<use xlink:href="#r"  x="450" y="106"/>
+<use xlink:href="#r"  x="400" y="154"/>
 
-<use xlink:href="#tg"  x="450" y="299"/>
+<use xlink:href="#tg"  x="400" y="347"/>
 
 
 
-    <rect id="node12" x="479.59999999999997" y="104" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node12" x="429.59999999999997" y="152" width="27.6" height="216" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 12
 Host Name: LVMOPAPIR2U
 IP: 10.119.134.13</title>
     </rect>
-    <text id="nodetext12" x="493.4" y="328" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext12" x="443.4" y="376" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 12</text>
     
-<use xlink:href="#r"  x="480.59999999999997" y="106"/>
+<use xlink:href="#r"  x="430.59999999999997" y="154"/>
 
-<use xlink:href="#tg"  x="480.59999999999997" y="299"/>
+<use xlink:href="#tg"  x="430.59999999999997" y="347"/>
 </svg>

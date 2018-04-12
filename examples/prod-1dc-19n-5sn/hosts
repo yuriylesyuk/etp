@@ -1,0 +1,20 @@
+[edge]
+n01 ansible_host=10.119.3.201
+n02 ansible_host=10.119.3.202
+n03 ansible_host=10.119.3.203
+n04 ansible_host=10.119.3.204
+n05 ansible_host=10.119.3.205
+n06 ansible_host=10.119.3.206
+n07 ansible_host=10.119.3.207
+n08 ansible_host=10.119.3.208
+n09 ansible_host=10.119.3.209
+n10 ansible_host=10.119.3.210
+n11 ansible_host=10.119.3.211
+n12 ansible_host=10.119.3.212
+n13 ansible_host=10.119.3.213
+n15 ansible_host=10.119.3.215
+n16 ansible_host=10.119.3.216
+n17 ansible_host=10.119.3.217
+n18 ansible_host=10.119.3.218
+n19 ansible_host=10.119.3.219
+n29 ansible_host=10.119.3.220

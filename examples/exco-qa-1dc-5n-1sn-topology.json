@@ -175,6 +175,19 @@
                     "nodes": [
                         { "host": "/dc/*/n/*", "port": 9005 }
                     ]
+                },
+                {
+                    "name": "env-r-ha-secure",
+                    "comp": "R", 
+                    "ip": "api.exco.com",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/org/org/env/prod/vhost" }
+                    ]
                 }
             ]
         }

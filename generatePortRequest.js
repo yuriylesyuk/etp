@@ -250,7 +250,7 @@ module.exports = function ( topologyFile, outputFile, program ){
     var testportcolumns = [ "c", "s", "p"]
 
     var testports = fp.flow(
-                    fp.map( port => { return { c: port.srcip, s: port.dstip, p: port.port }; } )
+                    fp.map( port => { return { cat: port.category, c: port.srcip, s: port.dstip, p: port.port }; } )
         )(firewallPortRequestsList).reduce( (arr,elem) => { arr.push( elem ); return arr;}, [] ) ;
 
     // Generate test port input

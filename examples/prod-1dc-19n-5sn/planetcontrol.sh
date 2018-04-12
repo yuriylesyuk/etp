@@ -147,15 +147,15 @@ fi
 
 
 
+
+
+
+
 if [[ ";dc-1;planet;" =~ ";$TARGET;" ]]
 then
    $DRYRUN ansible n19 -a $DRYESC$DRYQUOTE"apigee-service apigee-postgresql $ACTION$DRYESC$DRYQUOTE"
    if [[ $? -ne 0 ]]; then exit 1; fi
 fi
-
-
-
-
 
 
 

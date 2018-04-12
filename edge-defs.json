@@ -1009,7 +1009,7 @@
         },
         "R": {
             "pingProtocol": "http",
-            "pingPort": 8081,
+            "pingPort": 15999,
             "pingPath": "http://$host:8081/v1/servers/self/up",
             "responsecode": 200
         }

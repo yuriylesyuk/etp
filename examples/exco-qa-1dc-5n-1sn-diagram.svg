@@ -257,6 +257,13 @@ id="svg2">
 
         <text id="text1488" x="7" y="41" style="font-weight:bold;font-size:10px;font-family:Arial;" text-anchor="start">DC-1</text>
     
+<g transform="translate(17.30000000000001,54)">
+        <rect id="node1" x="0" y="0" width="42" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
+                <title>tooltip</title>
+        </rect> 
+        <use xlink:href="#lb"/>
+        <use xlink:href="#ms" transform="scale(0.6) translate(40,8)"/>
+</g>
 <g transform="translate(69.30000000000001,54)">
         <rect id="node1" x="0" y="0" width="60" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
                 <title>tooltip</title>
@@ -265,105 +272,112 @@ id="svg2">
         <use xlink:href="#r" transform="scale(0.6) translate(40,8)"/>
 <use xlink:href="#r" transform="scale(0.6) translate(70,8)"/>
 </g>
+<g transform="translate(NaN,74)">
+        <rect id="node1" x="0" y="0" width="42" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
+                <title>tooltip</title>
+        </rect> 
+        <use xlink:href="#lb"/>
+        <use xlink:href="#r" transform="scale(0.6) translate(40,8)"/>
+</g>
 
-        <line x1="7" y1="72" x2="201.60000000000002" y2="72" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
-        <text id="text1488" x="201.60000000000002" y="80" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
+        <line x1="7" y1="92" x2="201.60000000000002" y2="92" style="stroke:#7f7f7f;;stroke-width:0.5;stroke-dasharray:6, 2;stroke-dashoffset:0;"/>
+        <text id="text1488" x="201.60000000000002" y="100" style="font-weight:normal;font-size:8px;font-family:Arial;" text-anchor="end">CORE</text>
     
 
-<rect id="subnet1" x="7" y="92" width="194.60000000000002" height="122" style="fill:#f2f2f2;stroke:#bfbfbf">
+<rect id="subnet1" x="7" y="112" width="194.60000000000002" height="122" style="fill:#f2f2f2;stroke:#bfbfbf">
                     <title>Subnet: edge-devportal</title>
                 </rect>
 
 
-    <rect id="node1" x="15" y="95" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node1" x="15" y="115" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 1
 Host Name: dbqapiman01
 IP: 10.36.11.19</title>
     </rect>
-    <text id="nodetext1" x="28.8" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext1" x="28.8" y="225" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 1</text>
     
-<use xlink:href="#ui"  x="16" y="97"/>
-<use xlink:href="#ms"  x="16" y="116"/>
+<use xlink:href="#ui"  x="16" y="117"/>
+<use xlink:href="#ms"  x="16" y="136"/>
 
-<use xlink:href="#zk"  x="16" y="176"/>
-<use xlink:href="#cs"  x="16" y="157"/>
-<use xlink:href="#ol"  x="16" y="138"/>
+<use xlink:href="#zk"  x="16" y="196"/>
+<use xlink:href="#cs"  x="16" y="177"/>
+<use xlink:href="#ol"  x="16" y="158"/>
 
 
 
-    <rect id="node2" x="45.6" y="95" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node2" x="45.6" y="115" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 2
 Host Name: dbqapiproc01
 IP: 10.36.10.30</title>
     </rect>
-    <text id="nodetext2" x="59.400000000000006" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext2" x="59.400000000000006" y="225" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 2</text>
     
-<use xlink:href="#r"  x="46.6" y="97"/>
-<use xlink:href="#mp"  x="46.6" y="116"/>
+<use xlink:href="#r"  x="46.6" y="117"/>
+<use xlink:href="#mp"  x="46.6" y="136"/>
 
-<use xlink:href="#zk"  x="46.6" y="176"/>
-<use xlink:href="#cs"  x="46.6" y="157"/>
+<use xlink:href="#zk"  x="46.6" y="196"/>
+<use xlink:href="#cs"  x="46.6" y="177"/>
 
 
 
-    <rect id="node3" x="76.2" y="95" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node3" x="76.2" y="115" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 3
 Host Name: dbqapiproc02
 IP: 10.36.10.22</title>
     </rect>
-    <text id="nodetext3" x="90" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext3" x="90" y="225" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
-<use xlink:href="#r"  x="77.2" y="97"/>
-<use xlink:href="#mp"  x="77.2" y="116"/>
+<use xlink:href="#r"  x="77.2" y="117"/>
+<use xlink:href="#mp"  x="77.2" y="136"/>
 
-<use xlink:href="#zk"  x="77.2" y="176"/>
-<use xlink:href="#cs"  x="77.2" y="157"/>
+<use xlink:href="#zk"  x="77.2" y="196"/>
+<use xlink:href="#cs"  x="77.2" y="177"/>
 
 
 
-    <rect id="node4" x="106.80000000000001" y="95" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node4" x="106.80000000000001" y="115" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 4
 Host Name: dbqsax01
 IP: 10.36.8.23</title>
     </rect>
-    <text id="nodetext4" x="120.60000000000001" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext4" x="120.60000000000001" y="225" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 4</text>
     
-<use xlink:href="#ps"  x="107.80000000000001" y="97"/>
-<use xlink:href="#qs"  x="107.80000000000001" y="116"/>
+<use xlink:href="#ps"  x="107.80000000000001" y="117"/>
+<use xlink:href="#qs"  x="107.80000000000001" y="136"/>
 
-<use xlink:href="#qd"  x="107.80000000000001" y="176"/>
-<use xlink:href="#pgm"  x="107.80000000000001" y="157"/>
+<use xlink:href="#qd"  x="107.80000000000001" y="196"/>
+<use xlink:href="#pgm"  x="107.80000000000001" y="177"/>
 
 
 
-    <rect id="node5" x="137.4" y="95" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node5" x="137.4" y="115" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 5
 Host Name: dbqsax02
 IP: 10.36.8.22</title>
     </rect>
-    <text id="nodetext5" x="151.20000000000002" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext5" x="151.20000000000002" y="225" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 5</text>
     
-<use xlink:href="#ps"  x="138.4" y="97"/>
-<use xlink:href="#qs"  x="138.4" y="116"/>
+<use xlink:href="#ps"  x="138.4" y="117"/>
+<use xlink:href="#qs"  x="138.4" y="136"/>
 
-<use xlink:href="#qd"  x="138.4" y="176"/>
-<use xlink:href="#pgs"  x="138.4" y="157"/>
+<use xlink:href="#qd"  x="138.4" y="196"/>
+<use xlink:href="#pgs"  x="138.4" y="177"/>
 
 
 
-    <rect id="node6" x="168" y="95" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
+    <rect id="node6" x="168" y="115" width="27.6" height="102" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 6
 Host Name: dbqdevport01
 IP: 10.36.8.22</title>
     </rect>
-    <text id="nodetext6" x="181.8" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
+    <text id="nodetext6" x="181.8" y="225" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
-<use xlink:href="#dp"  x="169" y="97"/>
+<use xlink:href="#dp"  x="169" y="117"/>
 
 </svg>
