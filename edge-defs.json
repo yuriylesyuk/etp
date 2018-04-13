@@ -926,7 +926,7 @@
 
         { "id": "4526", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Management Server" },
         { "id": "4527", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Router" },
-        { "id": "4528", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Message Processor" },
+        { "id": "4528", "type": "rpc", "description": "Distributed cache calls between Message Processors, and for communication from the Router" },
         { "id": "4529", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Qpid Server" },
         { "id": "4530", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Postgres Server" },
 
