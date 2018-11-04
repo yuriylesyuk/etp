@@ -2,6 +2,8 @@
 var fs = require('fs');
 var fp = require("lodash/fp");
 
+var gu = require("./generateUtilities")
+
 // TODO: move to utils
 function rgb(r, g, b){
     function c(d){
@@ -14,12 +16,7 @@ function rgb(r, g, b){
 
 
 
-// function genRegionIdNodeId( onlySingleDC,  dcid, nodeid ){
-//     return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
-// }
-var genRegionIdNodeId = fp.curry( (onlySingleDC,  dcid, nodeid ) => {
-    return onlySingleDC ? "n"+ fp.padCharsStart('0')(2)(nodeid) : "dc" + dcid + "n"+ fp.padCharsStart('0')(2)(nodeid);
-})
+
 
 var ipT = fp.template( "IPDC<%= dcid %>N<%= ('0'+nodeid).slice(-2) %>" );
 var drT = fp.template( "$<%= ipref %>:<%= dcid %>,<%= rackid %>" );
@@ -40,7 +37,7 @@ function getNodeByIpRef( nodes, ipref){
 //    * nodes node list
 //    * XX component
 function gatherComp( topology, compType, compList ){
-    var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
+    var genNodeId = gu.genRegionIdNodeId( topology.regions.length === 1 );
 
     var comps = [];
     fp.map(
@@ -318,7 +315,7 @@ module.exports = function ( topologyFile, outputFile, program ){
 
     var topology = require( topologyFile );
 
-    var genNodeId = genRegionIdNodeId( topology.regions.length === 1 );
+    var genNodeId = gu.genRegionIdNodeId( topology.regions.length === 1 );
 
     // I.E.: ...= getTopologyProperty("customer.cassPassword");
     var getTopologyProperty= getTopologyPropertyFromTopologyPortdefs( portdefs, topology );

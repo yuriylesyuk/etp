@@ -2,19 +2,21 @@
 var fp = require("lodash/fp");
 
 
-module.exports = function ( topologyFile, outputFile ){
+// module.exports = function ( topologyFile, outputFile ){
 
-function isApigeeComponent( portdefs, component ) {
-    // make lookup table for component:isApigee check
-    var isApigee = fp(portdefs.mappings.edge).reduce( (comps, comp) => {
-            comps[comp.client.component] = comp.client.apigee;
-            return comps;
-    }, {});
-};
+// function isApigeeComponent( portdefs, component ) {
+//     // make lookup table for component:isApigee check
+//     var isApigee = fp(portdefs.mappings.edge).reduce( (comps, comp) => {
+//             comps[comp.client.component] = comp.client.apigee;
+//             return comps;
+//     }, {});
+// };
 
-// Usage: 
+// // Usage: 
 
- var isApigee = fp.partial(isApigeeComponent, portdefs);
+//  var isApigee = fp.partial(isApigeeComponent, portdefs);
 
-// Then later: 
- if( isApigee("CS") ){};
+// // Then later: 
+//  if( isApigee("CS") ){};
+
+

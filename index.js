@@ -25,7 +25,7 @@ program.on('*', function () {
     program.help();
 })
 
-var supportedArtifactTypes = ["diagram", "portrequest", "checkports", "inventory"];
+var supportedArtifactTypes = ["diagram", "portrequest", "checkports", "inventory", "consulconnect"];
 
 program.on('--help', function () {
     console.log(' Supported artifact:  ' + supportedArtifactTypes.join(", "));
@@ -65,4 +65,8 @@ if( artifactType === "portrequest"){
     var generateInventory = require( "./generateInventory.js" );
 
     generateInventory(topologyFile, outputFile, program);
+}else if (artifactType === "consulconnect" ){
+    var generateConsulConnect = require( "./generateConsulConnect.js" );
+
+    generateConsulConnect(topologyFile, outputFile, program);
 }
