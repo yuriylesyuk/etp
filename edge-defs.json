@@ -921,7 +921,7 @@
         { "id": "1103", "type": "tcp,jmx rmi", "description": "JMX Management" },
         { "id": "2181", "type": "tcp,zab", "description": "Zookeeper clients to connect to zk servers" },
         { "id": "2888", "type": "tcp", "description": "Zookeeper internode management: zk peers sending transaction updates" },
-        { "id": "3888", "type": "tcp|udp", "description": "Zookeeper internode management: for leader election ()" },
+        { "id": "3888", "type": "tcp", "description": "Zookeeper internode management: for leader election (electionAlg=3,default)" },
 
         { "id": "3306", "type": "tcp/udp", "description": "DEVPortal to MariaDB/MySQL" },
 
