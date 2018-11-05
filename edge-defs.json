@@ -914,11 +914,11 @@
     "ports": [
         { "id": "25", "type": "rmi", "description": "Defalt SMTP Server port" },
 
-        { "id": "1099", "type": "rmi", "description": "JMX Management" },
-        { "id": "1100", "type": "rmi", "description": "JMX Management" },
-        { "id": "1101", "type": "rmi", "description": "JMX Management" },
-        { "id": "1102", "type": "rmi", "description": "JMX Management" },
-        { "id": "1103", "type": "rmi", "description": "JMX Management" },
+        { "id": "1099", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1100", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1101", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1102", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1103", "type": "tcp,jmx rmi", "description": "JMX Management" },
         { "id": "2181", "type": "tcp,zab", "description": "Zookeeper clients to connect to zk servers" },
         { "id": "2888", "type": "tcp", "description": "Zookeeper internode management: zk peers sending transaction updates" },
         { "id": "3888", "type": "tcp|udp", "description": "Zookeeper internode management: for leader election ()" },
@@ -936,7 +936,7 @@
 
         { "id": "7000", "type": "tcp", "description": "Cassandra inter-node communications (gossip/replication/proxied queries/etc)" },
 
-        { "id": "7199", "type": "tcp,rmi", "description": "Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server." },
+        { "id": "7199", "type": "tcp,jmx rmi", "description": "Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server." },
 
         { "id": "8080", "type": "http", "description": "Default Management API Calls" },
         { "id": "8443", "type": "http", "description": "Default Management API Calls via TLS" },
