@@ -914,14 +914,14 @@
     "ports": [
         { "id": "25", "type": "rmi", "description": "Defalt SMTP Server port" },
 
-        { "id": "1099", "type": "rmi", "description": "JMX Management" },
-        { "id": "1100", "type": "rmi", "description": "JMX Management" },
-        { "id": "1101", "type": "rmi", "description": "JMX Management" },
-        { "id": "1102", "type": "rmi", "description": "JMX Management" },
-        { "id": "1103", "type": "rmi", "description": "JMX Management" },
-        { "id": "2181", "type": "???", "description": "Zookeeper internode management" },
-        { "id": "2888", "type": "???", "description": "Zookeeper internode management" },
-        { "id": "3888", "type": "???", "description": "Zookeeper internode management" },
+        { "id": "1099", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1100", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1101", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1102", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "1103", "type": "tcp,jmx rmi", "description": "JMX Management" },
+        { "id": "2181", "type": "tcp,zab", "description": "Zookeeper clients to connect to zk servers" },
+        { "id": "2888", "type": "tcp", "description": "Zookeeper internode management: zk peers sending transaction updates" },
+        { "id": "3888", "type": "tcp", "description": "Zookeeper internode management: for leader election (electionAlg=3,default)" },
 
         { "id": "3306", "type": "tcp/udp", "description": "DEVPortal to MariaDB/MySQL" },
 
@@ -931,12 +931,12 @@
         { "id": "4529", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Qpid Server" },
         { "id": "4530", "type": "rpc", "description": "Distributed cache and calls from the Management Servers to the Postgres Server" },
 
-        { "id": "5432", "type": "???", "description": "Postgres client" },
-        { "id": "5672", "type": "???", "description": "Sending analytics from Router and Message Processor to Qpid" },
+        { "id": "5432", "type": "tcp", "description": "PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)" },
+        { "id": "5672", "type": "tcp,amqp", "description": "Sending analytics from Router and Message Processor to Qpid" },
 
-        { "id": "7000", "type": "???", "description": "Cassandra inter-node communications" },
+        { "id": "7000", "type": "tcp", "description": "Cassandra inter-node communications (gossip/replication/proxied queries/etc)" },
 
-        { "id": "7199", "type": "???", "description": "JMX management. Must be open for access on the Cassandra node by the Management Server." },
+        { "id": "7199", "type": "tcp,jmx rmi", "description": "Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server." },
 
         { "id": "8080", "type": "http", "description": "Default Management API Calls" },
         { "id": "8443", "type": "http", "description": "Default Management API Calls via TLS" },
@@ -954,13 +954,13 @@
         { "id": "9000", "type": "http", "description": "Default Edge management UI port" },
         { "id": "9443", "type": "http", "description": "Default Edge management UI port via TLS" },
 
-        { "id": "9042", "type": "???", "description": "CQL native transport" },
+        { "id": "9042", "type": "tcp", "description": "Cassandra CQL native transport" },
 
-        { "id": "9160", "type": "???", "description": "Cassandra thrift client" },
+        { "id": "9160", "type": "tcp,thrift rpc", "description": "Cassandra thrift client" },
 
-        { "id": "10389", "type": "???", "description": "LDAP port" },
+        { "id": "10389", "type": "tcp,ldap", "description": "OpenLDAP port" },
 
-        { "id": "15999", "type": "???", "description": "Health check port for a load balancer" },
+        { "id": "15999", "type": "tcp", "description": "Health check port for a load balancer" },
 
 
         { "id": "59001", "type": "http", "description": "Port used by the apigee-validate utility to test the Edge installation" },
