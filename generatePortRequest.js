@@ -311,7 +311,7 @@ module.exports = function ( topologyFile, outputFile, program ){
 
 
     fs = require('fs');
-    fs.writeFile( outputFile+".compact", csvCompact.join("\n"), function (err) {
+    fs.writeFile( outputFile+".compact.csv", csvCompact.join("\n"), function (err) {
         if (err) 
             return console.log(err);
         console.log("File successfully written out");
@@ -339,7 +339,7 @@ module.exports = function ( topologyFile, outputFile, program ){
 
 
     fs = require('fs');
-    fs.writeFile( outputFile+".supercompact", csvSuperCompact.join("\n"), function (err) {
+    fs.writeFile( outputFile+".supercompact.csv", csvSuperCompact.join("\n"), function (err) {
         if (err) 
             return console.log(err);
         console.log("File successfully written out");

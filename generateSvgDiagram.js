@@ -66,6 +66,22 @@ id="svg2">
     >CS</text>
 </symbol>
 
+<symbol id="zkv">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZKv</text>
+</symbol>
+
+<symbol id="zko">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZKo</text>
+</symbol>
+
 <symbol id="zk">
     <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -171,6 +187,38 @@ id="svg2">
     >PGs</text>
 </symbol>
 
+<symbol id="dppg">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="0" y="0"
+        style="font-weight:bold;font-size:7px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="left"
+    >
+    <tspan x="8" dy="1.2em">DP</tspan>
+    <tspan x="8" dy="1.0em">PG</tspan>
+    </text>
+</symbol>
+
+<symbol id="dppgm">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="0" y="0"
+        style="font-weight:bold;font-size:7px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="left"
+    >
+    <tspan x="6" dy="1.2em">DP</tspan>
+    <tspan x="6" dy="1.0em">PGm</tspan>
+    </text>
+</symbol>
+
+<symbol id="dppgs">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#7a9543;"/>
+    <text id="text1488" x="0" y="0"
+        style="font-weight:bold;font-size:7px;font-family:Arial;fill:#7a9543;" 
+        alignment-baseline="middle" text-anchor="left"
+    >
+    <tspan x="6" dy="1.2em">DP</tspan>
+    <tspan x="6" dy="1.0em">PGs</tspan>
+    </text>
+</symbol>
 
 <symbol id="dp">
     <use xlink:href="#struct" style="fill:#c0504d;stroke:#c0504d;"/>
@@ -404,7 +452,7 @@ id="svg2">
                 lbWidth = getLoadBalancerWidth( lb );
 
 
-    console.log(xoffset, lbWidth);
+    // console.log(xoffset, lbWidth);
                 if( xoffset + lbPH + lbWidth > lbTotalWidth ){
                     rows.push( xoffset );
 
@@ -425,7 +473,7 @@ id="svg2">
         
         fp.map(
             lb => {
-    console.log(xoffset, lbWidth);
+    // console.log(xoffset, lbWidth);
                 if( xoffset + lbPH + lbWidth > lbTotalWidth ){
                     row++
 
