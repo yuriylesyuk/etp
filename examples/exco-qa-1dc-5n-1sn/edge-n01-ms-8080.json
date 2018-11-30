@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-n01-ms-8080",
+            "port": 8080,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

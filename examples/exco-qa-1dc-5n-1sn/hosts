@@ -1,7 +1,7 @@
 [edge]
-n01 ansible_host=10.36.11.19 ansible_user=srvtech ansible_ssh_private_key_file=~/.ssh/id_srvtech
-n02 ansible_host=10.36.10.30 ansible_user=srvtech ansible_ssh_private_key_file=~/.ssh/id_srvtech
-n03 ansible_host=10.36.10.22 ansible_user=srvtech ansible_ssh_private_key_file=~/.ssh/id_srvtech
-n04 ansible_host=10.36.8.23 ansible_user=srvtech ansible_ssh_private_key_file=~/.ssh/id_srvtech
-n05 ansible_host=10.36.8.22 ansible_user=srvtech ansible_ssh_private_key_file=~/.ssh/id_srvtech
-n06 ansible_host=10.36.8.22 ansible_user=srvtech ansible_ssh_private_key_file=~/.ssh/id_srvtech
+n01 ansible_host=10.36.11.19
+n02 ansible_host=10.36.10.30
+n03 ansible_host=10.36.10.22
+n04 ansible_host=10.36.8.23
+n05 ansible_host=10.36.8.22
+n06 ansible_host=10.36.8.22
