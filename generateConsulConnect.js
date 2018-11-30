@@ -12,6 +12,9 @@ var gu = require("./generateUtilities");
 //   edge-ccv-setup.sh               to configure iptables and sidecar proxies
 
 
+// ### Add node isolation
+
+
 // [ ] TODO: refactor two next loops into one function
 // [ ] ?collect nodes for ansible node list
 // [ ] TODO: refactor to edge-defs.json as SSOT [single source of truth]
@@ -30,7 +33,22 @@ var ccConfigurations = [
 
 ]
 
-// light-weight version of gatherComp [could be REFACTOR?]
+// TODO:
+//  MS: 4526
+
+// DP --> R 59002 << REJECT
+
+// TODO:: all others
+
+var systemIgnorePorts = [ 22 ]
+var ccIgnoreConfigurations = [
+    { cccomp: "MS", ports: [ 1099, 8443 ]},
+    { cccomp: "UI", ports: [ 9443 ]},
+    // [ ] TODO: refactor to topology as source of vhost definitions
+    { cccomp: "R", ports: [ 15999, 59001, 9001,90002,90003,90004,90005 ]}
+]
+
+// light-weight version of gatherComp [could be REFACTORED?]
 function gatherNodes( topology, compList ){
     var nodes = [];
     fp.map(
@@ -49,6 +67,111 @@ function gatherNodes( topology, compList ){
     return nodes;
 }
 
+function genisolationconfig( topology, genNodeId, ccvsetup ){
+
+    // all nodes
+
+    // [ ] TODO: factor-out inot generateUtilities.js (same in generateInventory.js)
+    var nodes = fp.flatMap( region => 
+            fp.flatMap( subnet => 
+                fp.map( node => {
+                    node.dcid = region.id;
+                    node.subnet = subnet.name;
+                    return node;
+                } )(subnet.nodes) 
+            )(region.subnets)
+        )(topology.regions);
+
+    var listofnodes = fp.join(",")( fp.map( n=> genNodeId( n.dcid, n.id ) )(nodes) );
+
+    ccvsetup.write( "#\n" );
+    ccvsetup.write( `## reset CONSUL_ custom chains\n` );
+    ccvsetup.write( "#\n" );
+
+    fp.map( chaindef => {
+            ccvsetup.write(
+                fp.template(
+                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -F <%= customchain %>"\n'
+                    +
+                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -X <%= customchain %>"\n'
+                    +
+                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -N <%= customchain %>"\n'
+                    +
+                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= chain %> -p tcp -j <%= customchain %>"\n'
+                    +
+                    // pass the consul:consul traffic through, including proxy sidecars
+                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= customchain %> -m owner --uid-owner consul -j RETURN"\n'
+                    +
+                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= customchain %> -m owner --gid-owner consul -j RETURN"\n'
+                    +
+                    '\n' )(chaindef)
+            )
+        })([
+            { nodes: listofnodes, table: "filter", chain: "INPUT", customchain: "CONSUL_INPUT" }, 
+            { nodes: listofnodes, table: "filter", chain: "OUTPUT", customchain: "CONSUL_INPUT" }, 
+            { nodes: listofnodes, table: "nat", chain: "INPUT", customchain: "CONSUL_INPUT" }, 
+            { nodes: listofnodes, table: "nat", chain: "OUTPUT", customchain: "CONSUL_INPUT" }
+        ]
+    );
+
+    ccvsetup.write( "#\n" );
+    ccvsetup.write( "## node traffic control\n" );
+    ccvsetup.write( "#\n\n" );
+
+
+    fp.forEach( node => {
+        var n = genNodeId( node.dcid, node.id );
+
+        //-------------------------------------------------------------
+        // 
+        //-------------------------------------------------------------
+        // Collect ports for components that are redirected to proxies
+        // ie: 2181,2888,3888,7000,7199,8080,9000,4526,9042,9160,10389
+
+        // for this node, collect components on the node and collect their ports from ccConfigurations
+        var rejectposts = [];
+        fp.reduce( ( ports, comp) => {
+            // collect all ports for the component in ccConfigurations
+            fp.map( ccomp => {
+                ports.push( ccomp.ccport );
+            })(fp.filter( {cccomp: comp} )(ccConfigurations));
+
+            return ports;
+        }, rejectposts)(fp.map(comp=>comp.comp)(node.components));
+
+        // Collect port that are ignored
+
+        // [ ] TODO: refactor to the ones that are not in ccComponents
+        var acceptports = []
+        acceptports.push( systemIgnorePorts );
+        fp.reduce( ( ports, comp) => {
+            // collect all ports for the component in ccConfigurations
+            fp.map( ccomp => {
+                ports.push( ccomp.ports );
+            })(fp.filter( {cccomp: comp} )(ccIgnoreConfigurations));
+
+            return ports;
+        }, acceptports)(fp.map(comp=>comp.comp)(node.components));
+
+        // REJECT traffic that is supposed to be redirected via proxies
+        ccvsetup.write( 
+            fp.template(
+                'ansible <%= n %> -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports <%= rejectposts %> -m state --state NEW,ESTABLISHED -j REJECT"\n'
+            )({ n: n, rejectposts: rejectposts })
+        );
+
+        // ACCEPT traffic that is processed by components
+        ccvsetup.write( 
+            fp.template(
+                'ansible <%= n %> -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports <%= acceptposts %> -m state --state NEW,ESTABLISHED -j ACCEPT"\n'
+            )({ n: n, acceptposts: acceptports })
+        );
+        ccvsetup.write( "\n" );
+
+    })(nodes);
+
+    ccvsetup.write( "#\n\n\n" );
+}
 
 function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeId, configFileTransfer, ccvsetup, program ){
 
@@ -67,15 +190,15 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
     var servernodes = fp.join(",")( fp.map( n=> genNodeId( n.dcid, n.nid ) )(servers) );
     var clientnodes = fp.join(",")( fp.map( n=> genNodeId( n.dcid, n.nid ) )(clients) );
 
-    // -- generate consul connect configuration
+    //
+    // -- generate consul connect configuration by component:port
+    //
 
     var ccCompPort = fp.template( '<%= cccomp %>-<%= ccport %>' )({ cccomp: cccomp.toLowerCase(), ccport: ccport });
 
     var serviceName = fp.template( 'edge-<%= ccCompPort %>' )({ ccCompPort: ccCompPort});
 
-
-
-
+   
     ccvsetup.write( "#\n" );
     ccvsetup.write( `## configuration for ${serviceName}\n` );
     ccvsetup.write( "#\n" );
@@ -90,19 +213,21 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
         var serviceNodeName = fp.template( 'edge-<%= n %>-<%= ccCompPort %>' )({ n: n, ccCompPort: ccCompPort});
         var serviceFileName = serviceNodeName + '.json';
     
+        //-------------------------------------------------------------
         // loop for a client to call to all servers
+        //-------------------------------------------------------------
         // server-set iptables fragment 
         // $node: $port: 1.1
         ccvsetup.write( 
             fp.template(
-                'ansible <%= clientnodes %> -ba "iptables -t nat -A OUTPUT -p tcp -d <%= ip %> --dport <%= ccport %> -j DNAT --to-destination 127.0.0.1:<%= port %>"\n'
+                'ansible <%= clientnodes %> -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d <%= ip %> --dport <%= ccport %> -j DNAT --to-destination 127.0.0.1:<%= port %>"\n'
             )({ clientnodes: clientnodes, ip: node.ip, ccport: ccport, port: node.port })
         );
 
         // node: $node: $port: 1.2
         ccvsetup.write( 
             fp.template(
-                'ansible <%= n %> -ba "iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport <%= ccport %> -j DNAT --to-destination <%= ip %>:<%= ccport %>"\n'
+                'ansible <%= n %> -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport <%= ccport %> -j DNAT --to-destination <%= ip %>:<%= ccport %>"\n'
             )({ n: n, ip: node.ip, ccport: ccport })
         );
 
@@ -152,9 +277,7 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
 
     })(servers)
 
-    ccvsetup.write( "#\n" );
-
-    // client nodes sidecars
+    // 
     // dc1-$node sidecar-for edge-$CC_COMP-$CC_PORT
     ccvsetup.write( 
         fp.template( 
@@ -162,7 +285,7 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
         )({ clientnodes: clientnodes, service: serviceName, upstreams: upstreams})
     );
 
-    ccvsetup.write( "#\n" );
+    ccvsetup.write( "#\n\n\n" );
 }
 
 // Params:
@@ -232,7 +355,29 @@ export CC_CONFIG_DIR=~/projects/edge-ccv
     var ccvconfig1 = fs.createWriteStream( platform.CC_DEPLOY_CONFIG1 );
     var ccvconfig2 = fs.createWriteStream( platform.CC_DEPLOY_CONFIG2 );
 
+    //
+    // transfer proxy def file to target nodes
+    //
     var configFileTransfer = configFilePlatformTranfer( platform, ccvconfig1, ccvconfig2 );
+
+    //
+    //  define consul:consul user:group for each consul node
+    //
+    // [ ] TODO:
+
+
+    //
+    //  reset and define CONSUL_ custom chains
+    //
+    genisolationconfig( topology, genNodeId, ccvsetup )
+
+    //
+    // generate component iptables configuration
+    //
+
+    ccvsetup.write( "#\n" );
+    ccvsetup.write( "## client nodes sidecars\n" );
+    ccvsetup.write( "#\n" );
 
     fp.map( cconfig => {
 
