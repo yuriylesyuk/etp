@@ -755,7 +755,7 @@ IP: 20.0.2.6</title>
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
 
-<use xlink:href="#zko"  x="431.2" y="233"/>
+<use xlink:href="#zkv"  x="431.2" y="233"/>
 <use xlink:href="#cs"  x="431.2" y="214"/>
 
 
@@ -892,7 +892,7 @@ IP: 30.0.3.6</title>
         alignment-baseline="middle" text-anchor="middle">Node 6</text>
     
 
-<use xlink:href="#zko"  x="754.6" y="176"/>
+<use xlink:href="#zkv"  x="754.6" y="176"/>
 <use xlink:href="#cs"  x="754.6" y="157"/>
 
 
