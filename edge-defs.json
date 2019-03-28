@@ -54,12 +54,14 @@
             "name": "multi-dc",
             "mapping": "multidc",
             "clients": [
+                "R",
                 "MP",
                 "MS",
                 "CS",
                 "ZK",
                 "OL",
                 "QS",
+                "PS",
                 "PGm",
                 "PGs"
             ]
@@ -729,6 +731,20 @@
         "multidc": [
             {
                 "client": {
+                    "component": "R",
+                    "apigee": true,
+                    "servers": [
+                        {
+                            "component": "MS",
+                            "ports": [
+                                "8080"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
                     "component": "MP",
                     "apigee": true,
                     "servers": [
@@ -736,6 +752,12 @@
                             "component": "MP",
                             "ports": [
                                 "4528"
+                            ]
+                        },
+                        {
+                            "component": "MS",
+                            "ports": [
+                                "8080"
                             ]
                         }
                     ]
@@ -845,6 +867,12 @@
                     "apigee": true,
                     "servers": [
                         {
+                            "component": "MS",
+                            "ports": [
+                                "8080"
+                            ]
+                        },
+                        {
                             "component": "PG",
                             "ports": [
                                 "5432"
@@ -860,6 +888,20 @@
                             "component": "PGs",
                             "ports": [
                                 "5432"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "PS",
+                    "apigee": true,
+                    "servers": [
+                        {
+                            "component": "MS",
+                            "ports": [
+                                "8080"
                             ]
                         }
                     ]
