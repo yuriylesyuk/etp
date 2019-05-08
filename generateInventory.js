@@ -96,6 +96,9 @@ var compName = {
     "PG": "apigee-postgresql",
     "PGm": "apigee-postgresql",
     "PGs": "apigee-postgresql",
+    "DPPG": "apigee-postgresql",
+    "DPPGm": "apigee-postgresql",
+    "DPPGs": "apigee-postgresql",
 
     "DP": "apigee-drupal-devportal", 
 
@@ -162,6 +165,7 @@ var getComponentPropertyFromTopologyPortdefs = fp.curry( ( portdefs, topology, c
 //      
 //   
 function streamProperty( stream, parameter, value, optional  ){
+	// console.log( "DEBUG: " + JSON.stringify(stream) + " " + parameter + " " + value + " " + optional );
     var optional = (typeof optional === "undefined" )? "R" : optional;
 
     // WARNING: Required parameters undefined
@@ -610,6 +614,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     var pss = gatherComp(topology, "PS");
     var pgms = gatherComp(topology, "PGm");
     var pgss = gatherComp(topology, "PGs");
+    var dppgms = gatherComp(topology, "DPPGm");
     
     var css = gatherComp(topology, "CS");
     var zks = gatherComp(topology, "CS");
@@ -698,7 +703,12 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     // iRULE: single PGm across all Data centers
     noOfPGms = pgms.length;
     if( noOfPGms !== 1 ){
-        ruleWarning( `Rule: single PGm across Data Centers. Found ${noOfPGms}` )
+        ruleWarning( `Rule: single PGm across Data Centers. Found ${noOfDPPGms}` )
+    }
+    // iRULE: single DPPGm across all Data centers
+    noOfDPPGms = dppgms.length;
+    if( noOfDPPGms !== 1 ){
+        ruleWarning( `Rule: single Dev Portal PGm across Data Centers. Found ${noOfDPPGms}` )
     }
 
 
@@ -769,8 +779,8 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
                     */
                     if( fp.includes("ms-host")(compConfigurationsIdx[configurations.compType].config) ){
-                        streamProperty( cfgstream, "MSIP", getTopologyProperty("<TODO: msip>"), "R" );
-                        streamProperty( cfgstream, "APIGEE_PORT_HTTP_MS", getTopologyProperty("customer.msPort"), "O" );
+                        streamProperty( cfgstream, "MSIP", getTopologyProperty("customer.msip") );
+                        streamProperty( cfgstream, "APIGEE_PORT_HTTP_MS", getTopologyProperty("customer.msipPort"), "O" );
                     }
 
                     if( fp.includes("ms-creds")(compConfigurationsIdx[configurations.compType].config) ){

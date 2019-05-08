@@ -1,0 +1,357 @@
+
+<head>
+    <style>
+        html * {
+            font-size: small;
+            font-family: "Arial Narrow", Arial, sans-serif !important;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #dddddd;
+        }
+
+        th,
+        td {
+            border: 1px solid lightgrey;
+        }
+
+        tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+        .roleApigee {
+            font-weight: bold;
+            color: #f83100;
+        }
+        .role3rdParty {
+            font-weight: bold;
+            color: blue;s
+        }
+        .nodeID {
+            font-weight: bold;
+        }
+    </style>
+</head><table>
+
+<thead>
+    <tr>
+        <th>DC</th>
+        <th>Node #</th>
+        <th>Role(s)</th>
+        <th>Rack</th>
+        <th>Subnet</th>
+        <th>Hostname</th>
+        <th>IP</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>external-rmps</td>
+    <td>dc1dmzrmp01</td>
+    <td>10.0.1.1</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>external-rmps</td>
+    <td>dc1dmzrmp02</td>
+    <td>10.0.1.2</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>external-rmps</td>
+    <td>dc1dmzrmp03</td>
+    <td>10.0.1.3</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">4</span></bold></td>
+    <td><span class="role3rdParty">OL</span>,<span class="roleApigee">MS</span>,<span class="roleApigee">UI</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1msuiol04</td>
+    <td>10.0.1.4</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">5</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc1cszk05</td>
+    <td>10.0.1.5</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">6</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc1cszk06</td>
+    <td>10.0.1.6</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">7</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc1cszk07</td>
+    <td>10.0.1.7</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">8</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1apzrmp08</td>
+    <td>10.0.1.8</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">9</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1apzrmp09</td>
+    <td>10.0.1.9</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">10</span></bold></td>
+    <td><span class="roleApigee">DP</span></td>
+    <td/>
+    <td>devportals</td>
+    <td>dc1dmzdp10</td>
+    <td>10.0.1.10</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">11</span></bold></td>
+    <td><span class="roleApigee">DP</span></td>
+    <td/>
+    <td>devportals</td>
+    <td>dc1dppgm11</td>
+    <td>10.0.1.11</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">12</span></bold></td>
+    <td><span class="roleApigee">QS</span>,<span class="role3rdParty">QD</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1qidd12</td>
+    <td>10.0.1.12</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">13</span></bold></td>
+    <td><span class="roleApigee">QS</span>,<span class="role3rdParty">QD</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1qidd13</td>
+    <td>10.0.1.13</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">14</span></bold></td>
+    <td><span class="roleApigee">PS</span>,<span class="role3rdParty">PGm</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1edgepgm14</td>
+    <td>10.0.1.14</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">15</span></bold></td>
+    <td><span class="role3rdParty">DPPGm</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc1dppgm15</td>
+    <td>10.0.1.15</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>external-rmps</td>
+    <td>dc2dmzrmp01</td>
+    <td>20.0.2.1</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>external-rmps</td>
+    <td>dc2dmzrmp02</td>
+    <td>20.0.2.2</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>external-rmps</td>
+    <td>dc2dmzrmp03</td>
+    <td>20.0.2.3</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">4</span></bold></td>
+    <td><span class="role3rdParty">OL</span>,<span class="roleApigee">MS</span>,<span class="roleApigee">UI</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2msuiol04</td>
+    <td>20.0.2.4</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">5</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc2cszk05</td>
+    <td>20.0.2.5</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">6</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc2cszk06</td>
+    <td>20.0.2.6</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">7</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc2cszk07</td>
+    <td>20.0.2.7</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">8</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2apzrmp08</td>
+    <td>20.0.2.8</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">9</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2apzrmp09</td>
+    <td>20.0.2.9</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">10</span></bold></td>
+    <td><span class="roleApigee">DP</span></td>
+    <td/>
+    <td>devportals</td>
+    <td>dc2dmzdp10</td>
+    <td>20.0.2.10</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">11</span></bold></td>
+    <td><span class="roleApigee">DP</span></td>
+    <td/>
+    <td>devportals</td>
+    <td>dc2dppgm11</td>
+    <td>20.0.2.11</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">12</span></bold></td>
+    <td><span class="roleApigee">QS</span>,<span class="role3rdParty">QD</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2qidd12</td>
+    <td>20.0.2.12</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">13</span></bold></td>
+    <td><span class="roleApigee">QS</span>,<span class="role3rdParty">QD</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2qidd13</td>
+    <td>20.0.2.13</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">14</span></bold></td>
+    <td><span class="roleApigee">PS</span>,<span class="role3rdParty">PGs</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2edgepgm14</td>
+    <td>20.0.2.14</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">15</span></bold></td>
+    <td><span class="role3rdParty">DPPGs</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc2dppgs15</td>
+    <td>20.0.2.15</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">5</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc3cszk05</td>
+    <td>30.0.3.5</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">6</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc3cszk06</td>
+    <td>30.0.3.6</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">7</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>gateway</td>
+    <td>dc3cszk07</td>
+    <td>30.0.3.7</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">16</span></bold></td>
+    <td><span class="role3rdParty">DPPGs</span></td>
+    <td/>
+    <td>gateway</td>
+    <td>dc3dppgs16</td>
+    <td>30.0.3.16</td>
+</tr></tbody></table>
+

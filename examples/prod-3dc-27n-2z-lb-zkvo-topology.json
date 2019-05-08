@@ -1,0 +1,698 @@
+{
+    "planet": "PROD",
+    "version": "0.0.1",
+    "regions": [
+        {
+            "id": 1,
+            "name": "dc-1",
+            "subnets": [
+                {
+                    "name": "external-rmps",
+                    "tier": "dmz",
+                    "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "dc1dmzrmp01",
+                            "ip": "10.0.1.1",
+                            "components": [
+                                {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "hostname": "dc1dmzrmp02",
+                            "ip": "10.0.1.2",
+                            "components": [
+                                   {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "hostname": "dc1dmzrmp03",
+                            "ip": "10.0.1.3",
+                            "components": [
+                                   {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "devportals",
+                    "tier": "dmz",
+                    "nodes": [
+                        {
+                            "id": 10,
+                            "hostname": "dc1dmzdp10",
+                            "ip": "10.0.1.10",
+                            "components": [
+                                {
+                                    "comp": "DP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 11,
+                            "hostname": "dc1dppgm11",
+                            "ip": "10.0.1.11",
+                            "components": [
+                                {
+                                    "comp": "DP"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "gateway",
+                    "tier": "apz",
+                    "nodes": [
+                        {
+                            "id": 4,
+                            "hostname": "dc1msuiol04",
+                            "ip": "10.0.1.4",
+                            "components": [
+                                {
+                                    "comp": "OL"
+                                },
+                                {
+                                    "comp": "MS"
+                                },
+                                {
+                                    "comp": "UI"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "rack": 1,
+                            "hostname": "dc1cszk05",
+                            "ip": "10.0.1.5",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "rack": 1,
+                            "hostname": "dc1cszk06",
+                            "ip": "10.0.1.6",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "rack": 1,
+                            "hostname": "dc1cszk07",
+                            "ip": "10.0.1.7",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 8,
+                            "hostname": "dc1apzrmp08",
+                            "ip": "10.0.1.8",
+                            "components": [
+                                {
+                                    "comp": "R"
+                                },
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 9,
+                            "hostname": "dc1apzrmp09",
+                            "ip": "10.0.1.9",
+                            "components": [
+                                   {
+                                    "comp": "R"
+                                },
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "hostname": "dc1qidd12",
+                            "ip": "10.0.1.12",
+                            "components": [
+                                {
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "QD"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 13,
+                            "hostname": "dc1qidd13",
+                            "ip": "10.0.1.13",
+                            "components": [
+                                {
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "QD"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 14,
+                            "hostname": "dc1edgepgm14",
+                            "ip": "10.0.1.14",
+                            "components": [
+                                {
+                                    "comp": "PS"
+                                },
+                                {
+                                    "comp": "PGm"
+                                }
+                            ]
+                        },
+                        {
+                          "id": 15,
+                            "hostname": "dc1dppgm15",
+                            "ip": "10.0.1.15",
+                            "components": [
+                                {
+                                    "comp": "DPPGm"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tiers": [
+                {
+                    "name": "dmz"
+                },
+                {
+                    "name": "apz"
+                }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "external-apis-he-1",
+                    "comp": "R", 
+                    "ip": "10.0.1.100",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/1/n/1", "port": 9001 },
+                        { "host": "/dc/1/n/2", "port": 9001 },
+                        { "host": "/dc/1/n/3", "port": 9001 }
+                    ]
+                },
+                {
+                    "name": "internal-apis-he-1",
+                    "comp": "R", 
+                    "ip": "10.0.1.101",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/1/n/8", "port": 9001 },
+                        { "host": "/dc/1/n/9", "port": 9001 }
+                    ]
+                },
+                {
+                    "name": "dev-portal-he-1",
+                    "comp": "DP", 
+                    "ip": "10.0.1.102",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/1/n/10", "port": 443 },
+                        { "host": "/dc/1/n/11", "port": 443 }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "dc-2",
+            "subnets": [
+                {
+                    "name": "external-rmps",
+                    "tier": "dmz",
+                    "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "dc2dmzrmp01",
+                            "ip": "20.0.2.1",
+                            "components": [
+                                  {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "hostname": "dc2dmzrmp02",
+                            "ip": "20.0.2.2",
+                            "components": [
+                                  {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "hostname": "dc2dmzrmp03",
+                            "ip": "20.0.2.3",
+                            "components": [
+                                {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "devportals",
+                    "tier": "dmz",
+                    "nodes": [
+                        {
+                            "id": 10,
+                            "hostname": "dc2dmzdp10",
+                            "ip": "20.0.2.10",
+                            "components": [
+                                {
+                                    "comp": "DP"
+                                }
+                            ]
+                        },
+                        {
+                          "id": 11,
+                            "hostname": "dc2dppgm11",
+                            "ip": "20.0.2.11",
+                            "components": [
+                                {
+                                    "comp": "DP"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "gateway",
+                    "tier": "apz",
+                    "nodes": [
+                        {
+                            "id": 4,
+                            "hostname": "dc2msuiol04",
+                            "ip": "20.0.2.4",
+                            "components": [
+                                {
+                                    "comp": "OL"
+                                },
+                                {
+                                    "comp": "MS"
+                                },
+                                {
+                                    "comp": "UI"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "rack": 1,
+                            "hostname": "dc2cszk05",
+                            "ip": "20.0.2.5",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "rack": 1,
+                            "hostname": "dc2cszk06",
+                            "ip": "20.0.2.6",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "rack": 1,
+                            "hostname": "dc2cszk07",
+                            "ip": "20.0.2.7",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKo"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 8,
+                            "hostname": "dc2apzrmp08",
+                            "ip": "20.0.2.8",
+                            "components": [
+                                {
+                                    "comp": "R"
+                                },
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 9,
+                            "hostname": "dc2apzrmp09",
+                            "ip": "20.0.2.9",
+                            "components": [
+                                   {
+                                    "comp": "R"
+                                },
+                                {
+                                    "comp": "MP"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "hostname": "dc2qidd12",
+                            "ip": "20.0.2.12",
+                            "components": [
+                                {
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "QD"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 13,
+                            "hostname": "dc2qidd13",
+                            "ip": "20.0.2.13",
+                            "components": [
+                                {
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "QD"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 14,
+                            "hostname": "dc2edgepgm14",
+                            "ip": "20.0.2.14",
+                            "components": [
+                                {
+                                    "comp": "PS"
+                                },
+                                {
+                                    "comp": "PGs"
+                                }
+                            ]
+                        },
+                        {
+                          "id": 15,
+                            "hostname": "dc2dppgs15",
+                            "ip": "20.0.2.15",
+                            "components": [
+                                {
+                                    "comp": "DPPGs"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tiers": [
+                {
+                    "name": "dmz"
+                },
+                {
+                    "name": "apz"
+                }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "external-apis-he-2",
+                    "comp": "R", 
+                    "ip": "10.0.2.200",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/2", "port": 9001 },
+                        { "host": "/dc/2/n/3", "port": 9001 }
+                    ]
+                },
+                {
+                    "name": "internal-apis-he-2",
+                    "comp": "R", 
+                    "ip": "20.0.2.201",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/2/n/8", "port": 9001 },
+                        { "host": "/dc/2/n/9", "port": 9001 }
+                    ]
+                },
+                {
+                    "name": "dev-portal-he-2",
+                    "comp": "DP", 
+                    "ip": "20.0.2.202",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/2/n/10", "port": 443 },
+                        { "host": "/dc/2/n/11", "port": 443 }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "dc-3",
+            "subnets": [
+                {
+                    "name": "gateway",
+                    "tier": "apz",
+                    "nodes": [
+                        {
+                            "id": 5,
+                            "rack": 1,
+                            "hostname": "dc3cszk05",
+                            "ip": "30.0.3.5",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "rack": 1,
+                            "hostname": "dc3cszk06",
+                            "ip": "30.0.3.6",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKv"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "rack": 1,
+                            "hostname": "dc3cszk07",
+                            "ip": "30.0.3.7",
+                            "components": [
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZKo"
+                                }
+                            ]
+                        },
+                        {
+                          "id": 16,
+                            "hostname": "dc3dppgs16",
+                            "ip": "30.0.3.16",
+                            "components": [
+                                {
+                                    "comp": "DPPGs"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tiers": [
+                {
+                    "name": "dmz"
+                },
+                {
+                    "name": "apz"
+                }
+            ]
+        }
+    ],
+    "customer": {
+        "brand": "FreddieMac",
+        "msip":"10.0.1.4",
+        "msipPort":"8080",
+        "adminEmail": "apiadmin@freddiemac.com",
+        "adminPassword": "Apigee123!",
+        "licenseFile": "/opt/apigee-install/configs/license.txt",
+        "skipSmtp": "n",
+        "smtpHost": "smtp.freddiemac.com",
+        "smtpPort": "25",
+        "smtpUser": "0",
+        "smtpPassword": "0",
+        "smtpSsl": "n"
+    },
+    "loadbalancers": [
+        {
+            "name": "external-apis",
+            "comp": "R", 
+            "ip": "10.0.0.1",
+            "port": 443,
+            "healthcheck" : {
+                "pingProtocol": "tcp",
+                "pingPath": "http://xxxx",
+                "responsecode": 200
+            },
+            "nodes": [
+                { "host": "/dc/1/n/*", "port": 9001 },
+                { "host": "/dc/2/n/*", "port": 9001 }
+            ]
+        },
+        {
+            "name": "internal-apis",
+            "comp": "R", 
+            "ip": "10.0.0.2",
+            "port": 443,
+            "healthcheck" : {
+                "pingProtocol": "tcp",
+                "pingPath": "http://xxxx",
+                "responsecode": 200
+            },
+            "nodes": [
+                { "host": "/dc/1/n/*", "port": 9001 },
+                { "host": "/dc/2/n/*", "port": 9001 }
+            ]
+        },
+        {
+            "name": "dev-portal",
+            "comp": "DP", 
+            "ip": "10.0.0.4",
+            "port": 443,
+            "healthcheck" : {
+                "pingProtocol": "tcp",
+                "pingPath": "http://xxxx",
+                "responsecode": 200
+            },
+            "nodes": [
+                { "host": "/dc/1/n/*", "port": 443 },
+                { "host": "/dc/2/n/*", "port": 443 }
+            ]
+        },
+        {
+            "name": "management-server",
+            "comp": "MS", 
+            "ip": "10.0.0.3",
+            "port": 443,
+            "healthcheck" : {
+                "pingProtocol": "tcpxx",
+                "pingPath": "http://xxxx",
+                "responsecode": 200
+            },
+            "nodes": [
+                { "host": "/dc/1/n/4", "port": 8443 },
+                { "host": "/dc/2/n/4", "port": 8443 }
+            ]
+        }
+    ]
+}

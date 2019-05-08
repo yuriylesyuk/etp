@@ -1,0 +1,119 @@
+Host dc1n01
+    HostName 10.0.1.1
+    IdentityFile 
+
+Host dc1n02
+    HostName 10.0.1.2
+    IdentityFile 
+
+Host dc1n03
+    HostName 10.0.1.3
+    IdentityFile 
+
+Host dc1n04
+    HostName 10.0.1.4
+    IdentityFile 
+
+Host dc1n05
+    HostName 10.0.1.5
+    IdentityFile 
+
+Host dc1n06
+    HostName 10.0.1.6
+    IdentityFile 
+
+Host dc1n07
+    HostName 10.0.1.7
+    IdentityFile 
+
+Host dc1n08
+    HostName 10.0.1.8
+    IdentityFile 
+
+Host dc1n09
+    HostName 10.0.1.9
+    IdentityFile 
+
+Host dc1n10
+    HostName 10.0.1.10
+    IdentityFile 
+
+Host dc1n11
+    HostName 10.0.1.11
+    IdentityFile 
+
+Host dc1n12
+    HostName 10.0.1.12
+    IdentityFile 
+
+Host dc1n13
+    HostName 10.0.1.13
+    IdentityFile 
+
+Host dc1n14
+    HostName 10.0.1.14
+    IdentityFile 
+
+Host dc1n15
+    HostName 10.0.1.15
+    IdentityFile 
+
+Host dc2n01
+    HostName 20.0.2.1
+    IdentityFile 
+
+Host dc2n02
+    HostName 20.0.2.2
+    IdentityFile 
+
+Host dc2n03
+    HostName 20.0.2.3
+    IdentityFile 
+
+Host dc2n04
+    HostName 20.0.2.4
+    IdentityFile 
+
+Host dc2n05
+    HostName 20.0.2.5
+    IdentityFile 
+
+Host dc2n06
+    HostName 20.0.2.6
+    IdentityFile 
+
+Host dc2n07
+    HostName 20.0.2.7
+    IdentityFile 
+
+Host dc2n08
+    HostName 20.0.2.8
+    IdentityFile 
+
+Host dc2n09
+    HostName 20.0.2.9
+    IdentityFile 
+
+Host dc2n10
+    HostName 20.0.2.10
+    IdentityFile 
+
+Host dc2n11
+    HostName 20.0.2.11
+    IdentityFile 
+
+Host dc2n12
+    HostName 20.0.2.12
+    IdentityFile 
+
+Host dc2n13
+    HostName 20.0.2.13
+    IdentityFile 
+
+Host dc2n14
+    HostName 20.0.2.14
+    IdentityFile 
+
+Host dc2n15
+    HostName 20.0.2.15
+    IdentityFile 

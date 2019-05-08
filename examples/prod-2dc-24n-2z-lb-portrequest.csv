@@ -1,0 +1,661 @@
+category, srcnode, srchostname, srcip, dstnode, dsthostname, dstip, clientcomponent, servercomponent, port, description
+internal, 1, dc1dmzrmp01, 10.0.1.1, 8, dc1apzrmp08, 10.0.1.8, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 8, dc1apzrmp08, 10.0.1.8, R, MP, 8998, Communication between Router and Message Processor
+internal, 1, dc1dmzrmp01, 10.0.1.1, 8, dc1apzrmp08, 10.0.1.8, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 1, dc1dmzrmp01, 10.0.1.1, 8, dc1apzrmp08, 10.0.1.8, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 9, dc1apzrmp09, 10.0.1.9, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 9, dc1apzrmp09, 10.0.1.9, R, MP, 8998, Communication between Router and Message Processor
+internal, 1, dc1dmzrmp01, 10.0.1.1, 9, dc1apzrmp09, 10.0.1.9, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 1, dc1dmzrmp01, 10.0.1.1, 9, dc1apzrmp09, 10.0.1.9, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 8, dc1apzrmp08, 10.0.1.8, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 8, dc1apzrmp08, 10.0.1.8, R, MP, 8998, Communication between Router and Message Processor
+internal, 2, dc1dmzrmp02, 10.0.1.2, 8, dc1apzrmp08, 10.0.1.8, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 2, dc1dmzrmp02, 10.0.1.2, 8, dc1apzrmp08, 10.0.1.8, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 9, dc1apzrmp09, 10.0.1.9, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 9, dc1apzrmp09, 10.0.1.9, R, MP, 8998, Communication between Router and Message Processor
+internal, 2, dc1dmzrmp02, 10.0.1.2, 9, dc1apzrmp09, 10.0.1.9, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 2, dc1dmzrmp02, 10.0.1.2, 9, dc1apzrmp09, 10.0.1.9, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 8, dc1apzrmp08, 10.0.1.8, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 8, dc1apzrmp08, 10.0.1.8, R, MP, 8998, Communication between Router and Message Processor
+internal, 3, dc1dmzrmp03, 10.0.1.3, 8, dc1apzrmp08, 10.0.1.8, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 3, dc1dmzrmp03, 10.0.1.3, 8, dc1apzrmp08, 10.0.1.8, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 9, dc1apzrmp09, 10.0.1.9, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 9, dc1apzrmp09, 10.0.1.9, R, MP, 8998, Communication between Router and Message Processor
+internal, 3, dc1dmzrmp03, 10.0.1.3, 9, dc1apzrmp09, 10.0.1.9, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 3, dc1dmzrmp03, 10.0.1.3, 9, dc1apzrmp09, 10.0.1.9, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 8998, Communication between Router and Message Processor
+internal, 8, dc1apzrmp08, 10.0.1.8, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 8, dc1apzrmp08, 10.0.1.8, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 8998, Communication between Router and Message Processor
+internal, 8, dc1apzrmp08, 10.0.1.8, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 8, dc1apzrmp08, 10.0.1.8, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 8998, Communication between Router and Message Processor
+internal, 8, dc1apzrmp08, 10.0.1.8, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 8, dc1apzrmp08, 10.0.1.8, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 8998, Communication between Router and Message Processor
+internal, 9, dc1apzrmp09, 10.0.1.9, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 9, dc1apzrmp09, 10.0.1.9, 1, dc1dmzrmp01, 10.0.1.1, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 8998, Communication between Router and Message Processor
+internal, 9, dc1apzrmp09, 10.0.1.9, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 9, dc1apzrmp09, 10.0.1.9, 2, dc1dmzrmp02, 10.0.1.2, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 8998, Communication between Router and Message Processor
+internal, 9, dc1apzrmp09, 10.0.1.9, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 9, dc1apzrmp09, 10.0.1.9, 3, dc1dmzrmp03, 10.0.1.3, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 4, dc1msuiol04, 10.0.1.4, R, MS, 8080, Default Management API Calls
+internal, 1, dc1dmzrmp01, 10.0.1.1, 4, dc1msuiol04, 10.0.1.4, R, MS, 8443, Default Management API Calls via TLS
+internal, 2, dc1dmzrmp02, 10.0.1.2, 4, dc1msuiol04, 10.0.1.4, R, MS, 8080, Default Management API Calls
+internal, 2, dc1dmzrmp02, 10.0.1.2, 4, dc1msuiol04, 10.0.1.4, R, MS, 8443, Default Management API Calls via TLS
+internal, 3, dc1dmzrmp03, 10.0.1.3, 4, dc1msuiol04, 10.0.1.4, R, MS, 8080, Default Management API Calls
+internal, 3, dc1dmzrmp03, 10.0.1.3, 4, dc1msuiol04, 10.0.1.4, R, MS, 8443, Default Management API Calls via TLS
+internal, 1, dc1dmzrmp01, 10.0.1.1, 12, dc1qidd12, 10.0.1.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc1dmzrmp01, 10.0.1.1, 13, dc1qidd13, 10.0.1.13, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc1dmzrmp02, 10.0.1.2, 12, dc1qidd12, 10.0.1.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc1dmzrmp02, 10.0.1.2, 13, dc1qidd13, 10.0.1.13, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc1dmzrmp03, 10.0.1.3, 12, dc1qidd12, 10.0.1.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc1dmzrmp03, 10.0.1.3, 13, dc1qidd13, 10.0.1.13, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc1dmzrmp01, 10.0.1.1, 5, dc1cszk05, 10.0.1.5, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc1dmzrmp01, 10.0.1.1, 6, dc1cszk06, 10.0.1.6, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc1dmzrmp01, 10.0.1.1, 7, dc1cszk07, 10.0.1.7, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc1dmzrmp02, 10.0.1.2, 5, dc1cszk05, 10.0.1.5, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc1dmzrmp02, 10.0.1.2, 6, dc1cszk06, 10.0.1.6, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc1dmzrmp02, 10.0.1.2, 7, dc1cszk07, 10.0.1.7, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc1dmzrmp03, 10.0.1.3, 5, dc1cszk05, 10.0.1.5, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc1dmzrmp03, 10.0.1.3, 6, dc1cszk06, 10.0.1.6, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc1dmzrmp03, 10.0.1.3, 7, dc1cszk07, 10.0.1.7, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc1dmzrmp01, 10.0.1.1, 5, dc1cszk05, 10.0.1.5, R, CS, 9042, Cassandra CQL native transport
+internal, 1, dc1dmzrmp01, 10.0.1.1, 5, dc1cszk05, 10.0.1.5, R, CS, 9160, Cassandra thrift client
+internal, 1, dc1dmzrmp01, 10.0.1.1, 6, dc1cszk06, 10.0.1.6, R, CS, 9042, Cassandra CQL native transport
+internal, 1, dc1dmzrmp01, 10.0.1.1, 6, dc1cszk06, 10.0.1.6, R, CS, 9160, Cassandra thrift client
+internal, 1, dc1dmzrmp01, 10.0.1.1, 7, dc1cszk07, 10.0.1.7, R, CS, 9042, Cassandra CQL native transport
+internal, 1, dc1dmzrmp01, 10.0.1.1, 7, dc1cszk07, 10.0.1.7, R, CS, 9160, Cassandra thrift client
+internal, 2, dc1dmzrmp02, 10.0.1.2, 5, dc1cszk05, 10.0.1.5, R, CS, 9042, Cassandra CQL native transport
+internal, 2, dc1dmzrmp02, 10.0.1.2, 5, dc1cszk05, 10.0.1.5, R, CS, 9160, Cassandra thrift client
+internal, 2, dc1dmzrmp02, 10.0.1.2, 6, dc1cszk06, 10.0.1.6, R, CS, 9042, Cassandra CQL native transport
+internal, 2, dc1dmzrmp02, 10.0.1.2, 6, dc1cszk06, 10.0.1.6, R, CS, 9160, Cassandra thrift client
+internal, 2, dc1dmzrmp02, 10.0.1.2, 7, dc1cszk07, 10.0.1.7, R, CS, 9042, Cassandra CQL native transport
+internal, 2, dc1dmzrmp02, 10.0.1.2, 7, dc1cszk07, 10.0.1.7, R, CS, 9160, Cassandra thrift client
+internal, 3, dc1dmzrmp03, 10.0.1.3, 5, dc1cszk05, 10.0.1.5, R, CS, 9042, Cassandra CQL native transport
+internal, 3, dc1dmzrmp03, 10.0.1.3, 5, dc1cszk05, 10.0.1.5, R, CS, 9160, Cassandra thrift client
+internal, 3, dc1dmzrmp03, 10.0.1.3, 6, dc1cszk06, 10.0.1.6, R, CS, 9042, Cassandra CQL native transport
+internal, 3, dc1dmzrmp03, 10.0.1.3, 6, dc1cszk06, 10.0.1.6, R, CS, 9160, Cassandra thrift client
+internal, 3, dc1dmzrmp03, 10.0.1.3, 7, dc1cszk07, 10.0.1.7, R, CS, 9042, Cassandra CQL native transport
+internal, 3, dc1dmzrmp03, 10.0.1.3, 7, dc1cszk07, 10.0.1.7, R, CS, 9160, Cassandra thrift client
+internal, 1, dc1dmzrmp01, 10.0.1.1, 8, dc1apzrmp08, 10.0.1.8, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 9, dc1apzrmp09, 10.0.1.9, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 8, dc1apzrmp08, 10.0.1.8, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 9, dc1apzrmp09, 10.0.1.9, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 8, dc1apzrmp08, 10.0.1.8, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 9, dc1apzrmp09, 10.0.1.9, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 1, dc1dmzrmp01, 10.0.1.1, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 2, dc1dmzrmp02, 10.0.1.2, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 3, dc1dmzrmp03, 10.0.1.3, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 1, dc1dmzrmp01, 10.0.1.1, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 2, dc1dmzrmp02, 10.0.1.2, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 3, dc1dmzrmp03, 10.0.1.3, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 4, dc1msuiol04, 10.0.1.4, MP, MS, 8080, Default Management API Calls
+internal, 1, dc1dmzrmp01, 10.0.1.1, 4, dc1msuiol04, 10.0.1.4, MP, MS, 8443, Default Management API Calls via TLS
+internal, 2, dc1dmzrmp02, 10.0.1.2, 4, dc1msuiol04, 10.0.1.4, MP, MS, 8080, Default Management API Calls
+internal, 2, dc1dmzrmp02, 10.0.1.2, 4, dc1msuiol04, 10.0.1.4, MP, MS, 8443, Default Management API Calls via TLS
+internal, 3, dc1dmzrmp03, 10.0.1.3, 4, dc1msuiol04, 10.0.1.4, MP, MS, 8080, Default Management API Calls
+internal, 3, dc1dmzrmp03, 10.0.1.3, 4, dc1msuiol04, 10.0.1.4, MP, MS, 8443, Default Management API Calls via TLS
+internal, 1, dc1dmzrmp01, 10.0.1.1, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc1dmzrmp02, 10.0.1.2, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc1dmzrmp03, 10.0.1.3, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc1apzrmp08, 10.0.1.8, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc1apzrmp09, 10.0.1.9, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc1dmzrmp01, 10.0.1.1, 12, dc1qidd12, 10.0.1.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc1dmzrmp01, 10.0.1.1, 13, dc1qidd13, 10.0.1.13, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc1dmzrmp02, 10.0.1.2, 12, dc1qidd12, 10.0.1.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc1dmzrmp02, 10.0.1.2, 13, dc1qidd13, 10.0.1.13, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc1dmzrmp03, 10.0.1.3, 12, dc1qidd12, 10.0.1.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc1dmzrmp03, 10.0.1.3, 13, dc1qidd13, 10.0.1.13, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc1dmzrmp01, 10.0.1.1, 5, dc1cszk05, 10.0.1.5, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc1dmzrmp01, 10.0.1.1, 6, dc1cszk06, 10.0.1.6, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc1dmzrmp01, 10.0.1.1, 7, dc1cszk07, 10.0.1.7, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc1dmzrmp02, 10.0.1.2, 5, dc1cszk05, 10.0.1.5, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc1dmzrmp02, 10.0.1.2, 6, dc1cszk06, 10.0.1.6, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc1dmzrmp02, 10.0.1.2, 7, dc1cszk07, 10.0.1.7, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc1dmzrmp03, 10.0.1.3, 5, dc1cszk05, 10.0.1.5, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc1dmzrmp03, 10.0.1.3, 6, dc1cszk06, 10.0.1.6, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc1dmzrmp03, 10.0.1.3, 7, dc1cszk07, 10.0.1.7, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc1dmzrmp01, 10.0.1.1, 5, dc1cszk05, 10.0.1.5, MP, CS, 9042, Cassandra CQL native transport
+internal, 1, dc1dmzrmp01, 10.0.1.1, 5, dc1cszk05, 10.0.1.5, MP, CS, 9160, Cassandra thrift client
+internal, 1, dc1dmzrmp01, 10.0.1.1, 6, dc1cszk06, 10.0.1.6, MP, CS, 9042, Cassandra CQL native transport
+internal, 1, dc1dmzrmp01, 10.0.1.1, 6, dc1cszk06, 10.0.1.6, MP, CS, 9160, Cassandra thrift client
+internal, 1, dc1dmzrmp01, 10.0.1.1, 7, dc1cszk07, 10.0.1.7, MP, CS, 9042, Cassandra CQL native transport
+internal, 1, dc1dmzrmp01, 10.0.1.1, 7, dc1cszk07, 10.0.1.7, MP, CS, 9160, Cassandra thrift client
+internal, 2, dc1dmzrmp02, 10.0.1.2, 5, dc1cszk05, 10.0.1.5, MP, CS, 9042, Cassandra CQL native transport
+internal, 2, dc1dmzrmp02, 10.0.1.2, 5, dc1cszk05, 10.0.1.5, MP, CS, 9160, Cassandra thrift client
+internal, 2, dc1dmzrmp02, 10.0.1.2, 6, dc1cszk06, 10.0.1.6, MP, CS, 9042, Cassandra CQL native transport
+internal, 2, dc1dmzrmp02, 10.0.1.2, 6, dc1cszk06, 10.0.1.6, MP, CS, 9160, Cassandra thrift client
+internal, 2, dc1dmzrmp02, 10.0.1.2, 7, dc1cszk07, 10.0.1.7, MP, CS, 9042, Cassandra CQL native transport
+internal, 2, dc1dmzrmp02, 10.0.1.2, 7, dc1cszk07, 10.0.1.7, MP, CS, 9160, Cassandra thrift client
+internal, 3, dc1dmzrmp03, 10.0.1.3, 5, dc1cszk05, 10.0.1.5, MP, CS, 9042, Cassandra CQL native transport
+internal, 3, dc1dmzrmp03, 10.0.1.3, 5, dc1cszk05, 10.0.1.5, MP, CS, 9160, Cassandra thrift client
+internal, 3, dc1dmzrmp03, 10.0.1.3, 6, dc1cszk06, 10.0.1.6, MP, CS, 9042, Cassandra CQL native transport
+internal, 3, dc1dmzrmp03, 10.0.1.3, 6, dc1cszk06, 10.0.1.6, MP, CS, 9160, Cassandra thrift client
+internal, 3, dc1dmzrmp03, 10.0.1.3, 7, dc1cszk07, 10.0.1.7, MP, CS, 9042, Cassandra CQL native transport
+internal, 3, dc1dmzrmp03, 10.0.1.3, 7, dc1cszk07, 10.0.1.7, MP, CS, 9160, Cassandra thrift client
+internal, 4, dc1msuiol04, 10.0.1.4, 1, dc1dmzrmp01, 10.0.1.1, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 4, dc1msuiol04, 10.0.1.4, 1, dc1dmzrmp01, 10.0.1.1, MS, MP, 8082, Issuing API requests directly to Message Processor
+internal, 4, dc1msuiol04, 10.0.1.4, 2, dc1dmzrmp02, 10.0.1.2, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 4, dc1msuiol04, 10.0.1.4, 2, dc1dmzrmp02, 10.0.1.2, MS, MP, 8082, Issuing API requests directly to Message Processor
+internal, 4, dc1msuiol04, 10.0.1.4, 3, dc1dmzrmp03, 10.0.1.3, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 4, dc1msuiol04, 10.0.1.4, 3, dc1dmzrmp03, 10.0.1.3, MS, MP, 8082, Issuing API requests directly to Message Processor
+internal, 4, dc1msuiol04, 10.0.1.4, 1, dc1dmzrmp01, 10.0.1.1, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 4, dc1msuiol04, 10.0.1.4, 1, dc1dmzrmp01, 10.0.1.1, MS, R, 8081, Issuing API requests directly to Router
+internal, 4, dc1msuiol04, 10.0.1.4, 2, dc1dmzrmp02, 10.0.1.2, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 4, dc1msuiol04, 10.0.1.4, 2, dc1dmzrmp02, 10.0.1.2, MS, R, 8081, Issuing API requests directly to Router
+internal, 4, dc1msuiol04, 10.0.1.4, 3, dc1dmzrmp03, 10.0.1.3, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 4, dc1msuiol04, 10.0.1.4, 3, dc1dmzrmp03, 10.0.1.3, MS, R, 8081, Issuing API requests directly to Router
+internal, 10, dc1dmzdp10, 10.0.1.10, 15, dc1dppgm15, 10.0.1.15, DP, DPPGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 11, dc1dppgm11, 10.0.1.11, 15, dc1dppgm15, 10.0.1.15, DP, DPPGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 10, dc1dmzdp10, 10.0.1.10, 4, dc1msuiol04, 10.0.1.4, DP, MS, 8080, Default Management API Calls
+internal, 10, dc1dmzdp10, 10.0.1.10, 4, dc1msuiol04, 10.0.1.4, DP, MS, 8443, Default Management API Calls via TLS
+internal, 11, dc1dppgm11, 10.0.1.11, 4, dc1msuiol04, 10.0.1.4, DP, MS, 8080, Default Management API Calls
+internal, 11, dc1dppgm11, 10.0.1.11, 4, dc1msuiol04, 10.0.1.4, DP, MS, 8443, Default Management API Calls via TLS
+internal, 10, dc1dmzdp10, 10.0.1.10, 1, dc1dmzrmp01, 10.0.1.1, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc1dmzdp10, 10.0.1.10, 2, dc1dmzrmp02, 10.0.1.2, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc1dmzdp10, 10.0.1.10, 3, dc1dmzrmp03, 10.0.1.3, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc1dmzdp10, 10.0.1.10, 8, dc1apzrmp08, 10.0.1.8, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc1dmzdp10, 10.0.1.10, 9, dc1apzrmp09, 10.0.1.9, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc1dppgm11, 10.0.1.11, 1, dc1dmzrmp01, 10.0.1.1, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc1dppgm11, 10.0.1.11, 2, dc1dmzrmp02, 10.0.1.2, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc1dppgm11, 10.0.1.11, 3, dc1dmzrmp03, 10.0.1.3, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc1dppgm11, 10.0.1.11, 8, dc1apzrmp08, 10.0.1.8, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc1dppgm11, 10.0.1.11, 9, dc1apzrmp09, 10.0.1.9, DP, R, 59002, The router port where SmartDocs page requests are sent
+multi-dc, 1, dc1dmzrmp01, 10.0.1.1, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc1dmzrmp01, 10.0.1.1, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc1dmzrmp01, 10.0.1.1, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc1dmzrmp01, 10.0.1.1, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc1dmzrmp01, 10.0.1.1, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc1dmzrmp02, 10.0.1.2, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc1dmzrmp02, 10.0.1.2, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc1dmzrmp02, 10.0.1.2, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc1dmzrmp02, 10.0.1.2, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc1dmzrmp02, 10.0.1.2, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc1dmzrmp03, 10.0.1.3, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc1dmzrmp03, 10.0.1.3, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc1dmzrmp03, 10.0.1.3, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc1dmzrmp03, 10.0.1.3, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc1dmzrmp03, 10.0.1.3, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc1apzrmp08, 10.0.1.8, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc1apzrmp08, 10.0.1.8, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc1apzrmp08, 10.0.1.8, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc1apzrmp08, 10.0.1.8, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc1apzrmp08, 10.0.1.8, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc1apzrmp09, 10.0.1.9, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc1apzrmp09, 10.0.1.9, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc1apzrmp09, 10.0.1.9, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc1apzrmp09, 10.0.1.9, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc1apzrmp09, 10.0.1.9, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 1, dc2dmzrmp01, 20.0.2.1, MS, R, 1100, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 1, dc2dmzrmp01, 20.0.2.1, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 1, dc2dmzrmp01, 20.0.2.1, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 2, dc2dmzrmp02, 20.0.2.2, MS, R, 1100, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 2, dc2dmzrmp02, 20.0.2.2, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 2, dc2dmzrmp02, 20.0.2.2, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 3, dc2dmzrmp03, 20.0.2.3, MS, R, 1100, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 3, dc2dmzrmp03, 20.0.2.3, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 3, dc2dmzrmp03, 20.0.2.3, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 8, dc2apzrmp08, 20.0.2.8, MS, R, 1100, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 8, dc2apzrmp08, 20.0.2.8, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 8, dc2apzrmp08, 20.0.2.8, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 9, dc2apzrmp09, 20.0.2.9, MS, R, 1100, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 9, dc2apzrmp09, 20.0.2.9, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 9, dc2apzrmp09, 20.0.2.9, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 1, dc2dmzrmp01, 20.0.2.1, MS, MP, 1101, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 1, dc2dmzrmp01, 20.0.2.1, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 1, dc2dmzrmp01, 20.0.2.1, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 2, dc2dmzrmp02, 20.0.2.2, MS, MP, 1101, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 2, dc2dmzrmp02, 20.0.2.2, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 2, dc2dmzrmp02, 20.0.2.2, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 3, dc2dmzrmp03, 20.0.2.3, MS, MP, 1101, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 3, dc2dmzrmp03, 20.0.2.3, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 3, dc2dmzrmp03, 20.0.2.3, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 8, dc2apzrmp08, 20.0.2.8, MS, MP, 1101, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 8, dc2apzrmp08, 20.0.2.8, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 8, dc2apzrmp08, 20.0.2.8, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 9, dc2apzrmp09, 20.0.2.9, MS, MP, 1101, JMX Management
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 9, dc2apzrmp09, 20.0.2.9, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 9, dc2apzrmp09, 20.0.2.9, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 5, dc2cszk05, 20.0.2.5, MS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 5, dc2cszk05, 20.0.2.5, MS, CS, 9042, Cassandra CQL native transport
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 5, dc2cszk05, 20.0.2.5, MS, CS, 9160, Cassandra thrift client
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 5, dc2cszk05, 20.0.2.5, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 6, dc2cszk06, 20.0.2.6, MS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 6, dc2cszk06, 20.0.2.6, MS, CS, 9042, Cassandra CQL native transport
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 6, dc2cszk06, 20.0.2.6, MS, CS, 9160, Cassandra thrift client
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 6, dc2cszk06, 20.0.2.6, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 7, dc2cszk07, 20.0.2.7, MS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 7, dc2cszk07, 20.0.2.7, MS, CS, 9042, Cassandra CQL native transport
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 7, dc2cszk07, 20.0.2.7, MS, CS, 9160, Cassandra thrift client
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 7, dc2cszk07, 20.0.2.7, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 14, dc2edgepgm14, 20.0.2.14, MS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, CS, CS, 9160, Cassandra thrift client
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, CS, CS, 9160, Cassandra thrift client
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, CS, CS, 9160, Cassandra thrift client
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, CS, CS, 9160, Cassandra thrift client
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, CS, CS, 9160, Cassandra thrift client
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, CS, CS, 9160, Cassandra thrift client
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, CS, CS, 9160, Cassandra thrift client
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, CS, CS, 9160, Cassandra thrift client
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, CS, CS, 9160, Cassandra thrift client
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 5, dc1cszk05, 10.0.1.5, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 5, dc1cszk05, 10.0.1.5, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 5, dc1cszk05, 10.0.1.5, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 6, dc1cszk06, 10.0.1.6, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 6, dc1cszk06, 10.0.1.6, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 6, dc1cszk06, 10.0.1.6, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 7, dc1cszk07, 10.0.1.7, 5, dc2cszk05, 20.0.2.5, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 7, dc1cszk07, 10.0.1.7, 6, dc2cszk06, 20.0.2.6, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 7, dc1cszk07, 10.0.1.7, 7, dc2cszk07, 20.0.2.7, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 4, dc1msuiol04, 10.0.1.4, 4, dc2msuiol04, 20.0.2.4, OL, OL, 10389, OpenLDAP port
+multi-dc, 12, dc1qidd12, 10.0.1.12, 14, dc2edgepgm14, 20.0.2.14, QS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 13, dc1qidd13, 10.0.1.13, 14, dc2edgepgm14, 20.0.2.14, QS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 14, dc1edgepgm14, 10.0.1.14, 14, dc2edgepgm14, 20.0.2.14, PGm, PGs, 22, 
+multi-dc, 14, dc1edgepgm14, 10.0.1.14, 14, dc2edgepgm14, 20.0.2.14, PGm, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 15, dc1dppgm15, 10.0.1.15, 15, dc2dppgs15, 20.0.2.15, DPPGm, DPPGs, 22, 
+multi-dc, 15, dc1dppgm15, 10.0.1.15, 15, dc2dppgs15, 20.0.2.15, DPPGm, DPPGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 1, dc2dmzrmp01, 20.0.2.1, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc2dmzrmp01, 20.0.2.1, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc2dmzrmp01, 20.0.2.1, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc2dmzrmp01, 20.0.2.1, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 1, dc2dmzrmp01, 20.0.2.1, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc2dmzrmp02, 20.0.2.2, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc2dmzrmp02, 20.0.2.2, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc2dmzrmp02, 20.0.2.2, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc2dmzrmp02, 20.0.2.2, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 2, dc2dmzrmp02, 20.0.2.2, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc2dmzrmp03, 20.0.2.3, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc2dmzrmp03, 20.0.2.3, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc2dmzrmp03, 20.0.2.3, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc2dmzrmp03, 20.0.2.3, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 3, dc2dmzrmp03, 20.0.2.3, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc2apzrmp08, 20.0.2.8, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc2apzrmp08, 20.0.2.8, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc2apzrmp08, 20.0.2.8, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc2apzrmp08, 20.0.2.8, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 8, dc2apzrmp08, 20.0.2.8, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc2apzrmp09, 20.0.2.9, 1, dc1dmzrmp01, 10.0.1.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc2apzrmp09, 20.0.2.9, 2, dc1dmzrmp02, 10.0.1.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc2apzrmp09, 20.0.2.9, 3, dc1dmzrmp03, 10.0.1.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc2apzrmp09, 20.0.2.9, 8, dc1apzrmp08, 10.0.1.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 9, dc2apzrmp09, 20.0.2.9, 9, dc1apzrmp09, 10.0.1.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 1, dc1dmzrmp01, 10.0.1.1, MS, R, 1100, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 1, dc1dmzrmp01, 10.0.1.1, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 1, dc1dmzrmp01, 10.0.1.1, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 2, dc1dmzrmp02, 10.0.1.2, MS, R, 1100, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 2, dc1dmzrmp02, 10.0.1.2, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 2, dc1dmzrmp02, 10.0.1.2, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 3, dc1dmzrmp03, 10.0.1.3, MS, R, 1100, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 3, dc1dmzrmp03, 10.0.1.3, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 3, dc1dmzrmp03, 10.0.1.3, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 8, dc1apzrmp08, 10.0.1.8, MS, R, 1100, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 8, dc1apzrmp08, 10.0.1.8, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 8, dc1apzrmp08, 10.0.1.8, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 9, dc1apzrmp09, 10.0.1.9, MS, R, 1100, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 9, dc1apzrmp09, 10.0.1.9, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 9, dc1apzrmp09, 10.0.1.9, MS, R, 8081, Issuing API requests directly to Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 1, dc1dmzrmp01, 10.0.1.1, MS, MP, 1101, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 1, dc1dmzrmp01, 10.0.1.1, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 1, dc1dmzrmp01, 10.0.1.1, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 2, dc1dmzrmp02, 10.0.1.2, MS, MP, 1101, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 2, dc1dmzrmp02, 10.0.1.2, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 2, dc1dmzrmp02, 10.0.1.2, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 3, dc1dmzrmp03, 10.0.1.3, MS, MP, 1101, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 3, dc1dmzrmp03, 10.0.1.3, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 3, dc1dmzrmp03, 10.0.1.3, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 8, dc1apzrmp08, 10.0.1.8, MS, MP, 1101, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 8, dc1apzrmp08, 10.0.1.8, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 8, dc1apzrmp08, 10.0.1.8, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 9, dc1apzrmp09, 10.0.1.9, MS, MP, 1101, JMX Management
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 9, dc1apzrmp09, 10.0.1.9, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 9, dc1apzrmp09, 10.0.1.9, MS, MP, 8082, Issuing API requests directly to Message Processor
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 5, dc1cszk05, 10.0.1.5, MS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 5, dc1cszk05, 10.0.1.5, MS, CS, 9042, Cassandra CQL native transport
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 5, dc1cszk05, 10.0.1.5, MS, CS, 9160, Cassandra thrift client
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 5, dc1cszk05, 10.0.1.5, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 6, dc1cszk06, 10.0.1.6, MS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 6, dc1cszk06, 10.0.1.6, MS, CS, 9042, Cassandra CQL native transport
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 6, dc1cszk06, 10.0.1.6, MS, CS, 9160, Cassandra thrift client
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 6, dc1cszk06, 10.0.1.6, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 7, dc1cszk07, 10.0.1.7, MS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 7, dc1cszk07, 10.0.1.7, MS, CS, 9042, Cassandra CQL native transport
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 7, dc1cszk07, 10.0.1.7, MS, CS, 9160, Cassandra thrift client
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 7, dc1cszk07, 10.0.1.7, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 14, dc1edgepgm14, 10.0.1.14, MS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, CS, CS, 9160, Cassandra thrift client
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, CS, CS, 9160, Cassandra thrift client
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, CS, CS, 9160, Cassandra thrift client
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, CS, CS, 9160, Cassandra thrift client
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, CS, CS, 9160, Cassandra thrift client
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, CS, CS, 9160, Cassandra thrift client
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, CS, CS, 9160, Cassandra thrift client
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, CS, CS, 9160, Cassandra thrift client
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, CS, CS, 9160, Cassandra thrift client
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 5, dc2cszk05, 20.0.2.5, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 5, dc2cszk05, 20.0.2.5, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 5, dc2cszk05, 20.0.2.5, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 6, dc2cszk06, 20.0.2.6, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 6, dc2cszk06, 20.0.2.6, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 6, dc2cszk06, 20.0.2.6, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 7, dc2cszk07, 20.0.2.7, 5, dc1cszk05, 10.0.1.5, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 7, dc2cszk07, 20.0.2.7, 6, dc1cszk06, 10.0.1.6, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 7, dc2cszk07, 20.0.2.7, 7, dc1cszk07, 10.0.1.7, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 4, dc2msuiol04, 20.0.2.4, 4, dc1msuiol04, 10.0.1.4, OL, OL, 10389, OpenLDAP port
+multi-dc, 12, dc2qidd12, 20.0.2.12, 14, dc1edgepgm14, 10.0.1.14, QS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 13, dc2qidd13, 20.0.2.13, 14, dc1edgepgm14, 10.0.1.14, QS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 14, dc2edgepgm14, 20.0.2.14, 14, dc1edgepgm14, 10.0.1.14, PGs, PGm, 22, 
+multi-dc, 14, dc2edgepgm14, 20.0.2.14, 14, dc1edgepgm14, 10.0.1.14, PGs, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+multi-dc, 15, dc2dppgs15, 20.0.2.15, 15, dc1dppgm15, 10.0.1.15, DPPGs, DPPGm, 22, 
+multi-dc, 15, dc2dppgs15, 20.0.2.15, 15, dc1dppgm15, 10.0.1.15, DPPGs, DPPGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 1, dc2dmzrmp01, 20.0.2.1, 8, dc2apzrmp08, 20.0.2.8, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 8, dc2apzrmp08, 20.0.2.8, R, MP, 8998, Communication between Router and Message Processor
+internal, 1, dc2dmzrmp01, 20.0.2.1, 8, dc2apzrmp08, 20.0.2.8, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 1, dc2dmzrmp01, 20.0.2.1, 8, dc2apzrmp08, 20.0.2.8, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 9, dc2apzrmp09, 20.0.2.9, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 9, dc2apzrmp09, 20.0.2.9, R, MP, 8998, Communication between Router and Message Processor
+internal, 1, dc2dmzrmp01, 20.0.2.1, 9, dc2apzrmp09, 20.0.2.9, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 1, dc2dmzrmp01, 20.0.2.1, 9, dc2apzrmp09, 20.0.2.9, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 8, dc2apzrmp08, 20.0.2.8, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 8, dc2apzrmp08, 20.0.2.8, R, MP, 8998, Communication between Router and Message Processor
+internal, 2, dc2dmzrmp02, 20.0.2.2, 8, dc2apzrmp08, 20.0.2.8, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 2, dc2dmzrmp02, 20.0.2.2, 8, dc2apzrmp08, 20.0.2.8, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 9, dc2apzrmp09, 20.0.2.9, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 9, dc2apzrmp09, 20.0.2.9, R, MP, 8998, Communication between Router and Message Processor
+internal, 2, dc2dmzrmp02, 20.0.2.2, 9, dc2apzrmp09, 20.0.2.9, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 2, dc2dmzrmp02, 20.0.2.2, 9, dc2apzrmp09, 20.0.2.9, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 8, dc2apzrmp08, 20.0.2.8, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 8, dc2apzrmp08, 20.0.2.8, R, MP, 8998, Communication between Router and Message Processor
+internal, 3, dc2dmzrmp03, 20.0.2.3, 8, dc2apzrmp08, 20.0.2.8, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 3, dc2dmzrmp03, 20.0.2.3, 8, dc2apzrmp08, 20.0.2.8, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 9, dc2apzrmp09, 20.0.2.9, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 9, dc2apzrmp09, 20.0.2.9, R, MP, 8998, Communication between Router and Message Processor
+internal, 3, dc2dmzrmp03, 20.0.2.3, 9, dc2apzrmp09, 20.0.2.9, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 3, dc2dmzrmp03, 20.0.2.3, 9, dc2apzrmp09, 20.0.2.9, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 8998, Communication between Router and Message Processor
+internal, 8, dc2apzrmp08, 20.0.2.8, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 8, dc2apzrmp08, 20.0.2.8, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 8998, Communication between Router and Message Processor
+internal, 8, dc2apzrmp08, 20.0.2.8, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 8, dc2apzrmp08, 20.0.2.8, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 8998, Communication between Router and Message Processor
+internal, 8, dc2apzrmp08, 20.0.2.8, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 8, dc2apzrmp08, 20.0.2.8, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 8998, Communication between Router and Message Processor
+internal, 9, dc2apzrmp09, 20.0.2.9, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 9, dc2apzrmp09, 20.0.2.9, 1, dc2dmzrmp01, 20.0.2.1, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 8998, Communication between Router and Message Processor
+internal, 9, dc2apzrmp09, 20.0.2.9, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 9, dc2apzrmp09, 20.0.2.9, 2, dc2dmzrmp02, 20.0.2.2, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 8998, Communication between Router and Message Processor
+internal, 9, dc2apzrmp09, 20.0.2.9, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 8082, Issuing API requests directly to Message Processor
+internal, 9, dc2apzrmp09, 20.0.2.9, 3, dc2dmzrmp03, 20.0.2.3, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 4, dc2msuiol04, 20.0.2.4, R, MS, 8080, Default Management API Calls
+internal, 1, dc2dmzrmp01, 20.0.2.1, 4, dc2msuiol04, 20.0.2.4, R, MS, 8443, Default Management API Calls via TLS
+internal, 2, dc2dmzrmp02, 20.0.2.2, 4, dc2msuiol04, 20.0.2.4, R, MS, 8080, Default Management API Calls
+internal, 2, dc2dmzrmp02, 20.0.2.2, 4, dc2msuiol04, 20.0.2.4, R, MS, 8443, Default Management API Calls via TLS
+internal, 3, dc2dmzrmp03, 20.0.2.3, 4, dc2msuiol04, 20.0.2.4, R, MS, 8080, Default Management API Calls
+internal, 3, dc2dmzrmp03, 20.0.2.3, 4, dc2msuiol04, 20.0.2.4, R, MS, 8443, Default Management API Calls via TLS
+internal, 1, dc2dmzrmp01, 20.0.2.1, 12, dc2qidd12, 20.0.2.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc2dmzrmp01, 20.0.2.1, 13, dc2qidd13, 20.0.2.13, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc2dmzrmp02, 20.0.2.2, 12, dc2qidd12, 20.0.2.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc2dmzrmp02, 20.0.2.2, 13, dc2qidd13, 20.0.2.13, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc2dmzrmp03, 20.0.2.3, 12, dc2qidd12, 20.0.2.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc2dmzrmp03, 20.0.2.3, 13, dc2qidd13, 20.0.2.13, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc2dmzrmp01, 20.0.2.1, 5, dc2cszk05, 20.0.2.5, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc2dmzrmp01, 20.0.2.1, 6, dc2cszk06, 20.0.2.6, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc2dmzrmp01, 20.0.2.1, 7, dc2cszk07, 20.0.2.7, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc2dmzrmp02, 20.0.2.2, 5, dc2cszk05, 20.0.2.5, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc2dmzrmp02, 20.0.2.2, 6, dc2cszk06, 20.0.2.6, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc2dmzrmp02, 20.0.2.2, 7, dc2cszk07, 20.0.2.7, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc2dmzrmp03, 20.0.2.3, 5, dc2cszk05, 20.0.2.5, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc2dmzrmp03, 20.0.2.3, 6, dc2cszk06, 20.0.2.6, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc2dmzrmp03, 20.0.2.3, 7, dc2cszk07, 20.0.2.7, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc2dmzrmp01, 20.0.2.1, 5, dc2cszk05, 20.0.2.5, R, CS, 9042, Cassandra CQL native transport
+internal, 1, dc2dmzrmp01, 20.0.2.1, 5, dc2cszk05, 20.0.2.5, R, CS, 9160, Cassandra thrift client
+internal, 1, dc2dmzrmp01, 20.0.2.1, 6, dc2cszk06, 20.0.2.6, R, CS, 9042, Cassandra CQL native transport
+internal, 1, dc2dmzrmp01, 20.0.2.1, 6, dc2cszk06, 20.0.2.6, R, CS, 9160, Cassandra thrift client
+internal, 1, dc2dmzrmp01, 20.0.2.1, 7, dc2cszk07, 20.0.2.7, R, CS, 9042, Cassandra CQL native transport
+internal, 1, dc2dmzrmp01, 20.0.2.1, 7, dc2cszk07, 20.0.2.7, R, CS, 9160, Cassandra thrift client
+internal, 2, dc2dmzrmp02, 20.0.2.2, 5, dc2cszk05, 20.0.2.5, R, CS, 9042, Cassandra CQL native transport
+internal, 2, dc2dmzrmp02, 20.0.2.2, 5, dc2cszk05, 20.0.2.5, R, CS, 9160, Cassandra thrift client
+internal, 2, dc2dmzrmp02, 20.0.2.2, 6, dc2cszk06, 20.0.2.6, R, CS, 9042, Cassandra CQL native transport
+internal, 2, dc2dmzrmp02, 20.0.2.2, 6, dc2cszk06, 20.0.2.6, R, CS, 9160, Cassandra thrift client
+internal, 2, dc2dmzrmp02, 20.0.2.2, 7, dc2cszk07, 20.0.2.7, R, CS, 9042, Cassandra CQL native transport
+internal, 2, dc2dmzrmp02, 20.0.2.2, 7, dc2cszk07, 20.0.2.7, R, CS, 9160, Cassandra thrift client
+internal, 3, dc2dmzrmp03, 20.0.2.3, 5, dc2cszk05, 20.0.2.5, R, CS, 9042, Cassandra CQL native transport
+internal, 3, dc2dmzrmp03, 20.0.2.3, 5, dc2cszk05, 20.0.2.5, R, CS, 9160, Cassandra thrift client
+internal, 3, dc2dmzrmp03, 20.0.2.3, 6, dc2cszk06, 20.0.2.6, R, CS, 9042, Cassandra CQL native transport
+internal, 3, dc2dmzrmp03, 20.0.2.3, 6, dc2cszk06, 20.0.2.6, R, CS, 9160, Cassandra thrift client
+internal, 3, dc2dmzrmp03, 20.0.2.3, 7, dc2cszk07, 20.0.2.7, R, CS, 9042, Cassandra CQL native transport
+internal, 3, dc2dmzrmp03, 20.0.2.3, 7, dc2cszk07, 20.0.2.7, R, CS, 9160, Cassandra thrift client
+internal, 1, dc2dmzrmp01, 20.0.2.1, 8, dc2apzrmp08, 20.0.2.8, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 9, dc2apzrmp09, 20.0.2.9, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 8, dc2apzrmp08, 20.0.2.8, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 9, dc2apzrmp09, 20.0.2.9, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 8, dc2apzrmp08, 20.0.2.8, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 9, dc2apzrmp09, 20.0.2.9, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 1, dc2dmzrmp01, 20.0.2.1, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 2, dc2dmzrmp02, 20.0.2.2, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 3, dc2dmzrmp03, 20.0.2.3, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 1, dc2dmzrmp01, 20.0.2.1, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 2, dc2dmzrmp02, 20.0.2.2, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 3, dc2dmzrmp03, 20.0.2.3, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 4, dc2msuiol04, 20.0.2.4, MP, MS, 8080, Default Management API Calls
+internal, 1, dc2dmzrmp01, 20.0.2.1, 4, dc2msuiol04, 20.0.2.4, MP, MS, 8443, Default Management API Calls via TLS
+internal, 2, dc2dmzrmp02, 20.0.2.2, 4, dc2msuiol04, 20.0.2.4, MP, MS, 8080, Default Management API Calls
+internal, 2, dc2dmzrmp02, 20.0.2.2, 4, dc2msuiol04, 20.0.2.4, MP, MS, 8443, Default Management API Calls via TLS
+internal, 3, dc2dmzrmp03, 20.0.2.3, 4, dc2msuiol04, 20.0.2.4, MP, MS, 8080, Default Management API Calls
+internal, 3, dc2dmzrmp03, 20.0.2.3, 4, dc2msuiol04, 20.0.2.4, MP, MS, 8443, Default Management API Calls via TLS
+internal, 1, dc2dmzrmp01, 20.0.2.1, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 2, dc2dmzrmp02, 20.0.2.2, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 8, dc2apzrmp08, 20.0.2.8, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 3, dc2dmzrmp03, 20.0.2.3, 9, dc2apzrmp09, 20.0.2.9, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 8, dc2apzrmp08, 20.0.2.8, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 1, dc2dmzrmp01, 20.0.2.1, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 2, dc2dmzrmp02, 20.0.2.2, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 9, dc2apzrmp09, 20.0.2.9, 3, dc2dmzrmp03, 20.0.2.3, MP, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 1, dc2dmzrmp01, 20.0.2.1, 12, dc2qidd12, 20.0.2.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc2dmzrmp01, 20.0.2.1, 13, dc2qidd13, 20.0.2.13, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc2dmzrmp02, 20.0.2.2, 12, dc2qidd12, 20.0.2.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 2, dc2dmzrmp02, 20.0.2.2, 13, dc2qidd13, 20.0.2.13, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc2dmzrmp03, 20.0.2.3, 12, dc2qidd12, 20.0.2.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 3, dc2dmzrmp03, 20.0.2.3, 13, dc2qidd13, 20.0.2.13, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
+internal, 1, dc2dmzrmp01, 20.0.2.1, 5, dc2cszk05, 20.0.2.5, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc2dmzrmp01, 20.0.2.1, 6, dc2cszk06, 20.0.2.6, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc2dmzrmp01, 20.0.2.1, 7, dc2cszk07, 20.0.2.7, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc2dmzrmp02, 20.0.2.2, 5, dc2cszk05, 20.0.2.5, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc2dmzrmp02, 20.0.2.2, 6, dc2cszk06, 20.0.2.6, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 2, dc2dmzrmp02, 20.0.2.2, 7, dc2cszk07, 20.0.2.7, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc2dmzrmp03, 20.0.2.3, 5, dc2cszk05, 20.0.2.5, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc2dmzrmp03, 20.0.2.3, 6, dc2cszk06, 20.0.2.6, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 3, dc2dmzrmp03, 20.0.2.3, 7, dc2cszk07, 20.0.2.7, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, dc2dmzrmp01, 20.0.2.1, 5, dc2cszk05, 20.0.2.5, MP, CS, 9042, Cassandra CQL native transport
+internal, 1, dc2dmzrmp01, 20.0.2.1, 5, dc2cszk05, 20.0.2.5, MP, CS, 9160, Cassandra thrift client
+internal, 1, dc2dmzrmp01, 20.0.2.1, 6, dc2cszk06, 20.0.2.6, MP, CS, 9042, Cassandra CQL native transport
+internal, 1, dc2dmzrmp01, 20.0.2.1, 6, dc2cszk06, 20.0.2.6, MP, CS, 9160, Cassandra thrift client
+internal, 1, dc2dmzrmp01, 20.0.2.1, 7, dc2cszk07, 20.0.2.7, MP, CS, 9042, Cassandra CQL native transport
+internal, 1, dc2dmzrmp01, 20.0.2.1, 7, dc2cszk07, 20.0.2.7, MP, CS, 9160, Cassandra thrift client
+internal, 2, dc2dmzrmp02, 20.0.2.2, 5, dc2cszk05, 20.0.2.5, MP, CS, 9042, Cassandra CQL native transport
+internal, 2, dc2dmzrmp02, 20.0.2.2, 5, dc2cszk05, 20.0.2.5, MP, CS, 9160, Cassandra thrift client
+internal, 2, dc2dmzrmp02, 20.0.2.2, 6, dc2cszk06, 20.0.2.6, MP, CS, 9042, Cassandra CQL native transport
+internal, 2, dc2dmzrmp02, 20.0.2.2, 6, dc2cszk06, 20.0.2.6, MP, CS, 9160, Cassandra thrift client
+internal, 2, dc2dmzrmp02, 20.0.2.2, 7, dc2cszk07, 20.0.2.7, MP, CS, 9042, Cassandra CQL native transport
+internal, 2, dc2dmzrmp02, 20.0.2.2, 7, dc2cszk07, 20.0.2.7, MP, CS, 9160, Cassandra thrift client
+internal, 3, dc2dmzrmp03, 20.0.2.3, 5, dc2cszk05, 20.0.2.5, MP, CS, 9042, Cassandra CQL native transport
+internal, 3, dc2dmzrmp03, 20.0.2.3, 5, dc2cszk05, 20.0.2.5, MP, CS, 9160, Cassandra thrift client
+internal, 3, dc2dmzrmp03, 20.0.2.3, 6, dc2cszk06, 20.0.2.6, MP, CS, 9042, Cassandra CQL native transport
+internal, 3, dc2dmzrmp03, 20.0.2.3, 6, dc2cszk06, 20.0.2.6, MP, CS, 9160, Cassandra thrift client
+internal, 3, dc2dmzrmp03, 20.0.2.3, 7, dc2cszk07, 20.0.2.7, MP, CS, 9042, Cassandra CQL native transport
+internal, 3, dc2dmzrmp03, 20.0.2.3, 7, dc2cszk07, 20.0.2.7, MP, CS, 9160, Cassandra thrift client
+internal, 4, dc2msuiol04, 20.0.2.4, 1, dc2dmzrmp01, 20.0.2.1, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 4, dc2msuiol04, 20.0.2.4, 1, dc2dmzrmp01, 20.0.2.1, MS, MP, 8082, Issuing API requests directly to Message Processor
+internal, 4, dc2msuiol04, 20.0.2.4, 2, dc2dmzrmp02, 20.0.2.2, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 4, dc2msuiol04, 20.0.2.4, 2, dc2dmzrmp02, 20.0.2.2, MS, MP, 8082, Issuing API requests directly to Message Processor
+internal, 4, dc2msuiol04, 20.0.2.4, 3, dc2dmzrmp03, 20.0.2.3, MS, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
+internal, 4, dc2msuiol04, 20.0.2.4, 3, dc2dmzrmp03, 20.0.2.3, MS, MP, 8082, Issuing API requests directly to Message Processor
+internal, 4, dc2msuiol04, 20.0.2.4, 1, dc2dmzrmp01, 20.0.2.1, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 4, dc2msuiol04, 20.0.2.4, 1, dc2dmzrmp01, 20.0.2.1, MS, R, 8081, Issuing API requests directly to Router
+internal, 4, dc2msuiol04, 20.0.2.4, 2, dc2dmzrmp02, 20.0.2.2, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 4, dc2msuiol04, 20.0.2.4, 2, dc2dmzrmp02, 20.0.2.2, MS, R, 8081, Issuing API requests directly to Router
+internal, 4, dc2msuiol04, 20.0.2.4, 3, dc2dmzrmp03, 20.0.2.3, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
+internal, 4, dc2msuiol04, 20.0.2.4, 3, dc2dmzrmp03, 20.0.2.3, MS, R, 8081, Issuing API requests directly to Router
+internal, 10, dc2dmzdp10, 20.0.2.10, 15, dc2dppgs15, 20.0.2.15, DP, DPPGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 11, dc2dppgm11, 20.0.2.11, 15, dc2dppgs15, 20.0.2.15, DP, DPPGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 10, dc2dmzdp10, 20.0.2.10, 4, dc2msuiol04, 20.0.2.4, DP, MS, 8080, Default Management API Calls
+internal, 10, dc2dmzdp10, 20.0.2.10, 4, dc2msuiol04, 20.0.2.4, DP, MS, 8443, Default Management API Calls via TLS
+internal, 11, dc2dppgm11, 20.0.2.11, 4, dc2msuiol04, 20.0.2.4, DP, MS, 8080, Default Management API Calls
+internal, 11, dc2dppgm11, 20.0.2.11, 4, dc2msuiol04, 20.0.2.4, DP, MS, 8443, Default Management API Calls via TLS
+internal, 10, dc2dmzdp10, 20.0.2.10, 1, dc2dmzrmp01, 20.0.2.1, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc2dmzdp10, 20.0.2.10, 2, dc2dmzrmp02, 20.0.2.2, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc2dmzdp10, 20.0.2.10, 3, dc2dmzrmp03, 20.0.2.3, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc2dmzdp10, 20.0.2.10, 8, dc2apzrmp08, 20.0.2.8, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 10, dc2dmzdp10, 20.0.2.10, 9, dc2apzrmp09, 20.0.2.9, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc2dppgm11, 20.0.2.11, 1, dc2dmzrmp01, 20.0.2.1, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc2dppgm11, 20.0.2.11, 2, dc2dmzrmp02, 20.0.2.2, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc2dppgm11, 20.0.2.11, 3, dc2dmzrmp03, 20.0.2.3, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc2dppgm11, 20.0.2.11, 8, dc2apzrmp08, 20.0.2.8, DP, R, 59002, The router port where SmartDocs page requests are sent
+internal, 11, dc2dppgm11, 20.0.2.11, 9, dc2apzrmp09, 20.0.2.9, DP, R, 59002, The router port where SmartDocs page requests are sent
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.100, dc1dmzrmp01, dc1dmzrmp01, 10.0.1.1, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer external-apis-he-1 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.100, dc1dmzrmp01, dc1dmzrmp01, 10.0.1.1, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck external-apis-he-1 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.100, dc1dmzrmp02, dc1dmzrmp02, 10.0.1.2, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer external-apis-he-1 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.100, dc1dmzrmp02, dc1dmzrmp02, 10.0.1.2, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck external-apis-he-1 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.100, dc1dmzrmp03, dc1dmzrmp03, 10.0.1.3, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer external-apis-he-1 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.100, dc1dmzrmp03, dc1dmzrmp03, 10.0.1.3, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck external-apis-he-1 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.101, dc1apzrmp08, dc1apzrmp08, 10.0.1.8, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer internal-apis-he-1 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.101, dc1apzrmp08, dc1apzrmp08, 10.0.1.8, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck internal-apis-he-1 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.101, dc1apzrmp09, dc1apzrmp09, 10.0.1.9, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer internal-apis-he-1 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.101, dc1apzrmp09, dc1apzrmp09, 10.0.1.9, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck internal-apis-he-1 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.102, dc1dmzdp10, dc1dmzdp10, 10.0.1.10, <TODO: clientComponent>, <TODO: sc.component>, 443, Load Balancer dev-portal-he-1 for DP.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.102, dc1dmzdp10, dc1dmzdp10, 10.0.1.10, <TODO: clientComponent>, <TODO: sc.component>, , Load Balancer Healthcheck dev-portal-he-1 for DP on path undefined.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.102, dc1dppgm11, dc1dppgm11, 10.0.1.11, <TODO: clientComponent>, <TODO: sc.component>, 443, Load Balancer dev-portal-he-1 for DP.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.1.102, dc1dppgm11, dc1dppgm11, 10.0.1.11, <TODO: clientComponent>, <TODO: sc.component>, , Load Balancer Healthcheck dev-portal-he-1 for DP on path undefined.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.2.200, dc2dmzrmp01, dc2dmzrmp01, 20.0.2.1, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer external-apis-he-2 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.2.200, dc2dmzrmp01, dc2dmzrmp01, 20.0.2.1, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck external-apis-he-2 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.2.200, dc2dmzrmp02, dc2dmzrmp02, 20.0.2.2, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer external-apis-he-2 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.2.200, dc2dmzrmp02, dc2dmzrmp02, 20.0.2.2, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck external-apis-he-2 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.2.200, dc2dmzrmp03, dc2dmzrmp03, 20.0.2.3, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer external-apis-he-2 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 10.0.2.200, dc2dmzrmp03, dc2dmzrmp03, 20.0.2.3, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck external-apis-he-2 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.201, dc2apzrmp08, dc2apzrmp08, 20.0.2.8, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer internal-apis-he-2 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.201, dc2apzrmp08, dc2apzrmp08, 20.0.2.8, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck internal-apis-he-2 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.201, dc2apzrmp09, dc2apzrmp09, 20.0.2.9, <TODO: clientComponent>, <TODO: sc.component>, 9001, Load Balancer internal-apis-he-2 for R.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.201, dc2apzrmp09, dc2apzrmp09, 20.0.2.9, <TODO: clientComponent>, <TODO: sc.component>, 15999, Load Balancer Healthcheck internal-apis-he-2 for R on path 15999.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.202, dc2dmzdp10, dc2dmzdp10, 20.0.2.10, <TODO: clientComponent>, <TODO: sc.component>, 443, Load Balancer dev-portal-he-2 for DP.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.202, dc2dmzdp10, dc2dmzdp10, 20.0.2.10, <TODO: clientComponent>, <TODO: sc.component>, , Load Balancer Healthcheck dev-portal-he-2 for DP on path undefined.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.202, dc2dppgm11, dc2dppgm11, 20.0.2.11, <TODO: clientComponent>, <TODO: sc.component>, 443, Load Balancer dev-portal-he-2 for DP.
+loadbalancers, TODO: lbserver, <TODO: lbhostname??>, 20.0.2.202, dc2dppgm11, dc2dppgm11, 20.0.2.11, <TODO: clientComponent>, <TODO: sc.component>, , Load Balancer Healthcheck dev-portal-he-2 for DP on path undefined.

@@ -35,10 +35,15 @@
                 "PGs", 
                 "PGm", 
                 "ZK", 
+                "ZKv", 
+                "ZKo", 
                 "CS",
                 "BS",
                 "BP",
-                "DP"
+                "DP",
+                "DPPG",
+                "DPPGm",
+                "DPPGs"
             ]
         },
         {
@@ -59,11 +64,15 @@
                 "MS",
                 "CS",
                 "ZK",
+                "ZKv", 
+                "ZKo", 
                 "OL",
                 "QS",
                 "PS",
                 "PGm",
-                "PGs"
+                "PGs",
+                "DPPGm",
+                "DPPGs"
             ]
         }
     ],
@@ -98,6 +107,18 @@
                         },
                         {
                             "component": "ZK",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
                             "ports": [
                                 "2181"
                             ]
@@ -169,7 +190,37 @@
                             ]
                         },
                         {
+                            "component": "DPPG",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "DPPGm",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "DPPGs",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
                             "component": "ZK",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
                             "ports": [
                                 "2181"
                             ]
@@ -229,6 +280,18 @@
                             ]
                         },
                         {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
                             "component": "CS",
                             "ports": [
                                 "9042",
@@ -283,6 +346,18 @@
                             ]
                         },
                         {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
                             "component": "CS",
                             "ports": [
                                 "9042",
@@ -322,6 +397,18 @@
                             ]
                         },
                         {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
                             "component": "PG",
                             "ports": [
                                 "5432"
@@ -356,6 +443,18 @@
                             ]
                         },
                         {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
                             "component": "CS",
                             "ports": [
                                 "9042",
@@ -383,10 +482,58 @@
                             ]
                         },
                         {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
                             "component": "CS",
                             "ports": [
                                 "9042",
                                 "9160"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "DPPG",
+                    "apigee": false,
+                    "servers": [
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "DPPGm",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "PGs",
+                            "ports": [
+                                "22"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "DPPGs",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "DPPGm",
+                            "ports": [
+                                "22"
                             ]
                         }
                     ]
@@ -409,11 +556,67 @@
             },
             {
                 "client": {
+                    "component": "ZKv",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2888",
+                                "3888"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2888",
+                                "3888"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "ZKo",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2888",
+                                "3888"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2888",
+                                "3888"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
                     "component": "CS",
                     "apigee": false,
                     "servers": [
                         {
                             "component": "ZK",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
                             "ports": [
                                 "2181"
                             ]
@@ -441,7 +644,19 @@
                             ]
                         },
                         {
-                            "component": "PG",
+                            "component": "DPPG",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "DPPGm",
+                            "ports": [
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "DPPGs",
                             "ports": [
                                 "5432"
                             ]
@@ -832,6 +1047,54 @@
             },
             {
                 "client": {
+                    "component": "ZKo",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181",
+                                "2888",
+                                "3888"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181",
+                                "2888",
+                                "3888"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "ZKv",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "ZKv",
+                            "ports": [
+                                "2181",
+                                "2888",
+                                "3888"
+                            ]
+                        },
+                        {
+                            "component": "ZKo",
+                            "ports": [
+                                "2181",
+                                "2888",
+                                "3888"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
                     "component": "CS",
                     "apigee": false,
                     "servers": [
@@ -943,6 +1206,50 @@
                         },
                         {
                             "component": "PGs",
+                            "ports": [
+                                "22",
+                                "5432"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "DPPGm",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "DPPGm",
+                            "ports": [
+                                "22",
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "DPPGs",
+                            "ports": [
+                                "22",
+                                "5432"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "client": {
+                    "component": "DPPGs",
+                    "apigee": false,
+                    "servers": [
+                        {
+                            "component": "DPPGm",
+                            "ports": [
+                                "22",
+                                "5432"
+                            ]
+                        },
+                        {
+                            "component": "DPPGs",
                             "ports": [
                                 "22",
                                 "5432"
