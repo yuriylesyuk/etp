@@ -1,33 +1,35 @@
 #
 ## reset CONSUL_ custom chains
 #
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A INPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
+set +e
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -F CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -X CONSUL_INPUT"
+set -e
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -N CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A INPUT -p tcp -j CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
 
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A OUTPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -F CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -X CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -N CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A OUTPUT -p tcp -j CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
 
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A INPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -F CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -X CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -N CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A INPUT -p tcp -j CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
 
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A OUTPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -F CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -X CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -N CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A OUTPUT -p tcp -j CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
 
 #
 ## node traffic control
@@ -48,8 +50,6 @@ ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m mu
 ansible n05 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports  -m state --state NEW,ESTABLISHED -j REJECT"
 ansible n05 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
-ansible n06 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports  -m state --state NEW,ESTABLISHED -j REJECT"
-ansible n06 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
 #
 

@@ -34,3 +34,4 @@ TOPOLOGY=$1
 node $ETP_HOME/index.js g diagram $PWD/$TOPOLOGY-topology.json $PWD/$TOPOLOGY-diagram.svg
 node $ETP_HOME/index.js g portrequest $PWD/$TOPOLOGY-topology.json $PWD/$TOPOLOGY-portrequest.csv
 node $ETP_HOME/index.js g inventory -u srvtech -k "~/.ssh/id_srvtech" $PWD/$TOPOLOGY-topology.json $PWD/$TOPOLOGY-inventory.html
+node $ETP_HOME/index.js g consulconnect -u srvtech -k "~/.ssh/id_srvtech" $PWD/$TOPOLOGY-topology.json $PWD/$TOPOLOGY-inventory.html

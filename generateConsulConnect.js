@@ -41,11 +41,12 @@ var ccConfigurations = [
 // TODO:: all others
 
 var systemIgnorePorts = [ 22 ]
+
 var ccIgnoreConfigurations = [
     { cccomp: "MS", ports: [ 1099, 8443 ]},
     { cccomp: "UI", ports: [ 9443 ]},
     // [ ] TODO: refactor to topology as source of vhost definitions
-    { cccomp: "R", ports: [ 15999, 59001, 9001,90002,90003,90004,90005 ]}
+    { cccomp: "R", ports: [ 15999, 59001, 9001,9002,9003,9004,9005 ]}
 ]
 
 // light-weight version of gatherComp [could be REFACTORED?]

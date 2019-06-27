@@ -769,7 +769,17 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
                     */
                     if( fp.includes("ms-host")(compConfigurationsIdx[configurations.compType].config) ){
-                        streamProperty( cfgstream, "MSIP", getTopologyProperty("<TODO: msip>"), "R" );
+
+                        var msip = null;
+                        if( compnode.components["MS"].primary ){
+                            msip = compnode.ip;
+                        }else{
+                            // for this dc, locate MS with .primary=true and use its ipref for MSIP
+                            msip = fp( mss ).filter({dcid: region.id}).map(
+                                n=> { return {ip: n.ip, primary: n.components["MS"].primary }} 
+                            ).filter({primary: true}).value()[0].ip 
+                        }
+                        streamProperty( cfgstream, "MSIP", msip );
                         streamProperty( cfgstream, "APIGEE_PORT_HTTP_MS", getTopologyProperty("customer.msPort"), "O" );
                     }
 

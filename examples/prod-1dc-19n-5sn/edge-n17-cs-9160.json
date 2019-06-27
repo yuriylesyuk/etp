@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-n17-cs-9160",
+            "port": 9160,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

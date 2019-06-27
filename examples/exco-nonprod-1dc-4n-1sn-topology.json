@@ -1,0 +1,224 @@
+{
+    "planet": "NONPROD",
+    "regions": [
+        {
+            "id": 1,
+            "name": "dc-1",
+            "subnets": [
+                {
+                    "name": "edge-devportal",
+                    "tier": "core",
+                    "nodes": [
+                        {
+                            "id": 1,
+                            "hostname": "c1.consul",
+                            "ip": "172.20.106.101",
+                            "rack": 1,
+                            "components": [
+                                {
+                                    "comp": "UI"
+                                },
+                                {
+                                    "comp": "MS",
+                                    "primary": true
+                                },
+                                {
+                                    "comp": "OL",
+                                    "ldapType": 2,
+                                    "ldapSid": 1
+                                },
+                                {
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"                                    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "hostname": "c2.consul",
+                            "ip": "172.20.106.101",
+                            "rack": "1",
+                            "components": [
+                                {
+                                    "comp": "R"
+                                },
+								{
+                                    "comp": "MP",
+                                    "primary": false
+								},
+                                {
+                                    "comp": "OL",
+                                    "ldapType": 2,
+                                    "ldapSid": 2
+                                },
+							    {
+                                    "comp": "PS"
+                                },
+                                {
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "PGm"
+                                },
+                                {
+                                    "comp": "QD"
+                                },
+								{
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"                                    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "hostname": "c3.consul",
+                            "ip": "172.20.106.101",
+                            "rack": "1",
+                            "components": [
+								{
+                                    "comp": "PS"
+                                },
+                                {
+                                    "comp": "QS"
+                                },
+                                {
+                                    "comp": "PGm"
+                                },
+                                {
+                                    "comp": "QD"
+                                },
+								{
+                                    "comp": "CS"
+                                },
+                                {
+                                    "comp": "ZK"                                    
+                                }
+                            ]
+                        },
+						                        {
+                            "id": 4,
+                            "hostname": "c4.consul",
+                            "ip": "172.20.106.104",
+                            "rack": "1",
+                            "components": [
+								{
+                                    "comp": "R"
+                                },
+                                {
+                                    "comp": "MP"                                    
+                                }
+                            ]
+                        }
+						
+                    ]
+                }
+            ],
+            "tiers": [
+                { "name": "core" }
+            ],
+            "loadbalancers": [
+                {
+                    "name": "ms-proxy",
+                    "comp": "MS", 
+                    "ip": "10.10.10.88",
+                    "port": 8080,
+                    "healthcheck" : {
+                        "pingProtocol": "tcpxx",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/1/n/1", "port": 8080 }
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha-default",
+                    "comp": "R", 
+                    "ip": "10.10.10.88",
+                    "port": 9001,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/1/n/2", "port": 9001 },
+                        { "host": "/dc/1/n/3", "port": 9001 }
+                    ]
+                },
+                {
+                    "name": "dmz-r-ha-secure",
+                    "comp": "R", 
+                    "ip": "10.10.10.88",
+                    "port": 9005,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "pingPath": "http://xxxx",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/dc/*/n/*", "port": 9005 }
+                    ]
+                },
+                {
+                    "name": "env-r-ha-secure",
+                    "comp": "R", 
+                    "ip": "api.exco.com",
+                    "port": 443,
+                    "healthcheck" : {
+                        "pingProtocol": "tcp",
+                        "responsecode": 200
+                    },
+                    "nodes": [
+                        { "host": "/org/org/env/prod/vhost" }
+                    ]
+                }
+            ]
+        }
+    ],
+    "organizations": [
+        {
+            "name": "org",
+            "orgAdminName": "new@user.com",
+            "orgAdminPassword": "Apigee123!",
+            "environments": [
+                {
+                    "name": "prod",
+                    "virtualhosts": [
+                        {
+                            "name": "default",
+                            "port": 9001,
+                            "aliases": [
+                                "org-prod.apigee.net"
+                            ]
+                        },
+                        {
+                            "name": "secure",
+                            "port": 9005,
+                            "aliases": [
+                                "org-prod.apigee.net"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "customer": {
+        "brand": "sap",
+        "adminEmail": "apigee@exco.co.za",
+        "adminPassword": "Apigee123!",
+        "licenseFile": "/opt/apigee-install/configs/license.txt",
+        "skipSmtp": "n",
+        "smtpHost": "smtp.exco.co.za",
+        "smtpPort": "25",
+        "smtpUser": "0",
+        "smtpPassword": "0",
+        "smtpSsl": "n"
+    }
+}
+    

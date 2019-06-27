@@ -1,33 +1,33 @@
 category, srcnode, srchostname, srcip, dstnode, dsthostname, dstip, clientcomponent, servercomponent, port, description
-internal, 7, nnnxxxyyy07, 10.119.3.207, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 7, nnnxxxyyy07, 10.119.3.207, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 7, nnnxxxyyy07, 10.119.3.207, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 8998, Communication between Router and Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 7, nnnxxxyyy07, 10.119.3.207, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 7, nnnxxxyyy07, 10.119.3.207, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 7, nnnxxxyyy07, 10.119.3.207, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 8998, Communication between Router and Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 7, nnnxxxyyy07, 10.119.3.207, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 7, nnnxxxyyy07, 10.119.3.207, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 7, nnnxxxyyy07, 10.119.3.207, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 8998, Communication between Router and Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 7, nnnxxxyyy07, 10.119.3.207, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 7, nnnxxxyyy07, 10.119.3.207, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 7, nnnxxxyyy07, 10.119.3.207, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 8998, Communication between Router and Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 7, nnnxxxyyy07, 10.119.3.207, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 8, nnnxxxyyy08, 10.119.3.208, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 8, nnnxxxyyy08, 10.119.3.208, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 8, nnnxxxyyy08, 10.119.3.208, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 8998, Communication between Router and Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 9, nnnxxxyyy09, 10.119.3.209, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 8, nnnxxxyyy08, 10.119.3.208, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 8, nnnxxxyyy08, 10.119.3.208, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 8, nnnxxxyyy08, 10.119.3.208, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 8998, Communication between Router and Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 10, nnnxxxyyy10, 10.119.3.210, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 8, nnnxxxyyy08, 10.119.3.208, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 8, nnnxxxyyy08, 10.119.3.208, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 8, nnnxxxyyy08, 10.119.3.208, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 8998, Communication between Router and Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 11, nnnxxxyyy11, 10.119.3.211, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 8, nnnxxxyyy08, 10.119.3.208, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 8, nnnxxxyyy08, 10.119.3.208, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 8, nnnxxxyyy08, 10.119.3.208, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 8998, Communication between Router and Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 8, nnnxxxyyy08, 10.119.3.208, 12, nnnxxxyyy12, 10.119.3.212, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
@@ -41,41 +41,41 @@ internal, 8, nnnxxxyyy08, 10.119.3.208, 5, nnnxxxyyy05, 10.119.3.205, R, QD, 567
 internal, 8, nnnxxxyyy08, 10.119.3.208, 6, nnnxxxyyy06, 10.119.3.206, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 11, nnnxxxyyy11, 10.119.3.211, 6, nnnxxxyyy06, 10.119.3.206, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 12, nnnxxxyyy12, 10.119.3.212, 6, nnnxxxyyy06, 10.119.3.206, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
-internal, 7, nnnxxxyyy07, 10.119.3.207, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper internode management
-internal, 7, nnnxxxyyy07, 10.119.3.207, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper internode management
-internal, 7, nnnxxxyyy07, 10.119.3.207, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper internode management
-internal, 8, nnnxxxyyy08, 10.119.3.208, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper internode management
-internal, 8, nnnxxxyyy08, 10.119.3.208, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper internode management
-internal, 8, nnnxxxyyy08, 10.119.3.208, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper internode management
-internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper internode management
-internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper internode management
-internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper internode management
-internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper internode management
-internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper internode management
-internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper internode management
-internal, 7, nnnxxxyyy07, 10.119.3.207, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, CQL native transport
+internal, 7, nnnxxxyyy07, 10.119.3.207, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, nnnxxxyyy07, 10.119.3.207, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, nnnxxxyyy07, 10.119.3.207, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, nnnxxxyyy08, 10.119.3.208, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, nnnxxxyyy08, 10.119.3.208, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, nnnxxxyyy08, 10.119.3.208, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, nnnxxxyyy07, 10.119.3.207, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, Cassandra CQL native transport
 internal, 7, nnnxxxyyy07, 10.119.3.207, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9160, Cassandra thrift client
-internal, 7, nnnxxxyyy07, 10.119.3.207, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, CQL native transport
+internal, 7, nnnxxxyyy07, 10.119.3.207, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, Cassandra CQL native transport
 internal, 7, nnnxxxyyy07, 10.119.3.207, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9160, Cassandra thrift client
-internal, 7, nnnxxxyyy07, 10.119.3.207, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, CQL native transport
+internal, 7, nnnxxxyyy07, 10.119.3.207, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, Cassandra CQL native transport
 internal, 7, nnnxxxyyy07, 10.119.3.207, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9160, Cassandra thrift client
-internal, 8, nnnxxxyyy08, 10.119.3.208, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, CQL native transport
+internal, 8, nnnxxxyyy08, 10.119.3.208, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, Cassandra CQL native transport
 internal, 8, nnnxxxyyy08, 10.119.3.208, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9160, Cassandra thrift client
-internal, 8, nnnxxxyyy08, 10.119.3.208, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, CQL native transport
+internal, 8, nnnxxxyyy08, 10.119.3.208, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, Cassandra CQL native transport
 internal, 8, nnnxxxyyy08, 10.119.3.208, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9160, Cassandra thrift client
-internal, 8, nnnxxxyyy08, 10.119.3.208, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, CQL native transport
+internal, 8, nnnxxxyyy08, 10.119.3.208, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, Cassandra CQL native transport
 internal, 8, nnnxxxyyy08, 10.119.3.208, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9160, Cassandra thrift client
-internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, CQL native transport
+internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, Cassandra CQL native transport
 internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9160, Cassandra thrift client
-internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, CQL native transport
+internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, Cassandra CQL native transport
 internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9160, Cassandra thrift client
-internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, CQL native transport
+internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, Cassandra CQL native transport
 internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9160, Cassandra thrift client
-internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, CQL native transport
+internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9042, Cassandra CQL native transport
 internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, R, CS, 9160, Cassandra thrift client
-internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, CQL native transport
+internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9042, Cassandra CQL native transport
 internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, R, CS, 9160, Cassandra thrift client
-internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, CQL native transport
+internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9042, Cassandra CQL native transport
 internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, R, CS, 9160, Cassandra thrift client
 internal, 7, nnnxxxyyy07, 10.119.3.207, 11, nnnxxxyyy11, 10.119.3.211, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
 internal, 7, nnnxxxyyy07, 10.119.3.207, 12, nnnxxxyyy12, 10.119.3.212, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
@@ -89,96 +89,96 @@ internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MP, QD, 56
 internal, 10, nnnxxxyyy10, 10.119.3.210, 6, nnnxxxyyy06, 10.119.3.206, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 11, nnnxxxyyy11, 10.119.3.211, 6, nnnxxxyyy06, 10.119.3.206, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 12, nnnxxxyyy12, 10.119.3.212, 6, nnnxxxyyy06, 10.119.3.206, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
-internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper internode management
-internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper internode management
-internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper internode management
-internal, 10, nnnxxxyyy10, 10.119.3.210, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper internode management
-internal, 10, nnnxxxyyy10, 10.119.3.210, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper internode management
-internal, 10, nnnxxxyyy10, 10.119.3.210, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper internode management
-internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper internode management
-internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper internode management
-internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper internode management
-internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper internode management
-internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper internode management
-internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper internode management
-internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, CQL native transport
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 10, nnnxxxyyy10, 10.119.3.210, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 10, nnnxxxyyy10, 10.119.3.210, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 10, nnnxxxyyy10, 10.119.3.210, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, Cassandra CQL native transport
 internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9160, Cassandra thrift client
-internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, CQL native transport
+internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, Cassandra CQL native transport
 internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9160, Cassandra thrift client
-internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, CQL native transport
+internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, Cassandra CQL native transport
 internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9160, Cassandra thrift client
-internal, 10, nnnxxxyyy10, 10.119.3.210, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, CQL native transport
+internal, 10, nnnxxxyyy10, 10.119.3.210, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, Cassandra CQL native transport
 internal, 10, nnnxxxyyy10, 10.119.3.210, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9160, Cassandra thrift client
-internal, 10, nnnxxxyyy10, 10.119.3.210, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, CQL native transport
+internal, 10, nnnxxxyyy10, 10.119.3.210, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, Cassandra CQL native transport
 internal, 10, nnnxxxyyy10, 10.119.3.210, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9160, Cassandra thrift client
-internal, 10, nnnxxxyyy10, 10.119.3.210, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, CQL native transport
+internal, 10, nnnxxxyyy10, 10.119.3.210, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, Cassandra CQL native transport
 internal, 10, nnnxxxyyy10, 10.119.3.210, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9160, Cassandra thrift client
-internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, CQL native transport
+internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, Cassandra CQL native transport
 internal, 11, nnnxxxyyy11, 10.119.3.211, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9160, Cassandra thrift client
-internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, CQL native transport
+internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, Cassandra CQL native transport
 internal, 11, nnnxxxyyy11, 10.119.3.211, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9160, Cassandra thrift client
-internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, CQL native transport
+internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, Cassandra CQL native transport
 internal, 11, nnnxxxyyy11, 10.119.3.211, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9160, Cassandra thrift client
-internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, CQL native transport
+internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9042, Cassandra CQL native transport
 internal, 12, nnnxxxyyy12, 10.119.3.212, 2, nnnxxxyyy02, 10.119.3.202, MP, CS, 9160, Cassandra thrift client
-internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, CQL native transport
+internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9042, Cassandra CQL native transport
 internal, 12, nnnxxxyyy12, 10.119.3.212, 3, nnnxxxyyy03, 10.119.3.203, MP, CS, 9160, Cassandra thrift client
-internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, CQL native transport
+internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9042, Cassandra CQL native transport
 internal, 12, nnnxxxyyy12, 10.119.3.212, 4, nnnxxxyyy04, 10.119.3.204, MP, CS, 9160, Cassandra thrift client
 internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MS, QS, 4529, Distributed cache and calls from the Management Servers to the Qpid Server
 internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MS, QS, 8083, Issuing API requests directly to Qpid Server
 internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MS, PS, 4530, Distributed cache and calls from the Management Servers to the Postgres Server
 internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MS, PS, 8084, Issuing API requests directly to Postgres Server
-internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MS, PG, 5432, Postgres client
-internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, ZK, 2181, Zookeeper internode management
-internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, ZK, 2181, Zookeeper internode management
-internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, ZK, 2181, Zookeeper internode management
-internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, CS, 9042, CQL native transport
+internal, 9, nnnxxxyyy09, 10.119.3.209, 6, nnnxxxyyy06, 10.119.3.206, MS, PG, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, CS, 9042, Cassandra CQL native transport
 internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, CS, 9160, Cassandra thrift client
-internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, CS, 9042, CQL native transport
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, CS, 9042, Cassandra CQL native transport
 internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, CS, 9160, Cassandra thrift client
-internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, CS, 9042, CQL native transport
+internal, 9, nnnxxxyyy09, 10.119.3.209, 3, nnnxxxyyy03, 10.119.3.203, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, CS, 9042, Cassandra CQL native transport
 internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, CS, 9160, Cassandra thrift client
-internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 9, nnnxxxyyy09, 10.119.3.209, 4, nnnxxxyyy04, 10.119.3.204, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
 internal, 9, nnnxxxyyy09, 10.119.3.209, 7, nnnxxxyyy07, 10.119.3.207, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
 internal, 9, nnnxxxyyy09, 10.119.3.209, 7, nnnxxxyyy07, 10.119.3.207, MS, R, 8081, Issuing API requests directly to Router
 internal, 9, nnnxxxyyy09, 10.119.3.209, 8, nnnxxxyyy08, 10.119.3.208, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
 internal, 9, nnnxxxyyy09, 10.119.3.209, 8, nnnxxxyyy08, 10.119.3.208, MS, R, 8081, Issuing API requests directly to Router
-internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, OL, 10389, LDAP port
+internal, 9, nnnxxxyyy09, 10.119.3.209, 2, nnnxxxyyy02, 10.119.3.202, MS, OL, 10389, OpenLDAP port
 internal, 6, nnnxxxyyy06, 10.119.3.206, 9, nnnxxxyyy09, 10.119.3.209, QS, MS, 8080, Default Management API Calls
 internal, 6, nnnxxxyyy06, 10.119.3.206, 9, nnnxxxyyy09, 10.119.3.209, QS, MS, 8443, Default Management API Calls via TLS
-internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, QS, ZK, 2181, Zookeeper internode management
-internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, QS, ZK, 2181, Zookeeper internode management
-internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, QS, ZK, 2181, Zookeeper internode management
-internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, QS, ZK, 2181, Zookeeper internode management
-internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, QS, ZK, 2181, Zookeeper internode management
-internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, QS, ZK, 2181, Zookeeper internode management
-internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, QS, CS, 9042, CQL native transport
+internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, QS, CS, 9042, Cassandra CQL native transport
 internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, QS, CS, 9160, Cassandra thrift client
-internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, QS, CS, 9042, CQL native transport
+internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, QS, CS, 9042, Cassandra CQL native transport
 internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, QS, CS, 9160, Cassandra thrift client
-internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, QS, CS, 9042, CQL native transport
+internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, QS, CS, 9042, Cassandra CQL native transport
 internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, QS, CS, 9160, Cassandra thrift client
-internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, QS, CS, 9042, CQL native transport
+internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, QS, CS, 9042, Cassandra CQL native transport
 internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, QS, CS, 9160, Cassandra thrift client
-internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, QS, CS, 9042, CQL native transport
+internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, QS, CS, 9042, Cassandra CQL native transport
 internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, QS, CS, 9160, Cassandra thrift client
-internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, QS, CS, 9042, CQL native transport
+internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, QS, CS, 9042, Cassandra CQL native transport
 internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, QS, CS, 9160, Cassandra thrift client
-internal, 5, nnnxxxyyy05, 10.119.3.205, 6, nnnxxxyyy06, 10.119.3.206, QS, PG, 5432, Postgres client
-internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, PS, ZK, 2181, Zookeeper internode management
-internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, PS, ZK, 2181, Zookeeper internode management
-internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, PS, ZK, 2181, Zookeeper internode management
-internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, BS, CS, 9042, CQL native transport
+internal, 5, nnnxxxyyy05, 10.119.3.205, 6, nnnxxxyyy06, 10.119.3.206, QS, PG, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 6, nnnxxxyyy06, 10.119.3.206, 2, nnnxxxyyy02, 10.119.3.202, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, nnnxxxyyy06, 10.119.3.206, 3, nnnxxxyyy03, 10.119.3.203, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, nnnxxxyyy06, 10.119.3.206, 4, nnnxxxyyy04, 10.119.3.204, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, BS, CS, 9042, Cassandra CQL native transport
 internal, 5, nnnxxxyyy05, 10.119.3.205, 2, nnnxxxyyy02, 10.119.3.202, BS, CS, 9160, Cassandra thrift client
-internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, BS, CS, 9042, CQL native transport
+internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, BS, CS, 9042, Cassandra CQL native transport
 internal, 5, nnnxxxyyy05, 10.119.3.205, 3, nnnxxxyyy03, 10.119.3.203, BS, CS, 9160, Cassandra thrift client
-internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, BS, CS, 9042, CQL native transport
+internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, BS, CS, 9042, Cassandra CQL native transport
 internal, 5, nnnxxxyyy05, 10.119.3.205, 4, nnnxxxyyy04, 10.119.3.204, BS, CS, 9160, Cassandra thrift client
 internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, DP, MY, 3306, DEVPortal to MariaDB/MySQL
-internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, DP, PG, 5432, Postgres client
+internal, 1, nnnxxxyyy01, 10.119.3.201, 6, nnnxxxyyy06, 10.119.3.206, DP, PG, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
 internal, 1, nnnxxxyyy01, 10.119.3.201, 9, nnnxxxyyy09, 10.119.3.209, DP, MS, 8080, Default Management API Calls
 internal, 1, nnnxxxyyy01, 10.119.3.201, 9, nnnxxxyyy09, 10.119.3.209, DP, MS, 8443, Default Management API Calls via TLS
 internal, 1, nnnxxxyyy01, 10.119.3.201, 11, nnnxxxyyy11, 10.119.3.211, DP, R, 59002, The router port where SmartDocs page requests are sent

@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-dc1n17-zk-3888",
+            "port": 3888,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

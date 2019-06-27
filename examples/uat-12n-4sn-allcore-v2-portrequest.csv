@@ -1,33 +1,33 @@
 category, srcnode, srchostname, srcip, dstnode, dsthostname, dstip, clientcomponent, servercomponent, port, description
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 8998, Communication between Router and Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 8998, Communication between Router and Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 8998, Communication between Router and Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 8998, Communication between Router and Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 8998, Communication between Router and Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 7, LVMOPAPIRMP1U, 10.119.133.13, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 8998, Communication between Router and Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 8, LVMOPAPIRMP2U, 10.119.133.14, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 8998, Communication between Router and Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 5, LVMOPAPIMP1U, 10.119.133.11, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 4528, Distributed cache and calls from the Management Servers to the Message Processor
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 4528, Distributed cache calls between Message Processors, and for communication from the Router
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 8998, Communication between Router and Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 8082, Issuing API requests directly to Message Processor
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 6, LVMOPAPIMP2U, 10.119.133.12, R, MP, 4527, Distributed cache and calls from the Management Servers to the Router
@@ -51,41 +51,41 @@ internal, 12, LVMOPAPIR2U, 10.119.134.13, 1, LVMOPAPIQD2U, 10.119.131.11, R, QD,
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 13, LVMOPAPIQD2Ux, 10.119.131.12, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 9, LVMOPAPIQD1U, 10.119.133.15, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 14, LVMOPAPIQD1Ux, 10.119.133.16, R, QD, 5672, Sending analytics from Router and Message Processor to Qpid
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper internode management
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper internode management
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper internode management
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper internode management
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper internode management
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper internode management
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper internode management
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper internode management
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper internode management
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper internode management
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper internode management
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper internode management
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, CQL native transport
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 2, LVMOPAPICS1U, 10.119.132.11, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 3, LVMOPAPICS2U, 10.119.132.12, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 4, LVMOPAPICS3U, 10.119.132.13, R, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, Cassandra CQL native transport
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9160, Cassandra thrift client
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, CQL native transport
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, Cassandra CQL native transport
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9160, Cassandra thrift client
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, CQL native transport
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, Cassandra CQL native transport
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9160, Cassandra thrift client
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, CQL native transport
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, Cassandra CQL native transport
 internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9160, Cassandra thrift client
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, CQL native transport
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, Cassandra CQL native transport
 internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9160, Cassandra thrift client
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, CQL native transport
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, Cassandra CQL native transport
 internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9160, Cassandra thrift client
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, CQL native transport
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, Cassandra CQL native transport
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9160, Cassandra thrift client
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, CQL native transport
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, Cassandra CQL native transport
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9160, Cassandra thrift client
-internal, 11, LVMOPAPIR1U, 10.119.134.12, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, CQL native transport
+internal, 11, LVMOPAPIR1U, 10.119.134.12, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, Cassandra CQL native transport
 internal, 11, LVMOPAPIR1U, 10.119.134.12, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9160, Cassandra thrift client
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, CQL native transport
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9042, Cassandra CQL native transport
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 2, LVMOPAPICS1U, 10.119.132.11, R, CS, 9160, Cassandra thrift client
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, CQL native transport
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9042, Cassandra CQL native transport
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 3, LVMOPAPICS2U, 10.119.132.12, R, CS, 9160, Cassandra thrift client
-internal, 12, LVMOPAPIR2U, 10.119.134.13, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, CQL native transport
+internal, 12, LVMOPAPIR2U, 10.119.134.13, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9042, Cassandra CQL native transport
 internal, 12, LVMOPAPIR2U, 10.119.134.13, 4, LVMOPAPICS3U, 10.119.132.13, R, CS, 9160, Cassandra thrift client
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 11, LVMOPAPIR1U, 10.119.134.12, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 12, LVMOPAPIR2U, 10.119.134.13, R, R, 4527, Distributed cache and calls from the Management Servers to the Router
@@ -103,41 +103,41 @@ internal, 5, LVMOPAPIMP1U, 10.119.133.11, 1, LVMOPAPIQD2U, 10.119.131.11, MP, QD
 internal, 5, LVMOPAPIMP1U, 10.119.133.11, 13, LVMOPAPIQD2Ux, 10.119.131.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 6, LVMOPAPIMP2U, 10.119.133.12, 1, LVMOPAPIQD2U, 10.119.131.11, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
 internal, 6, LVMOPAPIMP2U, 10.119.133.12, 13, LVMOPAPIQD2Ux, 10.119.131.12, MP, QD, 5672, Sending analytics from Router and Message Processor to Qpid
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper internode management
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper internode management
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper internode management
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper internode management
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper internode management
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper internode management
-internal, 5, LVMOPAPIMP1U, 10.119.133.11, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper internode management
-internal, 5, LVMOPAPIMP1U, 10.119.133.11, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper internode management
-internal, 5, LVMOPAPIMP1U, 10.119.133.11, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper internode management
-internal, 6, LVMOPAPIMP2U, 10.119.133.12, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper internode management
-internal, 6, LVMOPAPIMP2U, 10.119.133.12, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper internode management
-internal, 6, LVMOPAPIMP2U, 10.119.133.12, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper internode management
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, CQL native transport
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, LVMOPAPIMP1U, 10.119.133.11, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, LVMOPAPIMP1U, 10.119.133.11, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 5, LVMOPAPIMP1U, 10.119.133.11, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, LVMOPAPIMP2U, 10.119.133.12, 2, LVMOPAPICS1U, 10.119.132.11, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, LVMOPAPIMP2U, 10.119.133.12, 3, LVMOPAPICS2U, 10.119.132.12, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 6, LVMOPAPIMP2U, 10.119.133.12, 4, LVMOPAPICS3U, 10.119.132.13, MP, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, Cassandra CQL native transport
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9160, Cassandra thrift client
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, CQL native transport
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, Cassandra CQL native transport
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9160, Cassandra thrift client
-internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, CQL native transport
+internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, Cassandra CQL native transport
 internal, 7, LVMOPAPIRMP1U, 10.119.133.13, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9160, Cassandra thrift client
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, CQL native transport
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, Cassandra CQL native transport
 internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9160, Cassandra thrift client
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, CQL native transport
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, Cassandra CQL native transport
 internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9160, Cassandra thrift client
-internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, CQL native transport
+internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, Cassandra CQL native transport
 internal, 8, LVMOPAPIRMP2U, 10.119.133.14, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9160, Cassandra thrift client
-internal, 5, LVMOPAPIMP1U, 10.119.133.11, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, CQL native transport
+internal, 5, LVMOPAPIMP1U, 10.119.133.11, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, Cassandra CQL native transport
 internal, 5, LVMOPAPIMP1U, 10.119.133.11, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9160, Cassandra thrift client
-internal, 5, LVMOPAPIMP1U, 10.119.133.11, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, CQL native transport
+internal, 5, LVMOPAPIMP1U, 10.119.133.11, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, Cassandra CQL native transport
 internal, 5, LVMOPAPIMP1U, 10.119.133.11, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9160, Cassandra thrift client
-internal, 5, LVMOPAPIMP1U, 10.119.133.11, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, CQL native transport
+internal, 5, LVMOPAPIMP1U, 10.119.133.11, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, Cassandra CQL native transport
 internal, 5, LVMOPAPIMP1U, 10.119.133.11, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9160, Cassandra thrift client
-internal, 6, LVMOPAPIMP2U, 10.119.133.12, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, CQL native transport
+internal, 6, LVMOPAPIMP2U, 10.119.133.12, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9042, Cassandra CQL native transport
 internal, 6, LVMOPAPIMP2U, 10.119.133.12, 2, LVMOPAPICS1U, 10.119.132.11, MP, CS, 9160, Cassandra thrift client
-internal, 6, LVMOPAPIMP2U, 10.119.133.12, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, CQL native transport
+internal, 6, LVMOPAPIMP2U, 10.119.133.12, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9042, Cassandra CQL native transport
 internal, 6, LVMOPAPIMP2U, 10.119.133.12, 3, LVMOPAPICS2U, 10.119.132.12, MP, CS, 9160, Cassandra thrift client
-internal, 6, LVMOPAPIMP2U, 10.119.133.12, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, CQL native transport
+internal, 6, LVMOPAPIMP2U, 10.119.133.12, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9042, Cassandra CQL native transport
 internal, 6, LVMOPAPIMP2U, 10.119.133.12, 4, LVMOPAPICS3U, 10.119.132.13, MP, CS, 9160, Cassandra thrift client
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 1, LVMOPAPIQD2U, 10.119.131.11, MS, QS, 4529, Distributed cache and calls from the Management Servers to the Qpid Server
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 1, LVMOPAPIQD2U, 10.119.131.11, MS, QS, 8083, Issuing API requests directly to Qpid Server
@@ -155,34 +155,34 @@ internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 1, LVMOPAPIQD2U, 10.119.131.11, MS, 
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 1, LVMOPAPIQD2U, 10.119.131.11, MS, PS, 8084, Issuing API requests directly to Postgres Server
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 13, LVMOPAPIQD2Ux, 10.119.131.12, MS, PS, 4530, Distributed cache and calls from the Management Servers to the Postgres Server
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 13, LVMOPAPIQD2Ux, 10.119.131.12, MS, PS, 8084, Issuing API requests directly to Postgres Server
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 1, LVMOPAPIQD2U, 10.119.131.11, MS, PGm, 5432, Postgres client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 1, LVMOPAPIQD2U, 10.119.131.11, MS, PGm, 5432, Postgres client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 13, LVMOPAPIQD2Ux, 10.119.131.12, MS, PGs, 5432, Postgres client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 13, LVMOPAPIQD2Ux, 10.119.131.12, MS, PGs, 5432, Postgres client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, ZK, 2181, Zookeeper internode management
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, ZK, 2181, Zookeeper internode management
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, ZK, 2181, Zookeeper internode management
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, ZK, 2181, Zookeeper internode management
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, ZK, 2181, Zookeeper internode management
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, ZK, 2181, Zookeeper internode management
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 1, LVMOPAPIQD2U, 10.119.131.11, MS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 1, LVMOPAPIQD2U, 10.119.131.11, MS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 13, LVMOPAPIQD2Ux, 10.119.131.12, MS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 13, LVMOPAPIQD2Ux, 10.119.131.12, MS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 7199, JMX management. Must be open for access on the Cassandra node by the Management Server.
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, MS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 11, LVMOPAPIR1U, 10.119.134.12, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 11, LVMOPAPIR1U, 10.119.134.12, MS, R, 8081, Issuing API requests directly to Router
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 12, LVMOPAPIR2U, 10.119.134.13, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
@@ -191,10 +191,10 @@ internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 11, LVMOPAPIR1U, 10.119.134.12, MS, 
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 11, LVMOPAPIR1U, 10.119.134.12, MS, R, 8081, Issuing API requests directly to Router
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 12, LVMOPAPIR2U, 10.119.134.13, MS, R, 4527, Distributed cache and calls from the Management Servers to the Router
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 12, LVMOPAPIR2U, 10.119.134.13, MS, R, 8081, Issuing API requests directly to Router
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, OL, 10389, LDAP port
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, OL, 10389, LDAP port
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, OL, 10389, LDAP port
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, OL, 10389, LDAP port
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, MS, OL, 10389, OpenLDAP port
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, MS, OL, 10389, OpenLDAP port
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, MS, OL, 10389, OpenLDAP port
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, MS, OL, 10389, OpenLDAP port
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 9, LVMOPAPIQD1U, 10.119.133.15, QS, MS, 8080, Default Management API Calls
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 9, LVMOPAPIQD1U, 10.119.133.15, QS, MS, 8443, Default Management API Calls via TLS
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 14, LVMOPAPIQD1Ux, 10.119.133.16, QS, MS, 8080, Default Management API Calls
@@ -203,81 +203,81 @@ internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 9, LVMOPAPIQD1U, 10.119.133.15, QS, 
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 9, LVMOPAPIQD1U, 10.119.133.15, QS, MS, 8443, Default Management API Calls via TLS
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 14, LVMOPAPIQD1Ux, 10.119.133.16, QS, MS, 8080, Default Management API Calls
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 14, LVMOPAPIQD1Ux, 10.119.133.16, QS, MS, 8443, Default Management API Calls via TLS
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper internode management
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper internode management
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper internode management
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper internode management
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper internode management
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper internode management
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, CQL native transport
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, QS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, Cassandra CQL native transport
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9160, Cassandra thrift client
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, CQL native transport
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, Cassandra CQL native transport
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9160, Cassandra thrift client
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, CQL native transport
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, Cassandra CQL native transport
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9160, Cassandra thrift client
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, CQL native transport
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, Cassandra CQL native transport
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9160, Cassandra thrift client
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, CQL native transport
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, Cassandra CQL native transport
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9160, Cassandra thrift client
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, CQL native transport
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, Cassandra CQL native transport
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, QS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, QS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, QS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 1, LVMOPAPIQD2U, 10.119.131.11, QS, PGm, 5432, Postgres client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 1, LVMOPAPIQD2U, 10.119.131.11, QS, PGm, 5432, Postgres client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 13, LVMOPAPIQD2Ux, 10.119.131.12, QS, PGs, 5432, Postgres client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 13, LVMOPAPIQD2Ux, 10.119.131.12, QS, PGs, 5432, Postgres client
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PS, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PS, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PS, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PGs, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PGs, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PGs, ZK, 2181, Zookeeper internode management
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PGs, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 1, LVMOPAPIQD2U, 10.119.131.11, QS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 1, LVMOPAPIQD2U, 10.119.131.11, QS, PGm, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 13, LVMOPAPIQD2Ux, 10.119.131.12, QS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 13, LVMOPAPIQD2Ux, 10.119.131.12, QS, PGs, 5432, PostgreSQL message-based protocol for communication between frontends and backends (clients and servers)
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PS, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PGs, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PGs, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PGs, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PGs, CS, 9042, Cassandra CQL native transport
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 2, LVMOPAPICS1U, 10.119.132.11, PGs, CS, 9160, Cassandra thrift client
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PGs, CS, 9042, CQL native transport
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PGs, CS, 9042, Cassandra CQL native transport
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 3, LVMOPAPICS2U, 10.119.132.12, PGs, CS, 9160, Cassandra thrift client
-internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PGs, CS, 9042, CQL native transport
+internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PGs, CS, 9042, Cassandra CQL native transport
 internal, 13, LVMOPAPIQD2Ux, 10.119.131.12, 4, LVMOPAPICS3U, 10.119.132.13, PGs, CS, 9160, Cassandra thrift client
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PGm, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PGm, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PGm, ZK, 2181, Zookeeper internode management
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PGm, CS, 9042, CQL native transport
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PGm, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PGm, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PGm, ZK, 2181, Zookeeper clients to connect to zk servers
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PGm, CS, 9042, Cassandra CQL native transport
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 2, LVMOPAPICS1U, 10.119.132.11, PGm, CS, 9160, Cassandra thrift client
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PGm, CS, 9042, CQL native transport
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PGm, CS, 9042, Cassandra CQL native transport
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 3, LVMOPAPICS2U, 10.119.132.12, PGm, CS, 9160, Cassandra thrift client
-internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PGm, CS, 9042, CQL native transport
+internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PGm, CS, 9042, Cassandra CQL native transport
 internal, 1, LVMOPAPIQD2U, 10.119.131.11, 4, LVMOPAPICS3U, 10.119.132.13, PGm, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, BS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, BS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 2, LVMOPAPICS1U, 10.119.132.11, BS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, BS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, BS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 3, LVMOPAPICS2U, 10.119.132.12, BS, CS, 9160, Cassandra thrift client
-internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, BS, CS, 9042, CQL native transport
+internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, BS, CS, 9042, Cassandra CQL native transport
 internal, 9, LVMOPAPIQD1U, 10.119.133.15, 4, LVMOPAPICS3U, 10.119.132.13, BS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, BS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, BS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 2, LVMOPAPICS1U, 10.119.132.11, BS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, BS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, BS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 3, LVMOPAPICS2U, 10.119.132.12, BS, CS, 9160, Cassandra thrift client
-internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, BS, CS, 9042, CQL native transport
+internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, BS, CS, 9042, Cassandra CQL native transport
 internal, 14, LVMOPAPIQD1Ux, 10.119.133.16, 4, LVMOPAPICS3U, 10.119.132.13, BS, CS, 9160, Cassandra thrift client
 internal, 10, LVMOPAPIDPU, 10.119.134.11, 1, LVMOPAPIQD2U, 10.119.131.11, DP, MY, 3306, DEVPortal to MariaDB/MySQL
 internal, 10, LVMOPAPIDPU, 10.119.134.11, 13, LVMOPAPIQD2Ux, 10.119.131.12, DP, MY, 3306, DEVPortal to MariaDB/MySQL

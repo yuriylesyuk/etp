@@ -1,0 +1,5 @@
+[edge]
+n01 ansible_host=172.20.106.101
+n02 ansible_host=172.20.106.101
+n03 ansible_host=172.20.106.101
+n04 ansible_host=172.20.106.104

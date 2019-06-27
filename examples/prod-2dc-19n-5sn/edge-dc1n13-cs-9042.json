@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-dc1n13-cs-9042",
+            "port": 9042,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}
