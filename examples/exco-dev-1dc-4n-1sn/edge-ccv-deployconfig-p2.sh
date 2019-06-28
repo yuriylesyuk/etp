@@ -55,4 +55,7 @@ ansible n03 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n03-cs-91
 ansible n01 -m copy -a "src=/tmp/edge-n01-ms-8080.json dest=/opt/consul-install/"
 ansible n01 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n01-ms-8080.json dest=/etc/consul.d"
 
+ansible n02 -m copy -a "src=/tmp/edge-n02-ms-8080.json dest=/opt/consul-install/"
+ansible n02 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n02-ms-8080.json dest=/etc/consul.d"
+
 ansible consul -a "consul reload"

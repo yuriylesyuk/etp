@@ -92,26 +92,33 @@ function genisolationconfig( topology, genNodeId, ccvsetup ){
     fp.map( chaindef => {
             ccvsetup.write(
                 fp.template(
+                    `set +e\n`
+                    +
                     'ansible <%= nodes %> -ba "iptables -t <%= table %> -F <%= customchain %>"\n'
                     +
                     'ansible <%= nodes %> -ba "iptables -t <%= table %> -X <%= customchain %>"\n'
+                    +
+                    `set -e\n`
                     +
                     'ansible <%= nodes %> -ba "iptables -t <%= table %> -N <%= customchain %>"\n'
                     +
                     'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= chain %> -p tcp -j <%= customchain %>"\n'
                     +
-                    // pass the consul:consul traffic through, including proxy sidecars
-                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= customchain %> -m owner --uid-owner consul -j RETURN"\n'
+                    // pass the consul:consul traffic through, including proxy sidecars; meaningful for OUTPUT chains only
+                    '<% if( chain == "OUTPUT" ) { %>'
+                        +
+                        'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= customchain %> -m owner --uid-owner consul -j RETURN"\n'
+                        +
+                        'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= customchain %> -m owner --gid-owner consul -j RETURN"\n'
+                        +
+                    '<% } %>'
                     +
-                    'ansible <%= nodes %> -ba "iptables -t <%= table %> -A <%= customchain %> -m owner --gid-owner consul -j RETURN"\n'
-                    +
-                    '\n' )(chaindef)
+                    '\n' )
+                (chaindef)
             )
         })([
             { nodes: listofnodes, table: "filter", chain: "INPUT", customchain: "CONSUL_INPUT" }, 
-            { nodes: listofnodes, table: "filter", chain: "OUTPUT", customchain: "CONSUL_INPUT" }, 
-            { nodes: listofnodes, table: "nat", chain: "INPUT", customchain: "CONSUL_INPUT" }, 
-            { nodes: listofnodes, table: "nat", chain: "OUTPUT", customchain: "CONSUL_INPUT" }
+            { nodes: listofnodes, table: "nat", chain: "OUTPUT", customchain: "CONSUL_OUTPUT" }
         ]
     );
 

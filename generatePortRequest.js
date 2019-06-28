@@ -29,6 +29,8 @@ var getLbComponentHealthCheckPropertyFromTopologyPortdefs = fp.curry( ( portdefs
 //  "/dc/*/n/*"
 //  "/dc/2/n/3"
 //  "/dc/[3,4]/n/*"
+
+// TODO [ ]: "/org/org/env/prod/vhost"
 function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
     var nodes = {};
 

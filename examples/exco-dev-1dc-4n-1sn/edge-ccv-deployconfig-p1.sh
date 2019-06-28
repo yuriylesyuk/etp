@@ -17,3 +17,4 @@ gcloud compute --project "project-id" scp --zone "europe-west3-a"  ~/projects/ed
 gcloud compute --project "project-id" scp --zone "europe-west3-a"  ~/projects/edge/edge-n02-cs-9160.json "jumpbox:/tmp"
 gcloud compute --project "project-id" scp --zone "europe-west3-a"  ~/projects/edge/edge-n03-cs-9160.json "jumpbox:/tmp"
 gcloud compute --project "project-id" scp --zone "europe-west3-a"  ~/projects/edge/edge-n01-ms-8080.json "jumpbox:/tmp"
+gcloud compute --project "project-id" scp --zone "europe-west3-a"  ~/projects/edge/edge-n02-ms-8080.json "jumpbox:/tmp"

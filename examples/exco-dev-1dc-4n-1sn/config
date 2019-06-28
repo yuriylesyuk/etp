@@ -1,15 +1,15 @@
 Host n01
     HostName 172.20.106.101
-    IdentityFile 
+    IdentityFile ~/.ssh/id_srvtech
 
 Host n02
     HostName 172.20.106.101
-    IdentityFile 
+    IdentityFile ~/.ssh/id_srvtech
 
 Host n03
     HostName 172.20.106.101
-    IdentityFile 
+    IdentityFile ~/.ssh/id_srvtech
 
 Host n04
     HostName 172.20.106.104
-    IdentityFile 
+    IdentityFile ~/.ssh/id_srvtech

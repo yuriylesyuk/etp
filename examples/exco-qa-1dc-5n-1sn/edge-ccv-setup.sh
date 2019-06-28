@@ -2,34 +2,20 @@
 ## reset CONSUL_ custom chains
 #
 set +e
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -X CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -F CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -X CONSUL_INPUT"
 set -e
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A INPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -N CONSUL_INPUT"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t filter -A INPUT -p tcp -j CONSUL_INPUT"
 
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A OUTPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t filter -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
-
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A INPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
-
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -F CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -X CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -N CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A OUTPUT -p tcp -j CONSUL_INPUT"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --uid-owner consul -j RETURN"
-ansible n01,n02,n03,n04,n05 -ba "iptables -t nat -A CONSUL_INPUT -m owner --gid-owner consul -j RETURN"
+set +e
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -F CONSUL_OUTPUT"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -X CONSUL_OUTPUT"
+set -e
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -N CONSUL_OUTPUT"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A OUTPUT -p tcp -j CONSUL_OUTPUT"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A CONSUL_OUTPUT -m owner --uid-owner consul -j RETURN"
+ansible n01,n02,n03,n04,n05,n06 -ba "iptables -t nat -A CONSUL_OUTPUT -m owner --gid-owner consul -j RETURN"
 
 #
 ## node traffic control
@@ -39,10 +25,10 @@ ansible n01 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport
 ansible n01 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,9443,1099,8443 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
 ansible n02 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports 7000,9042,9160,2181,2888,3888 -m state --state NEW,ESTABLISHED -j REJECT"
-ansible n02 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,15999,59001,9001,90002,90003,90004,90005 -m state --state NEW,ESTABLISHED -j ACCEPT"
+ansible n02 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,15999,59001,9001,9002,9003,9004,9005 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
 ansible n03 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports 7000,9042,9160,2181,2888,3888 -m state --state NEW,ESTABLISHED -j REJECT"
-ansible n03 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,15999,59001,9001,90002,90003,90004,90005 -m state --state NEW,ESTABLISHED -j ACCEPT"
+ansible n03 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,15999,59001,9001,9002,9003,9004,9005 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
 ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports  -m state --state NEW,ESTABLISHED -j REJECT"
 ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22 -m state --state NEW,ESTABLISHED -j ACCEPT"
@@ -50,6 +36,8 @@ ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m mu
 ansible n05 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports  -m state --state NEW,ESTABLISHED -j REJECT"
 ansible n05 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
+ansible n06 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports  -m state --state NEW,ESTABLISHED -j REJECT"
+ansible n06 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
 #
 

@@ -186,7 +186,7 @@
                         "responsecode": 200
                     },
                     "nodes": [
-                        { "host": "/org/org/env/prod/vhost" }
+                        { "host": "/dc/[2,3]/n/*" }
                     ]
                 }
             ]

@@ -27,7 +27,7 @@ fi
 
 
 
-ETP_HOME=~/dbc/etp
+ETP_HOME=../
 
 TOPOLOGY=$1
 
