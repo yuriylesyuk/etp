@@ -64,7 +64,7 @@
     <td style="text-align:right; background-color:#159702;">1</td>
     <td>edge-devportal</td>
     <td>c2.consul</td>
-    <td>172.20.106.101</td>
+    <td>172.20.106.102</td>
 </tr>
 <tr>
     <td>dc-1</td>
@@ -73,7 +73,7 @@
     <td style="text-align:right; background-color:#159702;">1</td>
     <td>edge-devportal</td>
     <td>c3.consul</td>
-    <td>172.20.106.101</td>
+    <td>172.20.106.103</td>
 </tr>
 <tr>
     <td>dc-1</td>

@@ -179,9 +179,9 @@ function streamProperty( stream, parameter, value, optional  ){
 // TODO: Refactor
 function ruleWarning( w ){
 
-    if( typeof w === 'string' ){
+    if( typeof w === 'string' && w.length != 0 ){
         console.log( "WARNING: " + w);
-    }else{ 
+    }if( Array.isArray(w) && w.length != 0 ){ 
         // array of string
         console.log( "WARNING: " + w );
     }
@@ -699,6 +699,18 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     noOfPGms = pgms.length;
     if( noOfPGms !== 1 ){
         ruleWarning( `Rule: single PGm across Data Centers. Found ${noOfPGms}` )
+    }
+
+
+    // iRULE: Each node must have unique IP address
+
+    var dupIPs = fp(all).groupBy("ip").pickBy(x => x.length > 1).value()
+    if( !fp.isEmpty(dupIPs) ){
+        ruleWarning(
+            "Rule: Duplicate IP addresses assigned: "
+            +
+            fp.toPairs(dupIPs).map(v=> {return v[0] + ":" + v[1].map(n=>n.ipref).join(",")} ).join("; ")
+        )
     }
 
 
