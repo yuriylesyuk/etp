@@ -57,7 +57,7 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 21
 # file: "edge-n03-zk-2181.json"
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-zk-2181  &> /opt/hashicorp/consul/logs/edge-n03-zk-2181.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-zk-2181.pid'
 
-ansible n01,n02,n03,n04 -m shell -a 'nohup consul connect proxy -service edge-zk-2181 $upstreams  &> /opt/hashicorp/consul/logs/edge-zk-2181.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2181.pid'
+ansible n01,n02,n03,n04 -m shell -a 'nohup consul connect proxy -service edge-zk-2181 &> /opt/hashicorp/consul/logs/edge-zk-2181.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2181.pid'
 #
 
 
@@ -79,7 +79,7 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 28
 # file: "edge-n03-zk-2888.json"
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-zk-2888  &> /opt/hashicorp/consul/logs/edge-n03-zk-2888.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-zk-2888.pid'
 
-ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-zk-2888 $upstreams  &> /opt/hashicorp/consul/logs/edge-zk-2888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2888.pid'
+ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-zk-2888 &> /opt/hashicorp/consul/logs/edge-zk-2888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2888.pid'
 #
 
 
@@ -101,7 +101,7 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 38
 # file: "edge-n03-zk-3888.json"
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-zk-3888  &> /opt/hashicorp/consul/logs/edge-n03-zk-3888.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-zk-3888.pid'
 
-ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-zk-3888 $upstreams  &> /opt/hashicorp/consul/logs/edge-zk-3888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-3888.pid'
+ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-zk-3888 &> /opt/hashicorp/consul/logs/edge-zk-3888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-3888.pid'
 #
 
 
@@ -123,7 +123,7 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 70
 # file: "edge-n03-cs-7000.json"
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-cs-7000  &> /opt/hashicorp/consul/logs/edge-n03-cs-7000.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-cs-7000.pid'
 
-ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-7000 $upstreams  &> /opt/hashicorp/consul/logs/edge-cs-7000.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-7000.pid'
+ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-7000 &> /opt/hashicorp/consul/logs/edge-cs-7000.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-7000.pid'
 #
 
 
@@ -145,7 +145,7 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 90
 # file: "edge-n03-cs-9042.json"
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-cs-9042  &> /opt/hashicorp/consul/logs/edge-n03-cs-9042.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-cs-9042.pid'
 
-ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-9042 $upstreams  &> /opt/hashicorp/consul/logs/edge-cs-9042.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9042.pid'
+ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-9042 &> /opt/hashicorp/consul/logs/edge-cs-9042.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9042.pid'
 #
 
 
@@ -167,7 +167,7 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 91
 # file: "edge-n03-cs-9160.json"
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-cs-9160  &> /opt/hashicorp/consul/logs/edge-n03-cs-9160.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-cs-9160.pid'
 
-ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-9160 $upstreams  &> /opt/hashicorp/consul/logs/edge-cs-9160.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9160.pid'
+ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-9160 &> /opt/hashicorp/consul/logs/edge-cs-9160.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9160.pid'
 #
 
 
@@ -184,7 +184,7 @@ ansible n02 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 80
 # file: "edge-n02-ms-8080.json"
 ansible n02 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n02-ms-8080  &> /opt/hashicorp/consul/logs/edge-n02-ms-8080.log &  echo $! > /opt/hashicorp/consul/logs/edge-n02-ms-8080.pid'
 
-ansible n01,n02,n03,n04 -m shell -a 'nohup consul connect proxy -service edge-ms-8080 $upstreams  &> /opt/hashicorp/consul/logs/edge-ms-8080.log & echo $! > /opt/hashicorp/consul/logs/edge-ms-8080.pid'
+ansible n01,n02,n03,n04 -m shell -a 'nohup consul connect proxy -service edge-ms-8080 &> /opt/hashicorp/consul/logs/edge-ms-8080.log & echo $! > /opt/hashicorp/consul/logs/edge-ms-8080.pid'
 #
 
 

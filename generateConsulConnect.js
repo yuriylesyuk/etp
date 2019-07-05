@@ -211,8 +211,11 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
     ccvsetup.write( `## configuration for ${serviceName}\n` );
     ccvsetup.write( "#\n" );
     
-    
-    var upstreams = "";
+    // emit upstreams: name and file definitions
+    var upstreamName = fp.template( 'edge-<%= ccCompPort %>' )({ ccCompPort: ccCompPort});
+    var upstreamFile = upstreamName + ".json";
+
+    var upstreams = [];
 
     fp.forEach( node => {
 
@@ -267,7 +270,10 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
 
         ccservicedef.end();
 
-        // trasfer config file to target platform, ie, GCP project
+        // transfer a future-generated upsteam file same for all nodes to each node
+        configFileTransfer( n, upstreamFile )
+
+        // transfer config file to target platform, ie, GCP project
         configFileTransfer( n, serviceFileName )
     
         // server-each sidecar
@@ -281,15 +287,42 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
         ccvsetup.write( "\n" );
 
         // sider upstream collection
-        upstreams += fp.template( "-upstream <%= service %>:<%= port %> " )({ service: serviceNodeName, port: node.port });
+        upstreams.push( fp.template( `{
+                                "destination_name": "<%= service %>",
+                                "local_bind_port": <%= port %>
+                            }`)({ service: serviceNodeName, port: node.port })
+        );
 
     })(servers)
+
+    // emit upstreams: config definition
+    var ccupstreamdef = fs.createWriteStream( program.directory + '/' + upstreamFile );
+    ccupstreamdef.write(  
+        fp.template(`{
+    "services": [
+            {
+            "name": "<%= upstream %>",
+            "port": <%= port %>,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            <%= upstreams %>
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}` )({ upstream: upstreamName, port: ccport, upstreams: upstreams.join(", ") }) 
+    );
+    ccupstreamdef.end();           
 
     // 
     // dc1-$node sidecar-for edge-$CC_COMP-$CC_PORT
     ccvsetup.write( 
         fp.template( 
-            "ansible <%= clientnodes %> -m shell -a 'nohup consul connect proxy -service <%= service %> $upstreams  &> /opt/hashicorp/consul/logs/<%= service %>.log & echo $! > /opt/hashicorp/consul/logs/<%= service %>.pid'\n"
+            "ansible <%= clientnodes %> -m shell -a 'nohup consul connect proxy -service <%= service %> &> /opt/hashicorp/consul/logs/<%= service %>.log & echo $! > /opt/hashicorp/consul/logs/<%= service %>.pid'\n"
         )({ clientnodes: clientnodes, service: serviceName, upstreams: upstreams})
     );
 

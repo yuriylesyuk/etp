@@ -1,0 +1,26 @@
+{
+    "services": [
+            {
+            "name": "edge-cs-7000",
+            "port": 7000,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n01-cs-7000",
+                                "local_bind_port": 30701
+                            }, {
+                                "destination_name": "edge-n02-cs-7000",
+                                "local_bind_port": 30702
+                            }, {
+                                "destination_name": "edge-n03-cs-7000",
+                                "local_bind_port": 30703
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

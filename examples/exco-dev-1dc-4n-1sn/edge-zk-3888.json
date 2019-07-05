@@ -1,0 +1,26 @@
+{
+    "services": [
+            {
+            "name": "edge-zk-3888",
+            "port": 3888,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n01-zk-3888",
+                                "local_bind_port": 30381
+                            }, {
+                                "destination_name": "edge-n02-zk-3888",
+                                "local_bind_port": 30382
+                            }, {
+                                "destination_name": "edge-n03-zk-3888",
+                                "local_bind_port": 30383
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
