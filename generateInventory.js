@@ -690,13 +690,33 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     //
     //
 
+
+    // MS
+    // iRULE: If there are MS nodes defined in a region, one of them should be nominated as .primary
+    var noOfMSs = mss.length;
+    fp( mss ).filter()
+    fp.map( dc => {
+            var msPrimaryCounts = fp(mss).filter(
+                    {dcid: dc.id}
+                ).map( n => { 
+                    return {nodeid: n.nodeid, primary: n.components["MS"].primary } 
+                } ).countBy({primary: true}).value();
+
+
+            if( msPrimaryCounts.true != 1 ){
+                ruleWarning( `Rule: each DC with MSs should have 1 .primary==true MS. Found dc: ${dc.id} has ${msPrimaryCounts.true} MSs` )
+            }
+
+        }
+    )(topology.regions)
+    
     // PS -- PGm, PGs
     // each PS should have its PGm/PGs counterpart on its node
     // TODO: let's evolve the language!! DSL to describe topology integrity rules
 
 
     // iRULE: single PGm across all Data centers
-    noOfPGms = pgms.length;
+    var noOfPGms = pgms.length;
     if( noOfPGms !== 1 ){
         ruleWarning( `Rule: single PGm across Data Centers. Found ${noOfPGms}` )
     }

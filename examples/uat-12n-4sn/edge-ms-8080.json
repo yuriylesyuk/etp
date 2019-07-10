@@ -1,0 +1,20 @@
+{
+    "services": [
+            {
+            "name": "edge-ms-8080",
+            "port": 8080,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n09-ms-8080",
+                                "local_bind_port": 30805
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -78,7 +78,8 @@
                                     "comp": "MP"
                                 },
                                 {
-                                    "comp": "MS"
+                                    "comp": "MS",
+                                    "primary": true
                                 },
                                 {
                                     "comp": "UI"
@@ -475,7 +476,8 @@
                                     "comp": "MP"
                                 },
                                 {
-                                    "comp": "MS"
+                                    "comp": "MS",
+                                    "primary": true
                                 },
                                 {
                                     "comp": "UI"
@@ -829,8 +831,14 @@
         }
     ],
     "customer": {
-        "brand": "sap",
-        "adminEmail": "prodadmin@customer.com",
-        "adminPassword": "Welcome123"
+        "adminEmail": "apigee@exco.co.za",
+        "adminPassword": "Apigee123!",
+        "licenseFile": "/opt/apigee-install/configs/license.txt",
+        "skipSmtp": "n",
+        "smtpHost": "smtp.exco.co.za",
+        "smtpPort": "25",
+        "smtpUser": "0",
+        "smtpPassword": "0",
+        "smtpSsl": "n"
     }
 }

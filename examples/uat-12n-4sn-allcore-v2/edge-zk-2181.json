@@ -1,0 +1,26 @@
+{
+    "services": [
+            {
+            "name": "edge-zk-2181",
+            "port": 2181,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n02-zk-2181",
+                                "local_bind_port": 30212
+                            }, {
+                                "destination_name": "edge-n03-zk-2181",
+                                "local_bind_port": 30213
+                            }, {
+                                "destination_name": "edge-n04-zk-2181",
+                                "local_bind_port": 30214
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

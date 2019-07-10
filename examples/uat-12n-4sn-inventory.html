@@ -1,0 +1,159 @@
+
+<head>
+    <style>
+        html * {
+            font-size: small;
+            font-family: "Arial Narrow", Arial, sans-serif !important;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #dddddd;
+        }
+
+        th,
+        td {
+            border: 1px solid lightgrey;
+        }
+
+        tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+        .roleApigee {
+            font-weight: bold;
+            color: #f83100;
+        }
+        .role3rdParty {
+            font-weight: bold;
+            color: blue;s
+        }
+        .nodeID {
+            font-weight: bold;
+        }
+    </style>
+</head><table>
+
+<thead>
+    <tr>
+        <th>DC</th>
+        <th>Node #</th>
+        <th>Role(s)</th>
+        <th>Rack</th>
+        <th>Subnet</th>
+        <th>Hostname</th>
+        <th>IP</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="roleApigee">DP</span>,<span class="role3rdParty">NO</span>,<span class="role3rdParty">HT</span></td>
+    <td/>
+    <td>external</td>
+    <td>nnnxxxyyy01</td>
+    <td>10.119.3.201</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="role3rdParty">OL</span>,<span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>data-storage</td>
+    <td>nnnxxxyyy02</td>
+    <td>10.119.3.202</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>data-storage</td>
+    <td>nnnxxxyyy03</td>
+    <td>10.119.3.203</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">4</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>data-storage</td>
+    <td>nnnxxxyyy04</td>
+    <td>10.119.3.204</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">5</span></bold></td>
+    <td><span class="roleApigee">BS</span>,<span class="roleApigee">BP</span>,<span class="roleApigee">QS</span>,<span class="role3rdParty">TC</span>,<span class="role3rdParty">QD</span>,<span class="role3rdParty">GF</span>,<span class="role3rdParty">IF</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>gateway-baas</td>
+    <td>nnnxxxyyy05</td>
+    <td>10.119.3.205</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">6</span></bold></td>
+    <td><span class="roleApigee">PS</span>,<span class="roleApigee">QS</span>,<span class="role3rdParty">QD</span>,<span class="role3rdParty">PG</span>,<span class="role3rdParty">MY</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>analytics</td>
+    <td>nnnxxxyyy06</td>
+    <td>10.119.3.206</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">7</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>external</td>
+    <td>nnnxxxyyy07</td>
+    <td>10.119.3.207</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">8</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>external</td>
+    <td>nnnxxxyyy08</td>
+    <td>10.119.3.208</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">9</span></bold></td>
+    <td><span class="roleApigee">MP</span>,<span class="roleApigee">UI</span>,<span class="roleApigee">MS</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>gateway-baas</td>
+    <td>nnnxxxyyy09</td>
+    <td>10.119.3.209</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">10</span></bold></td>
+    <td><span class="roleApigee">MP</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>gateway-baas</td>
+    <td>nnnxxxyyy10</td>
+    <td>10.119.3.210</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">11</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>gateway-baas</td>
+    <td>nnnxxxyyy11</td>
+    <td>10.119.3.211</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">12</span></bold></td>
+    <td><span class="roleApigee">R</span>,<span class="roleApigee">MP</span>,<span class="role3rdParty">TG</span></td>
+    <td/>
+    <td>gateway-baas</td>
+    <td>nnnxxxyyy12</td>
+    <td>10.119.3.212</td>
+</tr></tbody></table>
+

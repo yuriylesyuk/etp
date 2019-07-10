@@ -194,7 +194,7 @@ ansible dc2n18 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n18-zk-2181.json"
 ansible dc2n18 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n18-zk-2181  &> /opt/hashicorp/consul/logs/edge-dc2n18-zk-2181.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n18-zk-2181.pid'
 
-ansible dc1n01,dc1n02,dc1n03,dc1n04,dc1n05,dc1n06,dc1n07,dc1n19,dc2n01,dc2n02,dc2n03,dc2n04,dc2n05,dc2n06,dc2n07,dc2n19 -m shell -a 'nohup consul connect proxy -service edge-zk-2181 $upstreams  &> /opt/hashicorp/consul/logs/edge-zk-2181.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2181.pid'
+ansible dc1n01,dc1n02,dc1n03,dc1n04,dc1n05,dc1n06,dc1n07,dc1n19,dc2n01,dc2n02,dc2n03,dc2n04,dc2n05,dc2n06,dc2n07,dc2n19 -m shell -a 'nohup consul connect proxy -service edge-zk-2181 &> /opt/hashicorp/consul/logs/edge-zk-2181.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2181.pid'
 #
 
 
@@ -251,7 +251,7 @@ ansible dc2n18 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n18-zk-2888.json"
 ansible dc2n18 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n18-zk-2888  &> /opt/hashicorp/consul/logs/edge-dc2n18-zk-2888.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n18-zk-2888.pid'
 
-ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-zk-2888 $upstreams  &> /opt/hashicorp/consul/logs/edge-zk-2888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2888.pid'
+ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-zk-2888 &> /opt/hashicorp/consul/logs/edge-zk-2888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-2888.pid'
 #
 
 
@@ -308,7 +308,7 @@ ansible dc2n18 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n18-zk-3888.json"
 ansible dc2n18 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n18-zk-3888  &> /opt/hashicorp/consul/logs/edge-dc2n18-zk-3888.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n18-zk-3888.pid'
 
-ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-zk-3888 $upstreams  &> /opt/hashicorp/consul/logs/edge-zk-3888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-3888.pid'
+ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-zk-3888 &> /opt/hashicorp/consul/logs/edge-zk-3888.log & echo $! > /opt/hashicorp/consul/logs/edge-zk-3888.pid'
 #
 
 
@@ -365,7 +365,7 @@ ansible dc2n18 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n18-cs-7000.json"
 ansible dc2n18 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n18-cs-7000  &> /opt/hashicorp/consul/logs/edge-dc2n18-cs-7000.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n18-cs-7000.pid'
 
-ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-cs-7000 $upstreams  &> /opt/hashicorp/consul/logs/edge-cs-7000.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-7000.pid'
+ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-cs-7000 &> /opt/hashicorp/consul/logs/edge-cs-7000.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-7000.pid'
 #
 
 
@@ -422,7 +422,7 @@ ansible dc2n18 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n18-cs-9042.json"
 ansible dc2n18 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n18-cs-9042  &> /opt/hashicorp/consul/logs/edge-dc2n18-cs-9042.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n18-cs-9042.pid'
 
-ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-cs-9042 $upstreams  &> /opt/hashicorp/consul/logs/edge-cs-9042.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9042.pid'
+ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-cs-9042 &> /opt/hashicorp/consul/logs/edge-cs-9042.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9042.pid'
 #
 
 
@@ -479,7 +479,7 @@ ansible dc2n18 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n18-cs-9160.json"
 ansible dc2n18 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n18-cs-9160  &> /opt/hashicorp/consul/logs/edge-dc2n18-cs-9160.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n18-cs-9160.pid'
 
-ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-cs-9160 $upstreams  &> /opt/hashicorp/consul/logs/edge-cs-9160.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9160.pid'
+ansible dc1n13,dc1n15,dc1n16,dc1n17,dc1n18,dc2n13,dc2n15,dc2n16,dc2n17,dc2n18 -m shell -a 'nohup consul connect proxy -service edge-cs-9160 &> /opt/hashicorp/consul/logs/edge-cs-9160.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9160.pid'
 #
 
 
@@ -496,7 +496,7 @@ ansible dc2n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport
 # file: "edge-dc2n03-ms-8080.json"
 ansible dc2n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-dc2n03-ms-8080  &> /opt/hashicorp/consul/logs/edge-dc2n03-ms-8080.log &  echo $! > /opt/hashicorp/consul/logs/edge-dc2n03-ms-8080.pid'
 
-ansible dc1n01,dc1n02,dc1n03,dc1n04,dc1n05,dc1n06,dc1n07,dc1n19,dc2n01,dc2n02,dc2n03,dc2n04,dc2n05,dc2n06,dc2n07,dc2n19 -m shell -a 'nohup consul connect proxy -service edge-ms-8080 $upstreams  &> /opt/hashicorp/consul/logs/edge-ms-8080.log & echo $! > /opt/hashicorp/consul/logs/edge-ms-8080.pid'
+ansible dc1n01,dc1n02,dc1n03,dc1n04,dc1n05,dc1n06,dc1n07,dc1n19,dc2n01,dc2n02,dc2n03,dc2n04,dc2n05,dc2n06,dc2n07,dc2n19 -m shell -a 'nohup consul connect proxy -service edge-ms-8080 &> /opt/hashicorp/consul/logs/edge-ms-8080.log & echo $! > /opt/hashicorp/consul/logs/edge-ms-8080.pid'
 #
 
 

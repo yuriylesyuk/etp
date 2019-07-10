@@ -1,0 +1,47 @@
+{
+    "services": [
+            {
+            "name": "edge-zk-2888",
+            "port": 2888,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-dc1n13-zk-2888",
+                                "local_bind_port": 30281
+                            }, {
+                                "destination_name": "edge-dc1n15-zk-2888",
+                                "local_bind_port": 30282
+                            }, {
+                                "destination_name": "edge-dc1n16-zk-2888",
+                                "local_bind_port": 30283
+                            }, {
+                                "destination_name": "edge-dc1n17-zk-2888",
+                                "local_bind_port": 30284
+                            }, {
+                                "destination_name": "edge-dc1n18-zk-2888",
+                                "local_bind_port": 30285
+                            }, {
+                                "destination_name": "edge-dc2n13-zk-2888",
+                                "local_bind_port": 30286
+                            }, {
+                                "destination_name": "edge-dc2n15-zk-2888",
+                                "local_bind_port": 30287
+                            }, {
+                                "destination_name": "edge-dc2n16-zk-2888",
+                                "local_bind_port": 30288
+                            }, {
+                                "destination_name": "edge-dc2n17-zk-2888",
+                                "local_bind_port": 30289
+                            }, {
+                                "destination_name": "edge-dc2n18-zk-2888",
+                                "local_bind_port": 30290
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

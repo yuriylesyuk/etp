@@ -81,6 +81,7 @@
                                 },
                                 {
                                     "comp": "MS",
+                                    "primary": true,
                                     "ldapHost": "/dc/1/n/13"
                                 },
                                 {

@@ -50,7 +50,7 @@
                             "components": [
                                 {"comp":"MP"},
                                 {"comp":"UI"},
-                                {"comp":"MS","ldapHost": "/dc/1/n/2"},
+                                {"comp":"MS","primary":true,"ldapHost": "/dc/1/n/2"},
                                 {"comp":"TG"}
                             ]
                         },

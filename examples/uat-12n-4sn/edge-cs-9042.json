@@ -1,0 +1,26 @@
+{
+    "services": [
+            {
+            "name": "edge-cs-9042",
+            "port": 9042,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n02-cs-9042",
+                                "local_bind_port": 30521
+                            }, {
+                                "destination_name": "edge-n03-cs-9042",
+                                "local_bind_port": 30522
+                            }, {
+                                "destination_name": "edge-n04-cs-9042",
+                                "local_bind_port": 30523
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

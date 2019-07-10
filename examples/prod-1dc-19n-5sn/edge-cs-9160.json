@@ -1,0 +1,32 @@
+{
+    "services": [
+            {
+            "name": "edge-cs-9160",
+            "port": 9160,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n13-cs-9160",
+                                "local_bind_port": 30601
+                            }, {
+                                "destination_name": "edge-n15-cs-9160",
+                                "local_bind_port": 30602
+                            }, {
+                                "destination_name": "edge-n16-cs-9160",
+                                "local_bind_port": 30603
+                            }, {
+                                "destination_name": "edge-n17-cs-9160",
+                                "local_bind_port": 30604
+                            }, {
+                                "destination_name": "edge-n18-cs-9160",
+                                "local_bind_port": 30605
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
