@@ -633,7 +633,8 @@
                                     "comp": "CS"
                                 },
                                 {
-                                    "comp": "ZK"
+                                    "comp": "ZK",
+                                    "observer": true
                                 }
                             ]
                         },
@@ -647,7 +648,8 @@
                                     "comp": "CS"
                                 },
                                 {
-                                    "comp": "ZK"
+                                    "comp": "ZK",
+                                    "observer": true
                                 }
                             ]
                         },
@@ -661,7 +663,8 @@
                                     "comp": "CS"
                                 },
                                 {
-                                    "comp": "ZK"
+                                    "comp": "ZK",
+                                    "observer": true
                                 }
                             ]
                         }

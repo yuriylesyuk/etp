@@ -1,6 +1,23 @@
 var fp = require("lodash/fp");
 
 
+/*
+
+Decision Register:
+
+TODO: [ ] we are caught between depreacated and not available:
+    usr xref:link is deprecated but svg2 parameters are of limited support
+
+    https://css-tricks.com/on-xlinkhref-being-deprecated-in-svg/
+
+    -- the cheapest option right now is to add excess component definisions 
+    -- for variants like msp, zko, pgm/pgs etc. until better refactoring
+
+TODO: [ ] for single MS in a Regions -- primary by default
+
+
+*/
+
 module.exports = function ( topologyFile, outputFile ){
     var portdefs = require("./edge-defs.json");
 
@@ -42,6 +59,14 @@ id="svg2">
     >MS</text>
 </symbol>
 
+<symbol id="msp">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MSp</text>
+</symbol>
+
 <symbol id="r">
     <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -72,6 +97,14 @@ id="svg2">
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
         alignment-baseline="middle" text-anchor="middle"
     >ZK</text>
+</symbol>
+
+<symbol id="zko">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZKo</text>
 </symbol>
 
 <symbol id="ol">
@@ -404,7 +437,7 @@ id="svg2">
                 lbWidth = getLoadBalancerWidth( lb );
 
 
-    console.log(xoffset, lbWidth);
+    // console.log(xoffset, lbWidth);
                 if( xoffset + lbPH + lbWidth > lbTotalWidth ){
                     rows.push( xoffset );
 
@@ -425,7 +458,7 @@ id="svg2">
         
         fp.map(
             lb => {
-    console.log(xoffset, lbWidth);
+    // console.log(xoffset, lbWidth);
                 if( xoffset + lbPH + lbWidth > lbTotalWidth ){
                     row++
 
@@ -682,7 +715,7 @@ id="svg2">
 
                             var comps = fp(comps).reduce(
                                 (acc, c) => {
-                                    acc.push( compTemplate({comp: c.comp.toLowerCase(), x: subnetX + subnetPaddingH + nodeX + compX, y: subnetY + subnetPaddingV + compY }) );
+                                    acc.push( compTemplate({comp: getCompLabel( c ).toLowerCase(), x: subnetX + subnetPaddingH + nodeX + compX, y: subnetY + subnetPaddingV + compY }) );
                                     compY += compInc();
 
                                     return acc;
@@ -717,4 +750,22 @@ id="svg2">
     svgstream.write( nodesSvg.join('\n') );
     svgstream.write( svgFooter);
     svgstream.end();
+}
+
+// Function to generate label for a componet
+function getCompLabel( comp ){
+    var label = comp.comp;
+
+    if( comp.comp === "MS"){
+        if( comp.primary == true ){
+            label = label + "p"
+        }
+    }
+    if( comp.comp === "ZK"){
+        if( comp.observer == true ){
+            label = label + "o"
+        }
+    }
+
+    return label;
 }

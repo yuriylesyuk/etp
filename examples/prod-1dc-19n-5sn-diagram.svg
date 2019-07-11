@@ -29,6 +29,14 @@ id="svg2">
     >MS</text>
 </symbol>
 
+<symbol id="msp">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MSp</text>
+</symbol>
+
 <symbol id="r">
     <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -59,6 +67,14 @@ id="svg2">
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
         alignment-baseline="middle" text-anchor="middle"
     >ZK</text>
+</symbol>
+
+<symbol id="zko">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZKo</text>
 </symbol>
 
 <symbol id="ol">
@@ -384,7 +400,7 @@ IP: 10.119.3.203</title>
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 <use xlink:href="#mp"  x="16" y="212"/>
-<use xlink:href="#ms"  x="16" y="231"/>
+<use xlink:href="#msp"  x="16" y="231"/>
 <use xlink:href="#ui"  x="16" y="250"/>
 
 

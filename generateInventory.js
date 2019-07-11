@@ -709,7 +709,17 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
         }
     )(topology.regions)
+
     
+    // iRULE: odd number of non-observer nodes per planet
+    var noOfZKs = zks.length;
+    var noOfZKos = fp(zks).reduce( (no, n ) => { return no + (n.components["ZK"].observer==true? 1: 0) }, 0 )
+    if( (noOfZKs - noOfZKos) % 2 == 0 ){ // if even
+
+        ruleWarning( `Rule: Should have odd number of voter nodes. Found ${noOfZKos} observers out of ${noOfZKs} total. Mark some ZK(s) as .observer:true` )
+    }
+
+
     // PS -- PGm, PGs
     // each PS should have its PGm/PGs counterpart on its node
     // TODO: let's evolve the language!! DSL to describe topology integrity rules
@@ -870,6 +880,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
                     // TODO:  change the behavior of observer so that if some ZK nodes are marked as observer in the topology, then this choice marking is respected.
                     cfgstream.write( "\n" );
 
+// TODO: [ ] RIP: ZK -- explicit observers                    
                     var observers = (zks.length % 2)===0 ? 1: 0
 
                     var _zks = fp(zks).take(zks.length-observers).map(n=> ({dcid: n.dcid, zkref: "$"+n.ipref}) ).value().concat(

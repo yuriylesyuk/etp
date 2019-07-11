@@ -29,6 +29,14 @@ id="svg2">
     >MS</text>
 </symbol>
 
+<symbol id="msp">
+    <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#ffffff;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >MSp</text>
+</symbol>
+
 <symbol id="r">
     <use xlink:href="#struct" style="fill:#5287a2;stroke:#5287a2;"/>
     <text id="text1488" x="12.5" y="10.5"
@@ -59,6 +67,14 @@ id="svg2">
         style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
         alignment-baseline="middle" text-anchor="middle"
     >ZK</text>
+</symbol>
+
+<symbol id="zko">
+    <use xlink:href="#struct" style="fill:#ffffff;stroke:#5287a2;"/>
+    <text id="text1488" x="12.5" y="10.5"
+        style="font-weight:bold;font-size:9px;font-family:Arial;fill:#5287a2;" 
+        alignment-baseline="middle" text-anchor="middle"
+    >ZKo</text>
 </symbol>
 
 <symbol id="ol">
@@ -463,7 +479,7 @@ IP: 10.119.3.203</title>
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 <use xlink:href="#mp"  x="16" y="232"/>
-<use xlink:href="#ms"  x="16" y="251"/>
+<use xlink:href="#msp"  x="16" y="251"/>
 <use xlink:href="#ui"  x="16" y="270"/>
 
 
@@ -771,7 +787,7 @@ IP: 10.119.5.203</title>
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 <use xlink:href="#mp"  x="360.8" y="232"/>
-<use xlink:href="#ms"  x="360.8" y="251"/>
+<use xlink:href="#msp"  x="360.8" y="251"/>
 <use xlink:href="#ui"  x="360.8" y="270"/>
 
 
@@ -930,7 +946,7 @@ IP: 10.119.5.216</title>
         alignment-baseline="middle" text-anchor="middle">Node 16</text>
     
 
-<use xlink:href="#zk"  x="450.3" y="425"/>
+<use xlink:href="#zko"  x="450.3" y="425"/>
 <use xlink:href="#cs"  x="450.3" y="406"/>
 
 
@@ -944,7 +960,7 @@ IP: 10.119.5.217</title>
         alignment-baseline="middle" text-anchor="middle">Node 17</text>
     
 
-<use xlink:href="#zk"  x="480.90000000000003" y="425"/>
+<use xlink:href="#zko"  x="480.90000000000003" y="425"/>
 <use xlink:href="#cs"  x="480.90000000000003" y="406"/>
 
 
@@ -958,7 +974,7 @@ IP: 10.119.5.218</title>
         alignment-baseline="middle" text-anchor="middle">Node 18</text>
     
 
-<use xlink:href="#zk"  x="511.5" y="425"/>
+<use xlink:href="#zko"  x="511.5" y="425"/>
 <use xlink:href="#cs"  x="511.5" y="406"/>
 
 
