@@ -60,7 +60,7 @@ function getTopologyComponentNodesByWildCard( topology, compType, pattern ){
 
     return fp.flatten( fp.flatMap(r => fp.map(s =>
         fp.reduce( ( ns, n ) => {
-console.log( r.id, n.id) 
+            // console.log( r.id, n.id) 
             if( includes( dcPattern, r.id ) && includes( nPattern, n.id ) ){
                 ns.push( { dc: r.id, n: n.id } )
             }

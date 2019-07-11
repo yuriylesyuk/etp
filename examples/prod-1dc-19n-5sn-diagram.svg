@@ -254,8 +254,8 @@ id="svg2">
         alignment-baseline="middle" text-anchor="middle"
     >LB:</text>
 </symbol>
-<g transform="translate(19.900000000000006,15)">
-        <rect id="node1" x="0" y="0" width="132" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
+<g transform="translate(2.9000000000000057,15)">
+        <rect id="node1" x="0" y="0" width="96" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
                 <title>tooltip</title>
         </rect> 
         <use xlink:href="#lb"/>
@@ -263,10 +263,8 @@ id="svg2">
 <use xlink:href="#r" transform="scale(0.6) translate(70,8)"/>
 <use xlink:href="#r" transform="scale(0.6) translate(100,8)"/>
 <use xlink:href="#r" transform="scale(0.6) translate(130,8)"/>
-<use xlink:href="#r" transform="scale(0.6) translate(160,8)"/>
-<use xlink:href="#r" transform="scale(0.6) translate(190,8)"/>
 </g>
-<g transform="translate(161.9,15)">
+<g transform="translate(108.9,15)">
         <rect id="node1" x="0" y="0" width="60" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
                 <title>tooltip</title>
         </rect> 
@@ -274,7 +272,7 @@ id="svg2">
         <use xlink:href="#dp" transform="scale(0.6) translate(40,8)"/>
 <use xlink:href="#dp" transform="scale(0.6) translate(70,8)"/>
 </g>
-<g transform="translate(231.9,15)">
+<g transform="translate(178.9,15)">
         <rect id="node1" x="0" y="0" width="60" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
                 <title>tooltip</title>
         </rect> 
@@ -282,7 +280,7 @@ id="svg2">
         <use xlink:href="#dp" transform="scale(0.6) translate(40,8)"/>
 <use xlink:href="#dp" transform="scale(0.6) translate(70,8)"/>
 </g>
-<g transform="translate(95.9,35)">
+<g transform="translate(248.9,15)">
         <rect id="node1" x="0" y="0" width="60" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
                 <title>tooltip</title>
         </rect> 
@@ -290,7 +288,7 @@ id="svg2">
         <use xlink:href="#dp" transform="scale(0.6) translate(40,8)"/>
 <use xlink:href="#dp" transform="scale(0.6) translate(70,8)"/>
 </g>
-<g transform="translate(165.9,35)">
+<g transform="translate(130.9,35)">
         <rect id="node1" x="0" y="0" width="60" height="17.6" style="fill:#ffffff;stroke:#bfbfbf">
                 <title>tooltip</title>
         </rect> 

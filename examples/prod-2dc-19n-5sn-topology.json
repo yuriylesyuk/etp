@@ -335,11 +335,8 @@
                     "heartbeattype": "socket",
                     "responsecode": 200,
                     "nodes": [
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/3"
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/3", "port": 9001 }
                     ]
                 },
                 {
@@ -350,11 +347,12 @@
                     "heartbeattype": "socket",
                     "responsecode": 200,
                     "nodes": [
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/3"
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/3", "port": 9001 }
                     ]
                 },
                 {
@@ -365,11 +363,10 @@
                     "heartbeattype": "socket",
                     "responsecode": 200,
                     "nodes": [
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/3"
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/3", "port": 9001 }
                     ]
                 },
                 {
@@ -380,11 +377,10 @@
                     "heartbeattype": "socket",
                     "responsecode": 200,
                     "nodes": [
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/1",
-                            "/dc/2/n/3"
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/3", "port": 9001 }
                     ]
                 },
                 {
@@ -395,8 +391,8 @@
                     "heartbeattype": "socket",
                     "responsecode": 200,
                     "nodes": [
-                            "/dc/2/n/1",
-                            "/dc/2/n/3"
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/3", "port": 9001 }
                     ]
                 }
             ]
@@ -733,8 +729,8 @@
                     "heartbeattype": "socket",
                     "responsecode": 200,
                     "nodes": [
-                            "/dc/2/n/1",
-                            "/dc/2/n/3"
+                        { "host": "/dc/2/n/1", "port": 9001 },
+                        { "host": "/dc/2/n/2", "port": 9001 }
                     ]
                 }
             ]
@@ -749,10 +745,9 @@
             "heartbeattype": "socket",
             "responsecode": 200,
             "nodes": [
-                    "/dc/1/n/1",
-                    "/dc/1/n/2",
-                    "/dc/2/n/1",
-                    "/dc/2/n/2"
+                { "host": "/dc/1/n/2", "port": 9001 },
+                { "host": "/dc/2/n/1", "port": 9001 },
+                { "host": "/dc/2/n/1", "port": 9001 }
             ]
         },
         {
@@ -763,10 +758,10 @@
             "heartbeattype": "socket",
             "responsecode": 200,
             "nodes": [
-                    "/dc/1/n/1",
-                    "/dc/1/n/2",
-                    "/dc/2/n/1",
-                    "/dc/2/n/2"
+                { "host": "/dc/1/n/2", "port": 9001 },
+                { "host": "/dc/2/n/1", "port": 9001 },
+                { "host": "/dc/2/n/1", "port": 9001 },
+                { "host": "/dc/2/n/2", "port": 9001 }
             ]
         },
         {
@@ -777,8 +772,8 @@
             "heartbeattype": "socket",
             "responsecode": 200,
             "nodes": [
-                    "/dc/2/n/1",
-                    "/dc/2/n/2"
+                { "host": "/dc/2/n/1", "port": 9001 },
+                { "host": "/dc/2/n/2", "port": 9001 }
             ]
         },
         {
@@ -801,8 +796,8 @@
             "heartbeattype": "socket",
             "responsecode": 200,
             "nodes": [
-                    "/dc/2/n/1",
-                    "/dc/2/n/2"
+                { "host": "/dc/2/n/1", "port": 9001 },
+                { "host": "/dc/2/n/2", "port": 9001 }
             ]
         },
         {
@@ -813,8 +808,8 @@
             "heartbeattype": "socket",
             "responsecode": 200,
             "nodes": [
-                    "/dc/2/n/1",
-                    "/dc/2/n/2"
+                { "host": "/dc/2/n/1", "port": 9001 },
+                { "host": "/dc/2/n/2", "port": 9001 }
             ]
         },
         {
@@ -825,20 +820,22 @@
             "heartbeattype": "socket",
             "responsecode": 200,
             "nodes": [
-                    "/dc/1/n/8",
-                    "/dc/2/n/8"
+                { "host": "/dc/1/n/8", "port": 9001 },
+                { "host": "/dc/2/n/8", "port": 9001 }
             ]
         }
     ],
     "customer": {
-        "adminEmail": "apigee@exco.co.za",
+        "adminEmail": "admin@exco.com",
         "adminPassword": "Apigee123!",
         "licenseFile": "/opt/apigee-install/configs/license.txt",
+        "ldapPassword": "Apigee123!",
         "skipSmtp": "n",
-        "smtpHost": "smtp.exco.co.za",
+        "smtpHost": "smtp.exco.com",
         "smtpPort": "25",
         "smtpUser": "0",
         "smtpPassword": "0",
-        "smtpSsl": "n"
+        "smtpSsl": "n",
+        "smtpMailFrom": "admin@exco.com" 
     }
 }

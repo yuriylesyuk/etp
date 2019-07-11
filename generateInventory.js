@@ -631,7 +631,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
     fp.map( region => {
         fp.map( subnet => {
             fp.reduce( (compPlanet, node ) => {
-                console.log(node.components);
+                // console.log(node.components);
                 compPlanet[ `/dc/${node.dcid}/n/${node.id}` ] = {
                         components: fp.map('comp')(node.components),
                         node: { 
