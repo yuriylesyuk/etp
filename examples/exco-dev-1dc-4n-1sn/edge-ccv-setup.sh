@@ -27,10 +27,10 @@ ansible n01 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m mu
 ansible n02 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports 8080,7000,9042,9160,2181,2888,3888 -m state --state NEW,ESTABLISHED -j REJECT"
 ansible n02 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,9443,1099,8443 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
-ansible n03 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports 7000,9042,9160,2181,2888,3888 -m state --state NEW,ESTABLISHED -j REJECT"
+ansible n03 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports 4529,8998,7000,9042,9160,2181,2888,3888 -m state --state NEW,ESTABLISHED -j REJECT"
 ansible n03 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,15999,59001,9001,9002,9003,9004,9005 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
-ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports  -m state --state NEW,ESTABLISHED -j REJECT"
+ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports 4529,8998 -m state --state NEW,ESTABLISHED -j REJECT"
 ansible n04 -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports 22,15999,59001,9001,9002,9003,9004,9005 -m state --state NEW,ESTABLISHED -j ACCEPT"
 
 #
@@ -168,6 +168,40 @@ ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 91
 ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-cs-9160  &> /opt/hashicorp/consul/logs/edge-n03-cs-9160.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-cs-9160.pid'
 
 ansible n01,n02,n03 -m shell -a 'nohup consul connect proxy -service edge-cs-9160 &> /opt/hashicorp/consul/logs/edge-cs-9160.log & echo $! > /opt/hashicorp/consul/logs/edge-cs-9160.pid'
+#
+
+
+#
+## configuration for edge-mp-4529
+#
+ansible n03,n04 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 172.20.106.103 --dport 4529 -j DNAT --to-destination 127.0.0.1:30901"
+ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 4529 -j DNAT --to-destination 172.20.106.103:4529"
+# file: "edge-n03-mp-4529.json"
+ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-mp-4529  &> /opt/hashicorp/consul/logs/edge-n03-mp-4529.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-mp-4529.pid'
+
+ansible n03,n04 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 172.20.106.104 --dport 4529 -j DNAT --to-destination 127.0.0.1:30902"
+ansible n04 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 4529 -j DNAT --to-destination 172.20.106.104:4529"
+# file: "edge-n04-mp-4529.json"
+ansible n04 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n04-mp-4529  &> /opt/hashicorp/consul/logs/edge-n04-mp-4529.log &  echo $! > /opt/hashicorp/consul/logs/edge-n04-mp-4529.pid'
+
+ansible n03,n04 -m shell -a 'nohup consul connect proxy -service edge-mp-4529 &> /opt/hashicorp/consul/logs/edge-mp-4529.log & echo $! > /opt/hashicorp/consul/logs/edge-mp-4529.pid'
+#
+
+
+#
+## configuration for edge-mp-8998
+#
+ansible n03,n04 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 172.20.106.103 --dport 8998 -j DNAT --to-destination 127.0.0.1:30851"
+ansible n03 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 8998 -j DNAT --to-destination 172.20.106.103:8998"
+# file: "edge-n03-mp-8998.json"
+ansible n03 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n03-mp-8998  &> /opt/hashicorp/consul/logs/edge-n03-mp-8998.log &  echo $! > /opt/hashicorp/consul/logs/edge-n03-mp-8998.pid'
+
+ansible n03,n04 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 172.20.106.104 --dport 8998 -j DNAT --to-destination 127.0.0.1:30852"
+ansible n04 -ba "iptables -t nat -A CONSUL_OUTPUT -p tcp -d 127.0.0.1 --dport 8998 -j DNAT --to-destination 172.20.106.104:8998"
+# file: "edge-n04-mp-8998.json"
+ansible n04 -m shell -a 'nohup consul connect proxy -sidecar-for edge-n04-mp-8998  &> /opt/hashicorp/consul/logs/edge-n04-mp-8998.log &  echo $! > /opt/hashicorp/consul/logs/edge-n04-mp-8998.pid'
+
+ansible n03,n04 -m shell -a 'nohup consul connect proxy -service edge-mp-8998 &> /opt/hashicorp/consul/logs/edge-mp-8998.log & echo $! > /opt/hashicorp/consul/logs/edge-mp-8998.pid'
 #
 
 

@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-n03-mp-8998",
+            "port": 8998,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

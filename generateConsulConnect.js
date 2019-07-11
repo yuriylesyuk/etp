@@ -29,6 +29,9 @@ var ccConfigurations = [
     { cccomp: "CS", ccport: 9042, ccoffset: 30520, comps: [ "CS"] },
     { cccomp: "CS", ccport: 9160, ccoffset: 30600, comps: [ "CS"] },
 
+    { cccomp: "MP", ccport: 4529, ccoffset: 30900, comps: [ "MP", "R" ] },
+    { cccomp: "MP", ccport: 8998, ccoffset: 30850, comps: [ "R" ] },
+
     { cccomp: "MS", ccport: 8080, ccoffset: 30800, comps: [ "MS", "R", "MP", "QS", "PS" ] }
 
 ]
