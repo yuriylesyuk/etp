@@ -1,0 +1,159 @@
+
+<head>
+    <style>
+        html * {
+            font-size: small;
+            font-family: "Arial Narrow", Arial, sans-serif !important;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #dddddd;
+        }
+
+        th,
+        td {
+            border: 1px solid lightgrey;
+        }
+
+        tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+        .roleApigee {
+            font-weight: bold;
+            color: #f83100;
+        }
+        .role3rdParty {
+            font-weight: bold;
+            color: blue;s
+        }
+        .nodeID {
+            font-weight: bold;
+        }
+    </style>
+</head><table>
+
+<thead>
+    <tr>
+        <th>DC</th>
+        <th>Node #</th>
+        <th>Role(s)</th>
+        <th>Rack</th>
+        <th>Subnet</th>
+        <th>Hostname</th>
+        <th>IP</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>datastore</td>
+    <td>dc1sndstn13</td>
+    <td>10.100.1.11</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#79eb0e;">2</td>
+    <td>datastore</td>
+    <td>dc1sndstn15</td>
+    <td>10.100.1.12</td>
+</tr>
+<tr>
+    <td>dc-1</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#c6ff48;">3</td>
+    <td>datastore</td>
+    <td>dc1sndstn16</td>
+    <td>10.100.1.1</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#79eb0e;">2</td>
+    <td>datastore</td>
+    <td>dc2sndstn13</td>
+    <td>10.100.2.11</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#c6ff48;">3</td>
+    <td>datastore</td>
+    <td>dc2sndstn15</td>
+    <td>10.100.2.12</td>
+</tr>
+<tr>
+    <td>dc-2</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>datastore</td>
+    <td>dc2sndstn16</td>
+    <td>10.100.2.13</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>datastore</td>
+    <td>dc3sndstn13</td>
+    <td>10.100.3.11</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#79eb0e;">2</td>
+    <td>datastore</td>
+    <td>dc3sndstn15</td>
+    <td>10.100.3.12</td>
+</tr>
+<tr>
+    <td>dc-3</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#c6ff48;">3</td>
+    <td>datastore</td>
+    <td>dc3sndstn16</td>
+    <td>10.100.3.13</td>
+</tr>
+<tr>
+    <td>dc-4</td>
+    <td>Node <bold><span class="nodeID">1</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#79eb0e;">2</td>
+    <td>datastore</td>
+    <td>dc4sndstn13</td>
+    <td>10.100.4.11</td>
+</tr>
+<tr>
+    <td>dc-4</td>
+    <td>Node <bold><span class="nodeID">2</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#c6ff48;">3</td>
+    <td>datastore</td>
+    <td>dc4sndstn15</td>
+    <td>10.100.4.12</td>
+</tr>
+<tr>
+    <td>dc-4</td>
+    <td>Node <bold><span class="nodeID">3</span></bold></td>
+    <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
+    <td style="text-align:right; background-color:#159702;">1</td>
+    <td>datastore</td>
+    <td>dc4sndstn16</td>
+    <td>10.100.4.13</td>
+</tr></tbody></table>
+
