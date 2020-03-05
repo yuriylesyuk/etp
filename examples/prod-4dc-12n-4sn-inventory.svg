@@ -54,7 +54,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#159702;">1</td>
     <td>datastore</td>
-    <td>dc1sndstn13</td>
+    <td>dc1sndstn11</td>
     <td>10.100.1.11</td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#79eb0e;">2</td>
     <td>datastore</td>
-    <td>dc1sndstn15</td>
+    <td>dc1sndstn12</td>
     <td>10.100.1.12</td>
 </tr>
 <tr>
@@ -72,8 +72,8 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#c6ff48;">3</td>
     <td>datastore</td>
-    <td>dc1sndstn16</td>
-    <td>10.100.1.1</td>
+    <td>dc1sndstn13</td>
+    <td>10.100.1.13</td>
 </tr>
 <tr>
     <td>dc-2</td>
@@ -81,7 +81,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#79eb0e;">2</td>
     <td>datastore</td>
-    <td>dc2sndstn13</td>
+    <td>dc2sndstn11</td>
     <td>10.100.2.11</td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#c6ff48;">3</td>
     <td>datastore</td>
-    <td>dc2sndstn15</td>
+    <td>dc2sndstn12</td>
     <td>10.100.2.12</td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#159702;">1</td>
     <td>datastore</td>
-    <td>dc2sndstn16</td>
+    <td>dc2sndstn13</td>
     <td>10.100.2.13</td>
 </tr>
 <tr>
@@ -108,7 +108,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#159702;">1</td>
     <td>datastore</td>
-    <td>dc3sndstn13</td>
+    <td>dc3sndstn11</td>
     <td>10.100.3.11</td>
 </tr>
 <tr>
@@ -117,7 +117,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#79eb0e;">2</td>
     <td>datastore</td>
-    <td>dc3sndstn15</td>
+    <td>dc3sndstn12</td>
     <td>10.100.3.12</td>
 </tr>
 <tr>
@@ -126,7 +126,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#c6ff48;">3</td>
     <td>datastore</td>
-    <td>dc3sndstn16</td>
+    <td>dc3sndstn13</td>
     <td>10.100.3.13</td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#79eb0e;">2</td>
     <td>datastore</td>
-    <td>dc4sndstn13</td>
+    <td>dc4sndstn11</td>
     <td>10.100.4.11</td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#c6ff48;">3</td>
     <td>datastore</td>
-    <td>dc4sndstn15</td>
+    <td>dc4sndstn12</td>
     <td>10.100.4.12</td>
 </tr>
 <tr>
@@ -153,7 +153,7 @@
     <td><span class="role3rdParty">CS</span>,<span class="role3rdParty">ZK</span></td>
     <td style="text-align:right; background-color:#159702;">1</td>
     <td>datastore</td>
-    <td>dc4sndstn16</td>
+    <td>dc4sndstn13</td>
     <td>10.100.4.13</td>
 </tr></tbody></table>
 

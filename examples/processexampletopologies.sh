@@ -26,5 +26,7 @@ process "uat-12n-4sn"
 
 process "prod-1dc-19n-5sn"
 
+process "prod-4dc-12n-4sn"
+
 process "uat-12n-4sn-allcore-v2"
 

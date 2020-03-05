@@ -1,7 +1,7 @@
 [edge]
 dc1n01 ansible_host=10.100.1.11
 dc1n02 ansible_host=10.100.1.12
-dc1n03 ansible_host=10.100.1.1
+dc1n03 ansible_host=10.100.1.13
 dc2n01 ansible_host=10.100.2.11
 dc2n02 ansible_host=10.100.2.12
 dc2n03 ansible_host=10.100.2.13
