@@ -1,0 +1,29 @@
+{
+    "services": [
+            {
+            "name": "edge-mp-8998",
+            "port": 8998,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n09-mp-8998",
+                                "local_bind_port": 30853
+                            }, {
+                                "destination_name": "edge-n10-mp-8998",
+                                "local_bind_port": 30854
+                            }, {
+                                "destination_name": "edge-n11-mp-8998",
+                                "local_bind_port": 30855
+                            }, {
+                                "destination_name": "edge-n12-mp-8998",
+                                "local_bind_port": 30856
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

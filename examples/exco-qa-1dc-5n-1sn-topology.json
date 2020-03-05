@@ -12,7 +12,7 @@
                         {
                             "id": 1,
                             "hostname": "dbqapiman01",
-                            "ip": "10.36.11.19",
+                            "ip": "10.156.0.7",
                             "rack": 1,
                             "components": [
                                 {
@@ -38,7 +38,7 @@
                         {
                             "id": 2,
                             "hostname": "dbqapiproc01",
-                            "ip": "10.36.10.30",
+                            "ip": "10.156.0.4",
                             "rack": "1",
                             "components": [
                                 {
@@ -58,7 +58,7 @@
                         {
                             "id": 3,
                             "hostname": "dbqapiproc02",
-                            "ip": "10.36.10.22",
+                            "ip": "10.156.0.3",
                             "rack": "1",
                             "components": [
                                 {
@@ -78,7 +78,7 @@
                         {
                             "id": 4,
                             "hostname": "dbqsax01",
-                            "ip": "10.36.8.23",
+                            "ip": "10.156.0.5",
                             "rack": "1",
                             "components": [
                                 {
@@ -98,7 +98,7 @@
                         {
                             "id": 5,
                             "hostname": "dbqsax02",
-                            "ip": "10.36.8.22",
+                            "ip": "10.156.0.6",
                             "rack": "1",
                             "components": [
                                 {
@@ -118,7 +118,7 @@
                         {
                             "id": 6,
                             "hostname": "dbqdevport01",
-                            "ip": "10.36.8.22",
+                            "ip": "10.156.0.8",
                             "rack": "1",
                             "components": [
                                 {
@@ -205,14 +205,14 @@
                             "name": "default",
                             "port": 9001,
                             "aliases": [
-                                "org-prod.apigee.net"
+                                "org-prod.exco.com"
                             ]
                         },
                         {
                             "name": "secure",
                             "port": 9005,
                             "aliases": [
-                                "org-prod.apigee.net"
+                                "org-prod.exco.com"
                             ]
                         }
                     ]
@@ -221,12 +221,12 @@
         }
     ],
     "customer": {
-        "brand": "sap",
-        "adminEmail": "apigee@exco.co.za",
+        "adminEmail": "admin@exco.com",
         "adminPassword": "Apigee123!",
         "licenseFile": "/opt/apigee-install/configs/license.txt",
         "skipSmtp": "n",
-        "smtpHost": "smtp.exco.co.za",
+        "smtpMailFrom": "admin@exco.com",
+        "smtpHost": "smtp.exco.com",
         "smtpPort": "25",
         "smtpUser": "0",
         "smtpPassword": "0",

@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-n07-mp-4529",
+            "port": 4529,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

@@ -875,8 +875,7 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
             */
 
-            // TODO: break it down to cs* zk* sections
-                if( fp.includes("cassandra")(compConfigurationsIdx[configurations.compType].config) ){
+                if( fp.includes("zk-hosts")(compConfigurationsIdx[configurations.compType].config) ){
                     // TODO:  change the behavior of observer so that if some ZK nodes are marked as observer in the topology, then this choice marking is respected.
                     cfgstream.write( "\n" );
 
@@ -892,13 +891,16 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
                     var ZK_CLIENT_HOSTS = fp(zks).filter({dcid: region.id}).map(n=> "$"+n.ipref).value().join(" ") 
 
+                    streamProperty( cfgstream, "ZK_HOSTS", "\""+ZK_HOSTS+"\"", "R" );
+                    streamProperty( cfgstream, "ZK_CLIENT_HOSTS", "\""+ZK_CLIENT_HOSTS+"\"", "R" );
+                }
+
+                if( fp.includes("cs-hosts")(compConfigurationsIdx[configurations.compType].config) ){
+
                     var CASS_HOSTS = fp(css).filter({dcid: region.id}).map(n=>n.drref).value().join(" ") 
                                 + " " + fp(css).reject({dcid: region.id}).map(n=>n.drref).value().join(" ");
 
-                    streamProperty( cfgstream, "ZK_HOSTS", "\""+ZK_HOSTS+"\"", "R" );
-                    streamProperty( cfgstream, "ZK_CLIENT_HOSTS", "\""+ZK_CLIENT_HOSTS+"\"", "R" );
                     streamProperty( cfgstream, "CASS_HOSTS", "\""+CASS_HOSTS+"\"", "R" );
-                    
                 }
 
                 if( fp.includes("ldap-host")(compConfigurationsIdx[configurations.compType].config) ){

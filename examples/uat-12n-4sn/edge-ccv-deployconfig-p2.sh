@@ -106,6 +106,54 @@ ansible n04 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-cs-9160.j
 ansible n04 -m copy -a "src=/tmp/edge-n04-cs-9160.json dest=/opt/consul-install/"
 ansible n04 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n04-cs-9160.json dest=/etc/consul.d"
 
+ansible n09 -m copy -a "src=/tmp/edge-mp-4529.json dest=/opt/consul-install/"
+ansible n09 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-4529.json dest=/etc/consul.d"
+
+ansible n09 -m copy -a "src=/tmp/edge-n09-mp-4529.json dest=/opt/consul-install/"
+ansible n09 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n09-mp-4529.json dest=/etc/consul.d"
+
+ansible n10 -m copy -a "src=/tmp/edge-mp-4529.json dest=/opt/consul-install/"
+ansible n10 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-4529.json dest=/etc/consul.d"
+
+ansible n10 -m copy -a "src=/tmp/edge-n10-mp-4529.json dest=/opt/consul-install/"
+ansible n10 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n10-mp-4529.json dest=/etc/consul.d"
+
+ansible n11 -m copy -a "src=/tmp/edge-mp-4529.json dest=/opt/consul-install/"
+ansible n11 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-4529.json dest=/etc/consul.d"
+
+ansible n11 -m copy -a "src=/tmp/edge-n11-mp-4529.json dest=/opt/consul-install/"
+ansible n11 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n11-mp-4529.json dest=/etc/consul.d"
+
+ansible n12 -m copy -a "src=/tmp/edge-mp-4529.json dest=/opt/consul-install/"
+ansible n12 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-4529.json dest=/etc/consul.d"
+
+ansible n12 -m copy -a "src=/tmp/edge-n12-mp-4529.json dest=/opt/consul-install/"
+ansible n12 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n12-mp-4529.json dest=/etc/consul.d"
+
+ansible n09 -m copy -a "src=/tmp/edge-mp-8998.json dest=/opt/consul-install/"
+ansible n09 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-8998.json dest=/etc/consul.d"
+
+ansible n09 -m copy -a "src=/tmp/edge-n09-mp-8998.json dest=/opt/consul-install/"
+ansible n09 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n09-mp-8998.json dest=/etc/consul.d"
+
+ansible n10 -m copy -a "src=/tmp/edge-mp-8998.json dest=/opt/consul-install/"
+ansible n10 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-8998.json dest=/etc/consul.d"
+
+ansible n10 -m copy -a "src=/tmp/edge-n10-mp-8998.json dest=/opt/consul-install/"
+ansible n10 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n10-mp-8998.json dest=/etc/consul.d"
+
+ansible n11 -m copy -a "src=/tmp/edge-mp-8998.json dest=/opt/consul-install/"
+ansible n11 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-8998.json dest=/etc/consul.d"
+
+ansible n11 -m copy -a "src=/tmp/edge-n11-mp-8998.json dest=/opt/consul-install/"
+ansible n11 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n11-mp-8998.json dest=/etc/consul.d"
+
+ansible n12 -m copy -a "src=/tmp/edge-mp-8998.json dest=/opt/consul-install/"
+ansible n12 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-mp-8998.json dest=/etc/consul.d"
+
+ansible n12 -m copy -a "src=/tmp/edge-n12-mp-8998.json dest=/opt/consul-install/"
+ansible n12 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-n12-mp-8998.json dest=/etc/consul.d"
+
 ansible n09 -m copy -a "src=/tmp/edge-ms-8080.json dest=/opt/consul-install/"
 ansible n09 -b -m copy -a "remote_src=yes src=/opt/consul-install/edge-ms-8080.json dest=/etc/consul.d"
 

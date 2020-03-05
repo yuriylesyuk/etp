@@ -1,0 +1,32 @@
+{
+    "services": [
+            {
+            "name": "edge-mp-4529",
+            "port": 4529,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-n03-mp-4529",
+                                "local_bind_port": 30903
+                            }, {
+                                "destination_name": "edge-n04-mp-4529",
+                                "local_bind_port": 30904
+                            }, {
+                                "destination_name": "edge-n05-mp-4529",
+                                "local_bind_port": 30905
+                            }, {
+                                "destination_name": "edge-n06-mp-4529",
+                                "local_bind_port": 30906
+                            }, {
+                                "destination_name": "edge-n07-mp-4529",
+                                "local_bind_port": 30907
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

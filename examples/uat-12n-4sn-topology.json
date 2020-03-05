@@ -165,5 +165,17 @@
                 { "name": "core" }
             ]
         }
-    ]
+    ],
+    "customer": {
+        "adminEmail": "admin@exco.com",
+        "adminPassword": "Apigee123!",
+        "licenseFile": "/opt/apigee-install/configs/license.txt",
+        "skipSmtp": "n",
+        "smtpMailFrom": "admin@exco.com",
+        "smtpHost": "smtp.exco.com",
+        "smtpPort": "25",
+        "smtpUser": "0",
+        "smtpPassword": "0",
+        "smtpSsl": "n"
+    }
 }

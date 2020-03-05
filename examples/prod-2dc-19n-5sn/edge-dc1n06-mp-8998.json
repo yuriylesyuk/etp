@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-dc1n06-mp-8998",
+            "port": 8998,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

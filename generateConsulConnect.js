@@ -140,7 +140,7 @@ function genisolationconfig( topology, genNodeId, ccvsetup ){
         // ie: 2181,2888,3888,7000,7199,8080,9000,4526,9042,9160,10389
 
         // for this node, collect components on the node and collect their ports from ccConfigurations
-        var rejectposts = [];
+        var rejectports = [];
         fp.reduce( ( ports, comp) => {
             // collect all ports for the component in ccConfigurations
             fp.map( ccomp => {
@@ -148,7 +148,7 @@ function genisolationconfig( topology, genNodeId, ccvsetup ){
             })(fp.filter( {cccomp: comp} )(ccConfigurations));
 
             return ports;
-        }, rejectposts)(fp.map(comp=>comp.comp)(node.components));
+        }, rejectports)(fp.map(comp=>comp.comp)(node.components));
 
         // Collect port that are ignored
 
@@ -165,18 +165,22 @@ function genisolationconfig( topology, genNodeId, ccvsetup ){
         }, acceptports)(fp.map(comp=>comp.comp)(node.components));
 
         // REJECT traffic that is supposed to be redirected via proxies
-        ccvsetup.write( 
-            fp.template(
-                'ansible <%= n %> -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports <%= rejectposts %> -m state --state NEW,ESTABLISHED -j REJECT"\n'
-            )({ n: n, rejectposts: rejectposts })
-        );
+        if( rejectports.length !== 0 ){
+            ccvsetup.write( 
+                fp.template(
+                    'ansible <%= n %> -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -p tcp -m multiport --dports <%= rejectports %> -m state --state NEW,ESTABLISHED -j REJECT"\n'
+                )({ n: n, rejectports: rejectports })
+            );
+        }
 
         // ACCEPT traffic that is processed by components
-        ccvsetup.write( 
-            fp.template(
-                'ansible <%= n %> -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports <%= acceptposts %> -m state --state NEW,ESTABLISHED -j ACCEPT"\n'
-            )({ n: n, acceptposts: acceptports })
-        );
+        if( acceptports.length !== 0 ){
+            ccvsetup.write( 
+                fp.template(
+                    'ansible <%= n %> -ba "iptables -t filter -A CONSUL_INPUT -i eth0  -s 0/0 -p tcp -m multiport --dports <%= acceptports %> -m state --state NEW,ESTABLISHED -j ACCEPT"\n'
+                )({ n: n, acceptports: acceptports })
+            );
+        }
         ccvsetup.write( "\n" );
 
     })(nodes);
@@ -283,7 +287,7 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
         // dc1-$node sidecar-for edge-$node-$CC_COMP-$CC_PORT
         ccvsetup.write(
             fp.template(
-                "ansible <%= n %> -m shell -a 'nohup consul connect proxy -sidecar-for <%= service %>  &> /opt/hashicorp/consul/logs/<%= service %>.log &  echo $! > /opt/hashicorp/consul/logs/<%= service %>.pid'\n"
+                "ansible <%= n %> --become --become-user consul -m shell -a 'nohup /opt/hashicorp/consul/bin/consul connect proxy -sidecar-for <%= service %>  &> /opt/hashicorp/consul/logs/<%= service %>.log &  echo $! > /opt/hashicorp/consul/logs/<%= service %>.pid'\n"
             )({ n: n, service: serviceNodeName})
         );
 
@@ -325,7 +329,7 @@ function gencompportconfig( cccomp, ccport, ccoffset, servers, clients, genNodeI
     // dc1-$node sidecar-for edge-$CC_COMP-$CC_PORT
     ccvsetup.write( 
         fp.template( 
-            "ansible <%= clientnodes %> -m shell -a 'nohup consul connect proxy -service <%= service %> &> /opt/hashicorp/consul/logs/<%= service %>.log & echo $! > /opt/hashicorp/consul/logs/<%= service %>.pid'\n"
+            "ansible <%= clientnodes %> --become --become-user consul -m shell -a 'nohup /opt/hashicorp/consul/bin/consul connect proxy -service <%= service %> &> /opt/hashicorp/consul/logs/<%= service %>.log & echo $! > /opt/hashicorp/consul/logs/<%= service %>.pid'\n"
         )({ clientnodes: clientnodes, service: serviceName, upstreams: upstreams})
     );
 
