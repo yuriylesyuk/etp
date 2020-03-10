@@ -110,8 +110,7 @@
                                     "comp": "CS"
                                 },
                                 {
-                                    "comp": "ZK",
-                                    "observer": true
+                                    "comp": "ZK"
                                 }
                             ]
                         }

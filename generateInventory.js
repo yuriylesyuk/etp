@@ -198,7 +198,7 @@ var compConfigurations = [
         ansible: "edge-comp-setup.yml",
         comps: [ "OL", "MS", "UI"],
         pred: true,
-        config: [ "hosts", "hostip", "bind", "ms-host", "ms-creds", "license", "ldap-host", "dc", "rmp-pod", "cs-creds", "cs-hosts", "zk-hosts", "pg-creds" ]
+        config: [ "hosts", "hostip", "bind", "ms-host", "ms-creds", "license", "ldap-host", "dc", "rmp-pod", "zk-hosts", "cs-creds", "cs-hosts", "pg-creds" ]
     } ],
     [ "RMP", {
         install: "rmp",
@@ -212,7 +212,7 @@ var compConfigurations = [
         ansible: "edge-comp-setup.yml",
         comps: [ "ZK", "CS" ],
         pred: true,
-        config: [ "hosts", "hostip", "run-as", "cs-creds", "cs-hosts" ]
+        config: [ "hosts", "hostip", "run-as", "cs-creds", "zk-hosts", "cs-hosts" ]
     } ],
     [ "SAX", {
         install: "sax",
@@ -226,7 +226,7 @@ var compConfigurations = [
         ansible: "edge-comp-setup.yml",
         comps: [ "MS" ],
         pred: true,
-        config: [ "hosts", "hostip", "ms-host", "ms-creds", "license", "ldap-host", "ldap-creds", "dc", "rmp-pod", "cs-creds", "cs-hosts", "zk-hosts", "pg-creds" ]
+        config: [ "hosts", "hostip", "ms-host", "ms-creds", "license", "ldap-host", "ldap-creds", "dc", "rmp-pod", "zk-hosts", "cs-creds", "cs-hosts", "pg-creds" ]
     } ],
     [ "OL", {
         install: "ld",
@@ -1075,45 +1075,38 @@ $IPB15:2,3   this would be the C* node in DC2 placed on the third rack of the DC
 
 
         // TODO: add support of BRAND=apigee|sap
-        // TODO: add DP and as a resulp, versions (DP is only 17.01+)
+        // TODO: add DP and as a result, versions (DP is only 17.01+)
 
         //var ansibleT = fp.template( 'ansible-playbook -l <%= regionidnodeidref %> $OPS_HOME/edge-comp-setup.yml -e "COMP=<%= comp %> CFG=<%= cfg %>"' );
-        var prologT = fp.template(`#!/bin/bash
-# check mandatory options
-
+        var scriptFragment = `
 help(){
         echo ""
-        echo "planetcontrol.sh <target> <action> [dryrun]"
+        echo "planetctl <action> <target> [<comp>] [--dryrun]"
         echo ""
         echo "Arguments:"
         echo ""
-        echo " <target>: planet or dc-1 or dc-2"
         echo " <action>: start or stop"
+        echo " <target>: planet or $DCS"
+        echo " <comp>: missing or all or subset of $COMPS"
         echo ""
         echo " <dryrun>: optional, if present the output command will be produced but not executed"
         echo ""
 }
 
+
+
 if [ "$#" -lt 2 ]
 then
         echo "Wrong number of mandatory arguments supplied."
-        echo.
+        echo ""
     help
     exit 1
 fi
 
 
-TARGET=$1
-ACTION=$2
+ACTION=$1
+TARGET=$2
 DRYRUN=$3
-
-if [[ ! ";dc-1;dc-2;planet;" =~ ";$TARGET;" ]]
-then
-   echo "Unsupported target: $TARGET"
-   help
-   exit 1
-fi
-
 
 if [[ ! ";start;stop;" =~ ";$ACTION;" ]]
 then
@@ -1122,56 +1115,108 @@ then
    exit 1
 fi
 
+
+if [[ ! "$DCS planet;" =~ "$TARGET" ]]
+then
+   echo "Unsupported target: $TARGET"
+   help
+   exit 1
+fi
 if [[ ! "$DRYRUN" == "" ]]
 then
     DRYRUN="echo "
-    DRYESC="\"
+    DRYESC=""
     DRYQUOTE='"'
 fi
 
-`);
+function command(){
+    local op=$1
+    local dcs=$2
+    local comps=$3
+
+    if [ "$dcs" = "planet" ]; then
+        dcs=$DCS
+    fi
+    if [ "$op" = "stop" ]; then
+                # reverse list of components
+                comps=$(echo -n "\${comps}"|awk '{for (i=NF;i>0;i--){printf $i " "};printf "\\n"}')
+    fi
+
+    for comp in $comps; do
+        for dc in $dcs; do
+            if [[ "$DCS" =~ "$dc" ]]; then
+                local nodes_ref=$(echo -n "\${comp}_\${dc}"|awk '{gsub(/-/, "_");print toupper($0)}')
+                local nodes=\${!nodes_ref}
+            
+                for node in $nodes; do
+
+                    $DRYRUN ansible $node -a $DRYESC$DRYQUOTE"apigee-service $comp $ACTION$DRYESC$DRYQUOTE"
+                    if [[ $? -ne 0 ]]; then exit 1; fi
+                done
+            fi
+        done
+        
+        echo ""
+    done
+}
+
+command "$ACTION" "$TARGET" "$COMPS"
+
+`;
 
 
-// TODO: prolog is currently hacker. REFACTOR!!! 
-// TODO:
-// TODO: escape dollar, remove space
+// TODO: Support of Components 
 
-        var compControlT = fp.template( `
-if [[ ";<%= regionref %>;planet;" =~ ";$TARGET;" ]]
-then
-   $DRYRUN ansible <%= regionidnodeidref %> -a $DRYESC$DRYQUOTE"apigee-service <%= comp %> $ACTION$DRYESC$DRYQUOTE"
-   if [[ $? -ne 0 ]]; then exit 1; fi
-fi
+// COMPS="apigee-zookeeper apigee-cassandra"
+// DCS="dc1 dc2"
+// APIGEE_ZOOKEEPER_DC1="dc1n13 dc1n15 dc1n16 dc1n18 dc1n16"
+// APIGEE_ZOOKEEPER_DC2="dc2n13 dc2n15 dc2n16 dc2n17 dc2n18"
+// APIGEE_CASSANDRA_DC1="dc1n13 dc1n15 dc1n16 dc1n18 dc1n16"
+// APIGEE_CASSANDRA_DC2="dc2n13 dc2n15 dc2n16 dc2n17 dc2n18"
 
-` );
-        genSequence(topology, portdefs.edgecomponentstartsequence, compControlT, prologT, program.directory + '/' + "planetcontrol.sh")
+        var compControlT = fp.template( `<%= comp.replace(/-/g,"_").toUpperCase() %>_<%= regionref.replace("-","_").toUpperCase() %>="<%= nodes %>"\n` );
+
+        genSequence(topology, portdefs.edgecomponentstartsequence, compControlT, scriptFragment, program.directory + '/' + "planetctl")
     //}
 };
 
 
 
-function genSequence(topology, sequence, template, prologtemplate, file){
+function genSequence(topology, sequence, template, script, file){
     //-------------------------------------------------------------------------- 
     // TODO:
     // ansible top-level script
 
         var ansiblestream = fs.createWriteStream( file );
+        ansiblestream.write( '#!/bin/bash\n\n' );
 
-        ansiblestream.write( prologtemplate() );
 
+        var comps = [];
         fp.map( compType =>
 
             fp.map( region => {
     
-                ansiblestream.write(
-                    fp.map(
-                        n => template({ regionref: region.name, regionidnodeidref: n.regionidnodeidref, comp: compName[ compType ] })
-                    )( fp.filter({dcid: region.id} )(gatherComp(topology, compType )) ).join('\n') +
-                    "\n\n"
-                )
+                
+
+                    var nodes = fp.map(
+                            n => n.regionidnodeidref
+                        )( fp.filter({dcid: region.id} )(gatherComp(topology, compType )) 
+                    );
+
+                    if( !fp.isEmpty( nodes ) ){
+                        comps.push( compName[ compType ] );
+
+                        ansiblestream.write(
+                            template({ regionref: region.name, comp: compName[ compType ], nodes: nodes.join(" ") })
+                        )
+                }
             })(topology.regions)
         )(sequence);
 
+        ansiblestream.write( "DCS=\"" + fp.map( r => r.name )( topology.regions ).join(" ") + "\"\n" );
+        ansiblestream.write( "COMPS=\"" + fp.map( c => c )( comps ).join(" ") + "\"\n" );
+
+        ansiblestream.write( script );
         ansiblestream.end();
         //-------------------------------------------------------------------------- 
 }
