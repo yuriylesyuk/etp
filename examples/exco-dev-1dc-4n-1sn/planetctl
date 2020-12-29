@@ -17,7 +17,7 @@ COMPS="apigee-zookeeper apigee-cassandra apigee-openldap apigee-postgresql apige
 
 help(){
         echo ""
-        echo "planetcontrol.sh <action> <target> [<comp>] [--dryrun]"
+        echo "planetctl <action> <target> [<comp>] [--dryrun]"
         echo ""
         echo "Arguments:"
         echo ""
