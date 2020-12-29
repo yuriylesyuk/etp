@@ -1,0 +1,17 @@
+{
+    "services": [
+            {
+            "name": "edge-mp-8998",
+            "port": 8998,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

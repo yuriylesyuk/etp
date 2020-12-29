@@ -1,0 +1,53 @@
+{
+    "services": [
+            {
+            "name": "edge-zk-2181",
+            "port": 2181,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-dc1n01-zk-2181",
+                                "local_bind_port": 30211
+                            }, {
+                                "destination_name": "edge-dc1n02-zk-2181",
+                                "local_bind_port": 30212
+                            }, {
+                                "destination_name": "edge-dc1n03-zk-2181",
+                                "local_bind_port": 30213
+                            }, {
+                                "destination_name": "edge-dc2n01-zk-2181",
+                                "local_bind_port": 30214
+                            }, {
+                                "destination_name": "edge-dc2n02-zk-2181",
+                                "local_bind_port": 30215
+                            }, {
+                                "destination_name": "edge-dc2n03-zk-2181",
+                                "local_bind_port": 30216
+                            }, {
+                                "destination_name": "edge-dc3n01-zk-2181",
+                                "local_bind_port": 30217
+                            }, {
+                                "destination_name": "edge-dc3n02-zk-2181",
+                                "local_bind_port": 30218
+                            }, {
+                                "destination_name": "edge-dc3n03-zk-2181",
+                                "local_bind_port": 30219
+                            }, {
+                                "destination_name": "edge-dc4n01-zk-2181",
+                                "local_bind_port": 30220
+                            }, {
+                                "destination_name": "edge-dc4n02-zk-2181",
+                                "local_bind_port": 30221
+                            }, {
+                                "destination_name": "edge-dc4n03-zk-2181",
+                                "local_bind_port": 30222
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

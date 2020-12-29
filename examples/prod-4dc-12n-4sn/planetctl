@@ -1,0 +1,96 @@
+#!/bin/bash
+
+APIGEE_ZOOKEEPER_DC_1="dc1n01 dc1n02 dc1n03"
+APIGEE_ZOOKEEPER_DC_2="dc2n01 dc2n02 dc2n03"
+APIGEE_ZOOKEEPER_DC_3="dc3n01 dc3n02 dc3n03"
+APIGEE_ZOOKEEPER_DC_4="dc4n01 dc4n02 dc4n03"
+APIGEE_CASSANDRA_DC_1="dc1n01 dc1n02 dc1n03"
+APIGEE_CASSANDRA_DC_2="dc2n01 dc2n02 dc2n03"
+APIGEE_CASSANDRA_DC_3="dc3n01 dc3n02 dc3n03"
+APIGEE_CASSANDRA_DC_4="dc4n01 dc4n02 dc4n03"
+DCS="dc-1 dc-2 dc-3 dc-4"
+COMPS="apigee-zookeeper apigee-zookeeper apigee-zookeeper apigee-zookeeper apigee-cassandra apigee-cassandra apigee-cassandra apigee-cassandra"
+
+help(){
+        echo ""
+        echo "planetctl <action> <target> [<comp>] [--dryrun]"
+        echo ""
+        echo "Arguments:"
+        echo ""
+        echo " <action>: start or stop"
+        echo " <target>: planet or $DCS"
+        echo " <comp>: missing or all or subset of $COMPS"
+        echo ""
+        echo " <dryrun>: optional, if present the output command will be produced but not executed"
+        echo ""
+}
+
+
+
+if [ "$#" -lt 2 ]
+then
+        echo "Wrong number of mandatory arguments supplied."
+        echo ""
+    help
+    exit 1
+fi
+
+
+ACTION=$1
+TARGET=$2
+DRYRUN=$3
+
+if [[ ! ";start;stop;" =~ ";$ACTION;" ]]
+then
+   echo "Unsupported Action: $ACTION"
+   help
+   exit 1
+fi
+
+
+if [[ ! "$DCS planet;" =~ "$TARGET" ]]
+then
+   echo "Unsupported target: $TARGET"
+   help
+   exit 1
+fi
+if [[ ! "$DRYRUN" == "" ]]
+then
+    DRYRUN="echo "
+    DRYESC=""
+    DRYQUOTE='"'
+fi
+
+function command(){
+    local op=$1
+    local dcs=$2
+    local comps=$3
+
+    if [ "$dcs" = "planet" ]; then
+        dcs=$DCS
+    fi
+    if [ "$op" = "stop" ]; then
+                # reverse list of components
+                comps=$(echo -n "${comps}"|awk '{for (i=NF;i>0;i--){printf $i " "};printf "\n"}')
+    fi
+
+    for comp in $comps; do
+        for dc in $dcs; do
+            if [[ "$DCS" =~ "$dc" ]]; then
+                local nodes_ref=$(echo -n "${comp}_${dc}"|awk '{gsub(/-/, "_");print toupper($0)}')
+                local nodes=${!nodes_ref}
+            
+                for node in $nodes; do
+
+                    $DRYRUN ansible $node -a $DRYESC$DRYQUOTE"apigee-service $comp $ACTION$DRYESC$DRYQUOTE"
+                    if [[ $? -ne 0 ]]; then exit 1; fi
+                done
+            fi
+        done
+        
+        echo ""
+    done
+}
+
+command "$ACTION" "$TARGET" "$COMPS"
+

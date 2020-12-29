@@ -1,0 +1,53 @@
+{
+    "services": [
+            {
+            "name": "edge-cs-9160",
+            "port": 9160,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            {
+                                "destination_name": "edge-dc1n01-cs-9160",
+                                "local_bind_port": 30601
+                            }, {
+                                "destination_name": "edge-dc1n02-cs-9160",
+                                "local_bind_port": 30602
+                            }, {
+                                "destination_name": "edge-dc1n03-cs-9160",
+                                "local_bind_port": 30603
+                            }, {
+                                "destination_name": "edge-dc2n01-cs-9160",
+                                "local_bind_port": 30604
+                            }, {
+                                "destination_name": "edge-dc2n02-cs-9160",
+                                "local_bind_port": 30605
+                            }, {
+                                "destination_name": "edge-dc2n03-cs-9160",
+                                "local_bind_port": 30606
+                            }, {
+                                "destination_name": "edge-dc3n01-cs-9160",
+                                "local_bind_port": 30607
+                            }, {
+                                "destination_name": "edge-dc3n02-cs-9160",
+                                "local_bind_port": 30608
+                            }, {
+                                "destination_name": "edge-dc3n03-cs-9160",
+                                "local_bind_port": 30609
+                            }, {
+                                "destination_name": "edge-dc4n01-cs-9160",
+                                "local_bind_port": 30610
+                            }, {
+                                "destination_name": "edge-dc4n02-cs-9160",
+                                "local_bind_port": 30611
+                            }, {
+                                "destination_name": "edge-dc4n03-cs-9160",
+                                "local_bind_port": 30612
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

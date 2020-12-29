@@ -1,47 +1,47 @@
 Host dc1n01
     HostName 10.100.1.11
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc1n02
     HostName 10.100.1.12
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc1n03
     HostName 10.100.1.13
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc2n01
     HostName 10.100.2.11
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc2n02
     HostName 10.100.2.12
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc2n03
     HostName 10.100.2.13
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc3n01
     HostName 10.100.3.11
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc3n02
     HostName 10.100.3.12
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc3n03
     HostName 10.100.3.13
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc4n01
     HostName 10.100.4.11
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc4n02
     HostName 10.100.4.12
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible
 
 Host dc4n03
     HostName 10.100.4.13
-    IdentityFile 
+    IdentityFile ~/.ssh/id_ansible

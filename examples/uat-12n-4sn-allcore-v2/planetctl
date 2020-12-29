@@ -1,0 +1,106 @@
+#!/bin/bash
+
+APIGEE_INFLUX_DC_1="n09"
+APIGEE_TELEGRAF_DC_1="n01 n02 n03 n04 n05 n06 n07 n08 n09 n11 n12 n13 n14"
+APIGEE_GRAFANA_DC_1="n09"
+APIGEE_ZOOKEEPER_DC_1="n02 n03 n04"
+APIGEE_CASSANDRA_DC_1="n02 n03 n04"
+APIGEE_OPENLDAP_DC_1="n02 n03"
+APIGEE_POSTGRESQL_DC_1="n01"
+APIGEE_POSTGRESQL_DC_1="n13"
+EDGE_POSTGRES_SERVER_DC_1="n01 n13"
+APIGEE_QPIDD_DC_1="n01 n09 n13 n14"
+EDGE_QPID_SERVER_DC_1="n01 n09 n13 n14"
+EDGE_MANAGEMENT_SERVER_DC_1="n09 n14"
+EDGE_MESSAGE_PROCESSOR_DC_1="n05 n06 n07 n08"
+EDGE_ROUTER_DC_1="n07 n08 n11 n12"
+EDGE_SAP_UI_DC_1="n09 n14"
+APIGEE_ELASTICSEARCH_DC_1="n09 n14"
+BAAS_SAP_USERGRID_DC_1="n09 n14"
+BAAS_SAP_PORTAL_DC_1="n09 n14"
+DCS="dc-1"
+COMPS="apigee-influx apigee-telegraf apigee-grafana apigee-zookeeper apigee-cassandra apigee-openldap apigee-postgresql apigee-postgresql edge-postgres-server apigee-qpidd edge-qpid-server edge-management-server edge-message-processor edge-router edge-sap-ui apigee-elasticsearch baas-sap-usergrid baas-sap-portal"
+
+help(){
+        echo ""
+        echo "planetctl <action> <target> [<comp>] [--dryrun]"
+        echo ""
+        echo "Arguments:"
+        echo ""
+        echo " <action>: start or stop"
+        echo " <target>: planet or $DCS"
+        echo " <comp>: missing or all or subset of $COMPS"
+        echo ""
+        echo " <dryrun>: optional, if present the output command will be produced but not executed"
+        echo ""
+}
+
+
+
+if [ "$#" -lt 2 ]
+then
+        echo "Wrong number of mandatory arguments supplied."
+        echo ""
+    help
+    exit 1
+fi
+
+
+ACTION=$1
+TARGET=$2
+DRYRUN=$3
+
+if [[ ! ";start;stop;" =~ ";$ACTION;" ]]
+then
+   echo "Unsupported Action: $ACTION"
+   help
+   exit 1
+fi
+
+
+if [[ ! "$DCS planet;" =~ "$TARGET" ]]
+then
+   echo "Unsupported target: $TARGET"
+   help
+   exit 1
+fi
+if [[ ! "$DRYRUN" == "" ]]
+then
+    DRYRUN="echo "
+    DRYESC=""
+    DRYQUOTE='"'
+fi
+
+function command(){
+    local op=$1
+    local dcs=$2
+    local comps=$3
+
+    if [ "$dcs" = "planet" ]; then
+        dcs=$DCS
+    fi
+    if [ "$op" = "stop" ]; then
+                # reverse list of components
+                comps=$(echo -n "${comps}"|awk '{for (i=NF;i>0;i--){printf $i " "};printf "\n"}')
+    fi
+
+    for comp in $comps; do
+        for dc in $dcs; do
+            if [[ "$DCS" =~ "$dc" ]]; then
+                local nodes_ref=$(echo -n "${comp}_${dc}"|awk '{gsub(/-/, "_");print toupper($0)}')
+                local nodes=${!nodes_ref}
+            
+                for node in $nodes; do
+
+                    $DRYRUN ansible $node -a $DRYESC$DRYQUOTE"apigee-service $comp $ACTION$DRYESC$DRYQUOTE"
+                    if [[ $? -ne 0 ]]; then exit 1; fi
+                done
+            fi
+        done
+        
+        echo ""
+    done
+}
+
+command "$ACTION" "$TARGET" "$COMPS"
+

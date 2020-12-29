@@ -307,7 +307,7 @@ id="svg2">
 
     <rect id="node1" x="15" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 1
-Host Name: dc1sndstn13
+Host Name: dc1sndstn11
 IP: 10.100.1.11</title>
     </rect>
     <text id="nodetext1" x="28.8" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -321,7 +321,7 @@ IP: 10.100.1.11</title>
 
     <rect id="node2" x="45.6" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 2
-Host Name: dc1sndstn15
+Host Name: dc1sndstn12
 IP: 10.100.1.12</title>
     </rect>
     <text id="nodetext2" x="59.400000000000006" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -335,8 +335,8 @@ IP: 10.100.1.12</title>
 
     <rect id="node3" x="76.2" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 3
-Host Name: dc1sndstn16
-IP: 10.100.1.1</title>
+Host Name: dc1sndstn13
+IP: 10.100.1.13</title>
     </rect>
     <text id="nodetext3" x="90" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
@@ -361,7 +361,7 @@ IP: 10.100.1.1</title>
 
     <rect id="node1" x="154.8" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 1
-Host Name: dc2sndstn13
+Host Name: dc2sndstn11
 IP: 10.100.2.11</title>
     </rect>
     <text id="nodetext1" x="168.60000000000002" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -375,7 +375,7 @@ IP: 10.100.2.11</title>
 
     <rect id="node2" x="185.4" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 2
-Host Name: dc2sndstn15
+Host Name: dc2sndstn12
 IP: 10.100.2.12</title>
     </rect>
     <text id="nodetext2" x="199.20000000000002" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -389,14 +389,14 @@ IP: 10.100.2.12</title>
 
     <rect id="node3" x="216" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 3
-Host Name: dc2sndstn16
+Host Name: dc2sndstn13
 IP: 10.100.2.13</title>
     </rect>
     <text id="nodetext3" x="229.8" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
         alignment-baseline="middle" text-anchor="middle">Node 3</text>
     
 
-<use xlink:href="#zko"  x="217" y="176"/>
+<use xlink:href="#zk"  x="217" y="176"/>
 <use xlink:href="#cs"  x="217" y="157"/>
 
 
@@ -415,7 +415,7 @@ IP: 10.100.2.13</title>
 
     <rect id="node1" x="294.6" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 1
-Host Name: dc3sndstn13
+Host Name: dc3sndstn11
 IP: 10.100.3.11</title>
     </rect>
     <text id="nodetext1" x="308.40000000000003" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -429,7 +429,7 @@ IP: 10.100.3.11</title>
 
     <rect id="node2" x="325.20000000000005" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 2
-Host Name: dc3sndstn15
+Host Name: dc3sndstn12
 IP: 10.100.3.12</title>
     </rect>
     <text id="nodetext2" x="339.00000000000006" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -443,7 +443,7 @@ IP: 10.100.3.12</title>
 
     <rect id="node3" x="355.8" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 3
-Host Name: dc3sndstn16
+Host Name: dc3sndstn13
 IP: 10.100.3.13</title>
     </rect>
     <text id="nodetext3" x="369.6" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -469,7 +469,7 @@ IP: 10.100.3.13</title>
 
     <rect id="node1" x="434.40000000000003" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 1
-Host Name: dc4sndstn13
+Host Name: dc4sndstn11
 IP: 10.100.4.11</title>
     </rect>
     <text id="nodetext1" x="448.20000000000005" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -483,7 +483,7 @@ IP: 10.100.4.11</title>
 
     <rect id="node2" x="465.00000000000006" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 2
-Host Name: dc4sndstn15
+Host Name: dc4sndstn12
 IP: 10.100.4.12</title>
     </rect>
     <text id="nodetext2" x="478.80000000000007" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"
@@ -497,7 +497,7 @@ IP: 10.100.4.12</title>
 
     <rect id="node3" x="495.6" y="152" width="27.6" height="45" style="fill:#ffffff;stroke:#bfbfbf">
         <title>Node: 3
-Host Name: dc4sndstn16
+Host Name: dc4sndstn13
 IP: 10.100.4.13</title>
     </rect>
     <text id="nodetext3" x="509.40000000000003" y="205" style="font-weight:normal;font-size:7.5px;font-family:Arial;"

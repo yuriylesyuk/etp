@@ -1,13 +1,13 @@
 [edge]
-dc1n01 ansible_host=10.100.1.11
-dc1n02 ansible_host=10.100.1.12
-dc1n03 ansible_host=10.100.1.13
-dc2n01 ansible_host=10.100.2.11
-dc2n02 ansible_host=10.100.2.12
-dc2n03 ansible_host=10.100.2.13
-dc3n01 ansible_host=10.100.3.11
-dc3n02 ansible_host=10.100.3.12
-dc3n03 ansible_host=10.100.3.13
-dc4n01 ansible_host=10.100.4.11
-dc4n02 ansible_host=10.100.4.12
-dc4n03 ansible_host=10.100.4.13
+dc1n01 ansible_host=10.100.1.11 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc1n02 ansible_host=10.100.1.12 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc1n03 ansible_host=10.100.1.13 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc2n01 ansible_host=10.100.2.11 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc2n02 ansible_host=10.100.2.12 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc2n03 ansible_host=10.100.2.13 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc3n01 ansible_host=10.100.3.11 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc3n02 ansible_host=10.100.3.12 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc3n03 ansible_host=10.100.3.13 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc4n01 ansible_host=10.100.4.11 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc4n02 ansible_host=10.100.4.12 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible
+dc4n03 ansible_host=10.100.4.13 ansible_user=opapiadmin ansible_ssh_private_key_file=~/.ssh/id_ansible

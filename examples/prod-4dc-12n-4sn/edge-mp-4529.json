@@ -1,0 +1,17 @@
+{
+    "services": [
+            {
+            "name": "edge-mp-4529",
+            "port": 4529,
+            "connect": {
+                "proxy": {
+                    "config": {
+                        "upstreams": [
+                            
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

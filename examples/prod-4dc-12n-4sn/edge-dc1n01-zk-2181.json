@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-dc1n01-zk-2181",
+            "port": 2181,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}

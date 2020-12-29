@@ -1,0 +1,757 @@
+category, srcnode, srchostname, srcip, dstnode, dsthostname, dstip, clientcomponent, servercomponent, port, description
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc1sndstn11, 10.100.1.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc1sndstn12, 10.100.1.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc1sndstn13, 10.100.1.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc2sndstn11, 10.100.2.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc2sndstn12, 10.100.2.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc2sndstn13, 10.100.2.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc3sndstn11, 10.100.3.11, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc3sndstn12, 10.100.3.12, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 1, dc4sndstn11, 10.100.4.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 2, dc4sndstn12, 10.100.4.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc3sndstn13, 10.100.3.13, 3, dc4sndstn13, 10.100.4.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc1sndstn11, 10.100.1.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc1sndstn12, 10.100.1.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc1sndstn13, 10.100.1.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc2sndstn11, 10.100.2.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc2sndstn12, 10.100.2.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc2sndstn13, 10.100.2.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, CS, CS, 9160, Cassandra thrift client
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7000, Cassandra inter-node communications (gossip/replication/proxied queries/etc)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 7199, Cassandra JMX management. Must be open for access on the Cassandra node by the Management Server.
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9042, Cassandra CQL native transport
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, CS, CS, 9160, Cassandra thrift client
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 1, dc4sndstn11, 10.100.4.11, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 2, dc4sndstn12, 10.100.4.12, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 1, dc3sndstn11, 10.100.3.11, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 2, dc3sndstn12, 10.100.3.12, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2181, Zookeeper clients to connect to zk servers
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 2888, Zookeeper internode management: zk peers sending transaction updates
+multi-dc, 3, dc4sndstn13, 10.100.4.13, 3, dc3sndstn13, 10.100.3.13, ZK, ZK, 3888, Zookeeper internode management: for leader election (electionAlg=3,default)

@@ -1,0 +1,9 @@
+{
+    "services": [
+        {
+            "name": "edge-dc3n03-cs-7000",
+            "port": 7000,
+            "connect": { "sidecar_service": {} }
+        }
+    ]
+}
